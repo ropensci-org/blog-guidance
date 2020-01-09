@@ -29,6 +29,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ github.event.pull_request.head.sha }} 
           body: |
-            You can go look at [the preview][1]. :rocket:
+            Your edit [is live][1]. :rocket:
 
-            [1]: ${process.env.DEPLOY_URL}
+            [1]: https://ropensci-blog-guidance.netlify.com/
