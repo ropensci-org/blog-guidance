@@ -1,0 +1,16 @@
+Package: blog-guidance
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Maëlle",
+           family = "Salmon",
+           role = c("cre", "aut"),
+           email = "maelle.salmon@yahoo.se",
+           comment = c(ORCID = "0000-0002-2815-0399"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Imports: 
+    bookdown
