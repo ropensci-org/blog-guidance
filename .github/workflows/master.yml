@@ -19,9 +19,6 @@ jobs:
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/setup-node@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
       - name: Install Netlify CLI
         run: npm install netlify-cli -g
       - name: Deploy to Netlify (test)
