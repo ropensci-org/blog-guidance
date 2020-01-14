@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Content Guidelines | A Minimal Bookdown Book</title>
   <meta name="description" content="Blog post guidance" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Content Guidelines | A Minimal Bookdown Book" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Stefanie Butland" />
 
 
-<meta name="date" content="2020-01-09" />
+<meta name="date" content="2020-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +34,7 @@
 <link rel="prev" href="index.html"/>
 <link rel="next" href="diving-in.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -71,12 +72,28 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>I Author Guide</b></span></li>
-<li class="chapter" data-level="1" data-path="content.html"><a href="content.html"><i class="fa fa-check"></i><b>1</b> Content Guidelines</a><ul>
+<li class="chapter" data-level="1" data-path="content.html"><a href="content.html"><i class="fa fa-check"></i><b>1</b> Content Guidelines</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="content.html"><a href="content.html#postornote"><i class="fa fa-check"></i><b>1.1</b> Blog post or Tech Note?</a></li>
 <li class="chapter" data-level="1.2" data-path="content.html"><a href="content.html#posttypes"><i class="fa fa-check"></i><b>1.2</b> Types of posts</a></li>
 <li class="chapter" data-level="1.3" data-path="content.html"><a href="content.html#what-goes-in-your-post"><i class="fa fa-check"></i><b>1.3</b> What goes in your post?</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="diving-in.html"><a href="diving-in.html"><i class="fa fa-check"></i><b>2</b> Diving In</a></li>
+<li class="chapter" data-level="3" data-path="technical.html"><a href="technical.html"><i class="fa fa-check"></i><b>3</b> Technical Guidelines</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="technical.html"><a href="technical.html#choose-your-workflow"><i class="fa fa-check"></i><b>3.1</b> Choose your workflow</a></li>
+<li class="chapter" data-level="3.2" data-path="technical.html"><a href="technical.html#walkthrough-with-code-snippets-and-screenshots"><i class="fa fa-check"></i><b>3.2</b> Walkthrough with code snippets and screenshots</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="technical.html"><a href="technical.html#what-goes-in-yaml"><i class="fa fa-check"></i><b>3.2.1</b> What goes in YAML</a></li>
+<li class="chapter" data-level="3.2.2" data-path="technical.html"><a href="technical.html#add-an-image"><i class="fa fa-check"></i><b>3.2.2</b> Add an image</a></li>
+<li class="chapter" data-level="3.2.3" data-path="technical.html"><a href="technical.html#add-a-tweet"><i class="fa fa-check"></i><b>3.2.3</b> Add a tweet</a></li>
+<li class="chapter" data-level="3.2.4" data-path="technical.html"><a href="technical.html#add-a-citation"><i class="fa fa-check"></i><b>3.2.4</b> Add a citation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="technical.html"><a href="technical.html#style-guide"><i class="fa fa-check"></i><b>3.3</b> Style guide</a></li>
+<li class="chapter" data-level="3.4" data-path="technical.html"><a href="technical.html#create-or-update-your-author-file"><i class="fa fa-check"></i><b>3.4</b> Create or update your author file</a></li>
+<li class="chapter" data-level="3.5" data-path="technical.html"><a href="technical.html#pre-submission-checklists"><i class="fa fa-check"></i><b>3.5</b> Pre-submission checklists</a></li>
+<li class="chapter" data-level="3.6" data-path="technical.html"><a href="technical.html#submit-your-draft-post"><i class="fa fa-check"></i><b>3.6</b> Submit your draft post</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -97,14 +114,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="content" class="section level1">
+<div id="content" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Content Guidelines</h1>
-<div id="postornote" class="section level2">
+<div id="postornote" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Blog post or Tech Note?</h2>
 <p>The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter notes aimed at a more technical audience. We provide details and selected examples of blog posts <a href="content.html#posttypes">below</a>. <a href="https://ropensci.org/technotes/">Tech Notes</a> are written for a narrower audience that wants details. They may include information on a software release with major new features, breaking changes, or significant new documentation. They should provide something a reader could not glean from the documentation itself.</p>
 <p>Blog posts are usually published weekly on Tuesdays. Tech Notes can be published on any weekday. Both are given the same promotional treatment by rOpenSci <link to Ch4 Publication and promotion of your post>.</p>
 </div>
-<div id="posttypes" class="section level2">
+<div id="posttypes" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Types of posts</h2>
 <p>Read a few <a href="https://ropensci.org/archive/">blog posts and tech notes</a> and consider what you like (or not) about them. Most posts written by community members are about packages that have passed rOpenSci software peer review, however, we have posts on a range of topics and we encourage you to consider these or to propose others.</p>
 <ul>
@@ -141,7 +158,7 @@
 </ul></li>
 </ul>
 </div>
-<div id="what-goes-in-your-post" class="section level2">
+<div id="what-goes-in-your-post" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> What goes in your post?</h2>
 <p>Since most posts contributed by community members are about packages that have passed software peer review, we use this type of post as an example to outline components you should consider including in your post. Some components would not be included if the post is not about a peer reviewed package.</p>
 <p><strong>What message would you like a reader to take away?</strong></p>

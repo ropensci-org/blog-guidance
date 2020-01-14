@@ -1,7 +1,7 @@
 --- 
 title: "A Minimal Bookdown Book"
 author: "Stefanie Butland"
-date: "2020-01-09"
+date: "2020-01-13"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
