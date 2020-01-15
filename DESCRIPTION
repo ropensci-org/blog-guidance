@@ -16,7 +16,8 @@ Description: The package DESCRIPTION allows us to store
 License: MIT + file LICENSE
 Imports: 
     bookdown,
-    webshot2
+    webshot2,
+    curl
 Remotes:
     rstudio/webshot2
 Encoding: UTF-8
