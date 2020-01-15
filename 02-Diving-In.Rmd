@@ -2,11 +2,13 @@
 
 Now let's talk screenshots! Using the in development `webshot2` package.
 
-For now screenshots of authenticated pages isn't supported (i.e. GitHub as one sees it when authenticated) which is fine 
+For now screenshots of authenticated pages isn't supported (i.e. GitHub as one sees it when authenticated) which is fine I think.
+
+* Author page
 
 
-```{r authorpage}
-webshot2::rmdshot("https://ropensci.org/authors/kelly-obriant/",
+```{r authorpage, cache = TRUE}
+webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
                   selector = "section.author",
                   expand = c(50, # top
                              0, # right
@@ -15,4 +17,18 @@ webshot2::rmdshot("https://ropensci.org/authors/kelly-obriant/",
                              )
                   )
 
+```
+
+* A tweet
+
+```{r atweet, cache = TRUE}
+webshot2::webshot("https://ropensci.org/blog/2017/10/31/ozunconf2017/",
+                 selector = "#twitter-widget-2",
+                  expand = c(100, # top
+                             100, # right
+                             100, # bottom
+                             100 #left
+                             ),
+                 delay = 2
+                 )
 ```
