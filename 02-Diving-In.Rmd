@@ -32,3 +32,17 @@ webshot2::webshot("https://ropensci.org/blog/2017/10/31/ozunconf2017/",
                  delay = 2
                  )
 ```
+
+* Footnotes
+
+```{r footnotes, cache = TRUE}
+webshot2::webshot("https://ropensci.org/blog/2019/10/21/rmangal/",
+                 selector = ".footnotes",
+                  expand = c(100, # top
+                             100, # right
+                             100, # bottom
+                             100 #left
+                             ),
+                 delay = 2
+                 )
+```
