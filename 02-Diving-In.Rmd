@@ -29,7 +29,7 @@ webshot2::webshot("https://ropensci.org/blog/2017/10/31/ozunconf2017/",
                              100, # bottom
                              100 #left
                              ),
-                 delay = 2
+                 delay = 2 # just to be sure the JS will be loaded
                  )
 ```
 
@@ -42,7 +42,6 @@ webshot2::webshot("https://ropensci.org/blog/2019/10/21/rmangal/",
                              100, # right
                              100, # bottom
                              100 #left
-                             ),
-                 delay = 2
+                             )
                  )
 ```
