@@ -1,16 +1,24 @@
 Package: blog-guidance
-Title: What the Package Does (One Line, Title Case)
+Title: Source of rOpenSci blog guidance (bookdown) as an R
+    package
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Maëlle",
-           family = "Salmon",
-           role = c("cre", "aut"),
-           email = "maelle.salmon@yahoo.se",
-           comment = c(ORCID = "0000-0002-2815-0399"))
-Description: What the package does (one paragraph).
+    c(person(given = "Maëlle",
+             family = "Salmon",
+             role = c("cre", "aut"),
+             email = "maelle.salmon@yahoo.se",
+             comment = c(ORCID = "0000-0002-2815-0399")),
+      person(given = "Stefanie",
+             family = "Butland",
+             role = "aut"))
+Description: The package DESCRIPTION allows us to store
+    dependencies to facilitate deployment.
 License: MIT + file LICENSE
+Imports: 
+    bookdown,
+    webshot2
+Remotes:
+    rstudio/webshot2
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-Imports: 
-    bookdown

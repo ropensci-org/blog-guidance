@@ -1,3 +1,18 @@
 # Diving In
 
-Now let's talk details.
+Now let's talk screenshots! Using the in development `webshot2` package.
+
+For now screenshots of authenticated pages isn't supported (i.e. GitHub as one sees it when authenticated) which is fine 
+
+
+```{r authorpage}
+webshot2::rmdshot("https://ropensci.org/authors/kelly-obriant/",
+                  selector = "section.author",
+                  expand = c(50, # top
+                             0, # right
+                             0, # bottom
+                             0 #left
+                             )
+                  )
+
+```
