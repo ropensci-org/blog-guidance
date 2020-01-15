@@ -45,3 +45,21 @@ webshot2::webshot("https://ropensci.org/blog/2019/10/21/rmangal/",
                              )
                  )
 ```
+
+* Author page with a frame
+
+
+```{r authorpageframed, cache = TRUE}
+library("magrittr")
+webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
+                  selector = "section.author",
+                  expand = c(50, # top
+                             0, # right
+                             0, # bottom
+                             0 #left
+                             )
+                  ) %>%
+  magick::image_read() %>%
+  magick::image_frame(color = "#1f58a3", geometry = "5x5")
+
+```

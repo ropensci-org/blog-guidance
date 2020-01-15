@@ -17,7 +17,8 @@ License: MIT + file LICENSE
 Imports: 
     bookdown,
     webshot2,
-    curl
+    curl,
+    magick
 Remotes:
     rstudio/webshot2
 Encoding: UTF-8
