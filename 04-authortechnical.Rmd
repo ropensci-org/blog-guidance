@@ -14,16 +14,34 @@ Adapt from [current roweb2 instructions](https://github.com/ropensci/roweb2#cont
 
 ### What goes in YAML
 
-include advice on tags, info on Twitter cards
-
-start with annotated screenshot of YAML from a real post (rmangal?)
+INTENT HERE is to show txt of template YAML followed by annotated screenshot of same template YAML explaining each component. Can follow with link to raw post and rendered post for both blog post (rmangal) and technote from a real post.
 
 ```
 ---
-rmangal YAML here
+slug: "post-template"
+title: Post Title in Title Case
+package_version: 0.1.0
+authors:
+  - Author Name1
+  - Author Name2
+date: 2019-06-04
+categories: blog
+topicid:
+tags:
+  - Software Peer Review
+  - packages
+  - R
+  - community
+twitterImg: img/blog-images/2019-06-04-post-template/name-of-image.png
+output: 
+  html_document:
+    keep_md: true
 ---
 ```
 
+NOTE annotated screenshot of template YAML here file: https://github.com/rosadmin/comms/blob/master/content_n_programs/blog_guide/yamltxt-txtannotated.png
+
+NOTE include advice on tags, info on Twitter cards
 
 ### Add an image
 from an image file, or created from R code in Rmd, adding alternative text for images
