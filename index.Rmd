@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Bookdown Book"
-author: "Stefanie Butland"
+title: "rOpenSci Blog Guidelines for Authors and Editors"
+author: "Stefanie Butland and Maëlle Salmon"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -14,4 +14,5 @@ description: "Blog post guidance"
 
 # Preface {-}
 
-This is the very first part of the book.
+This is the very first part of the book. Will add some preface text
+NOTE We'll want to make the ugly headings below disappear ;-)
