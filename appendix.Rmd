@@ -1,0 +1,13 @@
+# (APPENDIX) Appendix {-}
+
+# Post template in Markdown {#postmd}
+
+INCLUDE templates/post-template.md
+
+# Post template in R Markdown {#postrmd}
+
+CREATE AND ADD Rmd template based on templates/post-template.md
+
+# Author file template {#authortemplate}
+
+INCLUDE templates/author-file-template.md
