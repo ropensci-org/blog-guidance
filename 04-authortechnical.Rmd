@@ -1,12 +1,30 @@
 # Technical Guidelines {#technical}
 
-## Choose your workflow
+The technical details of these steps to submitting a blog post or tech note for publication on the rOpenSci website are explained in this chapter:
+
+- Fork the repository (repo) of the rOpenSci website
+- Draft your post in R Markdown or Markdown
+- Preview and refine your post locally (optional)
+- Submit via pull request, preview, and refine your post in the rOpenSci website repo
+- Community Manager or other staff member reviews your post
+- Revise your post in response to review
+
+## Fork the repo and choose your workflow
+
+Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2). For help with this we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html).
 
 Prepare your post in whichever way is most comfortable for you. You can write your post:
+
 - in your favorite editor in R Markdown or Markdown by starting with templates we provide
-    - link to or expand .Rmd template here
-    - link to or expand .md template here
+    - LINK TO .Rmd template here (in Appendix?)
+    - LINK TO .md template here (in Appendix?)
 - or by using the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
+    - install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
+    - Create a new post using the R Markdown or Markdown template
+      - in RStudio using the roblog Addin
+      - at the command-line using `roblog cmd here`
+
+QUESTION: Do we create 4 templates? one each for blog and technote in Rmd and md? If not, how does a person using the template know what to modify for technote?     
 
 ## Walkthrough with code snippets and screenshots
 
@@ -113,15 +131,17 @@ adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/style
 
 ## Create or update your author file
 
-**Why?** rOpenSci staff and community members who have authored a blog post, tech note, or presented in a Community Call have an author page on our website. Then, when a reader clicks on your by-line in your post, they can find your online home, possibly your Twitter or GitHub handle, and links to all the content you’ve authored on our site. For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed. The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/).
+### Why?
+rOpenSci staff and community members who have authored a blog post, tech note, or presented in a Community Call have an author page on our website. Then, when a reader clicks on your by-line in your post, they can find your online home, possibly your Twitter or GitHub handle, and links to all the content you’ve authored on our site. For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed. The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/).
 
 **NOTE** Need to adapt text below to use Rmd to read code (e.g. template file) and to suggest use of RStudio add-in or run `roblog::ro_blog_post_author()` as done in https://github.com/ropenscilabs/roblog/blob/master/vignettes/author-file-guidance.Rmd
 
-**How?** If you don't already have an author page, create a folder called`yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors). You can have accents, middle initials, or hyphens appear in your name if you name your `firstname-lastname` folder appropriately. If you're not sure of how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples.
+### How?
+If you don't already have an author page, create a folder called`yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors). You can have accents, middle initials, or hyphens appear in your name if you name your `firstname-lastname` folder appropriately. If you're not sure of how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples.
 
 In that folder, create a file called `_index.md` with information about your online presence.
 
-**Example and Template**
+### Example and Template
 
 Example author file [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) that, when rendered, generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/):
 
@@ -162,8 +182,20 @@ See roblog "check your post"
 
 
 ## Submit your draft post
-Step by step guide: clone/fork ...hugo local preview ...pull request...
+Once you've drafted your blog post, you can preview locally using Hugo or skip to the next step to preview on the pull request.
+
+Knitting the Rmd will generate both .html and .md files. Please do not include the html in your pull request.
+
+Send a pull request from your fork at least one week prior to the publication date to allow time for review. Netlify will start building the new version of the site within seconds and you can preview you changes to make sure everything looks as intended. Otherwise push additional fixes till things look right.
+
+Tag rOpenSci's Community Manager ([@stefaniebutland](https://github.com/stefaniebutland)) to review your pull request.
 
 See r-hub example PR https://github.com/r-hub/blog/pull/50
 
-Knitting the Rmd will generate both .html and .md files. Please do not include the html in your pull request to roweb2.
+### Local preview with Hugo
+
+If you wish to preview your post locally, as it will appear in our site, you must install Hugo. To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()`.
+
+Then run `hugo serve` in the repo directory to start a local server on http://localhost:1313. To view a future-dated blog post, use `hugo serve -F` (IS THAT STILL TRUE? I DON'T THINK I HAVE TO DO THIS) .
+
+The version of Hugo used by the server is defined in [netlify.toml](https://github.com/ropensci/roweb2/blob/master/netlify.toml).
