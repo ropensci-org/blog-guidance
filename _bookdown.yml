@@ -2,6 +2,6 @@ book_filename: "bookdown-start"
 chapter_name: "Chapter "
 repo: https://github.com/rosadmin/blog-guidance
 output_dir: docs
-rmd_files: ["index.Rmd", "01-authorcontent.Rmd", "04-authortechnical.Rmd", "appendix.Rmd"]
+rmd_files: ["index.Rmd", "01-authorcontent.Rmd", "04-authortechnical.Rmd", "editor.Rmd", "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
