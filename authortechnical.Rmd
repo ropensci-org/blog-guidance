@@ -143,7 +143,7 @@ In that folder, create a file called `_index.md` with information about your onl
 
 ### Example and Template
 
-Example author file [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) that, when rendered, generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/):
+Example author file [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
 
 ```
 ---
@@ -154,9 +154,21 @@ github: kellobri
 ---
 ```
 
-? maybe also show Maëlle Salmon example for other IDs and ë `content/authors/maëlle-salmon/_index.md`.?
+that, when rendered, generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/)
 
-? screenshot author page ?
+```{r authorpage, cache = TRUE, echo = FALSE}
+webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
+                  selector = "section.author",
+                  expand = c(50, # top
+                             0, # right
+                             0, # bottom
+                             0 #left
+                             )
+                  )
+```
+
+
+? maybe also show Maëlle Salmon example for other IDs and ë `content/authors/maëlle-salmon/_index.md`.?
 
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username. The link field is meant for your preferred online presence URL. Add your usernames or ID's without the "@").
 
