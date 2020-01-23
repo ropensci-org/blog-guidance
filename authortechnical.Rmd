@@ -186,6 +186,6 @@ See r-hub example PR https://github.com/r-hub/blog/pull/50
 
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo. To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()`.
 
-Then run `hugo serve` in the repo directory to start a local server on http://localhost:1313. To view a future-dated blog post, use `hugo serve -F` (IS THAT STILL TRUE? I DON'T THINK I HAVE TO DO THIS) .
+Then run `hugo serve` in the repo directory to start a local server on http://localhost:1313. 
 
 The version of Hugo used by the server is defined in [netlify.toml](https://github.com/ropensci/roweb2/blob/master/netlify.toml).
