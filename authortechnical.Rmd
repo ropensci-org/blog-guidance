@@ -35,7 +35,7 @@ Adapt from [current roweb2 instructions](https://github.com/ropensci/roweb2#cont
 INTENT HERE is to show txt of template YAML followed by annotated screenshot of same template YAML explaining each component. Can follow with link to raw post and rendered post for both blog post (rmangal) and technote from a real post.
 
 ```{r posttemplate, results="asis"}
-show_template("post-template.md", lang = "markdown",
+show_template("post-template.md", lang = "yaml",
               yaml_only = TRUE)
 ```
 
