@@ -173,16 +173,12 @@ webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username. The link field is meant for your preferred online presence URL. Add your usernames or ID's without the "@").
 
 Template `_index.md` <LINK to `author-file-template.md`> for author file.
-```
----
-name: Author Name
-link: website URL or other online presence
-twitter: Twitter username
-github: GitHub username
-gitlab: GitLab username
-keybase: Keybase ID
-orcid: ORCID ID
----
+
+```{r authorfiletemplate1, results="asis"}
+show_template("author-file-template.md", 
+              lang = "yaml",
+              details = TRUE
+)
 ```
 
 ## Pre-submission checklists

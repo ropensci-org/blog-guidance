@@ -5,7 +5,10 @@ knitr::opts_chunk$set(
 
 library("magrittr")
 
-show_template <- function(filename, lang = "markdown") {
+show_template <- function(filename, 
+                          lang = "markdown",
+                          details = FALSE,
+                          ...) {
   suppressWarnings(
     readLines(
       file.path("templates", filename)
@@ -13,5 +16,14 @@ show_template <- function(filename, lang = "markdown") {
   ) %>%
     glue::glue_collapse(sep = "\n") -> template
 
-glue::glue("````{lang}\n{template}\n````")
+  if (details) {
+    toshow <- details::details(template, summary = filename,
+                     lang = lang,
+                     ...)
+  } else {
+    toshow <- glue::glue("````{lang}\n{template}\n````")
+  }
+
+  return(toshow)
+
 }

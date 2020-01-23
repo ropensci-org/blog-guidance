@@ -17,6 +17,7 @@ Imports:
     webshot2,
     curl,
     glue,
-    magrittr
+    magrittr,
+    details
 Remotes:
     rstudio/webshot2
