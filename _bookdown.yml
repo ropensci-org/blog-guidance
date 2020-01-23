@@ -8,3 +8,4 @@ rmd_files: ["index.Rmd", "authorcontent.Rmd",
             "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
+before_chapter_script: "_common.R"
