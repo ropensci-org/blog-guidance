@@ -1,6 +1,6 @@
 #  (PART) Editor Guide {-}
 
-# Editor Guidelines {#editor}
+# Review a Post {#editor}
 
 Explain how to review a post. Audience is Community Manager and their intern.
 

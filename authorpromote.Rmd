@@ -1,0 +1,5 @@
+# Publication {#promote}
+
+## Publication and promotion of your post 
+
+rOpenSci twitter, newsletter, R Weekly, R-Bloggers 
