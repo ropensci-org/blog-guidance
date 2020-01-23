@@ -1,0 +1,8 @@
+# Responding to Editor's review {#respond}
+
+these are placeholder headings
+
+## Where to look for comments and suggested commits
+
+
+## How to edit and signal to editor you have addressed all comments
