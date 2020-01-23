@@ -12,20 +12,25 @@ date: 2019-06-04
 categories: blog
 # Leave topicid blank below; will be set by editor
 topicid:
-# Minimal tags for a post about a community-contributed package that has passed software peer review are listed below
+# Minimal tags for a post about a community-contributed package 
+# that has passed software peer review are listed below
 # Consult the Technical Guidelines for further information on choosing tags
 tags:
   - Software Peer Review
   - packages
   - R
   - community
-# Delete the twitterImg line below if you have no preferred image for Twitter cards 
+# If you have no preferred image for Twitter cards,
+# delete the twitterImg line below 
 twitterImg: img/blog-images/2019-06-04-post-template/name-of-image.png
 ---
 
-This is the markdown template for a blog post or tech note. To generate your post from R Markdown, use the R Markdown template instead.
+This is the markdown template for a blog post or tech note. 
+To generate your post from R Markdown, use the R Markdown template instead.
 
-Throughout this template, including the YAML, you should change "post-template" to the slug of your post, and "2019-06-04" to your publication date.
+Throughout this template, including the YAML, 
+you should change "post-template" to the slug of your post, 
+and "2019-06-04" to your publication date.
 
 Save this file under /content/blog/YYYY-MM-DD-slug.md in the local copy of your roweb2 fork.
 

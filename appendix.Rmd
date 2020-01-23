@@ -4,12 +4,17 @@
 
 INSTRUCT author to copy this template, or get it from roblog
 
+````markdown
+```{r, results="asis", echo=FALSE}
+library("magrittr")
+suppressWarnings(
+  readLines(
+  "templates/post-template.md"
+  )
+) %>%
+  glue::glue_collapse(sep = "\n")
 ```
-```{r eval = !knitr::is_latex_output(), child="templates/post-template.md"}
-```
-```
-```{r eval = knitr::is_latex_output(), child="templates/post-template.md"}
-```
+````
 
 
 # Post template in R Markdown {#postrmd}
@@ -22,22 +27,14 @@ INSTRUCT author to copy this template, or get it from roblog
 
 INSTRUCT author to copy this template, or get it from roblog
 
-ERROR when calling templates/author-file-template.md using ~same code as above: 
+````yaml
+```{r, results="asis", echo=FALSE}
+library("magrittr")
+suppressWarnings(
+  readLines(
+  "templates/author-file-template.md"
+  )
+) %>%
+  glue::glue_collapse(sep = "\n")
 ```
-List of 2
- $ eval : language !knitr::is_latex_output()
- $ child: chr "templates/author-file-template.md"
-
-
-
-processing file: ./templates/author-file-template.md
-Quitting from lines 27-27 (./templates/author-file-template.md) 
-Error in blks | head(c(TRUE, txts), -1) : 
-  operations are possible only for numeric, logical or complex types
-Calls: local ... lapply -> FUN -> knit -> process_file -> split_file
-
-Execution halted
-<simpleError in Rscript_render(f, render_args, render_meta): Failed to compile appendix.Rmd>
-```
-
-
+````
