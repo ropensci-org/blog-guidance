@@ -4,18 +4,9 @@
 
 INSTRUCT author to copy this template, or get it from roblog
 
-````markdown
-```{r, results="asis", echo=FALSE}
-library("magrittr")
-suppressWarnings(
-  readLines(
-  "templates/post-template.md"
-  )
-) %>%
-  glue::glue_collapse(sep = "\n")
+```{r posttemplate, results="asis"}
+show_template("post-template.md", lang = "markdown")
 ```
-````
-
 
 # Post template in R Markdown {#postrmd}
 
@@ -27,14 +18,6 @@ INSTRUCT author to copy this template, or get it from roblog
 
 INSTRUCT author to copy this template, or get it from roblog
 
-````yaml
-```{r, results="asis", echo=FALSE}
-library("magrittr")
-suppressWarnings(
-  readLines(
-  "templates/author-file-template.md"
-  )
-) %>%
-  glue::glue_collapse(sep = "\n")
+```{r authorfiletemplate, results="asis"}
+show_template("author-file-template.md", lang = "yaml")
 ```
-````
