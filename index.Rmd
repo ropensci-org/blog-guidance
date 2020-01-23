@@ -15,4 +15,7 @@ description: "Blog post guidance"
 # Preface {-}
 
 This is the very first part of the book. Will add some preface text
+
 NOTE We'll want to make the ugly headings below disappear ;-)
+
+
