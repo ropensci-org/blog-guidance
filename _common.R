@@ -8,12 +8,19 @@ library("magrittr")
 show_template <- function(filename, 
                           lang = "markdown",
                           details = FALSE,
+                          yaml_only = FALSE,
                           ...) {
-  suppressWarnings(
+  lines <- suppressWarnings(
     readLines(
       file.path("templates", filename)
     )
-  ) %>%
+  ) 
+  
+  if (yaml_only) {
+    lines <- bookdown:::fetch_yaml(lines)
+  }
+  
+  lines %>%
     glue::glue_collapse(sep = "\n") -> template
 
   if (details) {
