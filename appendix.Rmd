@@ -1,0 +1,40 @@
+# (APPENDIX) Appendix {-}
+
+# Post template in Markdown {#postmd}
+
+INSTRUCT author to copy this template, or get it from roblog
+
+````markdown
+```{r, results="asis", echo=FALSE}
+library("magrittr")
+suppressWarnings(
+  readLines(
+  "templates/post-template.md"
+  )
+) %>%
+  glue::glue_collapse(sep = "\n")
+```
+````
+
+
+# Post template in R Markdown {#postrmd}
+
+Maëlle please CREATE AND ADD Rmd template based on templates/post-template.md
+INSTRUCT author to copy this template, or get it from roblog
+
+
+# Author file template {#authortemplate}
+
+INSTRUCT author to copy this template, or get it from roblog
+
+````yaml
+```{r, results="asis", echo=FALSE}
+library("magrittr")
+suppressWarnings(
+  readLines(
+  "templates/author-file-template.md"
+  )
+) %>%
+  glue::glue_collapse(sep = "\n")
+```
+````

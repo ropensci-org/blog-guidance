@@ -1,0 +1,7 @@
+#  (PART) Editor Guide {-}
+
+# Review a Post {#editor}
+
+Explain how to review a post. Audience is Community Manager and their intern.
+
+Put review checklist templates here, including sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
