@@ -114,18 +114,29 @@ adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/style
 ## Create or update your author file
 
 ### Why?
-rOpenSci staff and community members who have authored a blog post, tech note, or presented in a Community Call have an author page on our website. Then, when a reader clicks on your by-line in your post, they can find your online home, possibly your Twitter or GitHub handle, and links to all the content you’ve authored on our site. For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed. The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/).
+The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/) who have contributed to a blog post, tech note, or presented in a Community Call. A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub, and a list of all the content you’ve authored on our site. For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
 
-**NOTE** Need to adapt text below to use Rmd to read code (e.g. template file) and to suggest use of RStudio add-in or run `roblog::ro_blog_post_author()` as done in https://github.com/ropenscilabs/roblog/blob/master/vignettes/author-file-guidance.Rmd
 
 ### How?
-If you don't already have an author page, create a folder called`yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors). You can have accents, middle initials, or hyphens appear in your name if you name your `firstname-lastname` folder appropriately. If you're not sure of how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples.
+If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors). You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately (it can be tricky). If you're not sure how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
 
-In that folder, create a file called `_index.md` with information about your online presence.
+In that folder, create a file called `_index.md` with information about your online presence. You can copy this template:
 
-### Example and Template
+```{r authorfiletemplate1, results="asis"}
+show_template("author-file-template.md", 
+              lang = "yaml",
+              details = TRUE
+)
+```
 
-Example author file [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
+At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username. Add your usernames or ID's without the "@" or the "https:..."). The link field can be your personal website URL, for example.
+
+
+**NOTE** Maëlle can you please adapt text to add how to use RStudio add-in or run `roblog::ro_blog_post_author()` as done in https://github.com/ropenscilabs/roblog/blob/master/vignettes/author-file-guidance.Rmd
+
+### Examples 
+
+This author file, [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
 
 ```
 ---
@@ -136,7 +147,7 @@ github: kellobri
 ---
 ```
 
-that, when rendered, generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/)
+... generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/)
 
 ```{r authorpage, fig.cap ="Screenshot of Kelly O'Briant's author page"}
 webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
@@ -150,18 +161,33 @@ webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
 ```
 
 
-? maybe also show Maëlle Salmon example for other IDs and ë `content/authors/maëlle-salmon/_index.md`.?
+This author file, [`/authors/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/authors/ma%C3%ABlle-salmon/_index.md)
 
-At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username. The link field is meant for your preferred online presence URL. Add your usernames or ID's without the "@").
-
-Template `_index.md` <LINK to `author-file-template.md`> for author file.
-
-```{r authorfiletemplate1, results="asis"}
-show_template("author-file-template.md", 
-              lang = "yaml",
-              details = TRUE
-)
 ```
+---
+name: Maëlle Salmon
+twitter: ma_salmon
+bio: rOpenSci Research Software Engineer, Associate editor of rOpenSci Software Peer Review
+github: maelle
+gitlab: maelle
+keybase: maelle_salmon
+orcid: 0000-0002-2815-0399
+---
+```
+
+... generates [Maëlle Salmon's author page](https://ropensci.org/authors/ma%C3%ABlle-salmon/)
+
+```{r authorpage_salmon, fig.cap ="Screenshot of Maëlle Salmon's author page"}
+webshot2::webshot("https://ropensci.org/authors/ma%C3%ABlle-salmon/",
+                  selector = "section.author",
+                  expand = c(50, # top
+                             0, # right
+                             0, # bottom
+                             0 #left
+                             )
+                  )
+```
+
 
 ## Pre-submission checklists
 Instructions to copy the relevant checklist into a comment on your pull request
