@@ -33,30 +33,30 @@ ADD.Rmd template here
 
 ## Walkthrough with code snippets and screenshots
 
-Adapt from [current roweb2 instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post) which are good. Like JOSS, code snippet in md that can be copied, followed by screenshot of preview
-
 ### What goes in YAML
 
-INTENT HERE is to show txt of template YAML followed by annotated screenshot of same template YAML explaining each component. Can follow with link to raw post and rendered post for both blog post (rmangal) and technote from a real post.
+This is the YAML from our post template, with comments to explain some components:
+
+(SUGGESTION: I think this example YAML should be the Rmd one, so the use of `output: ` can be explained. LINK "post template" phrase above to post-template.Rmd )
 
 ```{r posttemplate, results="asis"}
 show_template("post-template.md", lang = "yaml",
               yaml_only = TRUE)
 ```
 
-NOTE annotated screenshot of template YAML here file: https://github.com/rosadmin/comms/blob/master/content_n_programs/blog_guide/yamltxt-txtannotated.png
-
-NOTE include advice on tags, info on Twitter cards
+NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
 
 ### Add an image
-from an image file, or created from R code in Rmd, adding alternative text for images
+If your blog post has any images that are **not** generated from R Markdown, create a folder under `themes/ropensci/static/img/blog-images/` with the pattern `<DATE-SLUG>` (e.g. 2019-06-04-post-template) and place them there. To reference them in your post, use `/img/blog-images/<DATE-SLUG>/name-of-image.png`. If the paths are correct, you should see the preview render correctly (LINK TO PREVIEW INFO). 
 
-Add image from an image file `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
+- Insert an image `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
 
-Center or right-align an image
-`class="center"` or `class="pull-right"`
+- Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
 
-HMMMM NEED TO PUT SCREENSHOTS HERE TO SHOW IMAGE SIZE AND ALIGNMENT ON PAGE. See https://docs.ropensci.org/roblog/articles/rmd-guidance.html for Rmd template that includes image placement examples.
+- To insert the image aligned to the right, use `class = "pull-right"`
+
+MAËLLE: Can you draft best way to add Rmd image instructions? We need to make instructions for md and Rmd approaches consistent e.g. always list md first then Rmd, or vice versa
+https://docs.ropensci.org/roblog/articles/rmd-guidance.html 
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone. The alternative text should convey the meaning or content that is displayed in the image. Refer [to this tutorial](https://www.w3.org/WAI/tutorials/images/informative/) for details on what should go in alternative text.
 
@@ -103,7 +103,15 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 ADD THIS SCREENSHOT, annotated to point to quote symbol that opens the Cite window for the text to copy
 ![](https://i.imgur.com/ZzMt8WE.png)
 
+### Add tags
 
+Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
+
+For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
+
+### Examples
+
+Link to raw post and rendered post for both blog post (rmangal) and technote.
 
 ## Style guide
 adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/styleguide.Rmd
