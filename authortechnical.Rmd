@@ -1,13 +1,13 @@
 # Technical Guidelines {#technical}
 
-The technical details of these steps to submitting a blog post or tech note for publication on the rOpenSci website are explained in this chapter:
+This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website.
 
-- Fork the repository (repo) of the rOpenSci website
-- Draft your post in R Markdown or Markdown
-- Preview and refine your post locally (optional)
-- Submit via pull request, preview, and refine your post in the rOpenSci website repo
-- Community Manager or other staff member reviews your post
-- Revise your post in response to review
+1. Fork the repository (repo) of the rOpenSci website
+1.  Draft your post in R Markdown or Markdown
+1.  Preview and refine your post locally (optional)
+1. Submit via pull request, preview, and refine your post in the rOpenSci website repo
+1. Community Manager or other staff member reviews your post
+1. Revise your post in response to review
 
 ## Fork the repo and choose your workflow
 
