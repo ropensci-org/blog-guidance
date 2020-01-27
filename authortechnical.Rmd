@@ -11,20 +11,25 @@ This chapter explains the technical details of submitting a blog post or tech no
 
 ## Fork the repo and choose your workflow
 
-Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2). For help with this we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html).
+Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. For help with this we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [usethis](https://usethis.r-lib.org/) package.
 
 Prepare your post in whichever way is most comfortable for you. You can write your post:
 
 - in your favorite editor in R Markdown or Markdown by starting with templates we provide
-    - LINK TO .Rmd template here (in Appendix?)
-    - LINK TO .md template here (in Appendix?)
-- or by using the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
-    - install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
-    - Create a new post using the R Markdown or Markdown template
-      - in RStudio using the roblog Addin
-      - at the command-line using `roblog cmd here`
 
-QUESTION: Do we create 4 templates? one each for blog and technote in Rmd and md? If not, how does a person using the template know what to modify for technote?     
+```{r posttemplatemd, results="asis"}
+show_template("post-template.md", 
+              lang = "yaml",
+              details = TRUE
+)
+```
+ADD.Rmd template here 
+
+- or by using the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
+    - Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
+    - Start a new post
+      - in RStudio, using the roblog Addins
+      - or at the command-line, using `roblog::ro_blog_post_rmd()` or `roblog::ro_blog_post_md()`
 
 ## Walkthrough with code snippets and screenshots
 
