@@ -31,7 +31,7 @@ ADD.Rmd template here
       - in RStudio, using the roblog Addins
       - or at the command-line, using `roblog::ro_blog_post_rmd()` or `roblog::ro_blog_post_md()`
 
-## Walkthrough with code snippets and screenshots
+## Walkthrough with code snippets
 
 ### What goes in YAML
 
@@ -46,7 +46,7 @@ show_template("post-template.md", lang = "yaml",
 
 NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
 
-### Add an image
+### Add an image {#addimage}
 If your blog post has any images that are **not** generated from R Markdown, create a folder under `themes/ropensci/static/img/blog-images/` with the pattern `<DATE-SLUG>` (e.g. 2019-06-04-post-template) and place them there. To reference them in your post, use `/img/blog-images/<DATE-SLUG>/name-of-image.png`. If the paths are correct, you should see the preview render correctly (LINK TO PREVIEW INFO). 
 
 - Insert an image `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
@@ -62,13 +62,11 @@ Every image should be accompanied by alternative text (`alt="some text"`) to mak
 
 ### Add a tweet
 
-Use a Hugo shortcode to embed a tweet e.g. `{{< tweet 1138216112808529920 >}}`
-
-ADD SCREENSHOT of embedded tweet here
+Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`
 
 ### Add a citation
 
-To add citations, refer them in the body of your post:
+To add citations, refer to them in the body of your post:
 ```
 Citation of the primary literature[^1].
 Citation of an R package[^2].
@@ -78,30 +76,29 @@ Citation of a website[^3].
 And list your sources at the bottom of your post:
 
 ```
-[^1]: Sciaini, M., Fritsch, M., Scherer, C., & Simpkins, C. E. (2018). NLMR and landscapetools: An integrated environment for simulating and modifying neutral landscape models in R. Methods in Ecology and Evolution, 9(11), 2240-2248. [doi:10.1111/2041-210X.13076](https://doi.org/10.1111/2041-210X.13076)
+[^1]: Sciaini, M., Fritsch, M., Scherer, C., & Simpkins, C. E. (2018). NLMR and landscapetools: An integrated environment for simulating and modifying neutral landscape models in R. Methods in Ecology and Evolution, 9(11), 2240-2248. <https://doi.org/10.1111/2041-210X.13076>
 [^2]: Elin Waring, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu and Shannon Ellis (2019). skimr: Compact and Flexible Summaries of Data. R package version 2.0.2. https://CRAN.R-project.org/package=skimr
 [^3]: Hugo static site generator. https://gohugo.io/
 ```
-
-Citations will appear at the bottom of your post like this:
-ADD SCREENSHOT HERE of display of footnotes in this post template
 
 #### How to find citation text for a package or article
 
 To get the citation for an R package, run `citation("packagename")`.
 
-To get the citation for an article, you can use the RStudio addin for [rcrossref](https://docs.ropensci.org/rcrossref/), or get the  citation from a paper's DOI by running e.g.
+To get the citation for an article, you can use the RStudio Addin for [rcrossref](https://docs.ropensci.org/rcrossref/), or get the citation from a paper's DOI by running e.g.
 
 ```
-> rcrossref::cr_cn("10.1111/2041-210X.13076", format="text", style="apa")
+rcrossref::cr_cn("10.1111/2041-210X.13076", format="text", style="apa")
 
 [1] "Sciaini, M., Fritsch, M., Scherer, C., & Simpkins, C. E. (2018). NLMRandlandscapetools: An integrated environment for simulating and modifying neutral landscape models inR. Methods in Ecology and Evolution, 9(11), 2240–2248. doi:10.1111/2041-210x.13076"
 ```
 
 To get the citation for an article in [Google Scholar](https://scholar.google.com/), find the article, click the quote symbol (in search results under the article) to open the "Cite" window, and copy the APA style text.
 
-ADD THIS SCREENSHOT, annotated to point to quote symbol that opens the Cite window for the text to copy
-![](https://i.imgur.com/ZzMt8WE.png)
+
+```{r citation, echo = FALSE, fig.cap = "Get a citation from Google Scholar."}
+knitr::include_graphics("images/citation-gscholar.png")
+```
 
 ### Add tags
 
@@ -111,18 +108,20 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 
 ### Examples
 
-Link to raw post and rendered post for both blog post (rmangal) and technote.
+- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
+
+- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
 
 ## Style guide
 adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/styleguide.Rmd
 
-- For formatting of package names, functions, and code, follow the [tidyverse style guidance].(https://style.tidyverse.org/documentation.html#r-code).
-- Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't wrap well.
+- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code).
+- Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc.
-- Use informative alternative text for all images(LINK to image alt text section above).
+- Use informative [alternative text](#addimage) for all images.
 
 ## Create or update your author file
 
