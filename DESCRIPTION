@@ -1,13 +1,18 @@
 Package: blog-guidance
-Title: What the Package Does (One Line, Title Case)
+Title: rOpenSci Blog Guidelines for Authors and Editors
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Maëlle",
-           family = "Salmon",
-           role = c("cre", "aut"),
-           email = "maelle.salmon@yahoo.se",
-           comment = c(ORCID = "0000-0002-2815-0399"))
-Description: What the package does (one paragraph).
+    c(person(given = "Maëlle",
+             family = "Salmon",
+             role = c("cre", "aut"),
+             email = "maelle.salmon@yahoo.se",
+             comment = c(ORCID = "0000-0002-2815-0399")),
+      person(given = "Stefanie",
+             family = "Butland",
+             role = "aut",
+             email = "stefaniebutland@gmail.com"))
+             comment = c(ORCID = "0000-0002-5427-8951"))
+Description: Provides content and technical guidelines for authors submitting a blog post or tech note to rOpenSci, and for editors reviewing, publishing and promoting those posts. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
