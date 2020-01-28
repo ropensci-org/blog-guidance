@@ -122,6 +122,7 @@ adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/style
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc.
 - Use informative [alternative text](#addimage) for all images.
+- Add new line at end of each sentence (makes diffs easier to interpret and easier for editor to suggest specific changes) MAELLE we should link to outside explanation
 
 ## Create or update your author file
 
@@ -210,20 +211,33 @@ See roblog "check your post"
 
 
 ## Submit your draft post
-Once you've drafted your blog post, you can preview locally using Hugo or skip to the next step to preview on the pull request.
+Once you've drafted your blog post, you can [preview locally using Hugo](#localpreview) (recommended) or skip to the next step to make a pull request and preview that.
 
-Knitting the Rmd will generate both .html and .md files. Please do not include the html in your pull request.
-
-Send a pull request from your fork at least one week prior to the publication date to allow time for review. Netlify will start building the new version of the site within seconds and you can preview you changes to make sure everything looks as intended. Otherwise push additional fixes till things look right.
-
-Tag rOpenSci's Community Manager ([@stefaniebutland](https://github.com/stefaniebutland)) to review your pull request.
-
-See r-hub example PR https://github.com/r-hub/blog/pull/50
-
-### Local preview with Hugo
+### Local preview with Hugo {#localpreview}
 
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo. To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()`.
 
 Then run `hugo serve` in the repo directory to start a local server on http://localhost:1313. 
 
-The version of Hugo used by the server is defined in [netlify.toml](https://github.com/ropensci/roweb2/blob/master/netlify.toml).
+The version of Hugo used by the rOpenSci web server is defined in [netlify.toml](https://github.com/ropensci/roweb2/blob/master/netlify.toml).
+
+When this preview looks good to you, you should submit your post as a pull request.
+
+### Make a pull request
+
+Knitting the Rmd of your post will generate both .html and .md files. Please do not include the .html in your pull request.
+
+Send a pull request from your fork at least one week prior to the planned publication date to allow time for review. Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended. Otherwise push additional fixes till things look right.
+
+```{r hugochecks, echo = FALSE, fig.cap = "Some checks haven't completed yet."}
+knitr::include_graphics("images/hugochecks.png")
+```
+
+```{r hugocheckspassed, echo = FALSE, fig.cap = "All checks have passed."}
+knitr::include_graphics("images/hugocheckspassed.png")
+```
+
+Tag rOpenSci's Community Manager ([`@stefaniebutland`](https://github.com/stefaniebutland)) to review your pull request.
+
+
+
