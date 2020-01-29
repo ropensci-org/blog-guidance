@@ -23,6 +23,7 @@ Imports:
     curl,
     glue,
     magrittr,
-    details
+    details,
+    gluedown
 Remotes:
     rstudio/webshot2
