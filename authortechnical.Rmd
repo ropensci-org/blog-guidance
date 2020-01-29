@@ -11,7 +11,8 @@ This chapter explains the technical details of submitting a blog post or tech no
 
 ## Fork the repo and choose your workflow
 
-Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. For help with this we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [usethis](https://usethis.r-lib.org/) package.
+Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
+For help with this if you're new to this git/GitHub aspects, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
 Prepare your post in whichever way is most comfortable for you. You can write your post:
 
