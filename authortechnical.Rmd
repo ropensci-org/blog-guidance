@@ -9,22 +9,38 @@ This chapter explains the technical details of submitting a blog post or tech no
 1. Community Manager or other staff member reviews your post
 1. Revise your post in response to review
 
-## Fork the repo and choose your workflow
+## Fork the repo and create your post folder
 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
 For help with this if you're new to this git/GitHub aspects, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
+Create a folder `YYYY-MM-DD-slug` (e.g. `2020-01-20-rorcid`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
+
+## Start the post choose your workflow
+
+Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdow directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
+
 Prepare your post in whichever way is most comfortable for you. You can write your post:
 
-- in your favorite editor in R Markdown or Markdown by starting with templates we provide
+- in your favorite editor in R Markdown **or** Markdown by starting with templates we provide
+
+[Markdown template](#templatemd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
 ```{r posttemplatemd, results="asis"}
 show_template("post-template.md", 
-              lang = "yaml",
+              lang = "markdown",
               details = TRUE
 )
 ```
-ADD.Rmd template here 
+
+[R Markdown template](#templatermd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+
+```{r posttemplatermd, results="asis"}
+# show_template("post-template.Rmd", 
+#               lang = "markdown",
+#               details = TRUE
+# )
+```
 
 - or by using the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
     - Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
@@ -36,12 +52,10 @@ ADD.Rmd template here
 
 ### What goes in YAML
 
-This is the YAML from our post template, with comments to explain some components:
-
-(SUGGESTION: I think this example YAML should be the Rmd one, so the use of `output: ` can be explained. LINK "post template" phrase above to post-template.Rmd )
+This is the YAML from our [post template](#templatermd), with comments to explain some components:
 
 ```{r posttemplate, results="asis"}
-show_template("post-template.md", lang = "yaml",
+show_template("post-template.Rmd", lang = "markdown",
               yaml_only = TRUE)
 ```
 

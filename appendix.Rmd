@@ -1,11 +1,19 @@
 # (APPENDIX) Appendix {-}
 
-# Post template in Markdown {#postmd}
+# Post template in Markdown {#templatemd}
 
 INSTRUCT author to copy this template, or get it from roblog
 
 ```{r posttemplate, results="asis"}
 show_template("post-template.md", lang = "markdown")
+```
+
+# Post template in R Markdown {#templatermd}
+
+INSTRUCT author to copy this template, or get it from roblog
+
+```{r posttemplate2, results="asis"}
+show_template("post-template.Rmd", lang = "markdown")
 ```
 
 # Post template in R Markdown {#postrmd}
