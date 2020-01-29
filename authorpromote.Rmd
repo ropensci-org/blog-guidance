@@ -1,5 +1,16 @@
-# Publication {#promote}
+# Publication and Promotion {#promote}
 
-## Publication and promotion of your post 
+We hope that by doing the extra work of publishing a blog post or tech note that you will benefit by getting more eyes on your work.
+The rOpenSci website has XXX visitors and our blog has XXX median number of views per unit time. (MAELLE can you please add those numbers?) 
 
-rOpenSci twitter, newsletter, R Weekly, R-Bloggers 
+When your post is published, we do a few things to promote it.
+
+- Tweet from [rOpenSci](https://twitter.com/rOpenSci) with a link to your post, tagging post author(s) and package reviewers with a link to the software peer review thread where relevant.
+rOpenSci has more than 25,000 followers on Twitter
+
+- List your post, with author names, in our [biweekly newsletter](https://news.ropensci.org/). 
+Our newsletter has more than 2,000 email subscribers and additional readers through rss feeds.
+
+- List your post in our bimonthly newsletter summary "[2 Months in 2 Minutes](https://ropensci.org/tags/newsletter/)" on our blog.
+
+- Our blog and tech notes are syndicated to and tweeted by [R-bloggers](https://www.r-bloggers.com/) and [R-Weekly](https://rweekly.org/) (MAELLE can you please edit this language and indicate approx size of audience if possible?)
