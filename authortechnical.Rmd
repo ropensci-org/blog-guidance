@@ -222,8 +222,30 @@ You can use functions in the [roblog package to do some automated checks](https:
 
 In the first comment of your pull request submitting a post, please copy-paste the checklist corresponding to your post (hover, a copy-paste button will appear at the top-right corner of the shaded area) and check off items.
 
-- EXPAND checklist "Post about a peer-reviewed package" here
-- EXPAND checklist "Any other post" here
+### Checklist for a post about a peer-reviewed package
+
+```{r checklistpkg, echo = FALSE}
+library("magrittr")
+c(readLines(file.path("checklists", "submission-checklist.csv")),
+  readLines(file.path("checklists", "submission-checklist-peer-reviewed-pkg.csv"))) %>% 
+  gluedown::md_task() %>%
+  glue::glue_collapse("\n") -> x
+
+glue::glue("````markdown\n{x}\n````") %>% 
+  knitr::asis_output()
+```
+
+### Checklist for any other post
+
+```{r checklistother, echo = FALSE}
+library("magrittr")
+readLines(file.path("checklists", "submission-checklist.csv")) %>%
+  gluedown::md_task() %>%
+  glue::glue_collapse("\n") -> x
+
+glue::glue("````markdown\n{x}\n````") %>% 
+  knitr::asis_output()
+```
 
 ## Submit your draft post
 Once you've drafted your blog post, you can [preview locally using Hugo](#localpreview) (recommended) or skip to the next step to make a pull request and preview that.
@@ -240,7 +262,7 @@ When this preview looks good to you, you should submit your post as a pull reque
 
 ### Make a pull request
 
-Knitting the Rmd of your post will generate both .html and .md files. Please do not include the .html in your pull request.
+If using the R Markdown template, knitting `index.Rmd` will generate both `index.md` and `index.html`. Do not commit `index.html` but do commit `index.Rmd` and `index.md`.
 
 Send a pull request from your fork at least one week prior to the planned publication date to allow time for review. Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended. Otherwise push additional fixes till things look right.
 
