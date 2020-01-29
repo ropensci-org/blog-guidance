@@ -20,6 +20,8 @@ tags:
   - packages
   - R
   - community
+# the summary below will be used by e.g. Twitter cards
+description: "A very short summary of your post"
 # If you have no preferred image for Twitter cards,
 # delete the twitterImg line below 
 twitterImg: img/blog-images/2019-06-04-post-template/name-of-image.png
@@ -32,7 +34,7 @@ Throughout this template, including the YAML,
 you should change "post-template" to the slug of your post, 
 and "2019-06-04" to your publication date.
 
-Save this file under /content/blog/YYYY-MM-DD-slug.md in the local copy of your roweb2 fork.
+Save this file under /content/blog/YYYY-MM-DD-slug/index.md in the local copy of your roweb2 fork.
 
 ### Section heading in sentence case
 
@@ -46,9 +48,9 @@ Citation of an R package[^3].
 
 We recommend the use of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) to include images, tweets, videos, gists, etc.
 
-**Add an image** by using a Hugo shortcode.
+**Add an image** by using a Hugo shortcode. The image is saved under `/content/blog/YYYY-MM-DD-slug/name-of-image.png`.
 
-{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "200" alt = "this is the alternative text" >}}
+{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}
 
 add here examples of left, centered and right aligned images.
 
