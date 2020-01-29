@@ -3,8 +3,9 @@
 This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website.
 
 1. Fork the repository (repo) of the rOpenSci website
-1.  Draft your post in R Markdown or Markdown
-1.  Preview and refine your post locally (optional)
+1. Create a folder for your post inside the rOpenSci website fork folder
+1. Draft your post in R Markdown or Markdown
+1. Preview and refine your post locally (optional)
 1. Submit via pull request, preview, and refine your post in the rOpenSci website repo
 1. Community Manager or other staff member reviews your post
 1. Revise your post in response to review
@@ -14,39 +15,36 @@ This chapter explains the technical details of submitting a blog post or tech no
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
 For help with this if you're new to this git/GitHub aspects, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
-Create a folder `YYYY-MM-DD-slug` (e.g. `2020-01-20-rorcid`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
 
-## Start the post choose your workflow
+_In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
+
+## Start the post from a template
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdow directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
 
-Prepare your post in whichever way is most comfortable for you. You can write your post:
+Prepare your post in whichever way is most comfortable for you in your favorite editor in R Markdown **or** Markdown by starting with templates we provide. Get the templates from this book or [from the roblog package](#roblogtemplates).
 
-- in your favorite editor in R Markdown **or** Markdown by starting with templates we provide
+### Get Markdown template from this book
+
+Hover over the top-right corner of the template to make a copy-paste button appear.
 
 [Markdown template](#templatemd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
-```{r posttemplatemd, results="asis"}
-show_template("post-template.md", 
-              lang = "markdown",
-              details = TRUE
-)
-```
+### Get R Markdown template from GitHub
 
-[R Markdown template](#templatermd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+[R Markdown template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
-```{r posttemplatermd, results="asis"}
-# show_template("post-template.Rmd", 
-#               lang = "markdown",
-#               details = TRUE
-# )
-```
+### Get any template from the roblog package {#roblogtemplates}
 
-- or by using the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
-    - Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
-    - Start a new post
-      - in RStudio, using the roblog Addins
-      - or at the command-line, using `roblog::ro_blog_post_rmd()` or `roblog::ro_blog_post_md()`
+You could get templates from [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose. Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
+    
+- Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
+- Start a new post
+    - in RStudio, using the roblog Addins
+    - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
+- Save the file as `/content/blog/YYYY-MM-DD-slug/index.md` or `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
 
 ## Walkthrough with code snippets
 
@@ -62,22 +60,22 @@ show_template("post-template.Rmd", lang = "markdown",
 NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
 
 ### Add an image {#addimage}
-If your blog post has any images that are **not** generated from R Markdown, create a folder under `themes/ropensci/static/img/blog-images/` with the pattern `<DATE-SLUG>` (e.g. 2019-06-04-post-template) and place them there. To reference them in your post, use `/img/blog-images/<DATE-SLUG>/name-of-image.png`. If the paths are correct, you should see the preview render correctly (LINK TO PREVIEW INFO). 
 
-- Insert an image `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
+If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`). To reference them in your post, use `name-of-image.png`. 
 
-- Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "/img/blog-images/2019-06-04-post-template/name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
+- Insert an image `{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
+
+- Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
 
 - To insert the image aligned to the right, use `class = "pull-right"`
 
-MAËLLE: Can you draft best way to add Rmd image instructions? We need to make instructions for md and Rmd approaches consistent e.g. always list md first then Rmd, or vice versa
-https://docs.ropensci.org/roblog/articles/rmd-guidance.html 
+If your want to generate images from R Markdown use [our R Markdown template](#templatermd)  in order not to worry about paths.
 
-Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone. The alternative text should convey the meaning or content that is displayed in the image. Refer [to this tutorial](https://www.w3.org/WAI/tutorials/images/informative/) for details on what should go in alternative text.
+Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone. The alternative text should convey the meaning or content that is displayed in the image. Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
 
 ### Add a tweet
 
-Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`
+Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`.
 
 ### Add a citation
 
@@ -128,16 +126,16 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 - A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
 
 ## Style guide
-adapted from: https://github.com/ropenscilabs/roblog/blob/master/vignettes/styleguide.Rmd
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code).
 - Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
-- Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc.
+- Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
+- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd).
 - Use informative [alternative text](#addimage) for all images.
-- Add new line at end of each sentence (makes diffs easier to interpret and easier for editor to suggest specific changes) MAELLE we should link to outside explanation
+- Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
 
 ## Create or update your author file
 
@@ -148,7 +146,7 @@ The rOpenSci website has a page listing [all authors](https://ropensci.org/autho
 ### How?
 If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors). You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately (it can be tricky). If you're not sure how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
 
-In that folder, create a file called `_index.md` with information about your online presence. You can copy this template:
+In that folder, create a file called `_index.md` with information about your online presence. You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html)):
 
 ```{r authorfiletemplate1, results="asis"}
 show_template("author-file-template.md", 
@@ -158,9 +156,6 @@ show_template("author-file-template.md",
 ```
 
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username. Add your usernames or ID's without the "@" or the "https:..."). The link field can be your personal website URL, for example.
-
-
-**NOTE** Maëlle can you please adapt text to add how to use RStudio add-in or run `roblog::ro_blog_post_author()` as done in https://github.com/ropenscilabs/roblog/blob/master/vignettes/author-file-guidance.Rmd
 
 ### Examples 
 

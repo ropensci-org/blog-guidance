@@ -10,17 +10,7 @@ show_template("post-template.md", lang = "markdown")
 
 # Post template in R Markdown {#templatermd}
 
-INSTRUCT author to copy this template, or get it from roblog
-
-```{r posttemplate2, results="asis"}
-show_template("post-template.Rmd", lang = "markdown")
-```
-
-# Post template in R Markdown {#postrmd}
-
-Maëlle please CREATE AND ADD Rmd template based on templates/post-template.md
-INSTRUCT author to copy this template, or get it from roblog
-
+[R Markdown template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
 # Author file template {#authortemplate}
 
