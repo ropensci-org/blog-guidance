@@ -2,6 +2,12 @@
 
 # Content Guidelines {#content}
 
+```{block, type='summaryblock'}
+This chapter presents our guidance for writing a post blablabla.
+Very interesting very cool.
+```
+
+
 ## Blog post or tech note? {#postornote}
 
 The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter notes aimed at a more technical audience. We provide details and [selected examples of blog posts and tech notes](#postthemes) below. [Tech notes](https://ropensci.org/technotes/) are written for a narrower audience that wants details. They may include information on a software release with major new features, breaking changes, or significant new documentation. They should provide something a reader could not glean from the documentation itself.
