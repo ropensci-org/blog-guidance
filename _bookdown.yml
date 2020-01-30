@@ -1,6 +1,6 @@
 book_filename: "bookdown-start"
 chapter_name: "Chapter "
-repo: https://github.com/rosadmin/blog-guidance
+repo: https://github.com/ropensci-org/blog-guidance
 output_dir: docs
 rmd_files: ["index.Rmd", "authorcontent.Rmd", 
             "authortechnical.Rmd", "authorreview.Rmd", 
