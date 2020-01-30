@@ -82,6 +82,7 @@ with the caveats of the next subsections.
 ### Tagging accounts
 
 Only tag the account of an author if they included their username in their author file.
+
 For reviewers, you might search the account but only tag an account
 
 * it is active,
@@ -96,7 +97,11 @@ For a package wrapping a service present on Twitter (e.g. for a tweet about `rre
 #### Selecting relevant hashtags
 
 For a tweet about a post related to a package or any R thing, use the `#rstats` hashtag.
+
 For a tweet about a package post, make the package name a hashtag, since [rocitations Twitter account](https://twitter.com/rocitations) does this to announce package citations.
+
+Check the last tweets using any hashtag except the `#rstats` hashtag to see whether it is used as you think it would.
+E.g. using `httr` wouldn't be a good idea. It is a package name but on Twitter it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy) and even has its own emoji automatically attached to it be Twitter. 
 
 #### Adding hashtags
 
