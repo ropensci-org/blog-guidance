@@ -2,11 +2,10 @@
 
 # Content Guidelines {#content}
 
-```{block, type='summaryblock'}
+```{block, type='summaryblock', echo=TRUE}
 This chapter presents our guidance for writing a post blablabla.
 Very interesting very cool.
 ```
-
 
 ## Blog post or tech note? {#postornote}
 
