@@ -3,27 +3,64 @@
 # Review, Publish, Promote {#editor}
 
 ## Review a Post
-This section explains how to review a post. The editor for a post is typically the Community Manager or their intern.
+This section explains how to review a post.
+The editor for a post is typically the Community Manager or their intern.
 
 A post is submitted as a pull request on GitHub and we use the GitHub web interface to suggest edits, make comments, and ultimately merge the pull request to publish the post.
 
-Copy the checklist into the GitHub review
-
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
+
+Copy and paste this checklist into the GitHub review. Items marked '(SwPR)' apply only to posts about peer reviewed packages.
+
+```{r checklisteditor, echo = FALSE}
+library("magrittr")
+readLines(file.path("checklists", "editor-checklist.csv")) %>%
+  gluedown::md_task() %>%
+  glue::glue_collapse("\n") -> x
+glue::glue("````markdown\n{x}\n````") %>% 
+  knitr::asis_output()
+```
+
 
 
 ## Publish a Post
-Publish a post by merging its pull request. For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world. When possible, it's nice to have a post published by morning in the timezone of the main post author. 
+Publish a post by merging its pull request.
+For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
+When possible, it's nice to have a post published by morning in the timezone of the main post author. 
 
-Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/). When an entry is created, the topicid is the number at the end of the topic's URL.
+Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
+When an entry is created, the topicid is the number at the end of the topic's URL.
 
 ## Promote a Post
-Until we use a system for optimizing the time to send a tweet (e.g. using Buffer), we tweet at ~8am Pacific. 
+Tweet from [rOpenSci](https://twitter.com/rOpenSci) with a link to the post, tagging post author(s) and package reviewers with a link to the software peer review thread where relevant.
 
-Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread. 
+For a tweet about a package post, make the package name a hashtag, since [rocitations twitter](https://twitter.com/rocitations) does this to announce package citations.
 
-NOTE copy here the text from `authorpromote.Rmd` and include example tweets 
+We tweet at ~8am Pacific, but it would be good to use a system for optimizing the time to send a tweet (e.g. using Buffer). 
 
+Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
+Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
 
+Example 2-tweet thread (emojis optional):
+
+```
+[blog] “#rmangal: making ecological networks easily accessible” 
+
+New post by @KCazelles & @SVissault in our #SoftwarePeerReview series 
+
+🔗 https://ropensci.org/blog/2019/10/21/rmangal/
+
+1/2 
+#rstats
+```
+
+```
+Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal contributors https://docs.ropensci.org/rmangal/authors.html, & all ecologists who have spent countless hours collecting data
+
+🔎Read the #rmangal open #softwarepeerreview thread: https://github.com/ropensci/software-review/issues/332
+
+2/2 
+#rstats
+```
 
 Put review checklist templates here, including sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)

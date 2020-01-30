@@ -11,4 +11,3 @@ I ran `roblog::ro_check_urls()`
 follows Style Guide (is any of this not in `ro_lint_md`?)
 html not included in pull request of Rmd post
 author metadata is provided with correct folder name
-
