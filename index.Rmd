@@ -7,7 +7,7 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rosadmin/blog-guidance
+github-repo: ropensci-org/blog-guidance
 url: 'https\://ropensci-blog-guidance.netlify.com/'
 description: "Blog post guidance"
 ---
