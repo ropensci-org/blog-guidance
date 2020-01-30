@@ -1,8 +1,4 @@
 post follows content guidelines
-(SwPR) acknowledges and links to reviewers
-(SwPR) links to peer review thread
-(SwPR) package-version YAML tag
-(SwPR) tags "Software Peer Review", packagename, R, "community" for post authored by non-staff non-editor
 YAML description is appropriate for discuss forum 
 YAML is ok e.g. publication date
 tags are ok
@@ -11,3 +7,4 @@ I ran `roblog::ro_check_urls()`
 follows Style Guide (is any of this not in `ro_lint_md`?)
 html not included in pull request of Rmd post
 author metadata is provided with correct folder name
+Twitter metadata looks fine (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator))

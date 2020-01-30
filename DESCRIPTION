@@ -24,6 +24,7 @@ Imports:
     glue,
     magrittr,
     details,
-    gluedown
+    gluedown,
+    purrr
 Remotes:
     rstudio/webshot2

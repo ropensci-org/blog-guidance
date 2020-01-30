@@ -34,3 +34,15 @@ show_template <- function(filename,
   return(toshow)
 
 }
+
+show_checklist <- function(filenames) {
+  filenames <- file.path("checklists", filenames)
+  purrr::map(filenames, 
+             readLines) %>% 
+    unlist() %>%
+    gluedown::md_task() %>%
+    glue::glue_collapse("\n") -> x
+  
+  glue::glue("````markdown\n{x}\n````") %>% 
+    knitr::asis_output()
+}

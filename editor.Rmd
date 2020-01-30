@@ -6,22 +6,40 @@
 This section explains how to review a post.
 The editor for a post is typically the Community Manager or their intern.
 
-A post is submitted as a pull request on GitHub and we use the GitHub web interface to suggest edits, make comments, and ultimately merge the pull request to publish the post.
+A post is submitted as a pull request on GitHub and we use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-Copy and paste this checklist into the GitHub review. Items marked '(SwPR)' apply only to posts about peer reviewed packages.
+Copy and past one of the checklists below depending on the type of posts you are reviewing (about a peer-reviewed package or not).
 
-```{r checklisteditor, echo = FALSE}
-library("magrittr")
-readLines(file.path("checklists", "editor-checklist.csv")) %>%
-  gluedown::md_task() %>%
-  glue::glue_collapse("\n") -> x
-glue::glue("````markdown\n{x}\n````") %>% 
-  knitr::asis_output()
+### Checklist for a post about a peer-reviewed package
+
+```{r checklisteditorprp, echo = FALSE}
+show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv"))
 ```
 
+### Checklist for any other post
 
+```{r checklisteditor, echo = FALSE}
+show_checklist("editor-checklist.csv")
+```
+
+### Note about non automatic tech checks
+
+The roblog helpers do not check
+
+* whether the alternative text of an image is informative,
+* whether a title is in Title Case.
+
+Furthermore, do not ask for an author to add line returns after they wrote their post.
+We prefer authors to add such line breaks but should not make them correct their draft after the fact.
+
+### Note about Twitter metadata
+
+A further section concerns [the tweet _we_ send](#tweetpromo) about a post but the post will be shared by other accounts (R Weekly Live, some readers).
+Therefore it is important to check Twitter metadata of a post by pasting its preview link in [Twitter card validator](https://cards-dev.twitter.com/validator).
+Relevant YAML tags are `twitterImg`, `description`, `title`.
+Furthermore, the same metadata tags might be picked up by other platforms (e.g. Slack).
 
 ## Publish a Post
 Publish a post by merging its pull request.
@@ -29,19 +47,73 @@ For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific o
 When possible, it's nice to have a post published by morning in the timezone of the main post author. 
 
 Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
-When an entry is created, the topicid is the number at the end of the topic's URL.
+When an entry is created, the topicid is the number at the end of the topic's URL. 
+E.g. for [this topic about a tech note](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
 
-## Promote a Post
-Tweet from [rOpenSci](https://twitter.com/rOpenSci) with a link to the post, tagging post author(s) and package reviewers with a link to the software peer review thread where relevant.
+## Promote a Post on Twitter {#tweetpromo}
 
-For a tweet about a package post, make the package name a hashtag, since [rocitations twitter](https://twitter.com/rocitations) does this to announce package citations.
+### Workflow
+
+Tweet from [rOpenSci](https://twitter.com/rOpenSci).
 
 We tweet at ~8am Pacific, but it would be good to use a system for optimizing the time to send a tweet (e.g. using Buffer). 
 
 Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
 Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
 
-Example 2-tweet thread (emojis optional):
+### Content
+
+The first tweet of a thread or only tweet _must_ include
+
+* the post title,
+* a link to the post,
+
+Any tweet _must_ provide an alternative description of any included image.
+
+A further tweet _can_ include a link to the software peer review thread.
+
+Any tweet _can_ include
+
+* hashtags,
+* account names,
+
+with the caveats of the next subsections.
+
+### Tagging accounts
+
+Only tag the account of an author if they included their username in their author file.
+For reviewers, you might search the account but only tag an account
+
+* it is active,
+* it is not anonymous,
+* it is at least partly used professionally by the owner.
+In case of doubt contact the person whose account you'd like to tag.
+
+For a package wrapping a service present on Twitter (e.g. for a tweet about `rredlist` that accesses IUCN Red List you would tag IUCN Twitter account).
+
+### Using hashtags
+
+#### Selecting relevant hashtags
+
+For a tweet about a post related to a package or any R thing, use the `#rstats` hashtag.
+For a tweet about a package post, make the package name a hashtag, since [rocitations Twitter account](https://twitter.com/rocitations) does this to announce package citations.
+
+#### Adding hashtags
+
+Do not use too many hashtags in any tweet so as not to make the account look like a spam account / greedy for attention.
+
+Post hashtags at the bottom of each tweet, to make the rest of the content of the tweet easier to read.
+
+[Capitalize letters of each word](https://www.boia.org/blog/make-your-hashtags-accessible) for hashtags including several words i.e. use lower or upper camelCase (e.g. `#RLadies` not `#rladies`). 
+
+When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
+
+### Emoji use
+
+In tweets, emojis are optional. 
+When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
+
+### Example 2-tweet thread:
 
 ```
 [blog] “#rmangal: making ecological networks easily accessible” 
@@ -63,4 +135,4 @@ Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal co
 #rstats
 ```
 
-Put review checklist templates here, including sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
+sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
