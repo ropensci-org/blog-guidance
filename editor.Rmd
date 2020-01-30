@@ -79,19 +79,6 @@ Any tweet _can_ include
 
 with the caveats of the next subsections.
 
-### Tagging accounts
-
-Only tag the account of an author if they included their username in their author file.
-
-For reviewers, you might search the account but only tag an account
-
-* it is active,
-* it is not anonymous,
-* it is at least partly used professionally by the owner.
-In case of doubt contact the person whose account you'd like to tag.
-
-For a package wrapping a service present on Twitter (e.g. for a tweet about `rredlist` that accesses IUCN Red List you would tag IUCN Twitter account).
-
 ### Using hashtags
 
 #### Selecting relevant hashtags
@@ -112,6 +99,22 @@ Post hashtags at the bottom of each tweet, to make the rest of the content of th
 [Capitalize letters of each word](https://www.boia.org/blog/make-your-hashtags-accessible) for hashtags including several words i.e. use lower or upper camelCase (e.g. `#RLadies` not `#rladies`). 
 
 When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
+
+### Tagging accounts
+
+Only tag the account of an author if they included their username in their author file.
+
+For reviewers, you might search the account but only tag an account
+
+* it is active,
+* it is not anonymous,
+* it is at least partly used professionally by the owner.
+In case of doubt contact the person whose account you'd like to tag.
+
+For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you would tag IUCN Twitter account).
+
+When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
+We do not use tagging in tweets to ask for attention (i.e. no account names used liked hashtags at the bottom of a tweet).
 
 ### Emoji use
 
