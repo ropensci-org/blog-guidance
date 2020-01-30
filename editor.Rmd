@@ -1,7 +1,29 @@
 #  (PART) Editor Guide {-}
 
-# Review a Post {#editor}
+# Review, Publish, Promote {#editor}
 
-Explain how to review a post. Audience is Community Manager and their intern.
+## Review a Post
+This section explains how to review a post. The editor for a post is typically the Community Manager or their intern.
+
+A post is submitted as a pull request on GitHub and we use the GitHub web interface to suggest edits, make comments, and ultimately merge the pull request to publish the post.
+
+Copy the checklist into the GitHub review
+
+To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
+
+
+## Publish a Post
+Publish a post by merging its pull request. For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world. When possible, it's nice to have a post published by morning in the timezone of the main post author. 
+
+Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/). When an entry is created, the topicid is the number at the end of the topic's URL.
+
+## Promote a Post
+Until we use a system for optimizing the time to send a tweet (e.g. using Buffer), we tweet at ~8am Pacific. 
+
+Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread. 
+
+NOTE copy here the text from `authorpromote.Rmd` and include example tweets 
+
+
 
 Put review checklist templates here, including sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
