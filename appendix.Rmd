@@ -12,10 +12,34 @@ show_template("post-template.md", lang = "markdown")
 
 [R Markdown template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
+# Author checklist for a post about a peer-reviewed package
+
+```{r checklistpkg2, echo = FALSE}
+show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
+```
+
+# Author checklist for any other post
+
+```{r checklistother2, echo = FALSE}
+show_checklist("submission-checklist.csv")
+```
+
 # Author file template {#authortemplate}
 
 INSTRUCT author to copy this template, or get it from roblog
 
 ```{r authorfiletemplate, results="asis"}
 show_template("author-file-template.md", lang = "yaml")
+```
+
+# Editor checklist for a post about a peer-reviewed package
+
+```{r checklisteditor2, echo = FALSE}
+show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv"))
+```
+
+# Editor checklist for a post about any other peer-reviewed package
+
+```{r checklisteditorprp2, echo = FALSE}
+show_checklist("editor-checklist.csv")
 ```

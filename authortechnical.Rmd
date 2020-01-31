@@ -225,26 +225,13 @@ In the first comment of your pull request submitting a post, please copy-paste t
 ### Checklist for a post about a peer-reviewed package
 
 ```{r checklistpkg, echo = FALSE}
-library("magrittr")
-c(readLines(file.path("checklists", "submission-checklist.csv")),
-  readLines(file.path("checklists", "submission-checklist-peer-reviewed-pkg.csv"))) %>% 
-  gluedown::md_task() %>%
-  glue::glue_collapse("\n") -> x
-
-glue::glue("````markdown\n{x}\n````") %>% 
-  knitr::asis_output()
+show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
 ```
 
 ### Checklist for any other post
 
 ```{r checklistother, echo = FALSE}
-library("magrittr")
-readLines(file.path("checklists", "submission-checklist.csv")) %>%
-  gluedown::md_task() %>%
-  glue::glue_collapse("\n") -> x
-
-glue::glue("````markdown\n{x}\n````") %>% 
-  knitr::asis_output()
+show_checklist("submission-checklist.csv")
 ```
 
 ## Submit your draft post
