@@ -1,9 +1,9 @@
 # Publication and Promotion {#promote}
 
 We hope that by doing the extra work of publishing a blog post or tech note that you will benefit by getting more eyes on your work.
-The rOpenSci website has XXX visitors and our blog has XXX median number of views per unit time. (MAELLE can you please add those numbers?) 
+The rOpenSci website has XXX visitors and our blog has XXX median number of views each month.
 
-When your post is published, we do a few things to promote it.
+When your post is published, here is what we do to promote it.
 
 - Tweet from [rOpenSci](https://twitter.com/rOpenSci) with a link to your post, tagging post author(s) and package reviewers with a link to the software peer review thread where relevant.
 rOpenSci has more than 25,000 followers on Twitter
@@ -13,4 +13,6 @@ Our newsletter has more than 2,000 email subscribers and additional readers thro
 
 - List your post in our bimonthly newsletter summary "[2 Months in 2 Minutes](https://ropensci.org/tags/newsletter/)" on our blog.
 
-- Our blog and tech notes are syndicated to and tweeted by [R-bloggers](https://www.r-bloggers.com/) and [R-Weekly](https://rweekly.org/) (MAELLE can you please edit this language and indicate approx size of audience if possible?)
+- Our blog and tech notes are syndicated to and tweeted by [R-bloggers](https://www.r-bloggers.com/) and [R-Weekly](https://rweekly.org/)
+
+You are welcome to cross-post to your own website as long as you also link to the rOpenSci website version. [Example](https://juliasilge.com/blog/qualtrics-relaunch/)
