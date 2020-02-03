@@ -3,14 +3,14 @@
 # Review, Publish, Promote {#editor}
 
 ## Review a Post
-This section explains how to review a post.
+This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
 A post is submitted as a pull request on GitHub and we use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-Copy and past one of the checklists below depending on the type of posts you are reviewing (about a peer-reviewed package or not).
+Copy and past one of the checklists below depending on the type of post you are reviewing (about a peer-reviewed package or not).
 
 ### Checklist for a post about a peer-reviewed package
 
@@ -31,8 +31,8 @@ The roblog helpers do not check
 * whether the alternative text of an image is informative,
 * whether a title is in Title Case.
 
-Furthermore, do not ask for an author to add line returns after they wrote their post.
-We prefer authors to add such line breaks but should not make them correct their draft after the fact.
+While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
+
 
 ### Note about Twitter metadata
 
@@ -48,7 +48,7 @@ When possible, it's nice to have a post published by morning in the timezone of 
 
 Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
 When an entry is created, the topicid is the number at the end of the topic's URL. 
-E.g. for [this topic about a tech note](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
+E.g. for [this topic](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
 
 ## Promote a Post on Twitter {#tweetpromo}
 
@@ -60,6 +60,7 @@ We tweet at ~8am Pacific, but it would be good to use a system for optimizing th
 
 Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
 Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
+Stef uses a private google doc called "scratchpad" for this, and saves images in a local folder. 
 
 ### Content
 
