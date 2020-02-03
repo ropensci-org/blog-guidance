@@ -68,6 +68,7 @@ The first tweet of a thread or only tweet _must_ include
 
 * the post title,
 * a link to the post,
+* tag the author's account, or their IRL name,
 
 Any tweet _must_ provide an alternative description of any included image.
 
@@ -76,9 +77,26 @@ A further tweet _can_ include a link to the software peer review thread.
 Any tweet _can_ include
 
 * hashtags,
-* account names,
+* additional account names,
 
 with the caveats of the next subsections.
+
+### Tagging accounts
+
+Tag the account(s) of all post authors and package authors and reviewers. 
+
+If not already included in their author metadata, you can search for their account but only tag them if
+
+* it is active,
+* it is not anonymous,
+* it is at least partly used professionally by the owner.
+
+When in doubt, use the person's name, or time-permitting, contact the person whose account you'd like to tag.
+
+For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
+
+When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
+We do not use tagging in tweets to ask for attention (i.e. no account names used liked hashtags at the bottom of a tweet).
 
 ### Using hashtags
 
@@ -101,47 +119,38 @@ Post hashtags at the bottom of each tweet, to make the rest of the content of th
 
 When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
 
-### Tagging accounts
-
-Only tag the account of an author if they included their username in their author file.
-
-For reviewers, you might search for their account but only tag an account
-
-* it is active,
-* it is not anonymous,
-* it is at least partly used professionally by the owner.
-In case of doubt contact the person whose account you'd like to tag.
-
-For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
-
-When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
-We do not use tagging in tweets to ask for attention (i.e. no account names used liked hashtags at the bottom of a tweet).
-
-### Emoji use
+### Using emojis 
 
 In tweets, emojis are optional. 
 When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
 
+### Using gifs
+
+In tweets, gifs are optional.
+
+* One can include a gif that was created for the post (e.g. an animated plot)
+* But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show)
+* When using a gif we should [add their description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing [Gif alt: descriptive phrase] at the bottom of the tweet 
+* When tweeting from twitter.com, as of Feb 2020, if you have the "compose image descriptions" setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images
+
 ### Example 2-tweet thread:
 
 ```
-[blog] “#rmangal: making ecological networks easily accessible” 
+[blog] “rmangal: making ecological networks easily accessible” 
 
-New post by @KCazelles & @SVissault in our #SoftwarePeerReview series 
+New post by @KCazelles & @SVissault in our Software Peer Review series 
 
 🔗 https://ropensci.org/blog/2019/10/21/rmangal/
 
 1/2 
-#rstats
+#rstats #rmangal #SoftwarePeerReview
 ```
 
 ```
 Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal contributors https://docs.ropensci.org/rmangal/authors.html, & all ecologists who have spent countless hours collecting data
 
-🔎Read the #rmangal open #softwarepeerreview thread: https://github.com/ropensci/software-review/issues/332
+🔎Read the rmangal open software peer review thread: https://github.com/ropensci/software-review/issues/332
 
 2/2 
-#rstats
-```
 
-sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
+```
