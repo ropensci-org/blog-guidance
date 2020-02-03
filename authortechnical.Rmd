@@ -16,7 +16,7 @@ To assist you, we provide templates and checklists in the Appendix.
 ## Fork the repo and create your post folder
 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
-For help with this if you're new to this git/GitHub aspects, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
+For help with this aspect of git/GitHub, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
 Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
 Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
@@ -25,7 +25,7 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 
 ## Start the post from a template
 
-Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdow directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
+Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
 
 Prepare your post in whichever way is most comfortable for you in your favorite editor in R Markdown **or** Markdown by starting with templates we provide.
 Get the templates from this book or [from the roblog package](#roblogtemplates).
@@ -64,7 +64,7 @@ show_template("post-template.Rmd", lang = "markdown",
 
 NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
 
-### Add an image {#addimage}
+### To add an image {#addimage}
 
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
 To reference them in your post, use `name-of-image.png`. 
@@ -75,17 +75,13 @@ To reference them in your post, use `name-of-image.png`.
 
 - To insert the image aligned to the right, use `class = "pull-right"`
 
-If your want to generate images from R Markdown use [our R Markdown template](#templatermd) in order not to worry about paths.
+If you want to generate images from R Markdown use [our R Markdown template](#templatermd) in order not to worry about paths.
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
 
-### Add a tweet
-
-Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`.
-
-### Add a citation
+### To add a citation
 
 To add citations, refer to them in the body of your post:
 ```
@@ -121,6 +117,10 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
+### To add a tweet
+
+Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`.
+
 ### Add tags
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
@@ -129,13 +129,15 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 
 ### Examples
 
-- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
+Comparing the raw Markdown to the live posts in these examples might be helpful.
 
-- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
+- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
+
+- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
 
 ## Style guide
 
-- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code).
+- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
 - Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
@@ -155,8 +157,7 @@ For staff and leadership team members, editors for software peer review, or memb
 
 ### How?
 If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors).
-You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately (it can be tricky).
-If you're not sure how to do this, look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
+You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
 You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html)):
@@ -216,6 +217,8 @@ orcid: 0000-0002-2815-0399
 
 For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb2/blob/master/content/authors/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/authors/rich%C3%A8l-j.c.-bilderbeek/).
 The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.
+
+Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
 
 ## Pre-submission checks
 REVISIT THIS after discussing what goes in author and editor checklists
