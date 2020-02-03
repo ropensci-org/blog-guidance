@@ -1,14 +1,17 @@
 # Technical Guidelines {#technical}
 
 This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website.
+It includes commonly used things like adding an image, a citation, or embedding tweet.
+Briefly, the process is:
 
 1. Fork the repository (repo) of the rOpenSci website
-1. Create a folder for your post inside the rOpenSci website fork folder
-1. Draft your post in R Markdown or Markdown
-1. Preview and refine your post locally (optional)
-1. Submit via pull request, preview, and refine your post
+1. Draft your post in R Markdown or Markdown and create or update your author metadata
+1. Preview and refine your post locally
+1. Submit via pull request and preview your post
 1. Community Manager or other staff member reviews your post
 1. Revise your post in response to review
+
+To assist you, we provide templates and checklists in the Appendix.
 
 ## Fork the repo and create your post folder
 
