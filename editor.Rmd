@@ -8,9 +8,47 @@ The editor for a post is typically the Community Manager or their intern.
 
 A post is submitted as a pull request on GitHub and we use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
 
+### Review
+
+ADD screenshot(s) of review interface
+
+Read the post preview to get "a feel" for it. On my first read, I (Stefanie) typically make a few notes for myself (pen & paper) on what to pay attention to on deeper review.
+This is when I often note some positive feedback, based on a first impression.
+
+Click on the 'Files changed' tab in the pull request to view the .Rmd or .md file for the post.
+
+Copy and paste either the Editor checklist for a post about a peer-reviewed package, or the Editor checklist for any other post, into the window that appears when you click the green "Review changes" button.
+
+Carry out those checks and comment as needed inline in the .Rmd or .md file.
+
+When adding your first comment, choose 'Start a revew' (not 'Add a single comment'), so the author gets a single notification for the review when it is complete.
+
+Where changes are "obvious" such as fixing grammar or a typo, use GitHub "commit suggestion" `<cmd-g>` so the author can commit your change directly. 
+Comment to explain the change if needed.
+
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-Copy and past one of the checklists below depending on the type of post you are reviewing (about a peer-reviewed package or not).
+After all inline commenting is done, copy the editor response text sample to the Review window and add any further notes, including your overall impression.
+Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
+There is always something great in a post to highlight in your review. 
+Be specfic.
+If the post or something in it excites you, don't hesitate to say that.
+How else will the author know and be inpsired?!
+
+Sample editor response text is not written yet but here are some things to include:
+
+- I have made <n> comments. Look for 'hidden comments' when there are more than x comments.
+- ask for thumbs up or thumbs down on every editor comment so we know you have seen it
+- 'Resolve conversation' for items you have addressed
+- It's ok to disagree with some comments
+- tag Editor when you have finished addressing their comments
+
+When your review is complete, click 'Comment' or 'Request changes', at your discretion. 
+This will trigger a notificaton to the author
+
+To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html)
+Even if an author gives edit permission to the repo maintainer, the Editor does not usually make edits directly on the post.
+There are exceptions.
 
 ### Checklist for a post about a peer-reviewed package
 
