@@ -10,7 +10,7 @@ show_template("post-template.md", lang = "markdown")
 
 # Post template in R Markdown {#templatermd}
 
-[R Markdown template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
+[R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
 # Author checklist for a post about a peer-reviewed package
 
