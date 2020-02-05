@@ -96,7 +96,9 @@ To reference them in your post, use `name-of-image.png`.
 
 - To insert the image aligned to the right, use `class = "pull-right"`
 
-If you want to generate images from R Markdown use [our R Markdown template](#templatermd) in order not to worry about paths.
+- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) for an example.
+
+If you want to **generate** images from R Markdown use [our R Markdown template](#templatermd) in order not to worry about paths.
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
@@ -140,7 +142,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### To add a tweet {#addtweet}
 
-Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`.
+Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) for an example.
 
 ## Style guide {#styleguide}
 
