@@ -2,6 +2,7 @@
 
 We hope that by doing the extra work of publishing a blog post or tech note that you will benefit by getting more eyes on your work.
 Blog posts and tech notes published in 2019 on rOpenSci website got on average 426 page views in the 31 days following their publication (median of 298.5, minimum of 96, maximum of 1687). 
+Blog posts then live a life of their own: some people will still access them, e.g. finding them via a Search Engine or rOpenSci website tag pages.
 
 When your post is published, here is what we do to promote it.
 
