@@ -1,7 +1,14 @@
 # Technical Guidelines {#technical}
 
-This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website.
-It includes commonly used things like adding an image, a citation, or embedding tweet.
+```{block, type='summaryblock', echo=TRUE}
+This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website. All in all, your post will be an **`(R) Markdown` file** with some tweaks due to the use of **Hugo** for our website, accompanied by your author metadata as Markdown and optional images, and placed at the right place in **our website folder structure**; and the general submission and review process uses **GitHub Pull Request infrastructure**.
+
+This chapter explains the [local post drafting](#forkcreate), [where to find templates](#templates), [how to use the templates](#usetemplates), [what our style guide is](#styleguide), [how to add your author metadata](#createauthorfile), [how to check your post](#presubchecks), [how to submit it for our review](#submitpost).
+
+Furthermore, this chapter includes advice on commonly used things like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
+```
+
+
 Briefly, the process is:
 
 1. Fork the repository (repo) of the rOpenSci website
@@ -11,9 +18,9 @@ Briefly, the process is:
 1. Community Manager or other staff member reviews your post
 1. Revise your post in response to review
 
-To assist you, we provide templates and checklists in the Appendix.
+This chapter links templates for posts and checklists that you can also find in the Appendix.
 
-## Fork the repo and create your post folder
+## Fork the repo and create your post folder {#forkcreate}
 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
 For help with this aspect of git/GitHub, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
@@ -23,7 +30,7 @@ Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` 
 
 _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
 
-## Start the post from a template
+## Start the post from a template {#templates}
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
 
@@ -51,18 +58,32 @@ Installing roblog allows you to use RStudio addins to get templates and to run s
     - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
 - Save the file as `/content/blog/YYYY-MM-DD-slug/index.md` or `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
 
-## Walkthrough with code snippets
+## Walkthrough with code snippets {#usetemplates}
 
 ### What goes in YAML
 
 This is the YAML from our [post template](#templatermd), with comments to explain some components:
 
 ```{r posttemplate, results="asis"}
-show_template("post-template.Rmd", lang = "markdown",
+show_template("post-template.Rmd", lang = "yaml",
               yaml_only = TRUE)
 ```
 
 NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
+
+### Add tags
+
+Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
+
+For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
+
+### Examples
+
+Comparing the raw Markdown to the live posts in these examples might be helpful.
+
+- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
+
+- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
 
 ### To add an image {#addimage}
 
@@ -81,7 +102,7 @@ Every image should be accompanied by alternative text (`alt="some text"`) to mak
 The alternative text should convey the meaning or content that is displayed in the image.
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
 
-### To add a citation
+### To add a citation {#addcitation}
 
 To add citations, refer to them in the body of your post:
 ```
@@ -117,25 +138,11 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
-### To add a tweet
+### To add a tweet {#addtweet}
 
 Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`.
 
-### Add tags
-
-Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
-
-For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
-
-### Examples
-
-Comparing the raw Markdown to the live posts in these examples might be helpful.
-
-- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
-
-- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
-
-## Style guide
+## Style guide {#styleguide}
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
 - Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
@@ -147,11 +154,11 @@ Comparing the raw Markdown to the live posts in these examples might be helpful.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
 
-## Create or update your author file
+## Create or update your author file {#createauthorfile}
 
 ### Why?
 The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/) who have contributed to a blog post, tech note, or presented in a Community Call.
-A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub, and a list of all the content you’ve authored on our site.
+A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub profile(s), and a list of all the content you’ve authored on our site.
 For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
 
 
@@ -176,7 +183,7 @@ Add your usernames or ID's without the "@" or the "https:..."). The link field c
 
 This author file, [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
 
-```
+```yaml
 ---
 name: Kelly O'Briant
 link: https://kellobri.github.io/
@@ -201,7 +208,7 @@ webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
 
 This author file, [`/authors/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/authors/ma%C3%ABlle-salmon/_index.md)
 
-```
+```yaml
 ---
 name: Maëlle Salmon
 twitter: ma_salmon
@@ -220,7 +227,7 @@ The folder name must include accents, initials with periods, and hyphens for spa
 
 Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
 
-## Pre-submission checks
+## Pre-submission checks {#presubchecks}
 REVISIT THIS after discussing what goes in author and editor checklists
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
@@ -255,7 +262,7 @@ glue::glue("````markdown\n{x}\n````") %>%
   knitr::asis_output()
 ```
 
-## Submit your draft post
+## Submit your draft post {#submitpost}
 Once you've drafted your blog post, you can [preview locally using Hugo](#localpreview) (recommended) or skip to the next step to make a pull request and preview that.
 
 ### Local preview with Hugo {#localpreview}
