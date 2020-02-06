@@ -281,9 +281,6 @@ knitr::include_graphics("images/hugochecks.png")
 ```{r hugocheckspassed, echo = FALSE, fig.cap = "All checks have passed."}
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
-
-
-Tag rOpenSci's Community Manager ([`@stefaniebutland`](https://github.com/stefaniebutland)) to review your pull request.
-
+A review from blog editor(s) will be automatically requested.
 
 
