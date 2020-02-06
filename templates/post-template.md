@@ -14,21 +14,22 @@ categories: blog
 topicid:
 # Minimal tags for a post about a community-contributed package 
 # that has passed software peer review are listed below
-# Consult the Technical Guidelines for further information on choosing tags
+# Consult the Technical Guidelines for information on choosing other tags
 tags:
   - Software Peer Review
   - packages
   - R
   - community
-# the summary below will be used by e.g. Twitter cards
+# The summary below will be used by e.g. Twitter cards
 description: "A very short summary of your post"
-# If you have no preferred image for Twitter cards,
-# delete the twitterImg line below 
+# If you have no preferred image for Twitter cards, 
+# delete the twitterImg line below
+# Note there is no '/' symbol before 'img' here
 twitterImg: img/blog-images/2019-06-04-post-template/name-of-image.png
 ---
 
 This is the markdown template for a blog post or tech note. 
-To generate your post from R Markdown, use the R Markdown template instead.
+To generate your post from R Markdown, use that template instead.
 
 Throughout this template, including the YAML, 
 you should change "post-template" to the slug of your post, 
@@ -50,15 +51,13 @@ We recommend the use of [Hugo shortcodes](https://gohugo.io/content-management/s
 
 **Add an image** by using a Hugo shortcode. The image is saved under `/content/blog/YYYY-MM-DD-slug/name-of-image.png`.
 
-{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}
+{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" >}}
 
-add here examples of left, centered and right aligned images.
+Consult the Technical Guidelines for tips on changing image size, alignment, and for advice on alternative text.
 
 **Embed a tweet** by using a Hugo shortcode. 
 
 {{< tweet 1138216112808529920 >}}
-
-Add **other formatting examples** here, keeping citations last.
 
 
 **Add citation or footnote** text by using the format below 
