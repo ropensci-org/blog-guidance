@@ -170,7 +170,7 @@ In tweets, gifs are optional.
 * One can include a gif that was created for the post (e.g. an animated plot)
 * But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show)
 * When using a gif we should [add their description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet 
-* When tweeting from twitter.com, as of Feb 2020, if you have the "compose image descriptions" setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images
+* When tweeting from twitter.com, as of Feb 2020, if you have the "compose image descriptions" setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images.
 
 ### Example 2-tweet thread:
 
