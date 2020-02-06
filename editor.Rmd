@@ -48,7 +48,7 @@ This will trigger a notificaton to the author
 
 To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
 Even if an author gives edit permission to the repo maintainer, the Editor does not usually make edits directly on the post.
-There are exceptions.
+Rare exceptions can be made at the Editor's discretion.
 
 ### Checklist for a post about a peer-reviewed package
 
