@@ -130,7 +130,7 @@ If not already included in their author metadata, you can search for their accou
 * it is not anonymous,
 * it is at least partly used professionally by the owner.
 
-When in doubt, use the person's name, or time-permitting, contact the person whose account you'd like to tag.
+When in doubt, use the person's name, or time permitting, contact the person whose account you'd like to tag.
 
 For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
 
