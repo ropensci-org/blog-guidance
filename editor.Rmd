@@ -28,7 +28,7 @@ Comment to explain the change if needed, for instance if the diff displayed by G
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-After all inline commenting is done, copy the editor response text sample to the Review window and add any further notes, including your overall impression.
+After all inline commenting is done, copy the editor response text sample (CREATE and link to this in the Appendix) to the Review window and add any further notes, including your overall impression.
 Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
 There is always something great in a post to highlight in your review. 
 Be specfic.
