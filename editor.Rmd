@@ -24,7 +24,7 @@ Carry out those checks and comment as needed inline in the .Rmd or .md file.
 When adding your first comment, choose 'Start a revew' (not 'Add a single comment'), so the author gets a single notification for the review when it is complete.
 
 Where changes are "obvious" such as fixing grammar or a typo, use GitHub "commit suggestion" `<cmd-g>` so the author can commit your change directly. 
-Comment to explain the change if needed.
+Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight what word(s) where edited.
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
@@ -193,4 +193,3 @@ Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal co
 2/2 
 
 ```
-
