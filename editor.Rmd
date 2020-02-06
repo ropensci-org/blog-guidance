@@ -135,7 +135,7 @@ When in doubt, use the person's name, or time permitting, contact the person who
 For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
 
 When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
-We do not use tagging in tweets to ask for attention (i.e. no account names used liked hashtags at the bottom of a tweet).
+We do not use tagging in tweets to ask for attention (i.e. no account names used like hashtags at the bottom of a tweet) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the tweet.
 
 ### Using hashtags
 
