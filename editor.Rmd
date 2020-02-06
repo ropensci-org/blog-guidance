@@ -3,14 +3,52 @@
 # Review, Publish, Promote {#editor}
 
 ## Review a Post
-This section explains how to review a post.
+This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
 A post is submitted as a pull request on GitHub and we use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
 
+### Review
+
+ADD screenshot(s) of review interface
+
+Read the post preview to get "a feel" for it. On my first read, I (Stefanie) typically make a few notes for myself (pen & paper) on what to pay attention to on deeper review.
+This is when I often note some positive feedback, based on a first impression.
+
+Click on the 'Files changed' tab in the pull request to view the .Rmd or .md file for the post.
+
+Copy and paste either the Editor checklist for a post about a peer-reviewed package, or the Editor checklist for any other post, into the window that appears when you click the green "Review changes" button.
+
+Carry out those checks and comment as needed inline in the .Rmd or .md file.
+
+When adding your first comment, choose 'Start a revew' (not 'Add a single comment'), so the author gets a single notification for the review when it is complete.
+
+Where changes are "obvious" such as fixing grammar or a typo, use GitHub "commit suggestion" `<cmd-g>` so the author can commit your change directly. 
+Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight what word(s) where edited.
+
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-Copy and past one of the checklists below depending on the type of posts you are reviewing (about a peer-reviewed package or not).
+After all inline commenting is done, copy the editor response text sample (CREATE and link to this in the Appendix) to the Review window and add any further notes, including your overall impression.
+Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
+There is always something great in a post to highlight in your review. 
+Be specfic.
+If the post or something in it excites you, don't hesitate to say that.
+How else will the author know and be inspired?!
+
+Sample editor response text is not written yet but here are some things to include:
+
+- I have made <n> comments. Look for 'hidden comments' when there are more than x comments.
+- ask for thumbs up or thumbs down on every editor comment so we know you have seen it
+- 'Resolve conversation' for items you have addressed
+- It's ok to disagree with some comments
+- tag Editor when you have finished addressing their comments
+
+When your review is complete, click 'Comment' or 'Request changes', at your discretion. 
+This will trigger a notificaton to the author
+
+To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
+Even if an author gives edit permission to the repo maintainer, the Editor does not usually make edits directly on the post.
+Rare exceptions can be made at the Editor's discretion.
 
 ### Checklist for a post about a peer-reviewed package
 
@@ -31,15 +69,16 @@ The roblog helpers do not check
 * whether the alternative text of an image is informative,
 * whether a title is in Title Case.
 
-Furthermore, do not ask for an author to add line returns after they wrote their post.
-We prefer authors to add such line breaks but should not make them correct their draft after the fact.
+While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
 
-### Note about Twitter metadata
 
-A further section concerns [the tweet _we_ send](#tweetpromo) about a post but the post will be shared by other accounts (R Weekly Live, some readers).
-Therefore it is important to check Twitter metadata of a post by pasting its preview link in [Twitter card validator](https://cards-dev.twitter.com/validator).
-Relevant YAML tags are `twitterImg`, `description`, `title`.
-Furthermore, the same metadata tags might be picked up by other platforms (e.g. Slack).
+### Check Twitter metadata
+
+The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet, separate from [the tweet _we_ send](#tweetpromo). 
+Therefore it is important to check the Twitter metadata by pasting a post's preview link in the [Twitter card validator](https://cards-dev.twitter.com/validator).
+
+The relevant YAML tags are `twitterImg`, `description`, `title`.
+These same metadata tags might be picked up by other platforms such as Slack).
 
 ## Publish a Post
 Publish a post by merging its pull request.
@@ -48,7 +87,7 @@ When possible, it's nice to have a post published by morning in the timezone of 
 
 Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
 When an entry is created, the topicid is the number at the end of the topic's URL. 
-E.g. for [this topic about a tech note](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
+E.g. for [this topic](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
 
 ## Promote a Post on Twitter {#tweetpromo}
 
@@ -60,6 +99,7 @@ We tweet at ~8am Pacific, but it would be good to use a system for optimizing th
 
 Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
 Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
+Stef uses a private Google doc called "scratchpad" for this, and saves images in a local folder. 
 
 ### Content
 
@@ -67,6 +107,7 @@ The first tweet of a thread or only tweet _must_ include
 
 * the post title,
 * a link to the post,
+* tag the author's account, or their IRL name,
 
 Any tweet _must_ provide an alternative description of any included image.
 
@@ -75,9 +116,26 @@ A further tweet _can_ include a link to the software peer review thread.
 Any tweet _can_ include
 
 * hashtags,
-* account names,
+* additional account names,
 
 with the caveats of the next subsections.
+
+### Tagging accounts
+
+Tag the account(s) of all post authors and package authors and reviewers. 
+
+If not already included in their author metadata, you can search for their account but only tag them if
+
+* it is active,
+* it is not anonymous,
+* it is at least partly used professionally by the owner.
+
+When in doubt, use the person's name, or time permitting, contact the person whose account you'd like to tag.
+
+For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
+
+When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
+We do not use tagging in tweets to ask for attention (i.e. no account names used like hashtags at the bottom of a tweet) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the tweet.
 
 ### Using hashtags
 
@@ -100,47 +158,38 @@ Post hashtags at the bottom of each tweet, to make the rest of the content of th
 
 When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
 
-### Tagging accounts
-
-Only tag the account of an author if they included their username in their author file.
-
-For reviewers, you might search for their account but only tag an account
-
-* it is active,
-* it is not anonymous,
-* it is at least partly used professionally by the owner.
-In case of doubt contact the person whose account you'd like to tag.
-
-For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
-
-When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
-We do not use tagging in tweets to ask for attention (i.e. no account names used liked hashtags at the bottom of a tweet).
-
-### Emoji use
+### Using emojis 
 
 In tweets, emojis are optional. 
 When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
 
+### Using gifs
+
+In tweets, gifs are optional.
+
+* One can include a gif that was created for the post (e.g. an animated plot)
+* But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show)
+* When using a gif we should [add their description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet 
+* When tweeting from twitter.com, as of Feb 2020, if you have the "compose image descriptions" setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images.
+
 ### Example 2-tweet thread:
 
 ```
-[blog] “#rmangal: making ecological networks easily accessible” 
+[blog] “rmangal: making ecological networks easily accessible” 
 
-New post by @KCazelles & @SVissault in our #SoftwarePeerReview series 
+New post by @KCazelles & @SVissault in our Software Peer Review series 
 
 🔗 https://ropensci.org/blog/2019/10/21/rmangal/
 
 1/2 
-#rstats
+#rstats #rmangal #SoftwarePeerReview
 ```
 
 ```
 Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal contributors https://docs.ropensci.org/rmangal/authors.html, & all ecologists who have spent countless hours collecting data
 
-🔎Read the #rmangal open #softwarepeerreview thread: https://github.com/ropensci/software-review/issues/332
+🔎Read the rmangal open software peer review thread: https://github.com/ropensci/software-review/issues/332
 
 2/2 
-#rstats
-```
 
-sample messages for authors and reviewers as in [JOSS docs](https://joss.readthedocs.io/en/latest/editing.html#sample-messages-for-authors-and-reviewers)
+```
