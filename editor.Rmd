@@ -99,7 +99,7 @@ We tweet at ~8am Pacific, but it would be good to use a system for optimizing th
 
 Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
 Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
-Stef uses a private google doc called "scratchpad" for this, and saves images in a local folder. 
+Stef uses a private Google doc called "scratchpad" for this, and saves images in a local folder. 
 
 ### Content
 
