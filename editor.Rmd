@@ -46,7 +46,7 @@ Sample editor response text is not written yet but here are some things to inclu
 When your review is complete, click 'Comment' or 'Request changes', at your discretion. 
 This will trigger a notificaton to the author
 
-To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html)
+To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
 Even if an author gives edit permission to the repo maintainer, the Editor does not usually make edits directly on the post.
 There are exceptions.
 
