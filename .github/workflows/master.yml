@@ -24,7 +24,7 @@ jobs:
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - name: Commit results
-        if: github.repository == 'ropensci-books/http-testing'
+        if: github.repository == 'ropensci-org/blog-guidance'
         run: |
           cp ghpagescname docs/CNAME
           cd docs
@@ -32,4 +32,3 @@ jobs:
           git add .
           git commit -m 'update book'
           git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:gh-pages --force
-
