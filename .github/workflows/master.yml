@@ -23,17 +23,13 @@ jobs:
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
-      - uses: actions/setup-node@v1
-      - name: Install Netlify CLI
-        run: npm install netlify-cli -g
-      - name: Deploy to Netlify (test)
-        run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --prod --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
-      - name: Create commit comment
-        uses: peter-evans/commit-comment@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sha: ${{ github.event.pull_request.head.sha }} 
-          body: |
-            Your edit [is live][1]. :rocket:
+      - name: Commit results
+        if: github.repository == 'ropensci-books/http-testing'
+        run: |
+          cp ghpagescname docs/CNAME
+          cd docs
+          git init
+          git add .
+          git commit -m 'update book'
+          git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:gh-pages --force
 
-            [1]: https://ropensci-blog-guidance.netlify.com/
