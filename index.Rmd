@@ -15,9 +15,9 @@ description: "Blog post guidance"
 # Preface {-}
 
 The purpose of this documentation is to provide content and technical guidelines for authors and editors of blog posts and tech notes for the rOpenSci website.
-We created it after reviewing and publishing over 100 posts by community members in hopes of addressing many frequently asked questions, and frequently given suggestions. 
+We created it after reviewing and publishing over 100 posts by community members, in hopes of addressing many frequently asked questions, and frequently given suggestions. 
 
-The volume of information may be overwhelming at first. Some of the guidance indicates things we require that you do (such as create an author file), while most of the guidance is information to help you (such as adding an image to your post).
+The volume of information may be overwhelming at first. Some of the guidance indicates things we require that you do (such as creating an author file with your metadata), while most of the guidance is information to help you (such as adding an image to your post).
 We aim to make this less daunting as we iterate. 
 
 This is a work in progress, in which you may stumble upon our own prompts to add more information.
