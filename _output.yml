@@ -10,7 +10,7 @@ bookdown::gitbook:
         <li><a href="./">rOpenSci Blog Guidelines for Authors and Editors</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-        edit:
+    edit:
       link: https://github.com/ropensci-org/blog-guidance/edit/dev/%s
       text: "Edit this chapter"
     history:
