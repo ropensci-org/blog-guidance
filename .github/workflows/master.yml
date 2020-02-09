@@ -27,6 +27,7 @@ jobs:
         if: github.repository == 'ropensci-org/blog-guidance'
         run: |
          # cp ghpagescname docs/CNAME
+          cp -r images/. docs/
           cd docs
           git init
           git add .
