@@ -45,6 +45,8 @@ Get the templates from this book or [from the roblog package](#roblogtemplates).
 
 [R Markdown template](#templatermd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
+It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd`and `index.md`to your PR.
+
 ### Get any template from the roblog package {#roblogtemplates}
 
 You could get templates from the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose.
