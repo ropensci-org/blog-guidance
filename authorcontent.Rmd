@@ -72,8 +72,8 @@ Write in a way that any reader can understand what your post is about, but targe
 
 Assume no one knows what your package does or why they should care about it.
 Provide an outline so your reader knows where you’re taking them, especially if your post is long or complex.
-Use short headings to guide the reader.
 A good introduction helps potential readers know whether they want to read the rest.
+Use short headings to guide the reader.
 
 ### Give a compelling example
 
