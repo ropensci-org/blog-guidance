@@ -94,9 +94,9 @@ To reference them in your post, use `name-of-image.png`.
 
 - To insert the image aligned to the right, use `class = "pull-right"`
 
-- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) for an example.
+- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
-If you want to **generate** images from R Markdown use [our R Markdown template](#templatermd) in order not to worry about paths.
+If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) in order not to worry about paths.
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
@@ -140,7 +140,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### To add a tweet {#addtweet}
 
-Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) for an example.
+Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
 ## Style guide {#styleguide}
 
@@ -150,7 +150,7 @@ Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd).
+- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd).
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
 
