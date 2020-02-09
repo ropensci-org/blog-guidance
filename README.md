@@ -23,6 +23,8 @@ source("inst/scripts/check_urls.R")
 all_urls[!all_urls$ok,]
 ```
 
+Packages needed: magrittr, fs, glue, commonmark, xml2, tibble, crul, memoise, ratelimitr, purrr.
+
 # Meta
 
 This book was started using [Sean Kross](https://github.com/seankross)' [minimal bookdown example](https://github.com/seankross/bookdown-start).
