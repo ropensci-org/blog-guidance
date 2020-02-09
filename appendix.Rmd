@@ -2,7 +2,7 @@
 
 # Post template in Markdown {#templatemd}
 
-[Markdown template](/templates/post-template.md) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
+Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
@@ -12,7 +12,7 @@ show_template("post-template.md", lang = "markdown")
 
 # Post template in R Markdown {#templatermd}
 
-[R Markdown template](/templates/post-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
@@ -22,7 +22,7 @@ show_template("post-template.Rmd", lang = "markdown")
 
 # Author file template {#authortemplate}
 
-[Author file template](/templates/author-file-template.md) to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
+Author file template to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
 
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
