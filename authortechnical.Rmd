@@ -254,6 +254,8 @@ Once you've drafted your blog post, you can [preview locally using Hugo](#localp
 
 ### Local preview with Hugo {#localpreview}
 
+Delete `/content/blog/YYYY-MM-DD-slug/index.html` if present.
+
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo.
 To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()`.
 
