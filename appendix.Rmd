@@ -14,11 +14,7 @@ show_template("post-template.md", lang = "markdown")
 
 R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
-You can hover over the top-right corner of the template to make a copy-paste button appear.
-
-```{r posttemplatermd, results="asis"}
-show_template("post-template.Rmd", lang = "markdown")
-```
+[Available on GitHub](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd)
 
 # Author file template {#authortemplate}
 
