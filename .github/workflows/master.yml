@@ -23,11 +23,6 @@ jobs:
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
-      - name: Render book PDF
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::pdf_book", output_dir = "pdfbook")'
-      - name: Move files around
-        run: Rscript -e 'file.copy(from = "pdfbook/_main.pdf", to = "docs/main.pdf")'
-  
       - name: Commit results
         if: github.repository == 'ropensci-org/blog-guidance'
         run: |

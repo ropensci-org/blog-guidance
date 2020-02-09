@@ -16,7 +16,6 @@ bookdown::gitbook:
     history:
       link: https://github.com/ropensci-org/blog-guidance/commits/master/%s
       text: "Chapter edit history"
-    download: ["main.pdf"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
