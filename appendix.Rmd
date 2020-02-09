@@ -4,6 +4,8 @@
 
 [Markdown template](/templates/post-template.md) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
 ```{r posttemplatemd, results="asis"}
 show_template("post-template.md", lang = "markdown")
 ```
@@ -12,6 +14,8 @@ show_template("post-template.md", lang = "markdown")
 
 [R Markdown template](/templates/post-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
 ```{r posttemplatermd, results="asis"}
 show_template("post-template.Rmd", lang = "markdown")
 ```
@@ -19,6 +23,8 @@ show_template("post-template.Rmd", lang = "markdown")
 # Author file template {#authortemplate}
 
 [Author file template](/templates/author-file-template.md) to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
+
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r authorfiletemplate, results="asis"}
 show_template("author-file-template.md", lang = "yaml")
