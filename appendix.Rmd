@@ -32,7 +32,8 @@ show_template("author-file-template.md", lang = "yaml")
 
 # Author checklist for a post about a peer-reviewed package
 
-Copy this checklist into the first comment on your pull request. 
+Copy this checklist into the first comment on your pull request.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklistpkg2, echo = FALSE}
 show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
@@ -41,6 +42,7 @@ show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed
 # Author checklist for any other post
 
 Copy this checklist into the first comment on your pull request. 
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklistother2, echo = FALSE}
 show_checklist("submission-checklist.csv")
@@ -49,6 +51,7 @@ show_checklist("submission-checklist.csv")
 # Editor checklist for a post about a peer-reviewed package
 
 Copy this checklist to your GitHub review summary.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklisteditor2, echo = FALSE}
 show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
@@ -57,6 +60,7 @@ show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv
 # Editor checklist for any other post
 
 Copy this checklist to your GitHub review summary.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklisteditorprp2, echo = FALSE}
 show_checklist("editor-checklist.csv")
