@@ -37,20 +37,18 @@ Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prep
 Prepare your post in whichever way is most comfortable for you in your favorite editor in R Markdown **or** Markdown by starting with templates we provide.
 Get the templates from this book or [from the roblog package](#roblogtemplates).
 
-### Get Markdown template from this book
-
-Hover over the top-right corner of the template to make a copy-paste button appear.
+### Get Markdown template
 
 [Markdown template](#templatemd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
-### Get R Markdown template from GitHub
+### Get R Markdown template
 
-[R Markdown template](https://github.com/rosadmin/blog-guidance/blob/master/templates/author-file-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
+[R Markdown template](#templatermmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
 ### Get any template from the roblog package {#roblogtemplates}
 
-You could get templates from [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose.
-Installing roblog allows you to use RStudio addins to get templates and to run some pre-submission checks.
+You could get templates from the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose.
+Installing roblog allows you to use RStudio Addins to get templates and to run some pre-submission checks.
     
 - Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
 - Start a new post
