@@ -1,10 +1,10 @@
 post follows content guidelines
-YAML description is appropriate for discuss forum 
+post follows Style Guide
 YAML is ok e.g. publication date
-tags are ok
+YAML tags are ok
+YAML description appropriate for discussion forum
 I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()`
-follows Style Guide
 html not included in pull request of Rmd post
 author metadata is provided with correct folder name
 Twitter metadata looks fine (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator))

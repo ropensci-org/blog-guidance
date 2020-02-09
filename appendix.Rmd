@@ -2,17 +2,38 @@
 
 # Post template in Markdown {#templatemd}
 
-INSTRUCT author to copy this template, or get it from roblog
+Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
-```{r posttemplate, results="asis"}
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
+```{r posttemplatemd, results="asis"}
 show_template("post-template.md", lang = "markdown")
 ```
 
 # Post template in R Markdown {#templatermd}
 
-[R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
+R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
+```{r posttemplatermd, results="asis"}
+show_template("post-template.Rmd", lang = "markdown")
+```
+
+# Author file template {#authortemplate}
+
+Author file template to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
+
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
+```{r authorfiletemplate, results="asis"}
+show_template("author-file-template.md", lang = "yaml")
+```
 
 # Author checklist for a post about a peer-reviewed package
+
+Copy this checklist into the first comment on your pull request.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklistpkg2, echo = FALSE}
 show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
@@ -20,25 +41,26 @@ show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed
 
 # Author checklist for any other post
 
+Copy this checklist into the first comment on your pull request. 
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
 ```{r checklistother2, echo = FALSE}
 show_checklist("submission-checklist.csv")
 ```
 
-# Author file template {#authortemplate}
-
-INSTRUCT author to copy this template, or get it from roblog
-
-```{r authorfiletemplate, results="asis"}
-show_template("author-file-template.md", lang = "yaml")
-```
-
 # Editor checklist for a post about a peer-reviewed package
 
+Copy this checklist to your GitHub review summary.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
+
 ```{r checklisteditor2, echo = FALSE}
-show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv"))
+show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
 ```
 
-# Editor checklist for a post about any other peer-reviewed package
+# Editor checklist for any other post
+
+Copy this checklist to your GitHub review summary.
+You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r checklisteditorprp2, echo = FALSE}
 show_checklist("editor-checklist.csv")
