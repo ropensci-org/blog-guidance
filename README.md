@@ -10,9 +10,9 @@ This is the bookdown source for "rOpenSci Blog Guidelines for Authors and Editor
 
 The book is deployed via GitHub actions.
 
-* [Workflow for commit to master](.github/master.yml): the book is built (html) and deployed to gh-pages.
+* [Workflow for commit to master](.github/workflows/master.yml): the book is built (html) and deployed to gh-pages.
 
-* [Workflow for commit to any branch in a PR](.github/pr.yml): the book is built (html) and for PRs from this repo (not forks) the result is deployed to Netlify and the preview URL is posted as a commit comment.
+* [Workflow for commit to any branch in a PR](.github/workflows/pr.yml): the book is built (html) and for PRs from this repo (not forks) the result is deployed to Netlify and the preview URL is posted as a commit comment.
 
 # Misc
 
