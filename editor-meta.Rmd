@@ -18,6 +18,8 @@ For adding a new blog editor, the team maintainer or any ropensci admin
 
 * [adds them to the team](https://github.com/orgs/ropensci/teams/blog-editors/members) as Member (the default role).
 
+The blog editors can filter their notifications, e.g. using the [`reason:team-mention` filter](https://github.com/notifications/beta?query=reason%3Ateam-mention).
+
 BLABLABLA what to add regarding access to this very repo i.e. blog-guidance?
 
 ## Posts authored by staff
