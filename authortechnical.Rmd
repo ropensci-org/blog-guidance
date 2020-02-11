@@ -15,10 +15,10 @@ Briefly, the process is:
 1. Draft your post in R Markdown or Markdown and create or update your author metadata
 1. Preview and refine your post locally
 1. Submit via pull request and preview your post
-1. Community Manager or other staff member reviews your post
+1. A blog editor reviews your post
 1. Revise your post in response to review
 
-This chapter links templates for posts and checklists that you can also find in the Appendix.
+This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
 ## Fork the repo and create your post folder {#forkcreate}
 
