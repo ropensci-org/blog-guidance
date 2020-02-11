@@ -1,5 +1,3 @@
-#  (PART) Editor Guide {-}
-
 # Editorial governance {#editormeta}
 
 ## GitHub team
