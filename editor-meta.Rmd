@@ -12,6 +12,8 @@ The team is maintained by [`@stefaniebutland`](https://github.com/stefaniebutlan
 
 * Blog editors have write access to the roweb2 repo.
 
+* Blog editors are ["code owners"](https://github.com/ropensci/roweb2/blob/master/.github/CODEOWNERS) of `roweb2/content/technotes`, `roweb2/content/blog`, `roweb2/content/commcalls` according to [roweb2's CODEOWNERS file ](https://github.com/ropensci/roweb2/blob/master/.github/CODEOWNERS) so any PR touching a file under these paths will automatically request their review. The blog editor that will effectively handle the PR should unrequest the review from other blog editor(s).
+
 For adding a new blog editor, the team maintainer or any ropensci admin
 
 * ensures the user has [enabled 2FA](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
