@@ -272,8 +272,13 @@ When this preview looks good to you, you should submit your post as a pull reque
 If using the R Markdown template, knitting `index.Rmd` will generate both `index.md` and `index.html`.
 Do not commit `index.html` but do commit `index.Rmd` and `index.md`.
 
-Send a pull request from your fork at least one week prior to the planned publication date to allow time for review.
-Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
+* Open a [**draft** pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) from your fork ([using the web interface]((https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)), or [`usethis::pr_push()`](https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request))
+
+* Mark the PR as ready for review at least one week prior to the planned publication date to allow time for review. A review from blog editor(s) will be automatically requested by GitHub.
+
+* If you opened a PR instead of a **draft** PR, the PR can't go back to a draft stage but no problem, only make sure to tag `@ropensci/blog-editors` once to tell them the PR isn't ready for review, and once later to tell them the PR is really ready for review.
+
+From the PR, even when it's still a draft PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
 Otherwise push additional fixes till things look right.
 
 ```{r hugochecks, echo = FALSE, fig.cap = "Some checks haven't completed yet."}
@@ -283,6 +288,6 @@ knitr::include_graphics("images/hugochecks.png")
 ```{r hugocheckspassed, echo = FALSE, fig.cap = "All checks have passed."}
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
-A review from blog editor(s) will be automatically requested.
+
 
 
