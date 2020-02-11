@@ -25,6 +25,14 @@ all_urls[!all_urls$ok,]
 
 Packages needed: magrittr, fs, glue, commonmark, xml2, tibble, crul, memoise, ratelimitr, purrr.
 
+# Contributing
+
+This is a work in progress.
+If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in [this repository](https://github.com/ropensci-org/blog-guidance).
+
+We welcome contributions that adhere to our [Code of Conduct](https://ropensci.org/code-of-conduct/).
+
+
 # Meta
 
 This book was started using [Sean Kross](https://github.com/seankross)' [minimal bookdown example](https://github.com/seankross/bookdown-start).
