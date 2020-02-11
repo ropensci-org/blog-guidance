@@ -21,14 +21,17 @@ Read a few [blog posts and tech notes](https://ropensci.org/archive/) and consid
 Most posts written by community members are about packages that have passed rOpenSci software peer review, however, we have posts on a range of topics and we encourage you to consider these or to propose others.
 
 *   About a peer-reviewed package developed by the authors
+    *   [rmangal: Making Ecological Networks Easily Accessible](https://ropensci.org/blog/2019/10/21/rmangal/) talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn't make that the dominant part of the post.
+    *   [Forcing Yourself to Make Your Life Easier](https://ropensci.org/blog/2018/04/12/ijtiff/) is an honest post with some reflection and an important message.
+    *   [The av Package: Production Quality Video in R](https://ropensci.org/technotes/2018/10/06/av-release/) (tech note) is to the point. av is not a peer-reviewed package but this is a good example of a tech note. 
 *   Major updates to key packages
     *   [(Re)introducing skimr v2 - A year in the life of an open source R project](https://ropensci.org/blog/2019/10/29/skimrv2/)
     *   [drake transformed](https://ropensci.org/technotes/2019/03/18/drake-700/) (technote)
     *   [drake's improved high-performance computing power](https://ropensci.org/technotes/2018/05/18/drake-hpc/) (technote)
 *   [Reviewer perspectives](https://ropensci.org/tags/reviewer/)
 *   Contributing to or taking over maintenance of a package
-    *   [Relaunching the qualtRics package](https://ropensci.org/blog/2019/04/30/qualtrics-relaunch/)
-    *   [Monkeying around with Code and Paying it Forward](https://ropensci.org/blog/2018/04/20/monkeydo/)
+    *   [Relaunching the qualtRics package](https://ropensci.org/blog/2019/04/30/qualtrics-relaunch/) has an engaging tone while being informative and providing technical details.
+    *   [Monkeying around with Code and Paying it Forward](https://ropensci.org/blog/2018/04/20/monkeydo/) gives insight into how the author is thinking about workflows and contributing to rOpenSci.
 *   Summarizing a Community Call
     *   [Code Review in the Lab](https://ropensci.org/blog/2018/11/29/codereview/)
 *   Describing a creative use case for multiple rOpenSci packages
@@ -105,13 +108,5 @@ If you want people to give you general feedback, tell them how you’d like to r
 
 Will readers understand your take-home message clearly enough to tweet about your post?
 You might need to remind them of your main points.
-
-### We love these posts about packages
-
-*   [rmangal: Making Ecological Networks Easily Accessible](https://ropensci.org/blog/2019/10/21/rmangal/) talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn't make that the dominant part of the post.
-*   [Forcing Yourself to Make Your Life Easier](https://ropensci.org/blog/2018/04/12/ijtiff/) is an honest post with some reflection and an important message.
-*   [Relaunching the qualtRics package](https://ropensci.org/blog/2019/04/30/qualtrics-relaunch/) has an engaging tone while being informative and providing technical details.
-*   [Monkeying around with Code and Paying it Forward](https://ropensci.org/blog/2018/04/20/monkeydo/) gives insight into how the author is thinking about workflows and contributing to rOpenSci
-*   (tech note) [The av Package: Production Quality Video in R](https://ropensci.org/technotes/2018/10/06/av-release/) is to the point
 
 Now **[review the technical guidelines](#technical)** for submitting your draft post, and you’re ready to go.
