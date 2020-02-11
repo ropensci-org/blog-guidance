@@ -4,7 +4,8 @@ repo: https://github.com/ropensci-org/blog-guidance
 output_dir: docs
 rmd_files: ["index.Rmd", "authorcontent.Rmd", 
             "authortechnical.Rmd", "authorreview.Rmd", 
-            "authorpromote.Rmd", "editor.Rmd", 
+            "authorpromote.Rmd", "editor.Rmd",
+            "editor-meta.Rmd",
             "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes

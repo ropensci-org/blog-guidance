@@ -1,0 +1,26 @@
+#  (PART) Editor Guide {-}
+
+# Editorial governance {#editormeta}
+
+## GitHub team
+
+rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors) team.
+
+The team is maintained by [`@stefaniebutland`](https://github.com/stefaniebutland) at the moment.
+
+* Blog editors can be tagged in [any ropensci repo](https://github.com/ropensci/), in particular [roweb2](https://github.com/ropensci/roweb2/), by writing `@ropensci/blog-editors` (e.g. `:wave: @ropensci/blog-editors, I've an issue with using DT in my post!`).
+
+* Blog editors have write access to the roweb2 repo.
+
+For adding a new blog editor, the team maintainer or any ropensci admin
+
+* ensures the user has [enabled 2FA](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
+
+* [adds them to the team](https://github.com/orgs/ropensci/teams/blog-editors/members) as Member (the default role).
+
+BLABLABLA what to add regarding access to this very repo i.e. blog-guidance?
+
+## Posts authored by staff
+
+* Staff members can bypass review for tech notes but they can choose to request a review by blog editors.
+* Staff members' blog posts should be scheduled together with Stefanie Butland.
