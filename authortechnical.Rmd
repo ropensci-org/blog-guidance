@@ -11,14 +11,14 @@ Furthermore, this chapter includes advice on commonly used things like adding [a
 
 Briefly, the process is:
 
-1. Fork the repository (repo) of the rOpenSci website
-1. Draft your post in R Markdown or Markdown and create or update your author metadata
-1. Preview and refine your post locally
-1. Submit via pull request and preview your post
-1. Community Manager or other staff member reviews your post
-1. Revise your post in response to review
+1. Fork the repository (repo) of the rOpenSci website.
+1. Draft your post in R Markdown or Markdown and create or update your author metadata.
+1. Preview and refine your post locally.
+1. Submit via pull request and preview your post.
+1. A blog editor reviews your post.
+1. Revise your post in response to review.
 
-This chapter links templates for posts and checklists that you can also find in the Appendix.
+This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
 ## Fork the repo and create your post folder {#forkcreate}
 
@@ -32,25 +32,23 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 
 ## Start the post from a template {#templates}
 
-Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly) or `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown).
+Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or [from the roblog package](#roblogtemplates).
 
-Prepare your post in whichever way is most comfortable for you in your favorite editor in R Markdown **or** Markdown by starting with templates we provide.
-Get the templates from this book or [from the roblog package](#roblogtemplates).
-
-### Get Markdown template
-
-[Markdown template](#templatemd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
+Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
 
 ### Get R Markdown template
 
-[R Markdown template](#templatermd) to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
 
-It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd`and `index.md`to your PR.
+It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
+
+### Get Markdown template
+
+[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
 
 ### Get any template from the roblog package {#roblogtemplates}
 
-You could get templates from the [roblog helper package](https://docs.ropensci.org/roblog/) created for this purpose.
-Installing roblog allows you to use RStudio Addins to get templates and to run some pre-submission checks.
+Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows you to use RStudio Addins to get templates and to run some pre-submission checks.
     
 - Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
 - Start a new post
@@ -69,8 +67,6 @@ show_template("post-template.Rmd", lang = "yaml",
               yaml_only = TRUE)
 ```
 
-NOTE include advice on Twitter cards (in Ch3 Publication and Promotion?) and twitterImg.
-
 ### Add tags
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
@@ -81,9 +77,9 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 
 Comparing the raw Markdown to the live posts in these examples might be helpful.
 
-- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/)
+- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
 
-- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/)
+- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
 ### To add an image {#addimage}
 
@@ -240,11 +236,10 @@ The folder name must include accents, initials with periods, and hyphens for spa
 Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
 
 ## Pre-submission checks {#presubchecks}
-REVISIT THIS after discussing what goes in author and editor checklists
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
 
-- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of Hugo shortcodes for tweets, of lower camelCase for rOpenSci name.
+- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of Hugo shortcodes for tweets, of lower camelCase for rOpenSci name
 - `ro_check_urls()` to check for URLs that might be broken 
 
 In the first comment of your pull request submitting a post, please copy-paste the checklist corresponding to your post (hover, a copy-paste button will appear at the top-right corner of the shaded area) and check off items.
@@ -284,11 +279,11 @@ Do not commit `index.html` but do commit `index.Rmd` and `index.md`.
 
 * Open a [**draft** pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) from your fork ([using the web interface]((https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)), or [`usethis::pr_push()`](https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request))
 
-* Mark the PR as ready for review at least one week prior to the planned publication date to allow time for review. A review from blog editor(s) will be automatically requested by GitHub.
+* Mark the PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.
 
 * If you opened a PR instead of a **draft** PR, the PR can't go back to a draft stage but no problem, only make sure to tag `@ropensci/blog-editors` once to tell them the PR isn't ready for review, and once later to tell them the PR is really ready for review.
 
-From the PR, even when it's still a draft PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
+From the PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
 Otherwise push additional fixes till things look right.
 
 ```{r hugochecks, echo = FALSE, fig.cap = "Some checks haven't completed yet."}
