@@ -77,9 +77,11 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 
 Comparing the raw Markdown to the live posts in these examples might be helpful.
 
-- A blog post about a package that has passed software peer review. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
+- A blog post about a package that has passed software peer review.
+Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
 
-- A technote. Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
+- A tech note.
+Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
 ### To add an image {#addimage}
 
