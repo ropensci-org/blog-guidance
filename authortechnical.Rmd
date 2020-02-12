@@ -1,11 +1,9 @@
 # Technical Guidelines {#technical}
 
 ```{block, type='summaryblock', echo=TRUE}
-This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website. All in all, your post will be an **`(R) Markdown` file** with some tweaks due to the use of **Hugo** for our website, accompanied by your author metadata as Markdown and optional images, and placed at the right place in **our website folder structure**; and the general submission and review process uses **GitHub Pull Request infrastructure**.
+This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
 
-This chapter explains the [local post drafting](#forkcreate), [where to find templates](#templates), [how to use the templates](#usetemplates), [what our style guide is](#styleguide), [how to add your author metadata](#createauthorfile), [how to check your post](#presubchecks), [how to submit it for our review](#submitpost).
-
-Furthermore, this chapter includes advice on commonly used things like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
+We include advice on commonly used elements like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
 ```
 
 
