@@ -2,6 +2,10 @@
 
 # Content Guidelines {#content}
 
+```{block, type='summaryblock', echo=TRUE}
+This chapter coaches you in thinking through what you might say in a post for the rOpenSci website.
+```
+
 ## Blog post or tech note? {#postornote}
 
 The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter notes aimed at a more technical audience.
