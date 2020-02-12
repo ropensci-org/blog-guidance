@@ -26,7 +26,7 @@ jobs:
       - name: Commit results
         if: github.repository == 'ropensci-org/blog-guidance'
         run: |
-         # cp ghpagescname docs/CNAME
+         cp ghpagescname docs/CNAME
           cp -r favicon/ docs/
           cd docs
           git init
