@@ -10,7 +10,7 @@ jobs:
       - name: test
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
-          if [ $fork ]; then
+          if $fork; then
              echo "fork not doing anything"
           else
              echo "doing something"
