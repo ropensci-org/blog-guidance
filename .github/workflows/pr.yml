@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: test
         run: |
-          fork=$(jq --raw-output .head.repo.fork "${GITHUB_EVENT_PATH}")
+          fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
           echo "Fork is $fork"
