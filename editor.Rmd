@@ -2,7 +2,11 @@
 
 # Review, Publish, Promote {#editor}
 
-## Review a Post
+```{block, type='summaryblock', echo=TRUE}
+This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
+```
+
+## Review a Post {#review}
 This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
@@ -10,26 +14,31 @@ A post is submitted as a pull request on GitHub and we use the [well documented 
 
 ### Review
 
-ADD screenshot(s) of review interface
-
 Read the post preview to get "a feel" for it. On my first read, I (Stefanie) typically make a few notes for myself (pen & paper) on what to pay attention to on deeper review.
 This is when I often note some positive feedback, based on a first impression.
 
 Click on the 'Files changed' tab in the pull request to view the .Rmd or .md file for the post.
 
-Copy and paste either the Editor checklist for a post about a peer-reviewed package, or the Editor checklist for any other post, into the window that appears when you click the green "Review changes" button.
+Copy and paste either the [editor checklist for a post about a peer-reviewed package](#editorchecklistpeer), or the [editor checklist for any other post](#editorchecklistany), into the box that appears when you click the green "Review changes" button.
 
 Carry out those checks and comment as needed inline in the .Rmd or .md file.
 
 When adding your first comment, choose 'Start a review' (not 'Add a single comment'), so the author gets a single notification for the review when it is complete.
 
 Where changes are "obvious" such as fixing grammar or a typo, use GitHub "commit suggestion" `<cmd-g>` so the author can commit your change directly. 
-Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight what word(s) where edited.
+Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) where edited.
+
+While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
+
+To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
+Even if an author gives edit permission to the repo maintainer, the editor does not usually make edits directly on the post.
+Rare exceptions can be made at the editor's discretion.
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-After all inline commenting is done, copy the editor response text sample (CREATE and link to this in the Appendix) to the Review window and add any further notes, including your overall impression.
+After all inline commenting and the checklist is done, add any further notes, including your overall impression to the 'Review changes' box.
 Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
+
 There is always something great in a post to highlight in your review. 
 Be specfic.
 If the post or something in it excites you, don't hesitate to say that.
@@ -37,18 +46,14 @@ How else will the author know and be inspired?!
 
 Sample editor response text is not written yet but here are some things to include:
 
-- I have made <n> comments. Look for 'hidden comments' when there are more than x comments.
-- ask for thumbs up or thumbs down on every editor comment so we know you have seen it
-- 'Resolve conversation' for items you have addressed
-- It's ok to disagree with some comments
-- tag Editor when you have finished addressing their comments
+- I have made n (number of) comments. Look for 'hidden conversations' when there are many comments.
+- Ask for thumbs up or thumbs down on every editor comment so we know you have seen it.
+- 'Resolve conversation' for items you have addressed.
+- It's ok to disagree with some comments.
+- Tag editor when you have finished addressing their comments.
 
 When your review is complete, click 'Comment' or 'Request changes', at your discretion. 
-This will trigger a notificaton to the author
-
-To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
-Even if an author gives edit permission to the repo maintainer, the Editor does not usually make edits directly on the post.
-Rare exceptions can be made at the Editor's discretion.
+This will trigger a notificaton to the author.
 
 ### Checklist for a post about a peer-reviewed package
 
@@ -62,16 +67,6 @@ show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv
 show_checklist("editor-checklist.csv")
 ```
 
-### Note about non automatic tech checks
-
-The roblog helpers do not check
-
-* whether the alternative text of an image is informative,
-* whether a title is in Title Case.
-
-While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
-
-
 ### Check Twitter metadata
 
 The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet, separate from [the tweet _we_ send](#tweetpromo). 
@@ -80,14 +75,15 @@ Therefore it is important to check the Twitter metadata by pasting a post's prev
 The relevant YAML tags are `twitterImg`, `description`, `title`.
 These same metadata tags might be picked up by other platforms such as Slack).
 
-## Publish a Post
+## Publish a Post {#publish}
 Publish a post by merging its pull request.
 For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
 When possible, it's nice to have a post published by morning in the timezone of the main post author. 
 
-Editor adds the YAML `topicid` of a post by adding an entry - called a "topic" for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
+Editor adds the YAML `topicid` of a post by adding an entry, called a "topic", for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
 When an entry is created, the topicid is the number at the end of the topic's URL. 
 E.g. for [this topic](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
+It can be added immediately after merging the post's PR by direct edit of the post file through the GitHub web interface.
 
 ## Promote a Post on Twitter {#tweetpromo}
 
@@ -145,7 +141,7 @@ For a tweet about a post related to a package or any R thing, use the `#rstats` 
 
 For a tweet about a package post, make the package name a hashtag, since [rocitations Twitter account](https://twitter.com/rocitations) does this to announce package citations.
 
-Check the last tweets using any hashtag except the `#rstats` hashtag to see whether it is used as you think it would.
+Check the last tweets using any hashtag except the `#rstats` hashtag to see whether it is used as you expect.
 E.g. using `httr` wouldn't be a good idea. It is a package name but on Twitter it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy) and even has its own emoji automatically attached to it by Twitter. 
 
 #### Adding hashtags
@@ -167,9 +163,9 @@ When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com
 
 In tweets, gifs are optional.
 
-* One can include a gif that was created for the post (e.g. an animated plot)
-* But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show)
-* When using a gif we should [add their description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet 
+* One can include a gif that was created for the post (e.g. an animated plot).
+* But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show).
+* When using a gif we should [add its description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet.
 * When tweeting from twitter.com, as of Feb 2020, if you have the "compose image descriptions" setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images.
 
 ### Example 2-tweet thread:
