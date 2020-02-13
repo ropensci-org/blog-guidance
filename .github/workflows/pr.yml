@@ -14,10 +14,10 @@ jobs:
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
-      - name: Try skipping
+      - name: If this is a fork stop here
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
-          if [ $fork != true ]; then
+          if [ $fork == true ]; then
              echo "This is a fork, no preview rendering"
              exit 78;
           else
