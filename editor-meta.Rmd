@@ -26,3 +26,4 @@ BLABLABLA what to add regarding access to this very repo i.e. blog-guidance?
 
 * Staff members can bypass review for tech notes but they can choose to request a review by blog editors.
 * Staff members' blog posts should be scheduled together with Stefanie Butland.
+* Staff members are responsible for creating the [discussion forum entry](#publish) for their own post and must [tweet from the rOpenSci Twitter account](#tweetpromo) (directly or via the Tweetdeck rOpenSci team) before tweeting from their personal account.
