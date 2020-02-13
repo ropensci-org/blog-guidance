@@ -3,9 +3,7 @@
 # Review, Publish, Promote {#editor}
 
 ```{block, type='summaryblock', echo=TRUE}
-This chapter outlines ...
-
-The specific audience for this chapter is the person(s) reviewing and publishing a post, however, it may provide insights to post authors.
+This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
 ```
 
 ## Review a Post
@@ -29,6 +27,8 @@ When adding your first comment, choose 'Start a review' (not 'Add a single comme
 
 Where changes are "obvious" such as fixing grammar or a typo, use GitHub "commit suggestion" `<cmd-g>` so the author can commit your change directly. 
 Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) where edited.
+
+While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
 
 To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
 Even if an author gives edit permission to the repo maintainer, the editor does not usually make edits directly on the post.
@@ -66,16 +66,6 @@ show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv
 ```{r checklisteditor, echo = FALSE}
 show_checklist("editor-checklist.csv")
 ```
-
-### Note about non automatic tech checks
-
-The roblog helpers do not check
-
-* whether the alternative text of an image is informative,
-* whether a title is in Title Case.
-
-While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
-
 
 ### Check Twitter metadata
 
