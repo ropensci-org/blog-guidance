@@ -2,6 +2,8 @@
 
 # Post template in Markdown {#templatemd}
 
+Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
+
 Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 
 You can hover over the top-right corner of the template to make a copy-paste button appear.
@@ -12,11 +14,15 @@ show_template("post-template.md", lang = "markdown")
 
 # Post template in R Markdown {#templatermd}
 
+Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
+
 R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
-[Available on GitHub](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd)
+[Available on GitHub](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) (_not displayed for copy-paste because of "html_preserve" tags_)
 
 # Author file template {#authortemplate}
+
+Use of this template is described in [Create or update your author file](#createauthorfile).
 
 Author file template to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
 
@@ -28,6 +34,8 @@ show_template("author-file-template.md", lang = "yaml")
 
 # Author checklist for a post about a peer-reviewed package
 
+Use of this template is described in [Pre-submission checks](#presubchecks).
+
 Copy this checklist into the first comment on your pull request.
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
@@ -36,6 +44,8 @@ show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed
 ```
 
 # Author checklist for any other post
+
+Use of this template is described in [Pre-submission checks](#presubchecks).
 
 Copy this checklist into the first comment on your pull request. 
 You can hover over the top-right corner of the template to make a copy-paste button appear.
@@ -46,6 +56,8 @@ show_checklist("submission-checklist.csv")
 
 # Editor checklist for a post about a peer-reviewed package
 
+Use of this template is described in [Review a Post](#review).
+
 Copy this checklist to your GitHub review summary.
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
@@ -54,6 +66,8 @@ show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv
 ```
 
 # Editor checklist for any other post
+
+Use of this template is described in [Review a Post](#review).
 
 Copy this checklist to your GitHub review summary.
 You can hover over the top-right corner of the template to make a copy-paste button appear.
