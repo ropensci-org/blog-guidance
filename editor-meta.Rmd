@@ -20,7 +20,7 @@ For adding a new blog editor, the team maintainer or any ropensci admin
 
 The blog editors can filter their notifications, e.g. using the [`reason:team-mention` filter](https://github.com/notifications/beta?query=reason%3Ateam-mention).
 
-BLABLABLA what to add regarding access to this very repo i.e. blog-guidance?
+The blog editors don't necessarily have write access to the blog-guidance repo but are encouraged to make PRs.
 
 ## Posts authored by staff
 
