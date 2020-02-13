@@ -14,26 +14,23 @@ jobs:
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
+      - name: If this is a fork stop here
+        run: |
+          fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
+          if [ $fork == true ]; then
+             echo "This is a fork, no preview rendering"
+             exit 78;
+          else
+             echo "This is not a fork, on to preview rendering"
+          fi
       - uses: actions/setup-node@v1
-        env: # Set the secret as an input
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        if: env.NETLIFY_SITE_ID != ''
         with:
           node-version: "12.x"
       - name: Install Netlify CLI
-        env: # Set the secret as an input
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        if: env.NETLIFY_SITE_ID != 0
         run: npm install netlify-cli -g
       - name: Deploy to Netlify (test)
-        env: # Set the secret as an input
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        if: env.NETLIFY_SITE_ID != ''
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
       - name: Create commit comment
-        env: # Set the secret as an input
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        if: env.NETLIFY_SITE_ID != ''
         uses: peter-evans/commit-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
