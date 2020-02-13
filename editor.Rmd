@@ -19,7 +19,7 @@ This is when I often note some positive feedback, based on a first impression.
 
 Click on the 'Files changed' tab in the pull request to view the .Rmd or .md file for the post.
 
-Copy and paste either the [editor checklist for a post about a peer-reviewed package]LINK, or the [editor checklist for any other post]LINK, into the box that appears when you click the green "Review changes" button.
+Copy and paste either the [editor checklist for a post about a peer-reviewed package](#editorchecklistpeer), or the [editor checklist for any other post](#editorchecklistany), into the box that appears when you click the green "Review changes" button.
 
 Carry out those checks and comment as needed inline in the .Rmd or .md file.
 
