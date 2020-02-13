@@ -10,4 +10,4 @@ jobs:
       - name: test
         run: |
           fork=$(jq --raw-output .repo.fork "${GITHUB_EVENT_PATH}")
-          echo "Fork is $fork"
+          echo "Fork is ${GITHUB_EVENT_PATH}"
