@@ -24,7 +24,7 @@ jobs:
       - name: Install Netlify CLI
         env: # Set the secret as an input
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        if: env.NETLIFY_SITE_ID != ''
+        if: env.NETLIFY_SITE_ID != null
         run: npm install netlify-cli -g
       - name: Deploy to Netlify (test)
         env: # Set the secret as an input
