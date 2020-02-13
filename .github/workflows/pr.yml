@@ -9,9 +9,5 @@ jobs:
     steps:
       - name: test
         run: |
-          ok=${NETLIFY_SITE_ID:0}
-          if [[ $ok != 0 ]]; then
-              npm install netlify-cli -g
-          else
-              echo "skipped for forks"
-          fi
+          fork=$(jq --raw-output .repo.fork "${GITHUB_EVENT_PATH}")
+          echo "Fork is $fork"
