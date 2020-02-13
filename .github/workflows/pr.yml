@@ -26,6 +26,7 @@ jobs:
           
   publish:
     name: Publish-Book
+    needs: Render-Book
     runs-on: macOS-latest
     steps:
       - uses: actions/setup-node@v1
