@@ -28,7 +28,7 @@ Packages needed: magrittr, fs, glue, commonmark, xml2, tibble, crul, memoise, ra
 
 # Contributing
 
-This is a work in progress.
+This is a work in progress.ok
 If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in [this repository](https://github.com/ropensci-org/blog-guidance).
 
 We welcome contributions that adhere to our [Code of Conduct](https://ropensci.org/code-of-conduct/).
