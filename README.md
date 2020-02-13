@@ -37,5 +37,7 @@ We welcome contributions that adhere to our [Code of Conduct](https://ropensci.o
 
 This book was started using [Sean Kross](https://github.com/seankross)' [minimal bookdown example](https://github.com/seankross/bookdown-start).
 
+The organization of this book was inspired by [JOSS's Author and Reviewer Guides](https://joss.readthedocs.io/en/latest/reviewer_guidelines.html).
+
 All of the content of this repository is licensed 
 [CC-BY-SA](https://creativecommons.org/publicdomain/zero/1.0/).
