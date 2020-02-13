@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: test
         run: |
-          if [[ -z "${NETLIFY_SITE_ID}" ]]; then
+          ok=${NETLIFY_SITE_ID:0}
+          if [[ $ok != 0 ]]; then
               npm install netlify-cli -g
           else
               echo "skipped for forks"
