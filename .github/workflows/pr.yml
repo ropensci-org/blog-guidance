@@ -17,7 +17,7 @@ jobs:
       - name: Try skipping
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
-          if [ $fork != true ]; then
+          if [ $fork == true ]; then
              echo "This is a fork, no preview rendering"
              exit 78;
           else
