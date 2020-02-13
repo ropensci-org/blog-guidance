@@ -1,8 +1,8 @@
 I have read the content guidelines.
 I have read the technical guidelines.
-I used the R Markdown template or Markdown template.
+I used or followed the R Markdown or Markdown template.
 I have followed the Style Guide.
 I created or updated my author metadata with correct folder name.
 I have added relevant tags after browsing existing tags.
 I ran `roblog::ro_lint_md()` on index.md (optional).
-I ran `roblog::ro_check_urls()` (optional).
+I ran `roblog::ro_check_urls()` on index.md (optional).
