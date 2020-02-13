@@ -7,6 +7,6 @@ YAML description is ok
 I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()` on index.md
 alternative text of images is informative
-Twitter metadata looks ok (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator); might have to click twice)
+Twitter metadata looks ok (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator); might have to click twice on "Preview card")
 author metadata is provided with correct folder name
 html not included in pull request of Rmd post
