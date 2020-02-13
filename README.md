@@ -5,7 +5,7 @@
 [![GitHub Actions Workflow for commits to master](https://github.com/ropensci-org/blog-guidance/workflows/Render-Book-from-master/badge.svg)](https://github.com/ropensci-org/blog-guidance/actions?query=workflow%3ARender-Book-from-master)
 <!-- badges: end -->
 
-This is the bookdown source for "rOpenSci Blog Guidelines for Authors and Editors".
+This repo contains the bookdown source for "rOpenSci Blog Guidelines for Authors and Editors".
 
 # Deployment
 
