@@ -6,7 +6,7 @@ rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://g
 
 The team is maintained by [`@stefaniebutland`](https://github.com/stefaniebutland) at the moment.
 
-* Blog editors can be tagged in [any ropensci repo](https://github.com/ropensci/), in particular [roweb2](https://github.com/ropensci/roweb2/), by writing `@ropensci/blog-editors` (e.g. `:wave: @ropensci/blog-editors, I've an issue with using DT in my post!`).
+* Blog editors can be tagged in [any ropensci repo](https://github.com/ropensci/), in particular [roweb2](https://github.com/ropensci/roweb2/), by writing `@ropensci/blog-editors` (e.g. `:wave: @ropensci/blog-editors, I have trouble adding citations in my post!`).
 
 * Blog editors have write access to the roweb2 repo.
 
