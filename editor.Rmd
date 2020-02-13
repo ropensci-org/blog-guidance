@@ -5,6 +5,7 @@
 ```{block, type='summaryblock', echo=TRUE}
 This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
 ```
+ok
 
 ## Review a Post {#review}
 This section explains how to review a blog post or tech note.
