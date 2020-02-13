@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: test
         run: |
-          echo $env.NETLIFY_SITE_ID
+          echo ${NETLIFY_SITE_ID}
