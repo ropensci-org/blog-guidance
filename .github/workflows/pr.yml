@@ -17,18 +17,12 @@ jobs:
       - name: Try skipping
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
-          if [ $fork == true ]; then
+          if [ $fork != true ]; then
              echo "This is a fork, no preview rendering"
              exit 78;
           else
              echo "This is not a fork, on to preview rendering"
           fi
-          
-  publish:
-    name: Publish-Book
-    needs: bookdown
-    runs-on: macOS-latest
-    steps:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
