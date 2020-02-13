@@ -6,7 +6,7 @@
 This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
 ```
 
-## Review a Post
+## Review a Post {#review}
 This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
@@ -75,7 +75,7 @@ Therefore it is important to check the Twitter metadata by pasting a post's prev
 The relevant YAML tags are `twitterImg`, `description`, `title`.
 These same metadata tags might be picked up by other platforms such as Slack).
 
-## Publish a Post
+## Publish a Post {#publish}
 Publish a post by merging its pull request.
 For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
 When possible, it's nice to have a post published by morning in the timezone of the main post author. 
