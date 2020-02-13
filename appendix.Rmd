@@ -32,7 +32,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_template("author-file-template.md", lang = "yaml")
 ```
 
-# Author checklist for a post about a peer-reviewed package
+# Author checklist for a post about a peer-reviewed package {#authorchecklistpeer}
 
 Use of this template is described in [Pre-submission checks](#presubchecks).
 
@@ -43,7 +43,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
 ```
 
-# Author checklist for any other post
+# Author checklist for any other post {#authorchecklistany}
 
 Use of this template is described in [Pre-submission checks](#presubchecks).
 
@@ -54,7 +54,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist("submission-checklist.csv")
 ```
 
-# Editor checklist for a post about a peer-reviewed package
+# Editor checklist for a post about a peer-reviewed package {#editorchecklistpeer}
 
 Use of this template is described in [Review a Post](#review).
 
@@ -65,7 +65,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
 ```
 
-# Editor checklist for any other post
+# Editor checklist for any other post {#editorchecklistany}
 
 Use of this template is described in [Review a Post](#review).
 
