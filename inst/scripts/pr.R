@@ -9,5 +9,6 @@ gh::gh("PATCH /repos/:owner/:repo/check-runs/:check_run_id",
        owner = "ropensci-org",
        repo = "blog-guidance",
        check_run_id = check$check_runs[[1]]$id,
-       details_url = Sys.getenv("DEPLOY_URL"),
-       .send_headers = c(Accept = "application/vnd.github.antiope-preview+json"))
+       details_url = "https://masalmon.eu",
+       .send_headers = c(Accept = "application/vnd.github.antiope-preview+json"),
+       .token = Sys.getenv("repotoken"))
