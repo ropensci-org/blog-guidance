@@ -28,3 +28,4 @@ jobs:
         run: Rscript -e "source('inst/scripts/pr.R')"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          sha: ${{ github.event.pull_request.head.sha }} 
