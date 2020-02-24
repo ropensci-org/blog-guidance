@@ -16,4 +16,4 @@ jobs:
       - name: Add preview URL
         run: Rscript -e 'gh::gh_whoami()'
         env:
-          repotoken: secrets.GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
