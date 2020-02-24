@@ -2,7 +2,8 @@ check <- gh::gh("GET /repos/:owner/:repo/commits/:ref/check-runs",
        owner = "ropensci-org",
        repo = "blog-guidance",
        ref = Sys.getenv("sha"),
-       .send_headers = c(Accept = "application/vnd.github.antiope-preview+json"))
+       .send_headers = c(Accept = "application/vnd.github.antiope-preview+json"),
+       .token = Sys.getenv("GITHUB_TOKEN2"))
 
 gh::gh("PATCH /repos/:owner/:repo/check-runs/:check_run_id",
        owner = "ropensci-org",
