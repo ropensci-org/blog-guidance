@@ -27,4 +27,4 @@ jobs:
       - name: Add preview URL
         run: Rscript -e "source('inst/scripts/pr.R')"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
