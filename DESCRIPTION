@@ -27,6 +27,7 @@ Imports:
     gluedown,
     purrr,
     readr,
-    gh
+    gh,
+    gert
 Remotes:
     rstudio/webshot2
