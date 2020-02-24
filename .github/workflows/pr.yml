@@ -14,6 +14,6 @@ jobs:
         run:
           Rscript -e "install.packages('gh')" 
       - name: Add preview URL
-        run: Rscript -e 'gh::gh_whoami(.token = Sys.getenv("repotoken"))'
+        run: Rscript -e 'gh::gh_whoami()'
         env:
           repotoken: secrets.GITHUB_TOKEN
