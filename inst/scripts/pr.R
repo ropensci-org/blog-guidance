@@ -10,7 +10,7 @@ gh::gh("PATCH /repos/:owner/:repo/check-runs/:check_run_id",
        repo = "blog-guidance",
        check_run_id = check$check_runs[[1]]$id,
        output = list (
-         "title": "BLABLA",
-         "summary": "[yeah](https://masalmon.eu)",
+         "title" = "BLABLA",
+         "summary" = "[yeah](https://masalmon.eu)",
          "text" = "[text](https://masalmon.eu)"),
        .send_headers = c(Accept = "application/vnd.github.antiope-preview+json"))
