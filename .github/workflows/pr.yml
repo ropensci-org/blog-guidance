@@ -10,6 +10,7 @@ jobs:
       - name: Is this a fork
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}");echo "::set-env name=fork::$fork"
+          
       - name: Create check
         if: env.fork == 'false'
         run: |
@@ -55,12 +56,15 @@ jobs:
           node-version: "12.x"
           
       - name: Install Netlify CLI
+        if: env.fork == 'false'
         run: npm install netlify-cli -g
         
       - name: Deploy to Netlify (test)
+        if: env.fork == 'false'
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
             
       - name: Update check
+        if: env.fork == 'false'
         run: |
           curl --request PATCH \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs/${{ env.PREVIEWRUNID }} \
