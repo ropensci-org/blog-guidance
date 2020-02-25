@@ -18,7 +18,7 @@ jobs:
             "name": "Book rendering",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
             "status": "in_progress"
-            }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::PREVIEWRUNID"
+            }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::$PREVIEWRUNID"
       - name: Update check
         run: |
           curl --request PATCH \
