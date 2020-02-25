@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Create check
         run: |
-          curl --request POST \
+          PREVIEWRUNID=$(curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'Accept: application/vnd.github.antiope-preview+json' \
@@ -18,4 +18,5 @@ jobs:
             "name": "Book rendering",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
             "status": "in_progress"
-            }'
+            }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::PREVIEWRUNID"
+            
