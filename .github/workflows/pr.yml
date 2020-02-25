@@ -16,5 +16,6 @@ jobs:
           --header 'content-type: application/json' \
           --data '{
             "name": "Book rendering",
-            "head_sha": "${{ github.sha }}"
+            "head_sha": "${{ github.sha }}",
+            "status": "in_progress"
             }'
