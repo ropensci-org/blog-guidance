@@ -18,8 +18,46 @@ jobs:
             "name": "Book preview link",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
             "status": "in_progress",
-            "details_url": "https://masalmon.eu"
             }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::$PREVIEWRUNID"
+            
+      
+      - uses: actions/checkout@v1
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Query dependencies
+        run:
+          Rscript -e "install.packages('remotes')" -e "saveRDS(remotes::dev_package_deps(dependencies = TRUE), 'depends.Rds', version = 2)"
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('depends.Rds') }}
+          restore-keys: ${{ runner.os }}-r-
+
+      - name: Install dependencies
+        run:
+          Rscript -e "library(remotes)" -e "deps <- readRDS('depends.Rds')" -e "deps[['installed']] <- vapply(deps[['package']], remotes:::local_sha, character(1))" -e "update(deps)"
+
+      - name: Render Book
+        run: Rscript -e 'bookdown::render_book("index.Rmd")'
+      - name: If this is a fork stop here
+        run: |
+          fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
+          if [ $fork == true ]; then
+             echo "This is a fork, no preview rendering"
+             exit 78;
+          else
+             echo "This is not a fork, on to preview rendering"
+          fi
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install Netlify CLI
+        run: npm install netlify-cli -g
+      - name: Deploy to Netlify (test)
+        run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
+            
       - name: Update check
         run: |
           curl --request PATCH \
@@ -28,12 +66,11 @@ jobs:
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "details_url": "https://masalmon.eu",
+            "details_url": "{{ env.DEPLOY_URL }}",
             "conclusion": "success",
             "output": {
-                "title": "Mighty Readme report",
-                "summary": "[summary](https://masalmon.eu)",
-                "text": "[text](https://masalmon.eu)"
+                "title": "Preview link below",
+                "summary": "[Click here](${{ env.DEPLOY_URL }}) :rocket:"
             }
             }'
             
