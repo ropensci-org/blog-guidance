@@ -7,7 +7,11 @@ jobs:
     name: Render-Book
     runs-on: macOS-latest
     steps:
+      - name: Is this a fork
+        run: |
+          fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}");echo "::set-env name=fork::$fork"
       - name: Create check
+        if: !fork
         run: |
           PREVIEWRUNID=$(curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs \
@@ -41,24 +45,19 @@ jobs:
 
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
-      - name: If this is a fork stop here
-        run: |
-          fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}")
-          if [ $fork == true ]; then
-             echo "This is a fork, no preview rendering"
-             exit 78;
-          else
-             echo "This is not a fork, on to preview rendering"
-          fi
       - uses: actions/setup-node@v1
+        if: !fork
         with:
           node-version: "12.x"
       - name: Install Netlify CLI
+        if: !fork
         run: npm install netlify-cli -g
       - name: Deploy to Netlify (test)
+        if: !fork
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
             
       - name: Update check
+        if: !fork
         run: |
           curl --request PATCH \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs/${{ env.PREVIEWRUNID }} \
@@ -66,7 +65,6 @@ jobs:
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "details_url": "{{ env.DEPLOY_URL }}",
             "conclusion": "success",
             "output": {
                 "title": "Preview link below",
