@@ -59,6 +59,7 @@ jobs:
           --header 'content-type: application/json' \
           --data '{
             "name": "Preview Book",
+            "external_id": "42",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
             "conclusion": "success",
             "html_url": "${{ env.DEPLOY_URL }}",
