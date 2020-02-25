@@ -11,7 +11,7 @@ jobs:
         run: |
           fork=$(jq --raw-output .pull_request.head.repo.fork "${GITHUB_EVENT_PATH}");echo "::set-env name=fork::$fork"
       - name: Create check
-        if: fork == false
+        if: env == false
         run: |
           PREVIEWRUNID=$(curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs \
