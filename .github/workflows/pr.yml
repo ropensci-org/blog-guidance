@@ -29,6 +29,11 @@ jobs:
           --header 'content-type: application/json' \
           --data '{
             "details_url": "https://masalmon.eu",
-            "conclusion": "success"
+            "conclusion": "success",
+            "output": {
+                "title": "Mighty Readme report",
+                "summary": "[summary](https://masalmon.eu)",
+                "text": "[text](https://masalmon.eu)"
+            }
             }'
             
