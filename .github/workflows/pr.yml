@@ -1,10 +1,10 @@
 on: pull_request
   
-name: Render-Book-from-PR
+name: PR-workflow
 
 jobs:
   bookdown:
-    name: Render-Book
+    name: Render Book
     runs-on: macOS-latest
     steps:
       - name: Is this a fork
@@ -19,7 +19,7 @@ jobs:
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "name": "Book preview link",
+            "name": "Preview Book",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
             "status": "in_progress"
             }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::$PREVIEWRUNID"
