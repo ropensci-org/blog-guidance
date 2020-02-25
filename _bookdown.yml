@@ -1,5 +1,5 @@
 book_filename: "bookdown-start"
-chapter_name: "Chapter "
+chapter_name: "Chapterrr "
 repo: https://github.com/ropensci-org/blog-guidance
 output_dir: docs
 rmd_files: ["index.Rmd", "authorcontent.Rmd", 
