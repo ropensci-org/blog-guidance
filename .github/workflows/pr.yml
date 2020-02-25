@@ -7,31 +7,14 @@ jobs:
     name: Render-Book
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
       - name: Create check
         run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/check-runs \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'Accept: application/vnd.github.antiope-preview+json'
+          --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
             "name": "Book rendering",
             "head_sha": "${{ github.sha }}"
             }'
-      - name: Query dependencies
-        run:
-          Rscript -e "install.packages('remotes')" -e "saveRDS(remotes::dev_package_deps(dependencies = TRUE), 'depends.Rds', version = 2)"
-
-      - name: Cache R packages
-        uses: actions/cache@v1
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('depends.Rds') }}
-          restore-keys: ${{ runner.os }}-r-
-
-      - name: Install dependencies
-        run:
-          Rscript -e "library(remotes)" -e "deps <- readRDS('depends.Rds')" -e "deps[['installed']] <- vapply(deps[['package']], remotes:::local_sha, character(1))" -e "update(deps)"
