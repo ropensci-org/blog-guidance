@@ -15,9 +15,10 @@ jobs:
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "name": "Book rendering",
+            "name": "Book preview link",
             "head_sha": "${{ github.event.pull_request.head.sha }}",
-            "status": "in_progress"
+            "status": "in_progress",
+            "details_url": "https://masalmon.eu"
             }' | jq '.id' --raw-output);echo "::set-env name=PREVIEWRUNID::$PREVIEWRUNID"
       - name: Update check
         run: |
@@ -27,7 +28,6 @@ jobs:
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "status": "completed",
             "details_url": "https://masalmon.eu",
             "conclusion": "success"
             }'
