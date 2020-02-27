@@ -138,7 +138,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### To add a tweet {#addtweet}
 
-Use a Hugo shortcode to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
 ### Don't use html widgets
 
@@ -239,7 +239,7 @@ Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/ma
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
 
-- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of Hugo shortcodes for tweets, of lower camelCase for rOpenSci name
+- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) for tweets, of lower camelCase for rOpenSci name
 - `ro_check_urls()` to check for URLs that might be broken 
 
 In the first comment of your pull request submitting a post, please copy-paste the checklist corresponding to your post (hover, a copy-paste button will appear at the top-right corner of the shaded area) and check off items.
