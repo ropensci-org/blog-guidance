@@ -8,7 +8,7 @@ This chapter coaches you in thinking through what you might say in a post for th
 
 ## Blog post or tech note? {#postornote}
 
-The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter notes aimed at a more technical audience.
+The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter tech notes aimed at a more technical audience. The word "post" refers generically to either type.
 We provide details and [selected examples of blog posts and tech notes](#postthemes) below.
 [Tech notes](https://ropensci.org/technotes/) are written for a narrower audience that wants details.
 They may include information on a software release with major new features, breaking changes, or significant new documentation.
