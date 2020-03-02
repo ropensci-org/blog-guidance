@@ -26,7 +26,7 @@ Carry out those checks and comment as needed inline in the .Rmd or .md file.
 When adding your first comment, choose 'Start a review' (not 'Add a single comment'), so the author gets a single notification for the review when it is complete.
 
 Where changes are "obvious" such as fixing grammar or a typo, use GitHub ["commit suggestion" `<cmd-g>`/`<ctrl-g>`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) so the author can commit your change directly. 
-Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) where edited.
+Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) were edited.
 
 While we recommend that authors add [line breaks at the end of every sentence, after the period](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
 
