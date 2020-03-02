@@ -153,6 +153,7 @@ If you really want to show an html widget, consider publishing it elsewhere and 
 ## Style Guide {#styleguide}
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
+- When linking to rOpenSci packages use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/
 - Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
