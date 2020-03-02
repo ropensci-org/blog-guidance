@@ -1,7 +1,7 @@
 # Technical Guidelines {#technical}
 
 ```{block, type='summaryblock', echo=TRUE}
-This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
+This chapter explains the technical details of submitting a blog post or tech note (referred to collectively as "posts") for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
 
 We include advice on commonly used elements like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
 ```
