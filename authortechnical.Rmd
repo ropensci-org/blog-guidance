@@ -275,7 +275,7 @@ When this preview looks good to you, you should submit your post as a pull reque
 If using the R Markdown template, knitting `index.Rmd` will generate both `index.md` and `index.html`.
 `index.html` will be ignored; do commit both `index.Rmd` and `index.md`.
 
-* Open a [**draft** pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) from your fork ([using the web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), see step 8 for creating a **draft**), or [`usethis::pr_push()`](https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request) that will open the same web interface)
+* Open a [**draft** pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) from your fork ([using the web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), see step 8 for creating a **draft**), or [`usethis::pr_push()`](https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request) that will save you some work and that will in the end open the same web interface where you can choose Draft PR in the last step)
 
 * Mark the draft PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.
 
