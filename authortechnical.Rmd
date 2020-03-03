@@ -48,7 +48,7 @@ It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `in
 
 Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows you to use RStudio Addins to get templates and to run some pre-submission checks.
     
-- Install roblog via `remotes::install_github("ropenscilabs/roblog")`
+- Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
 - Start a new post
     - in RStudio, using the roblog Addins
     - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
