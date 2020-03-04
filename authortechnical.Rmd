@@ -66,7 +66,7 @@ show_template("post-template.Rmd", lang = "yaml",
               yaml_only = TRUE)
 ```
 
-#### Add tags
+#### Add subject tags
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
 
@@ -83,7 +83,7 @@ These same metadata tags might be picked up by other platforms such as Slack.
 NOTE: code below trying to show tweet screenshot according to https://twitter.com/grrrck/status/1211856156412579840?s=20
 `Error: 'tweet_screenshot' is not an exported object from 'namespace:webshot2'`
 
-```{r twittercarddefault, fig.cap ="Summary Twitter Card for an rOpenSci URL"}
+```{r twittercarddefault, eval=FALSE, fig.cap="Summary", include=FALSE}
 webshot2::tweet_screenshot(tweet_url("nistara_r","1225931157159608320"))
 ```
 
