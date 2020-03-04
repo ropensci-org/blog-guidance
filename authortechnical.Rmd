@@ -93,6 +93,8 @@ To reference them in your post, use `name-of-image.png`.
 
 - To insert the image aligned to the right, use `class = "pull-right"`
 
+- To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
+
 - In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
 If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) in order not to worry about paths.
@@ -141,16 +143,6 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
-### Don't use html widgets
-
-We've decided against featuring html widgets (`DT`, `leaflet`, etc.) in posts because
-
-* their JS and CSS could clash with our website's JS and CSS;
-
-* using an iframe to embed them, setting the correct width/height is tricky.
-
-If you really want to show an html widget, consider publishing it elsewhere and linking it from the blog post.
-
 ## Style Guide {#styleguide}
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
@@ -161,6 +153,7 @@ If you really want to show an html widget, consider publishing it elsewhere and 
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
 - In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd).
+- Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
 
