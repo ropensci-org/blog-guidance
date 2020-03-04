@@ -21,7 +21,7 @@ tags:
   - R
   - community
 # The summary below will be used by e.g. Twitter cards
-description: "A very short summary of your post"
+description: "A very short summary of your post (~ 100 characters)"
 # If you have no preferred image for Twitter cards, 
 # delete the twitterImg line below
 # Note there is no '/' symbol before 'img' here
