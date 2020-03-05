@@ -19,6 +19,9 @@ Briefly, the process is:
 
 This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
+The roblog package is an option that can help with these steps.
+Its [installation and use](#roblogtemplates) is described below. 
+
 ## Fork the repo and create your post folder {#forkcreate}
 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
@@ -35,16 +38,6 @@ Prepare your post in your favorite editor in R Markdown **or** Markdown by start
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
 
-### Get R Markdown template
-
-[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
-
-It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
-
-### Get Markdown template
-
-[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
-
 ### Get any template from the roblog package {#roblogtemplates}
 
 Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows you to use RStudio Addins to get templates and to run some pre-submission checks.
@@ -54,6 +47,16 @@ Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows
     - in RStudio, using the roblog Addins
     - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
 - Save the file as `/content/blog/YYYY-MM-DD-slug/index.md` or `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+
+### Get R Markdown template
+
+[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+
+It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
+
+### Get Markdown template
+
+[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
 
 ## Walkthrough with code snippets {#usetemplates}
 
