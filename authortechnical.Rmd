@@ -72,7 +72,7 @@ Add tags to the YAML of your post to make it more findable. Browse [our page tha
 
 For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
 
-#### Understanding Twitter cards
+#### Understanding Twitter cards {#twittercards}
 
 This section is optional. 
 
