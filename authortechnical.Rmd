@@ -77,9 +77,9 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'c
 
 #### Understanding Twitter cards {#twittercards}
 
-This section is optional. 
+Only read this if you're curious about Twitter cards.
 
-A Twitter card [ADD link to basic explainer - Maëlle please suggest] means than when a URL is included in a tweet, what other Twitter users see is not the URL but instead a "card", i.e. the metadata from the URL rendered in a nice preview.
+A [Twitter card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) means than when a URL is included in a tweet, what other Twitter users see is not the URL but instead a "card", i.e. the metadata from the URL rendered in a nice preview.
 The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet. 
 The relevant YAML tags for rOpenSci posts are `title`, `description`, `twitterImg`.
 These same metadata tags might be picked up by other platforms such as Slack.
