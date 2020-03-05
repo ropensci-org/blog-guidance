@@ -8,7 +8,7 @@ This chapter coaches you in thinking through what you might say in a post for th
 
 ## Blog post or tech note? {#postornote}
 
-The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter notes aimed at a more technical audience.
+The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter tech notes aimed at a more technical audience. The word "post" refers generically to either type.
 We provide details and [selected examples of blog posts and tech notes](#postthemes) below.
 [Tech notes](https://ropensci.org/technotes/) are written for a narrower audience that wants details.
 They may include information on a software release with major new features, breaking changes, or significant new documentation.
@@ -21,8 +21,8 @@ Both are given the same [promotional treatment](#promote) by rOpenSci.
 
 ## Themes of posts {#postthemes}
 
-Read a few [blog posts and tech notes](https://ropensci.org/archive/) and consider what you like (or not) about them.
-Most posts written by community members are about packages that have passed rOpenSci software peer review. However, we have posts on a range of topics and we encourage you to consider these or to propose others.
+Read a few [posts](https://ropensci.org/archive/) and consider what you like (or not) about them.
+Most posts written by community members are about packages that have passed rOpenSci software peer review, however, we have posts on a range of topics and we encourage you to consider these or to propose others.
 
 Expand a topic below to see examples.
 
@@ -119,4 +119,4 @@ If you want people to give you general feedback, tell them how you’d like to r
 Will readers understand your take-home message clearly enough to tweet about your post?
 You might need to remind them of your main points.
 
-Now **[review the technical guidelines](#technical)** for submitting your draft post, and you’re ready to go.
+Now **[review the Technical Guidelines](#technical)** for submitting your draft post, and you’re ready to go.
