@@ -94,8 +94,9 @@ This is what a tweet about an rOpenSci post looks like with YAML `twitterImg` sp
 
 <!--html_preserve--><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Aggregating spatial data with the grainchanger package <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw">@rOpenSci</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/datascience?src=hash&amp;ref_src=twsrc%5Etfw">#datascience</a> <a href="https://t.co/eILe7af7o8">https://t.co/eILe7af7o8</a></p>&mdash; R Weekly Live (@rweekly_live) <a href="https://twitter.com/rweekly_live/status/1151027589831462912?ref_src=twsrc%5Etfw">July 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <!--/html_preserve-->
 
-If you specify a `twitterImg`, ensure that its dimensions are appropriate (last time we looked, 1.91:1 or 1200px X 628px dimensions). 
-These may different from the dimensions of an image featured in your post. 
+If you specify a `twitterImg`, ensure that its dimensions are appropriate. 
+(Google those for current recommendation.) 
+These may be different from the dimensions of an image featured in your post. 
 You could save a separate copy of an image for the purpose of `twitterImg` only if you think it will draw people to read your post.
 
 How do you know what it will look like?
