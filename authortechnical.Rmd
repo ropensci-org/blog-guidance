@@ -1,7 +1,7 @@
 # Technical Guidelines {#technical}
 
 ```{block, type='summaryblock', echo=TRUE}
-This chapter explains the technical details of submitting a blog post or tech note for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
+This chapter explains the technical details of submitting a blog post or tech note (referred to collectively as "posts") for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
 
 We include advice on commonly used elements like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
 ```
@@ -9,6 +9,7 @@ We include advice on commonly used elements like adding [an image](#addimage), [
 
 Briefly, the process is:
 
+1. Get the go-ahead and a tentative publication date from our Community Manager [Stefanie Butland](https://github.com/stefaniebutland).
 1. Fork the repository (repo) of the rOpenSci website.
 1. Draft your post in R Markdown or Markdown and create or update your author metadata.
 1. Preview and refine your post locally.
@@ -17,6 +18,9 @@ Briefly, the process is:
 1. Revise your post in response to review.
 
 This chapter links to templates for posts and checklists that you can also find in the Appendix.
+
+The roblog package is an option that can help with these steps.
+Its [installation and use](#roblogtemplates) is described below. 
 
 ## Fork the repo and create your post folder {#forkcreate}
 
@@ -34,16 +38,6 @@ Prepare your post in your favorite editor in R Markdown **or** Markdown by start
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
 
-### Get R Markdown template
-
-[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
-
-It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
-
-### Get Markdown template
-
-[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
-
 ### Get any template from the roblog package {#roblogtemplates}
 
 Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows you to use RStudio Addins to get templates and to run some pre-submission checks.
@@ -54,9 +48,19 @@ Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows
     - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
 - Save the file as `/content/blog/YYYY-MM-DD-slug/index.md` or `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
 
+### Get R Markdown template
+
+[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+
+It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
+
+### Get Markdown template
+
+[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
+
 ## Walkthrough with code snippets {#usetemplates}
 
-### What goes in YAML
+### What goes in YAML {#whatgoesinyaml}
 
 This is the YAML from our [post template](#templatermd), with comments to explain some components:
 
@@ -65,11 +69,15 @@ show_template("post-template.Rmd", lang = "yaml",
               yaml_only = TRUE)
 ```
 
-### Add tags
+#### Add subject tags
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
 
 For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
+
+##### Understanding Twitter cards
+
+If you're curious about the `description`, `twitterImg` YAML fields in the post metadata, refer to [our explanations of Twitter cards](#twittercards).
 
 ### Examples
 
@@ -91,6 +99,8 @@ To reference them in your post, use `name-of-image.png`.
 - Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
 
 - To insert the image aligned to the right, use `class = "pull-right"`
+
+- To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 
 - In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
 
@@ -136,29 +146,21 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
-### To add a tweet {#addtweet}
+### To embed a tweet {#addtweet}
 
 Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
-
-### Don't use html widgets
-
-We've decided against featuring html widgets (`DT`, `leaflet`, etc.) in posts because
-
-* their JS and CSS could clash with our website's JS and CSS;
-
-* using an iframe to embed them, setting the correct width/height is tricky.
-
-If you really want to show an html widget, consider publishing it elsewhere and linking it from the blog post.
 
 ## Style Guide {#styleguide}
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
+- When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/
 - Use ### or #### to format headings in your post; larger sizes don't look good. Note long headings with #### don't currently wrap well.
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
 - In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd).
+- Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
 
@@ -291,6 +293,5 @@ knitr::include_graphics("images/hugochecks.png")
 ```{r hugocheckspassed, echo = FALSE, fig.cap = "All checks have passed."}
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
-
 
 
