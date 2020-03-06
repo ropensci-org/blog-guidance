@@ -24,7 +24,6 @@ These are particularly helpful:
 
 Read the post preview to get a feel for it. On my first read, I (Stefanie) typically make a few pen & paper notes for myself on what to pay attention to on deeper review.
 This is when I often note some positive feedback, based on a first impression.
-
 There is always something great in a post to highlight in your review. 
 Be specfic.
 If the post or something in it excites you, don't hesitate to say that.
@@ -33,16 +32,16 @@ How else will the author know and be inspired?!
 To start your review of the pull request, copy and paste either the [editor checklist for a post about a peer-reviewed package](#editorchecklistpeer), or the [editor checklist for any other post](#editorchecklistany), into the box that appears when you click the green _Review changes_ button.
 
 Click on the _Files changed_ tab in the pull request to view the .Rmd or .md file for the post.
-Carry out those checks and comment as needed inline in the .Rmd or .md file.
+Complete the checklist and comment as needed inline in the .Rmd or .md file.
 
 When adding your first comment, choose _Start a review_ (not _Add a single comment_), so the author gets a single notification for the review when it is complete.
 
 Where changes are "obvious" such as fixing grammar or a typo, use GitHub ["commit suggestion" `<cmd-g>`/`<ctrl-g>`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) so the author can commit your change directly. 
 Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) were edited.
 
-While our [Style Guide](#styleguide) recommends that authors add [line breaks at the end of every sentence](https://cirosantilli.com/markdown-style-guide#line-wrapping), after the period, we do not ask them to add these in their draft after the fact.
+While our [Style Guide](#styleguide) recommends that authors add [line breaks at the end of every sentence](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
 
-To download a PR locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
+To download a pull request locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
 Even if an author gives edit permission to the repo maintainer, the editor does not usually make edits directly on the post.
 Rare exceptions can be made at the editor's discretion.
 
@@ -54,13 +53,13 @@ This helps draw their attention to this nice feature.
 
 We don't (yet?) have templated editor response text, but here are helpful things to include:
 
-- I have made n (number of) comments. Look for _hidden conversations_ when there are many comments.
+- I have made ~n (number of) comments. Look for _hidden conversations_ when there are many comments.
 - Ask for thumbs up or thumbs down on every editor comment so we know you have seen it.
 - It's ok to disagree with some comments.
 - [_Resolve conversation_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations) for items you have addressed.
 - Tag editor when you have finished addressing their comments.
 
-When your review is complete, click [_Comment_ _Approve_, or _Request changes_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review), at your discretion. 
+When your review is complete, click [_Comment_, _Approve_, or _Request changes_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review), at your discretion. 
 This will trigger a notificaton to the author.
 
 ### Checklist for a post about a peer-reviewed package
