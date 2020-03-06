@@ -1,6 +1,10 @@
 # Responding to Editor's review {#respond}
 
-these are placeholder headings
+```{block, type='summaryblock', echo=TRUE}
+This chapter outlines how an author of a blog post or tech note can find and respond to the comments from an editor in the GitHub pull request review interface.
+```
+
+
 
 ## Where to look for comments and suggested commits
 
