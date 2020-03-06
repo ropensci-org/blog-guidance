@@ -65,7 +65,7 @@ This will trigger a notificaton to the author.
 ### Checklist for a post about a peer-reviewed package
 
 ```{r checklisteditorprp, echo = FALSE}
-show_checklist(c("editor-checklist-peer-reviewed-pkg.csv", "editor-checklist.csv"))
+show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
 ```
 
 ### Checklist for any other post
