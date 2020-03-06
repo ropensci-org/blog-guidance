@@ -10,7 +10,15 @@ This chapter outlines the workflow for an editor to review, publish and promote 
 This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
-A post is submitted as a pull request on GitHub and we use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
+A post is submitted as a pull request on GitHub. 
+We use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
+There's no better resource than that for screenshots and guidance on reviewing pull requests and for links to share with an author when coaching them on how to respond to your review. 
+
+These are particularly helpful:
+
+- [About pull request reviews](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
+- [Reviewing proposed changes in a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+- [Incorporating feedback in your pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)
 
 ### Review
 
