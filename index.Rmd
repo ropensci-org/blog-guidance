@@ -23,9 +23,7 @@ We created it after reviewing and publishing over 100 posts by community members
 The volume of information may be overwhelming at first. 
 Some of the guidance indicates things we require that you do (such as creating an author file with your metadata), while most of the guidance is information to help you (such as how to add an image to your post).
 
-If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in the [repository for this book](https://github.com/ropensci-org/blog-guidance).
-
-_We are thankful for the feedback and contributions by [Steffi LaZerte](https://github.com/steffilazerte)._
+**What's in the book and what's required reading?**
 
 - Chapter 1 [Content Guidelines](#content) coaches you in thinking through what you might say in your post.
 
@@ -36,4 +34,9 @@ _We are thankful for the feedback and contributions by [Steffi LaZerte](https://
 - Chapter 4 [Publication and Promotion](#promote) provides some motivation for doing the extra work to contribute a post by outlining what rOpenSci does to promote it.
 
 - Chapters 5 and 6 provide [guidelines for editors](#editor) reviewing, publishing and promoting posts and outine editorial [governance](#editormeta).
+
+
+If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in the [repository for this book](https://github.com/ropensci-org/blog-guidance).
+
+_We are thankful for the feedback and contributions by [Steffi LaZerte](https://github.com/steffilazerte)._
 
