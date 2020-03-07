@@ -19,7 +19,7 @@ Briefly, the process is:
 
 This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
-The roblog package is an option that can help with these steps.
+The [roblog package](https://docs.ropensci.org/roblog/) is an option that can help with these steps.
 Its [installation and use](#roblogtemplates) are described below. 
 
 ## Fork the repo and create your post folder {#forkcreate}
