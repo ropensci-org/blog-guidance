@@ -11,3 +11,5 @@ Browse [Chapter 5.1 Review a post](#review) to see how editors use the well docu
 - It's ok to explain why you disagree with some comments.
 - [_Resolve conversation_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations) for items you have addressed.
 - Tag the editor when you have finished addressing their comments.
+
+The editor will confirm when your post is ready for publication.
