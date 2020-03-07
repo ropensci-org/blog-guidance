@@ -1,5 +1,9 @@
 # Editorial Governance {#editormeta}
 
+```{block, type='summaryblock', echo=TRUE}
+This chapter explains management of the blog editors GitHub team and the process for staff-authored posts.
+```
+
 ## GitHub team
 
 rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors) team.
