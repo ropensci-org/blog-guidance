@@ -1,4 +1,4 @@
-# Editorial governance {#editormeta}
+# Editorial Governance {#editormeta}
 
 ## GitHub team
 
