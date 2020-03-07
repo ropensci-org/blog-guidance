@@ -6,7 +6,7 @@
 This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
 ```
 
-## Review a Post {#review}
+## Review a post {#review}
 This section explains how to review a blog post or tech note.
 The editor for a post is typically the Community Manager or their intern.
 
@@ -83,7 +83,7 @@ You might have to click twice.
 See [Understanding Twitter cards](#twittercards) for details. 
 Perfecting metadata for Twitter cards is optional for authors, so decide how critical any changes are before requesting them in your review.
 
-## Publish a Post {#publish}
+## Publish a post {#publish}
 Publish a post by merging its pull request.
 For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
 When possible, it's nice to have a post published by morning in the timezone of the main post author. 
@@ -93,7 +93,7 @@ When an entry is created, the `topicid` is the number at the end of the topic's 
 E.g. for [this topic](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
 It can be added immediately after merging the post's PR by direct edit of the post file through the GitHub web interface.
 
-## Promote a Post on Twitter {#tweetpromo}
+## Promote a post on Twitter {#tweetpromo}
 
 ### Workflow
 
