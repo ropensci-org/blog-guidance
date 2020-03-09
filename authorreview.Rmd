@@ -4,7 +4,7 @@
 This chapter outlines how an author of a blog post or tech note can find and respond to comments from an editor in the GitHub pull request review interface.
 ```
 
-Once you have [submitted](#submitpost) your blog post or tech note, an editor will review your post providing comments on both [content](#content) (does it make sense?) and [technical](#technical) (does it follow our Style Guide?) aspects.
+Once you have [submitted](#submitpost) your blog post or tech note, an editor will review your post providing comments on both [content](#content) (is the narrative clear?) and [technical](#technical) (does it follow our Style Guide?) aspects.
 
 Browse [Chapter 5.1 Review a post](#review) to see how editors use the [GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests) to suggest edits, make comments, and approve or request changes to your pull request.
 
