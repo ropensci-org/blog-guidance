@@ -33,6 +33,7 @@ To start your review of the pull request, copy and paste either the [editor chec
 
 Click on the _Files changed_ tab in the pull request to view the .Rmd or .md file for the post.
 Complete the checklist and comment as needed inline in the .Rmd or .md file.
+You must comment in the .Rmd if one was submitted.
 
 When adding your first comment, choose _Start a review_ (not _Add a single comment_), so the author gets a single notification for the review when it is complete.
 
@@ -47,7 +48,7 @@ Rare exceptions can be made at the editor's discretion.
 
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
-After all inline commenting and the checklist is done, add any further notes, starting with your overall impression, to the _Review changes_ box.
+After all inline commenting and the checklist is done, add any further notes, starting with a positive comment and your overall impression, to the _Review changes_ box.
 Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
 This helps draw their attention to this nice feature.
 
