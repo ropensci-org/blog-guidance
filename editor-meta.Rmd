@@ -1,4 +1,8 @@
-# Editorial governance {#editormeta}
+# Editorial Governance {#editormeta}
+
+```{block, type='summaryblock', echo=TRUE}
+This chapter explains management of the blog editors GitHub team and the process for staff-authored posts.
+```
 
 ## GitHub team
 
