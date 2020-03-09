@@ -19,7 +19,7 @@ Briefly, the process is:
 
 This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
-The roblog package is an option that can help with these steps.
+The [roblog package](https://docs.ropensci.org/roblog/) is an option that can help with these steps.
 Its [installation and use](#roblogtemplates) are described below. 
 
 ## Fork the repo and create your post folder {#forkcreate}
@@ -75,9 +75,11 @@ Add tags to the YAML of your post to make it more findable. Browse [our page tha
 
 For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
 
-##### Understanding Twitter cards
+#### Optional Twitter cards metadata
 
-If you're curious about the `description`, `twitterImg` YAML fields in the post metadata, refer to [our explanations of Twitter cards](#twittercards).
+If you're curious about the `description`, `twitterImg` YAML fields in the post metadata and how they can help draw readers to your post, refer to [our explanation of Twitter cards](#twittercards).
+
+Delete `description` and `twitterImg` YAML fields if you don't use them. 
 
 ### Examples
 
