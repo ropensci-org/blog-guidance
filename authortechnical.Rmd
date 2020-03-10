@@ -26,16 +26,12 @@ For help with this aspect of git/GitHub, we recommend [happygitwithr](https://ha
 
 ## Start the post from a template {#templates}
 
-Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or using blogdown's handy New Post RStudio addin (recommended approach).
-
-Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
-If using [blogdown's New Post addin](#blogdownaddin) you won't need to manually create the folder.
-_In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
-
+If you use RStudio, refer to [the instructions to create your draft with blogdown's New Post Addin](#blogdownaddin).
+If not, refer to [the instructions to create your draft manually](#manually).
 
 ### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
-We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
+The blogdown New Post Rstudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.
 If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could could first get opened in Vim.
 
 * Install `whoami` and `blogdown` development version from GitHub
@@ -60,20 +56,25 @@ blogdown::install_hugo()
 
 * For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
 
+```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin."}
+knitr::include_graphics("images/blogdownaddin.png")
+```
+
   * Enter a title, no need to worry about title case at this stage.
   * Enter your name if `whoami` wasn't able to guess it.
   * Choose the correct date.
   * Enter a new slug if the default one is too long.
-  * Choose "blog" or "technotes" as a subdirectory.
-  * Choose an archetype, Rmd or md.
-  * Also choose the correct extension: .Rmd if Rmd, Markdown (.md) if md.
-  * Select any relevant tag. To create new tags, wait until the post draft is open.
+  * Choose "blog" or "technotes" as a Subdirectory from the drop-down menu.
+  * Choose an Archetype, Rmd or md.
+  * Also choose the correct extension: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.
+  * Ignore Categories.
+  * Select any relevant tag and/or create new ones.
   * Click on "Done", your post draft will have been created and opened.
 
-### Get R Markdown or Markdown template manually
+### Get R Markdown or Markdown template manually {#manually}
 
-Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
-Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively.
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.[^1]
 
 * [R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`. It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
 
@@ -318,4 +319,4 @@ knitr::include_graphics("images/hugochecks.png")
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
 
-
+[^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
