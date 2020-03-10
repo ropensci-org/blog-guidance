@@ -31,12 +31,14 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 
 ## Start the post from a template {#templates}
 
-Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or using blogdown's handy New Post RStudio addin.
+Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or using blogdown's handy New Post RStudio addin (recommended approach).
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
-The blogdown New Post Rstudio addin handles the paths for you.
 
 ### Use any template with blogdown's New Post Addin
+
+We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
+If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new post will first get opened in Vim.
 
 * Install `whoami` and `blogdown`
 
@@ -58,11 +60,12 @@ blogdown::install_hugo()
 
 * Re-start R.
 
-* Run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
+* For your local roweb2 copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
 
-  * Enter a title, no need to worry about tile case.
+  * Enter a title, no need to worry about title case at this stage.
   * Enter your name if `whoami` wasn't able to guess it.
   * Choose the correct date.
+  * Choose "blog" or "technotes" as a subdirectory.
   * Choose an archetype, Rmd or md.
   * Also choose the correct extension: .Rmd if Rmd, Markdown (.md) if md.
   * Select any relevant tag. To create new tags, wait until the post draft is open.
