@@ -9,7 +9,7 @@ Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 You can hover over the top-right corner of the template to make a copy-paste button appear.
 
 ```{r posttemplatemd, results="asis"}
-show_template("post-template.md", lang = "markdown")
+show_template("https://github.com/ropensci/roweb2/raw/master/archetypes/md/index.md", lang = "markdown")
 ```
 
 # Post template in R Markdown {#templatermd}
@@ -18,7 +18,7 @@ Use of this template is described in [Start the post from a template](#templates
 
 R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
-[Available on GitHub](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) (_not displayed for copy-paste because of "html_preserve" tags_)
+[Available on GitHub](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) (_not displayed for copy-paste because of "html_preserve" tags_)
 
 # Author file template {#authortemplate}
 

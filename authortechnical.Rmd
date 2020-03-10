@@ -65,7 +65,8 @@ It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `in
 This is the YAML from our [post template](#templatermd), with comments to explain some components:
 
 ```{r posttemplate, results="asis"}
-show_template("post-template.Rmd", lang = "yaml",
+show_template("https://github.com/ropensci/roweb2/raw/master/archetypes/md/index.md", 
+              lang = "yaml",
               yaml_only = TRUE)
 ```
 
@@ -104,9 +105,9 @@ To reference them in your post, use `name-of-image.png`.
 
 - To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 
-- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
+- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
 
-If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) in order not to worry about paths.
+If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) in order not to worry about paths.
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
@@ -150,7 +151,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### To embed a tweet {#addtweet}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
 
 ## Style Guide {#styleguide}
 
@@ -161,7 +162,7 @@ Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) t
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd).
+- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md).
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
@@ -169,13 +170,13 @@ Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) t
 ## Create or update your author file {#createauthorfile}
 
 ### Why?
-The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/) who have contributed to a blog post, tech note, or presented in a Community Call.
+The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, or presented in a Community Call.
 A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub profile(s), and a list of all the content you’ve authored on our site.
 For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
 
 
 ### How?
-If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors).
+If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/author/`](https://github.com/ropensci/roweb2/tree/master/content/author).
 You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
@@ -193,7 +194,7 @@ Add your usernames or ID's without the "@" or the "https:..."). The link field c
 
 ### Examples 
 
-This author file, [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
+This author file, [`/author/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/author/kelly-obriant/_index.md) 
 
 ```yaml
 ---
@@ -204,10 +205,10 @@ github: kellobri
 ---
 ```
 
-... generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/)
+... generates [Kelly O'Briant's author page](https://ropensci.org/author/kelly-obriant/)
 
 ```{r authorpage, fig.cap ="Screenshot of Kelly O'Briant's author page"}
-webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
+webshot2::webshot("https://ropensci.org/author/kelly-obriant/",
                   selector = "section.author",
                   expand = c(50, # top
                              0, # right
@@ -218,7 +219,7 @@ webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
 ```
 
 
-This author file, [`/authors/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/authors/ma%C3%ABlle-salmon/_index.md)
+This author file, [`/author/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/author/ma%C3%ABlle-salmon/_index.md)
 
 ```yaml
 ---
@@ -232,12 +233,12 @@ orcid: 0000-0002-2815-0399
 ---
 ```
 
-... generates [Maëlle Salmon's author page](https://ropensci.org/authors/ma%C3%ABlle-salmon/).
+... generates [Maëlle Salmon's author page](https://ropensci.org/author/ma%C3%ABlle-salmon/).
 
-For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb2/blob/master/content/authors/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/authors/rich%C3%A8l-j.c.-bilderbeek/).
+For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb2/blob/master/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/).
 The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.
 
-Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
+Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/author) for examples. 
 
 ## Pre-submission checks {#presubchecks}
 
