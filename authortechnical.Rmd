@@ -36,7 +36,7 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 ### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
 We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
-If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new post will first get opened in Vim.
+If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could will first get opened in Vim.
 
 * Install `whoami` and `blogdown`
 
@@ -69,21 +69,14 @@ blogdown::install_hugo()
   * Select any relevant tag. To create new tags, wait until the post draft is open.
   * Click on "Done", your post draft will have been created and opened.
 
-### Get R Markdown template
+### Get R Markdown or Markdown template manually
 
 Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
 Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
 
-[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+* [R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`. It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
 
-It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
-
-### Get Markdown template
-
-Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
-Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
-
-[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
+* [Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
 
 ## Walkthrough with code snippets {#usetemplates}
 
