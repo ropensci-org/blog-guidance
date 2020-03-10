@@ -31,8 +31,7 @@ If not, refer to [the instructions to create your draft manually](#manually).
 
 ### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
-The blogdown New Post Rstudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.
-If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could could first get opened in Vim.
+The blogdown New Post Rstudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
 * Install `whoami` and `blogdown` development version from GitHub
 
@@ -320,3 +319,4 @@ knitr::include_graphics("images/hugocheckspassed.png")
 ```
 
 [^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
+[^2]: If you don't use RStudio you can still use the addin, but the new post will be opened in [`getOption("editor")`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html).
