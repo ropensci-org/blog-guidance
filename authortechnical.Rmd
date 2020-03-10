@@ -319,4 +319,4 @@ knitr::include_graphics("images/hugocheckspassed.png")
 ```
 
 [^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
-[^2]: If you don't use RStudio you can still use the addin, but the new post will be opened in the editor returned by [`getOption("editor")`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html), that you might have configured or not.
+[^2]: If you don't use RStudio you can still use the addin, but the new post will be opened in the editor returned by [`getOption("editor")`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html), that you might need to configure.
