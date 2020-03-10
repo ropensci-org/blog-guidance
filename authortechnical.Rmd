@@ -36,7 +36,7 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 ### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
 We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
-If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could will first get opened in Vim.
+If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could could first get opened in Vim.
 
 * Install `whoami` and `blogdown`
 
