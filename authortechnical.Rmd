@@ -24,18 +24,16 @@ This chapter links to templates for posts and checklists that you can also find 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
 For help with this aspect of git/GitHub, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
-Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
-Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
-
-_In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
-
 ## Start the post from a template {#templates}
 
 Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or using blogdown's handy New Post RStudio addin (recommended approach).
 
 Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
+If using [blogdown's New Post addin](#blogdownaddin) you won't need to manually create the folder.
+_In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
 
-### Use any template with blogdown's New Post Addin
+
+### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
 We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
 If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new post will first get opened in Vim.
@@ -73,11 +71,17 @@ blogdown::install_hugo()
 
 ### Get R Markdown template
 
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
+
 [R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
 
 It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
 
 ### Get Markdown template
+
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
 
 [Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
 
