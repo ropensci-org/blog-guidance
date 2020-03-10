@@ -57,7 +57,7 @@ blogdown::install_hugo()
 * For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
 
 ```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin."}
-knitr::include_graphics("images/blogdownaddin.png")
+knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
 ```
 
   * Enter a title, no need to worry about title case at this stage.
