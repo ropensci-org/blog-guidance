@@ -38,7 +38,7 @@ _In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-
 We recommend this approach because the blogdown New Post Rstudio addin handles the paths for you.
 If you don't use RStudio you can still use the addin, but in e.g. Ubuntu the new could could first get opened in Vim.
 
-* Install `whoami` and `blogdown`
+* Install `whoami` and `blogdown` development version from GitHub
 
 ```r
 whoami_path <- try(find.package("whoami"), silent = TRUE)
@@ -58,7 +58,7 @@ blogdown::install_hugo()
 
 * Re-start R.
 
-* For your local roweb2 copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
+* For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
 
   * Enter a title, no need to worry about title case at this stage.
   * Enter your name if `whoami` wasn't able to guess it.
