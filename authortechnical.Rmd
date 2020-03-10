@@ -69,6 +69,7 @@ blogdown::install_hugo()
   * Choose an archetype, Rmd or md.
   * Also choose the correct extension: .Rmd if Rmd, Markdown (.md) if md.
   * Select any relevant tag. To create new tags, wait until the post draft is open.
+  * Click on "Done", your post draft will have been created and opened.
 
 ### Get R Markdown template
 
