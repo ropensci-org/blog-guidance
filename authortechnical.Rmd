@@ -63,6 +63,7 @@ blogdown::install_hugo()
   * Enter a title, no need to worry about title case at this stage.
   * Enter your name if `whoami` wasn't able to guess it.
   * Choose the correct date.
+  * Enter a new slug if the default one is too long.
   * Choose "blog" or "technotes" as a subdirectory.
   * Choose an archetype, Rmd or md.
   * Also choose the correct extension: .Rmd if Rmd, Markdown (.md) if md.
