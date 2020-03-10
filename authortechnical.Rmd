@@ -64,7 +64,7 @@ knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
   * Choose the correct date.
   * Enter a new slug if the default one is too long.
   * Choose "blog" or "technotes" as a Subdirectory from the drop-down menu.
-  * Choose an Archetype, Rmd or md.
+  * Choose an Archetype, Rmd or md, from the drop-down menu.
   * Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.
   * Ignore Categories.
   * Select any relevant tag and/or create new ones.
