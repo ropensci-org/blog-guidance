@@ -11,9 +11,14 @@ show_template <- function(filename,
                           yaml_only = FALSE,
                           ...) {
   lines <- suppressWarnings(
-    readLines(
-      file.path("templates", filename)
-    )
+    if(grepl("roweb2", filename)) {
+      readLines(filename)
+    } else {
+      readLines(
+        file.path("templates", filename)
+      )
+      
+    }
   ) 
   
   if (yaml_only) {

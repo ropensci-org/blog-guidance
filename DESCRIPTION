@@ -28,4 +28,5 @@ Imports:
     purrr,
     readr
 Remotes:
-    rstudio/webshot2
+    rstudio/webshot2,
+    r-lib/xml2

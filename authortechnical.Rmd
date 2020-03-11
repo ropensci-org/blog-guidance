@@ -19,44 +19,65 @@ Briefly, the process is:
 
 This chapter links to templates for posts and checklists that you can also find in the Appendix.
 
-The [roblog package](https://docs.ropensci.org/roblog/) is an option that can help with these steps.
-Its [installation and use](#roblogtemplates) are described below. 
-
 ## Fork the repo and create your post folder {#forkcreate}
 
 Fork the rOpenSci website [repository](https://github.com/ropensci/roweb2) and create a new branch to work on your post. 
 For help with this aspect of git/GitHub, we recommend [happygitwithr](https://happygitwithr.com/fork-and-clone.html) and the [pull request helpers of the usethis package](https://usethis.r-lib.org/articles/articles/pr-functions.html).
 
-Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively. 
-Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.
-
-_In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles)._
-
 ## Start the post from a template {#templates}
 
-Prepare your post in your favorite editor in R Markdown **or** Markdown by starting with templates we provide in this book or [from the roblog package](#roblogtemplates).
+If you use RStudio, refer to [the instructions to create your draft with blogdown's New Post Addin](#blogdownaddin).
+If not, refer to [the instructions to create your draft manually](#manually).
 
-Your post source should be either `/content/blog/YYYY-MM-DD-slug/index.Rmd` (using R Markdown) or `/content/blog/YYYY-MM-DD-slug/index.md` (prepared in Markdown directly).
+### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
-### Get any template from the roblog package {#roblogtemplates}
+The blogdown New Post Rstudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
-Installing the [roblog helper package](https://docs.ropensci.org/roblog/) allows you to use RStudio Addins to get templates and to run some pre-submission checks.
-    
-- Install roblog via `install.packages("roblog", repos = "https://dev.ropensci.org")`
-- Start a new post
-    - in RStudio, using the roblog Addins
-    - or at the command-line, using `roblog::ro_blog_post_md()` or `roblog::ro_blog_post_rmd()`
-- Save the file as `/content/blog/YYYY-MM-DD-slug/index.md` or `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+* Install `whoami` and `blogdown` development version from GitHub
 
-### Get R Markdown template
+```r
+whoami_path <- try(find.package("whoami"), silent = TRUE)
 
-[R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`.
+if (is(whoami_path, "try-error")) {
+  install.packages("whoami")
+}
 
-It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
+remotes::install_github("rstudio/blogdown")
+```
 
-### Get Markdown template
+* Install Hugo if it wasn't already installed on your machine.
 
-[Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
+```r
+blogdown::install_hugo()
+```
+
+* Re-start R.
+
+* For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
+
+```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin."}
+knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
+```
+
+  * Enter a title, no need to worry about title case at this stage.
+  * Enter your name if `whoami` wasn't able to guess it.
+  * Choose the correct date.
+  * Enter a new slug if the default one is too long.
+  * Choose "blog" or "technotes" as a Subdirectory from the drop-down menu.
+  * Choose an Archetype, Rmd or md, from the drop-down menu.
+  * Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.
+  * Ignore Categories.
+  * Select any relevant tag and/or create new ones.
+  * Click on "Done", your post draft will have been created and opened.
+
+### Get R Markdown or Markdown template manually {#manually}
+
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively.
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.[^1]
+
+* [R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`. It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `index.md`to your PR.
+
+* [Markdown template](#templatemd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`.
 
 ## Walkthrough with code snippets {#usetemplates}
 
@@ -65,7 +86,8 @@ It will need to be knit (e.g. RStudio knit button). Add both `index.Rmd` and `in
 This is the YAML from our [post template](#templatermd), with comments to explain some components:
 
 ```{r posttemplate, results="asis"}
-show_template("post-template.Rmd", lang = "yaml",
+show_template("https://github.com/ropensci/roweb2/raw/master/archetypes/md/index.md", 
+              lang = "yaml",
               yaml_only = TRUE)
 ```
 
@@ -104,9 +126,9 @@ To reference them in your post, use `name-of-image.png`.
 
 - To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 
-- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
+- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
 
-If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) in order not to worry about paths.
+If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) in order not to worry about paths.
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
@@ -150,7 +172,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### To embed a tweet {#addtweet}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
 
 ## Style Guide {#styleguide}
 
@@ -161,7 +183,7 @@ Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) t
 - 'rOpenSci' not 'ROpenSci'
 - When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci-org/blog-guidance/blob/master/templates/post-template.Rmd).
+- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md).
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
@@ -169,17 +191,17 @@ Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) t
 ## Create or update your author file {#createauthorfile}
 
 ### Why?
-The rOpenSci website has a page listing [all authors](https://ropensci.org/authors/) who have contributed to a blog post, tech note, or presented in a Community Call.
+The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, or presented in a Community Call.
 A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub profile(s), and a list of all the content you’ve authored on our site.
 For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
 
 
 ### How?
-If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/authors/`](https://github.com/ropensci/roweb2/tree/master/content/authors).
+If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb2/content/author/`](https://github.com/ropensci/roweb2/tree/master/content/author).
 You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
-You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html)):
+You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")`):
 
 ```{r authorfiletemplate1, results="asis"}
 show_template("author-file-template.md", 
@@ -193,7 +215,7 @@ Add your usernames or ID's without the "@" or the "https:..."). The link field c
 
 ### Examples 
 
-This author file, [`/authors/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/authors/kelly-obriant/_index.md) 
+This author file, [`/author/kelly-obriant/_index.md`](https://github.com/ropensci/roweb2/blob/master/content/author/kelly-obriant/_index.md) 
 
 ```yaml
 ---
@@ -204,10 +226,10 @@ github: kellobri
 ---
 ```
 
-... generates [Kelly O'Briant's author page](https://ropensci.org/authors/kelly-obriant/)
+... generates [Kelly O'Briant's author page](https://ropensci.org/author/kelly-obriant/)
 
 ```{r authorpage, fig.cap ="Screenshot of Kelly O'Briant's author page"}
-webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
+webshot2::webshot("https://ropensci.org/author/kelly-obriant/",
                   selector = "section.author",
                   expand = c(50, # top
                              0, # right
@@ -218,7 +240,7 @@ webshot2::webshot("https://ropensci.org/authors/kelly-obriant/",
 ```
 
 
-This author file, [`/authors/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/authors/ma%C3%ABlle-salmon/_index.md)
+This author file, [`/author/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb2/blob/master/content/author/ma%C3%ABlle-salmon/_index.md)
 
 ```yaml
 ---
@@ -232,12 +254,12 @@ orcid: 0000-0002-2815-0399
 ---
 ```
 
-... generates [Maëlle Salmon's author page](https://ropensci.org/authors/ma%C3%ABlle-salmon/).
+... generates [Maëlle Salmon's author page](https://ropensci.org/author/ma%C3%ABlle-salmon/).
 
-For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb2/blob/master/content/authors/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/authors/rich%C3%A8l-j.c.-bilderbeek/).
+For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb2/blob/master/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/).
 The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.
 
-Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/authors) for examples. 
+Look at [other people's folder names](https://github.com/ropensci/roweb2/tree/master/content/author) for examples. 
 
 ## Pre-submission checks {#presubchecks}
 
@@ -296,4 +318,5 @@ knitr::include_graphics("images/hugochecks.png")
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
 
-
+[^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
+[^2]: If you don't use RStudio you can still use the addin, but the new post will be opened in the editor returned by [`getOption("editor")`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html), that you might need to configure.
