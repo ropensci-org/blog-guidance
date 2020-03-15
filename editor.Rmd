@@ -89,10 +89,9 @@ Publish a post by merging its pull request.
 For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
 When possible, it's nice to have a post published by morning in the timezone of the main post author. 
 
-Editor adds the YAML `topicid` of a post by adding an entry, called a "topic", for the post in our [discussion forum blogs category](https://discuss.ropensci.org/c/blog/).
-When an entry is created, the `topicid` is the number at the end of the topic's URL. 
-E.g. for [this topic](https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904), `https://discuss.ropensci.org/t/we-cleaned-our-website-urls-with-r/1904`, the `topicid` is `1904`.
-It can be added immediately after merging the post's PR by direct edit of the post file through the GitHub web interface.
+A "topic" linked to the blog post will automatically be created in the [discussion forum blogs category](https://discuss.ropensci.org/c/blog/) for both blog posts and tech notes. This facilitates commenting on posts. Comments will appear both below the post and in the discussion forum.
+
+_Note about older posts:_ Very old posts from (before March 2017) have no comments at all; these posts have no `topicid` field in their yaml header. Newer posts (March 2017 onward) have a yaml field `topicid` and a number in it that links to a topic that we manually created in the forum. Posts newer than March 9, 2020 won't have a `topicid` field in their yaml header as a forum topic is automatically created.
 
 ## Promote a post on Twitter {#tweetpromo}
 
