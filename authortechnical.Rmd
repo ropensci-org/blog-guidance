@@ -118,6 +118,8 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
 To reference them in your post, use `name-of-image.png`. 
 
+> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
+
 - Insert an image `{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
 
 - Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
@@ -127,8 +129,6 @@ To reference them in your post, use `name-of-image.png`.
 - To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 
 - In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
-
-If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) in order not to worry about paths, see [next subsection](#addfigure).
 
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
