@@ -118,6 +118,8 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
 To reference them in your post, use `name-of-image.png`. 
 
+> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
+
 - Insert an image `{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
 
 - Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
@@ -128,11 +130,25 @@ To reference them in your post, use `name-of-image.png`.
 
 - In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) for an example.
 
-If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) in order not to worry about paths.
-
 Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
+
+### To add a figure generated with R {#addfigure}
+
+When using [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. 
+Therefore you don't need to worry about paths.
+
+In the chunk producing a figure, use the `hugoopts` chunk option to control the alternative text and other elements.
+`hugoopts` is a named list that can have all elements described in the [documentation of the Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/#figure).
+
+````markdown
+```{r chunkname, hugoopts=list(alt="alternative text please make it informative", title="title of the image", caption="this is what this image shows, write it here or in the paragraph after the image as you prefer", width=300)} `r ''`
+plot(1:10)
+```
+````
+
+This chunk above produces a figure with _"alternative text please make it informative"_ as alternative text, _"title of the image"_ as title, _"this is what this image shows, write it here or in the paragraph after the image as you prefer"_ as caption, and a width of 300 pixels.
 
 ### To add a citation {#addcitation}
 
