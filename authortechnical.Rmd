@@ -139,16 +139,16 @@ Refer [to this tutorial for details on what should go in alternative text](https
 When using [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. 
 Therefore you don't need to worry about paths.
 
-In the chunk producing a figure, use the `hugoopts` chunk options to control the alternative text and other.
+In the chunk producing a figure, use the `hugoopts` chunk option to control the alternative text and other elements.
 `hugoopts` is a named list that can have all elements described in the [documentation of the Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/#figure).
 
-````
-```{r chunkname, hugoopts=list(alt="alternative text please make it informative", title="title of the image", caption="this is what this image shows, write it here or in the paragraph after the image as you prefer", width=300)}
+````markdown
+```{r chunkname, hugoopts=list(alt="alternative text please make it informative", title="title of the image", caption="this is what this image shows, write it here or in the paragraph after the image as you prefer", width=300)} `r ''`
 plot(1:10)
 ```
 ````
 
-This chunk above produces a figure with "alternative text please make it informative" as alternative text, "title of the image" as title, ="this is what this image shows, write it here or in the paragraph after the image as you prefer" as caption, and a width of 300 pixels.
+This chunk above produces a figure with _"alternative text please make it informative"_ as alternative text, _"title of the image"_ as title, _"this is what this image shows, write it here or in the paragraph after the image as you prefer"_ as caption, and a width of 300 pixels.
 
 ### To add a citation {#addcitation}
 
