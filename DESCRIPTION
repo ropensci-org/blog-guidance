@@ -1,5 +1,5 @@
 Package: blog-guidance
-Title: rOpenSci Blog Guidelines for Authors and Editors
+Title: rOpenSci Blog Guidelines for Authors & Editors
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Maëlle",
