@@ -217,7 +217,7 @@ If you don't already have an author page, create a folder called `yourfirstname-
 You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
-You can copy this template below, or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")`.
+You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")` ).
 
 ```{r authorfiletemplate1, results="asis"}
 show_template("author-file-template.md", 
