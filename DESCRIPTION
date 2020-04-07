@@ -19,7 +19,6 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 Imports: 
     bookdown,
-    webshot2,
     curl,
     glue,
     magrittr,
@@ -28,5 +27,4 @@ Imports:
     purrr,
     readr
 Remotes:
-    rstudio/webshot2,
     r-lib/xml2

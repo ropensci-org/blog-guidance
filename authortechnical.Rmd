@@ -245,14 +245,7 @@ github: kellobri
 ... generates [Kelly O'Briant's author page](https://ropensci.org/author/kelly-obriant/)
 
 ```{r authorpage, fig.cap ="Screenshot of Kelly O'Briant's author page"}
-webshot2::webshot("https://ropensci.org/author/kelly-obriant/",
-                  selector = "section.author",
-                  expand = c(50, # top
-                             0, # right
-                             0, # bottom
-                             0 #left
-                             )
-                  )
+knitr::include_graphics("images/authorpage-1.png")
 ```
 
 
