@@ -31,7 +31,7 @@ If not, refer to [the instructions to create your draft manually](#manually).
 
 ### Use any template with blogdown's New Post Addin {#blogdownaddin}
 
-The blogdown New Post Rstudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
+The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
 * Install `whoami` and `blogdown` development version from GitHub
 
@@ -217,7 +217,7 @@ If you don't already have an author page, create a folder called `yourfirstname-
 You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
-You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")`):
+You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")` ).
 
 ```{r authorfiletemplate1, results="asis"}
 show_template("author-file-template.md", 
@@ -227,7 +227,7 @@ show_template("author-file-template.md",
 ```
 
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username.
-Add your usernames or ID's without the "@" or the "https:..."). The link field can be your personal website URL, for example.
+Add your usernames or ID's without the "@" or the "https:...". The link field can be your personal website URL, for example.
 
 ### Examples 
 
