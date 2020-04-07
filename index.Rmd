@@ -17,7 +17,7 @@ favicon: "favicon/favicon.ico"
 
 # Preface {-}
 
-The purpose of this documentation is to provide a guidele for authors and editors of blog posts and tech notes for the rOpenSci website.
+The purpose of this documentation is to provide a guide for authors and editors of blog posts and tech notes for the rOpenSci website.
 We created it after reviewing and publishing over 100 posts by community members, in hopes of addressing many frequently asked questions, and frequently given suggestions. 
 
 The volume of information may be overwhelming at first. 
