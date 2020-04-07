@@ -29,7 +29,7 @@ For help with this aspect of git/GitHub, we recommend [happygitwithr](https://ha
 If you use RStudio, refer to [the instructions to create your draft with blogdown's New Post Addin](#blogdownaddin).
 If not, refer to [the instructions to create your draft manually](#manually).
 
-### Use any template with blogdown's New Post Addin {#blogdownaddin}
+### Get R Markdown or Markdown template with blogdown’s New Post Addin {#blogdownaddin}
 
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
