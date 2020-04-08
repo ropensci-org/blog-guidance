@@ -8,4 +8,5 @@ author metadata is provided with correct folder name
 html not included in pull request of Rmd post
 I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()` on index.md
+I ran a spell-check on index.md
 YAML subject tags are ok
