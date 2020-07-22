@@ -26,4 +26,4 @@ Imports:
     gluedown,
     purrr,
     readr,
-    r-lib/xml2
+    xml2
