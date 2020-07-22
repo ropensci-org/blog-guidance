@@ -25,6 +25,5 @@ Imports:
     details,
     gluedown,
     purrr,
-    readr
-Remotes:
+    readr,
     r-lib/xml2
