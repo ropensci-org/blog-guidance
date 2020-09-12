@@ -6,3 +6,4 @@ I created or updated my author metadata with correct folder name.
 I have added relevant tags after browsing existing tags.
 I ran `roblog::ro_lint_md()` on index.md (optional).
 I ran `roblog::ro_check_urls()` on index.md (optional).
+I ran a spell-check on index.md.
