@@ -117,6 +117,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/
 
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
 To reference them in your post, use `name-of-image.png`. 
+If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
 
 > If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
 
@@ -124,7 +125,27 @@ To reference them in your post, use `name-of-image.png`.
 
 - Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
 
-- To insert the image aligned to the right, use `class = "pull-right"`
+- To pull the image to the left or right with text wrapped around it (which you cannot do if producing the image from R Markdown), use our shortcode.
+
+    - Image pulled to the left
+
+```markdown
+{{< imgtxt src="name-of-image.png" alt="this is the alternative text">}}
+
+Text wrapped by the image blablabla.
+
+{{< /imgtxt >}}
+```
+
+    - Image pulled to the right
+
+```markdown
+{{< imgtxt side="right" src="name-of-image.png" alt="this is the alternative text">}}
+
+Text wrapped by the image blablabla.
+
+{{< /imgtxt >}}
+```
 
 - To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 
