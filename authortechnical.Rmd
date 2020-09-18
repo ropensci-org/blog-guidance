@@ -117,6 +117,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb2/master/
 
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
 To reference them in your post, use `name-of-image.png`. 
+If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
 
 > If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb2/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
 
