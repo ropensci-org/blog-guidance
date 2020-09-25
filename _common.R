@@ -11,7 +11,7 @@ show_template <- function(filename,
                           yaml_only = FALSE,
                           ...) {
   lines <- suppressWarnings(
-    if(grepl("roweb2", filename)) {
+    if(grepl("roweb3", filename)) {
       readLines(filename)
     } else {
       readLines(
