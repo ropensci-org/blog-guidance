@@ -137,15 +137,12 @@ Refer [to this tutorial for details on what should go in alternative text](https
 - Make the image a **hyperlink** with `link`  
   `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
 
-**Important!**  
+**Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
-In **R Markdown** (i.e. in *.Rmd files but NOT *.md files), these Hugo shortcodes need to be escaped:  
+<code>&lt;!\-\-html_preserve\-\-></code>    
+<code>{{< figure src = \"name-of-image.png\" width = \"400\" alt = \"informative description\">}}</code>  
+<code>&lt;!\-\-/html_preserve\-\-></code>  
 
-```
-<!--
-{{< figure src = "name-of-image.png" width = "400" alt = "informative description">}}  
--->
-```
 
 ### To add a figure generated with R {#addfigure}
 
