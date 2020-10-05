@@ -119,21 +119,30 @@ If your blog post has any images that are **not** generated from R Markdown, put
 To reference them in your post, use `name-of-image.png`. 
 If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
 
-> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
-
-- Insert an image `{{< figure src = "name-of-image.png" width = "200" alt = "this is the alternative text" >}}`
-
-- Insert the same image, but centered and bigger. Notice ` width` and `class`. `{{< figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" class = "center" >}}`
-
-- To insert the image aligned to the right, use `class = "pull-right"`
-
-- To hyperlink an image, use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
-
-- In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) for an example.
-
-Every image should be accompanied by alternative text (`alt="some text"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
+Every image should be accompanied by alternative text (`alt="informative description"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
+
+> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
+
+- **Insert** an image  
+  `{{< figure src = "image-name.png" alt = "informative description" >}}`
+- Control image **size** with `width`  
+  `{{< figure src = "image-name.png" width = "400" alt = "informative description">}}`
+- Control image **placement** with `class`  
+  `{{< figure src = "image-name.png" alt = "informative description" class = "center" >}}`
+    - `pull-left` - Left-align the picture and wrap text around it
+    - `center` - Center the picture (no text wrapping)
+    - `pull-right` - Right-align the picture and wrap text around it
+- Make the image a **hyperlink** with `link`  
+  `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
+
+**Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
+
+<code>&lt;!\-\-html_preserve\-\-></code>    
+<code>{{< figure src = \"name-of-image.png\" width = \"400\" alt = \"informative description\">}}</code>  
+<code>&lt;!\-\-/html_preserve\-\-></code>  
+
 
 ### To add a figure generated with R {#addfigure}
 
