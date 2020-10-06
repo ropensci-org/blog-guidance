@@ -124,6 +124,7 @@ Refer [to this tutorial for details on what should go in alternative text](https
 - For images side-by-side, create a composite and insert as a single image
     - Consider [gimp](https://www.gimp.org>) for free and open source image manipulation software
     - Consider the R package [patchwork](https://patchwork.data-imaginist.com/) for combining R figures
+- For very large images, consider image compression such as [TinyPNG](https://tinypng.com/)
 
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
