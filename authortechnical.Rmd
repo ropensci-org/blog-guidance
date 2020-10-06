@@ -100,6 +100,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/
 ### To add an image {#addimage}
 
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
+All non-R Markdown images should be in this folder (do not link to external services like imgur).
 To reference them in your post, use `name-of-image.png`. 
 If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
 
