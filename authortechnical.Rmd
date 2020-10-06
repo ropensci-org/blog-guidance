@@ -33,29 +33,13 @@ If not, refer to [the instructions to create your draft manually](#manually).
 
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
-* Install `whoami` and `blogdown` development version from GitHub
+* Install `whoami` and `blogdown`: `install.packages(c("whoami", "blogdown"))`
+* Install Hugo (to preview the post): `blogdown::install_hugo()`
+* Re-start R
+* In RStudio, open the forked `roweb3` project
+* Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`
 
-```r
-whoami_path <- try(find.package("whoami"), silent = TRUE)
-
-if (is(whoami_path, "try-error")) {
-  install.packages("whoami")
-}
-
-remotes::install_github("rstudio/blogdown")
-```
-
-* Install Hugo if it wasn't already installed on your machine.
-
-```r
-blogdown::install_hugo()
-```
-
-* Re-start R.
-
-* For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
-
-```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin."}
+```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
 ```
 
