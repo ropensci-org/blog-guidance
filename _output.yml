@@ -6,6 +6,9 @@ bookdown::gitbook:
   split_by: chapter
   toc_depth: 4
   config:
+    sharing:
+      github: yes
+      facebook: false
     toc:
       collapse: subsection
       before: |
