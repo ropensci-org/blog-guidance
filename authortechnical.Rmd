@@ -259,7 +259,7 @@ knitr::include_graphics("images/authorpage-1.png")
 ```
 
 
-This author file, [`/author/maëlle-salmon/_index.md'](https://github.com/ropensci/roweb3/blob/master/content/author/ma%C3%ABlle-salmon/_index.md)
+This author file, [`/author/maëlle-salmon/_index.md`](https://github.com/ropensci/roweb3/blob/master/content/author/ma%C3%ABlle-salmon/_index.md)
 
 ```yaml
 ---
