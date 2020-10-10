@@ -39,5 +39,5 @@ Some of the guidance indicates things we require that you do (such as creating a
 
 If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in the [repository for this book](https://github.com/ropensci-org/blog-guidance).
 
-_We are thankful for the feedback and contributions by [Steffi LaZerte](https://github.com/steffilazerte)._
+_We are thankful for the feedback and contributions from [Hugo Gruson](https://github.com/Bisaloo) and [Mark Padgham](https://github.com/mpadge)._
 
