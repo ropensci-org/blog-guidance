@@ -83,16 +83,20 @@ The Twitter metadata in a [post's YAML](whatgoesinyaml) helps it "look good" whe
 The relevant YAML tags for rOpenSci posts are `title`, `description`, `twitterImg`.
 These same metadata tags might be picked up by other platforms such as Slack.
 
-This is what a tweet about an rOpenSci post looks like by default.
-
-<!--html_preserve--><blockquote class="twitter-tweet"><p lang="en" dir="ltr">rOpenSci&#39;s Leadership in <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> Culture <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw">@rOpenSci</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/datascience?src=hash&amp;ref_src=twsrc%5Etfw">#datascience</a> <a href="https://t.co/VWSmvstOED">https://t.co/VWSmvstOED</a></p>&mdash; R Weekly Live (@rweekly_live) <a href="https://twitter.com/rweekly_live/status/1230932166306983936?ref_src=twsrc%5Etfw">February 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <!--/html_preserve-->
-
 If a specific `description` is not specified, the first sentences of the post (~100 characters) are used.
 If a specific `twitterImg` is not specified, a thumbnail of the rOpenSci logo is used. 
 
+This is what a tweet about an rOpenSci post looks like by default.
+
+```{r twitter_default, echo = FALSE, fig.cap = "Example of tweet without twitterImg specified"}
+knitr::include_graphics("images/twitterImg_default.png")
+```
+
 This is what a tweet about an rOpenSci post looks like with YAML `twitterImg` specified.
 
-<!--html_preserve--><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Aggregating spatial data with the grainchanger package <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw">@rOpenSci</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/datascience?src=hash&amp;ref_src=twsrc%5Etfw">#datascience</a> <a href="https://t.co/eILe7af7o8">https://t.co/eILe7af7o8</a></p>&mdash; R Weekly Live (@rweekly_live) <a href="https://twitter.com/rweekly_live/status/1151027589831462912?ref_src=twsrc%5Etfw">July 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <!--/html_preserve-->
+```{r twitterImg, echo = FALSE, fig.cap = "Example of tweet with twitterImg specified"}
+knitr::include_graphics("images/twitterImg.png")
+```
 
 If you specify a `twitterImg`, ensure that its dimensions are appropriate. 
 (Search for those in a search engine for current recommendation.) 

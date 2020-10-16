@@ -33,29 +33,13 @@ If not, refer to [the instructions to create your draft manually](#manually).
 
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
-* Install `whoami` and `blogdown` development version from GitHub
+* Install `whoami` and `blogdown`: `install.packages(c("whoami", "blogdown"))`
+* Install Hugo (to preview the post): `blogdown::install_hugo()`
+* Re-start R
+* In RStudio, open the forked `roweb3` project
+* Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`
 
-```r
-whoami_path <- try(find.package("whoami"), silent = TRUE)
-
-if (is(whoami_path, "try-error")) {
-  install.packages("whoami")
-}
-
-remotes::install_github("rstudio/blogdown")
-```
-
-* Install Hugo if it wasn't already installed on your machine.
-
-```r
-blogdown::install_hugo()
-```
-
-* Re-start R.
-
-* For your local website copy, after creating a branch, run blogdown's New Post addin from the RStudio addins menu or `blogdown:::new_post_addin()`
-
-```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin."}
+```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
 ```
 
@@ -116,6 +100,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/
 ### To add an image {#addimage}
 
 If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
+All non-R Markdown images should be in this folder (do not link to external services like imgur).
 To reference them in your post, use `name-of-image.png`. 
 If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
 
@@ -136,6 +121,10 @@ Refer [to this tutorial for details on what should go in alternative text](https
     - `pull-right` - Right-align the picture and wrap text around it
 - Make the image a **hyperlink** with `link`  
   `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
+- For images side-by-side, create a composite and insert as a single image
+    - Consider [gimp](https://www.gimp.org) for free and open source image manipulation software
+    - Consider the R package [patchwork](https://patchwork.data-imaginist.com/) for combining R figures
+- For very large images, consider image compression such as [TinyPNG](https://tinypng.com/)
 
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
@@ -202,12 +191,13 @@ Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) t
 
 ## Style Guide {#styleguide}
 
-- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text.
-- When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/
+- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text (no quotes).
+- Do not use markdown in titles (but you can use them in headings).
 - Use ## and ### to format headings in your post, i.e. section titles as ## (h2) and subsections as ### (h3), #### (h4).
 - Use title case for the title of your post; use sentence case for headings inside the post.
 - 'rOpenSci' not 'ROpenSci'
-- When adding links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
+- When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
+- When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
 - In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md).
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
