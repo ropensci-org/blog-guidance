@@ -122,7 +122,7 @@ Refer [to this tutorial for details on what should go in alternative text](https
 - Make the image a **hyperlink** with `link`  
   `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
 - For images side-by-side, create a composite and insert as a single image
-    - Consider [gimp](https://www.gimp.org>) for free and open source image manipulation software
+    - Consider [gimp](https://www.gimp.org) for free and open source image manipulation software
     - Consider the R package [patchwork](https://patchwork.data-imaginist.com/) for combining R figures
 - For very large images, consider image compression such as [TinyPNG](https://tinypng.com/)
 
