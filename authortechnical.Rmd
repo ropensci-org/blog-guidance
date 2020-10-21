@@ -110,20 +110,46 @@ Refer [to this tutorial for details on what should go in alternative text](https
 
 > If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
 
-- **Insert** an image  
-  `{{< figure src = "image-name.png" alt = "informative description" >}}`
-- Control image **size** with `width`  
-  `{{< figure src = "image-name.png" width = "400" alt = "informative description">}}`
-- Control image **placement** with `class`  
+**Insert an image**
+
+- **Insert** an image with either `figure` or `imgtxt` short codes
+  - `{{< figure src = "image-name.png" alt = "informative description" >}}`
+  - `{{< imgtxt src = "image-name.png" alt = "informative description">}} Text to right {{< /imgtxt >}}`
+  
+**Image placement**
+
+- Basic positioning with `{{< figure >}}` and `class`
+
   `{{< figure src = "image-name.png" alt = "informative description" class = "center" >}}`
     - `pull-left` - Left-align the picture and wrap text around it
     - `center` - Center the picture (no text wrapping)
     - `pull-right` - Right-align the picture and wrap text around it
-- Make the image a **hyperlink** with `link`  
-  `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
+  
+```{r, out.width = "30%", fig.align = "center"}
+knitr::include_graphics("images/figure.png")
+```
+  
+- Specific text next to image with `{{< imgtxt >}}`
+
+  `{{< imgtxt src = "image-name.png">}} Text to right {{</ imgtxt >}} Text below`
+    - Only text between `{{< imgtxt >}}` and `{{</ imgtxt >}}` is to the right of the figure
+
+```{r, out.width = "30%", fig.align = "center"}
+knitr::include_graphics("images/imgtxt.png")
+```
+
 - For images side-by-side, create a composite and insert as a single image
     - Consider [gimp](https://www.gimp.org) for free and open source image manipulation software
     - Consider the R package [patchwork](https://patchwork.data-imaginist.com/) for combining R figures
+
+**Other details**
+
+- Control image **size** with `width`  
+  `{{< figure src = "image-name.png" width = "400" alt = "informative description">}}`
+
+- Make the image a **hyperlink** with `link`  
+  `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
+
 - For very large images, consider image compression such as [TinyPNG](https://tinypng.com/)
 
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
