@@ -80,11 +80,12 @@ show_checklist("editor-checklist.csv")
 
 A [Twitter card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) means than when a URL is included in a tweet, what other Twitter users see is not the URL but instead a "card", i.e. the metadata from the URL rendered in a nice preview.
 The Twitter metadata in a [post's YAML](whatgoesinyaml) helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet. 
-The relevant YAML tags for rOpenSci posts are `title`, `description`, `twitterImg`.
+The relevant YAML tags for rOpenSci posts are `title`, `description`, `twitterImg`, `twitterAlt`.
 These same metadata tags might be picked up by other platforms such as Slack.
 
 If a specific `description` is not specified, the first sentences of the post (~100 characters) are used.
 If a specific `twitterImg` is not specified, a thumbnail of the rOpenSci logo is used. 
+If you use `twitterImg` also use `twitterAlt` to provide alternative text for screenreader users.
 
 This is what a tweet about an rOpenSci post looks like by default.
 
