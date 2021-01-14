@@ -1,6 +1,6 @@
 # (APPENDIX) Appendix {-}
 
-# Post template in Markdown {#templatemd}
+# Template - Post (md) {#templatemd}
 
 Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
 
@@ -12,7 +12,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", lang = "markdown")
 ```
 
-# Post template in R Markdown {#templatermd}
+# Template - Post (Rmd) {#templatermd}
 
 Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
 
@@ -20,7 +20,7 @@ R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
 [Available on GitHub](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) (_not displayed for copy-paste because of "html_preserve" tags_)
 
-# Author file template {#authortemplate}
+# Template - Author file {#authortemplate}
 
 Use of this template is described in [Create or update your author file](#createauthorfile).
 
@@ -32,7 +32,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_template("author-file-template.md", lang = "yaml")
 ```
 
-# Author checklist for a post about a peer-reviewed package {#authorchecklistpeer}
+# Author Checklist - Posts on peer-reviewed packages {#authorchecklistpeer}
 
 Use of this template is described in [Pre-submission checks](#presubchecks).
 
@@ -43,7 +43,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
 ```
 
-# Author checklist for any other post {#authorchecklistany}
+# Author Checklist - Other posts {#authorchecklistany}
 
 Use of this template is described in [Pre-submission checks](#presubchecks).
 
@@ -54,7 +54,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist("submission-checklist.csv")
 ```
 
-# Editor checklist for a post about a peer-reviewed package {#editorchecklistpeer}
+# Editor Checklist - Posts on peer-reviewed packages {#editorchecklistpeer}
 
 Use of this template is described in [Review a Post](#review).
 
@@ -65,7 +65,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
 ```
 
-# Editor checklist for any other post {#editorchecklistany}
+# Editor checklist - Other posts {#editorchecklistany}
 
 Use of this template is described in [Review a Post](#review).
 
@@ -76,7 +76,7 @@ You can hover over the top-right corner of the template to make a copy-paste but
 show_checklist("editor-checklist.csv")
 ```
 
-# Understanding Twitter cards {#twittercards}
+# Twitter cards {#twittercards}
 
 A [Twitter card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) means than when a URL is included in a tweet, what other Twitter users see is not the URL but instead a "card", i.e. the metadata from the URL rendered in a nice preview.
 The Twitter metadata in a [post's YAML](whatgoesinyaml) helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet. 

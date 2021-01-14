@@ -19,7 +19,7 @@ Tech notes can be published on any weekday.
 Both are given the same [promotional treatment](#promote) by rOpenSci.
 
 
-## Themes of posts {#postthemes}
+## Themes {#postthemes}
 
 Read a few [posts](https://ropensci.org/archive/) and consider what you like (or not) about them.
 Most posts written by community members are about packages that have passed rOpenSci software peer review, however, we have posts on a range of topics and we encourage you to consider these or to propose others.
@@ -54,7 +54,7 @@ cat(paste0(
 
 ```
 
-## What goes in your post? {#whatgoesin}
+## Post content {#postcontent}
 
 Since most posts contributed by community members are about packages that have passed software peer review, we use this type of post as an example to outline components you should consider including in your post.
 Some components would not be included if the post is not about a peer reviewed package.
