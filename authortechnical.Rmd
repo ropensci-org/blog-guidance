@@ -107,6 +107,7 @@ The blogdown New Post RStudio addin creates the post draft in the correct locati
 * Re-start R
 * In RStudio, open the forked `roweb3` project
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`
+* Leave "Categories" blank
 
 ```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
@@ -148,7 +149,7 @@ show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
 
-For a post about your peer-reviewed package, use 'Software Peer Review', 'R', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
+For a post about your peer-reviewed package, use 'Software Peer Review', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
 
 #### Twitter cards metadata (optional)
 
@@ -353,7 +354,7 @@ When this preview looks good to you, you should submit your post as a pull reque
 
 * Open a [**draft** pull request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) from your fork ([using the web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), see step 8 for creating a **draft**), or [`usethis::pr_push()`](https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request) that will save you some work and that will in the end open the same web interface where you can choose Draft PR in the last step)
 
-* If you opened a PR instead of a **draft** PR, the PR can't go back to a draft stage but no problem, only make sure to add a comment to the PR mentioning `@ropensci/blog-editors` once to tell them the PR isn't ready for review 
+* If you opened a PR instead of a **draft** PR, you can [convert it to a draft](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft) by clicking on "Still in progress? Convert to draft" on the right panel under "Reviewers".
 
 ### Add checklist
 
@@ -375,9 +376,6 @@ knitr::include_graphics("images/hugocheckspassed.png")
 ### Submit post
 
 * Mark the draft PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.
-
-* If you opened a PR instead of a **draft** PR, add a comment to the PR mentioning `@ropensci/blog-editors` to tell them the PR is ready for review.
-
 
 
 [^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
