@@ -27,3 +27,8 @@ Imports:
     purrr,
     readr,
     xml2
+Remotes:
+    rstudio/htmltools,
+    rstudio/bookdown,
+    rstudio/bslib,
+    r-lib/downlit

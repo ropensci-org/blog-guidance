@@ -8,6 +8,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: ropensci-org/blog-guidance
+twitter: ropensci
 url: 'https\://blogguide.ropensci.org/'
 description: "Blog post guidance"
 apple-touch-icon: "favicon/apple-touch-icon.png"
