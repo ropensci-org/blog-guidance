@@ -4,6 +4,7 @@ I used or followed the R Markdown or Markdown template.
 I have followed the Style Guide.
 I created or updated my author metadata with correct folder name.
 I have added relevant tags after browsing existing tags (incuding "community" tag).
+I have added the "tech notes" tag if this is a technote.
 I ran `roblog::ro_lint_md()` on index.md (optional).
 I ran `roblog::ro_check_urls()` on index.md (optional).
 I ran a spell-check on index.md.
