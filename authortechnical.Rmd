@@ -117,17 +117,18 @@ knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
   * Enter your name if `whoami` wasn't able to guess it.
   * Choose the correct date.
   * Enter a new slug if the default one is too long.
-  * Choose "blog" or "technotes" as a Subdirectory from the drop-down menu.
+  * Choose "blog" as a Subdirectory from the drop-down menu.
   * Choose an Archetype, Rmd or md, from the drop-down menu.
   * Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.
   * Ignore Categories.
-  * Select any relevant tag and/or create new ones.
+  * Select "tech notes" tag if this is a tech note
+  * Select any other relevant tags and/or create new ones
   * Click on "Done", your post draft will have been created and opened.
 
 ### Manually {#manually}
 
-Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/` or `content/technotes/` for a blog post and a tech note, respectively.
-Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`.[^1]
+Create a folder `YYYY-MM-DD-slug/` (e.g. `2020-01-20-rorcid/`) under `/content/blog/`
+Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/`.[^1]
 
 * [R Markdown template](#templatermd) is to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`. It will need to be knit (RStudio knit button, or `rmarkdown::render(<path_to_file>)`). Add both `index.Rmd` and `index.md`to your PR.
 
@@ -159,7 +160,7 @@ Delete `description`, `twitterImg` and `twitterAlt` YAML fields if you don't use
 
 ### External images {#addimage}
 
-If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/` or `/content/technotes/YYYY-MM-DD-slug/`).
+If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`).
 All non-R Markdown images should be in this folder (do not link to external services like imgur).
 To reference them in your post, use `name-of-image.png`. 
 If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
@@ -283,7 +284,7 @@ Comparing the raw Markdown to the live posts in these examples might be helpful.
 Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
 
 - A tech note.
-Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/content/technotes/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
+Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
 ## Style Guide {#styleguide}
 

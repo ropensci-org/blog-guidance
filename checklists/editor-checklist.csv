@@ -9,4 +9,4 @@ html not included in pull request of Rmd post
 I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()` on index.md
 I ran a spell-check on index.md
-YAML subject tags are ok (add "community" for post by non-staff non-editor)
+YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
