@@ -26,4 +26,12 @@ Imports:
     gluedown,
     purrr,
     readr,
-    xml2
+    xml2,
+    bslib,
+    downlit
+Remotes:
+    rstudio/htmltools,
+    rstudio/bookdown,
+    rstudio/bslib,
+    r-lib/downlit
+    
