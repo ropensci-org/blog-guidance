@@ -158,6 +158,13 @@ If you're curious about the `description`, `twitterImg`, `twitterAlt` YAML field
 
 Delete `description`, `twitterImg` and `twitterAlt` YAML fields if you don't use them. 
 
+#### Default Twitter text (optional)
+Provide default text for tweets when a reader clicks the "Share on Twitter" button by
+replacing the value of `tweet: "A post about blabla by @username!"`.
+Consider including your (and your coauthors) Twitter handle(s) (`@username`) in the tweet
+text to ensure you get notified when someone shares your post.
+
+
 ### Images - General
 
 Images can either be [external](#addimage) or created in [rmarkdown](#addfigure). 
