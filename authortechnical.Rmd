@@ -158,22 +158,45 @@ If you're curious about the `description`, `twitterImg`, `twitterAlt` YAML field
 
 Delete `description`, `twitterImg` and `twitterAlt` YAML fields if you don't use them. 
 
-### External images {#addimage}
+### Images - General
 
-If your blog post has any images that are **not** generated from R Markdown, put them in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`).
-All non-R Markdown images should be in this folder (do not link to external services like imgur).
-To reference them in your post, use `name-of-image.png`. 
-If your image is e.g. an hex logo, it might look better with a transparent background because the blog background is not exactly white.
+Images can either be [external](#addimage) or created in [rmarkdown](#addfigure). 
+Regardless of how images are included, they should all contain **alt** text 
+and consider the following features.
 
-Every image should be accompanied by alternative text (`alt="informative description"`) to make it more accessible to people with disabilities and provide a better user experience for everyone.
+**Alt text**  
+Every image should be accompanied by alternative text to make it more accessible to people with disabilities and provide a better user experience for everyone.
 The alternative text should convey the meaning or content that is displayed in the image.
-Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/).
+Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/), 
+and see the following sections for how to include alt text.
 
+
+**Image features**  
+
+- Consider transparent backgrounds as the blog background is not white 
+  (hex logos etc. will look better this way)
+- Keep images < 1 mb
+  - Large images can be compressed/optimized with tools like
+  - [OptiPNG](http://optipng.sourceforge.net/) (Local software, 
+  [also integrates with rmarkdown](https://bookdown.org/yihui/rmarkdown-cookbook/optipng.html))
+  - [minimage](https://github.com/ardata-fr/minimage) (Local software)
+  - [TinyPNG](https://tinypng.com/) (Online tool)
+
+
+### Images - External {#addimage}
+
+> This section refers to images that are **not** generated from R Markdown. 
 > If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
+
+**File location**  
+All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`) 
+(do not link to external services like imgur).
+To reference them in your post, use `name-of-image.png`. 
 
 **Insert an image**
 
 - **Insert** an image with either `figure` or `imgtxt` short codes
+  - Note the use of `alt =` to specify [alt text](#images)
   - `{{< figure src = "image-name.png" alt = "informative description" >}}`
   - `{{< imgtxt src = "image-name.png" alt = "informative description">}} Text to right {{< /imgtxt >}}`
   
@@ -211,8 +234,6 @@ knitr::include_graphics("images/imgtxt.png")
 - Make the image a **hyperlink** with `link`  
   `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
 
-- For very large images, consider image compression such as [TinyPNG](https://tinypng.com/)
-
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
 <code>&lt;!\-\-html_preserve\-\-></code>    
@@ -220,12 +241,14 @@ knitr::include_graphics("images/imgtxt.png")
 <code>&lt;!\-\-/html_preserve\-\-></code>  
 
 
-### Rmd-created images {#addfigure}
+### Images - Rmd-created {#addfigure}
 
+**File location**   
 When using [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. 
 Therefore you don't need to worry about paths.
 
-In the chunk producing a figure, use the `hugoopts` chunk option to control the alternative text and other elements.
+**Image details**    
+In the chunk producing a figure, use the `hugoopts` chunk option to control the **alt text** and other elements.
 `hugoopts` is a named list that can have all elements described in the [documentation of the Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/#figure) except for `title`.
 
 ````markdown
