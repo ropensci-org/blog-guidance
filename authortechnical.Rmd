@@ -66,7 +66,7 @@ github: kellobri
 
 ... generates [Kelly O'Briant's author page](https://ropensci.org/author/kelly-obriant/)
 
-```{r authorpage, fig.cap ="Screenshot of Kelly O'Briant's author page"}
+```{r authorpage, fig.alt ="Screenshot of Kelly O'Briant's author page"}
 knitr::include_graphics("images/authorpage-1.png")
 ```
 
@@ -109,7 +109,7 @@ The blogdown New Post RStudio addin creates the post draft in the correct locati
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
 * Leave "Categories" blank.
 
-```{r blogdownaddin, echo = FALSE, fig.cap = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
+```{r blogdownaddin, echo = FALSE, fig.alt = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
 ```
 
@@ -268,7 +268,7 @@ rcrossref::cr_cn("10.1111/2041-210X.13076", format="text", style="apa")
 To get the citation for an article in [Google Scholar](https://scholar.google.com/), find the article, click the quote symbol (in search results under the article) to open the "Cite" window, and copy the APA style text.
 
 
-```{r citation, echo = FALSE, fig.cap = "Get a citation from Google Scholar."}
+```{r citation, echo = FALSE, fig.alt = "Get a citation from Google Scholar."}
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
@@ -366,11 +366,11 @@ In the first comment of your pull request submitting a post, please copy-paste t
 From the PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
 Otherwise push additional fixes till things look right.
 
-```{r hugochecks, echo = FALSE, fig.cap = "Some checks haven't completed yet."}
+```{r hugochecks, echo = FALSE, fig.alt = "Some checks haven't completed yet."}
 knitr::include_graphics("images/hugochecks.png")
 ```
 
-```{r hugocheckspassed, echo = FALSE, fig.cap = "All checks have passed."}
+```{r hugocheckspassed, echo = FALSE, fig.alt = "All checks have passed."}
 knitr::include_graphics("images/hugocheckspassed.png")
 ```
 

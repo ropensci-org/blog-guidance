@@ -84,10 +84,6 @@ div.book-header.fixed[style] {
   color: #fff;
 }
 
-.caption {
-  display: none;
-}
-
 summary {
     display: list-item;
 }

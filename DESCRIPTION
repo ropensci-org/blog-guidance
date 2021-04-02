@@ -28,7 +28,8 @@ Imports:
     readr,
     xml2,
     bslib,
-    downlit
+    downlit,
+    knitr (>= 1.31)
 Remotes:
     rstudio/htmltools,
     rstudio/bookdown,

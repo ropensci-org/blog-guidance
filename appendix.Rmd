@@ -89,13 +89,13 @@ If you use `twitterImg` also use `twitterAlt` to provide alternative text for sc
 
 This is what a tweet about an rOpenSci post looks like by default.
 
-```{r twitter_default, echo = FALSE, fig.cap = "Example of tweet without twitterImg specified"}
+```{r twitter_default, echo = FALSE, fig.alt = "Example of tweet without twitterImg specified"}
 knitr::include_graphics("images/twitterImg_default.png")
 ```
 
 This is what a tweet about an rOpenSci post looks like with YAML `twitterImg` specified.
 
-```{r twitterImg, echo = FALSE, fig.cap = "Example of tweet with twitterImg specified"}
+```{r twitterImg, echo = FALSE, fig.alt = "Example of tweet with twitterImg specified"}
 knitr::include_graphics("images/twitterImg.png")
 ```
 
