@@ -150,7 +150,7 @@ show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
 
-For a post about your peer-reviewed package, use 'Software Peer Review', 'community', 'packages', the package name, tags that were [topic labels](https://github.com/ropensci/software-review/labels) in your package review such as 'data-access', and any others you see fit.
+For a post about your peer-reviewed package, use 'Software Peer Review', 'community', 'packages', the package name, and any others you see fit.
 
 #### Twitter cards metadata (optional)
 
