@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Technical Guidelines | rOpenSci Blog Guide for Authors and Editors</title>
+<meta name="author" content="Stefanie Butland, Steffi LaZerte, Maëlle Salmon">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.4.9003/tabs.js"></script><script src="libs/bs3compat-0.2.4.9003/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Blog Guide for Authors and Editors</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li class="book-part">Author Guide</li>
+<li><a class="" href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></li>
+<li><a class="active" href="technical.html"><span class="header-section-number">2</span> Technical Guidelines</a></li>
+<li><a class="" href="respond.html"><span class="header-section-number">3</span> Respond to Feedback</a></li>
+<li><a class="" href="promote.html"><span class="header-section-number">4</span> Publication and Promotion</a></li>
+<li class="book-part">Editor Guide</li>
+<li><a class="" href="editor.html"><span class="header-section-number">5</span> Review, Publish, Promote</a></li>
+<li><a class="" href="editormeta.html"><span class="header-section-number">6</span> Editorial Governance</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="templatemd.html"><span class="header-section-number">A</span> Template - Post (md)</a></li>
+<li><a class="" href="templatermd.html"><span class="header-section-number">B</span> Template - Post (Rmd)</a></li>
+<li><a class="" href="authortemplate.html"><span class="header-section-number">C</span> Template - Author file</a></li>
+<li><a class="" href="authorchecklistpeer.html"><span class="header-section-number">D</span> Author Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="authorchecklistany.html"><span class="header-section-number">E</span> Author Checklist - Other posts</a></li>
+<li><a class="" href="editorchecklistpeer.html"><span class="header-section-number">F</span> Editor Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="editorchecklistany.html"><span class="header-section-number">G</span> Editor checklist - Other posts</a></li>
+<li><a class="" href="twittercards.html"><span class="header-section-number">H</span> Twitter cards</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci-org/blog-guidance">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="technical" class="section level1">
+<h1>
+<span class="header-section-number">2</span> Technical Guidelines<a class="anchor" aria-label="anchor" href="#technical"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+This chapter explains the technical details of submitting a blog post or tech note (referred to collectively as “posts”) for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
+</p>
+<p>
+We include advice on commonly used elements like adding <a href="technical.html#addimage">an image</a>, <a href="technical.html#addcitation">a citation</a>, or <a href="technical.html#addtweet">embedding a tweet</a> in case you need them.
+</p>
+</div>
+<p>Briefly, the process is:</p>
+<ol style="list-style-type: decimal">
+<li>Get the go-ahead and a tentative publication date from our Community Manager <a href="https://github.com/stefaniebutland">Stefanie Butland</a>.</li>
+<li>Fork the repository (repo) of the rOpenSci website.</li>
+<li>Draft your post in R Markdown or Markdown and create or update your author metadata.</li>
+<li>Preview and refine your post locally.</li>
+<li>Submit via pull request and preview your post.</li>
+<li>A blog editor reviews your post.</li>
+<li>Revise your post in response to review.</li>
+</ol>
+<p>This chapter links to templates for posts and checklists that you can also find in the Appendix.</p>
+<div id="forkcreate" class="section level2">
+<h2>
+<span class="header-section-number">2.1</span> Fork the <code>roweb3</code> repository<a class="anchor" aria-label="anchor" href="#forkcreate"><i class="fas fa-link"></i></a>
+</h2>
+<p>Fork the rOpenSci website <a href="https://github.com/ropensci/roweb3">repository</a> and create a new branch to work on your post.
+For help with this aspect of git/GitHub, we recommend <a href="https://happygitwithr.com/fork-and-clone.html">happygitwithr</a> and the <a href="https://usethis.r-lib.org/articles/articles/pr-functions.html">pull request helpers of the usethis package</a>.</p>
+</div>
+<div id="createauthorfile" class="section level2">
+<h2>
+<span class="header-section-number">2.2</span> Author files<a class="anchor" aria-label="anchor" href="#createauthorfile"><i class="fas fa-link"></i></a>
+</h2>
+<p>Create or update your author file.</p>
+<div id="why" class="section level3">
+<h3>
+<span class="header-section-number">2.2.1</span> Why?<a class="anchor" aria-label="anchor" href="#why"><i class="fas fa-link"></i></a>
+</h3>
+<p>The rOpenSci website has a page listing <a href="https://ropensci.org/author/">all authors</a> who have contributed to a blog post, tech note, or presented in a Community Call.
+A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub profile(s), and a list of all the content you’ve authored on our site.
+For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.</p>
+</div>
+<div id="how" class="section level3">
+<h3>
+<span class="header-section-number">2.2.2</span> How?<a class="anchor" aria-label="anchor" href="#how"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you don’t already have an author page, create a folder called <code>yourfirstname-yourlastname</code> in your local copy of <a href="https://github.com/ropensci/roweb3/tree/master/content/author"><code>roweb3/content/author/</code></a>.
+You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.</p>
+<p>In that folder, create a file called <code>_index.md</code> with information about your online presence.
+You can copy this template below (or get it via <a href="https://docs.ropensci.org/roblog/reference/blog-posts.html">roblog</a> after installing it via <code>install.packages("roblog", repos = "https://dev.ropensci.org")</code> ).</p>
+<details closed><p><summary><span title="Click to Expand"> author-file-template.md </span> </summary></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="technical.html#cb1-1"></a></span>
+<span id="cb1-2"><a href="technical.html#cb1-2"></a><span class="pp">---</span></span>
+<span id="cb1-3"><a href="technical.html#cb1-3"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Author Name</span></span>
+<span id="cb1-4"><a href="technical.html#cb1-4"></a><span class="fu">link</span><span class="kw">:</span><span class="at"> website URL or other online presence</span></span>
+<span id="cb1-5"><a href="technical.html#cb1-5"></a><span class="fu">twitter</span><span class="kw">:</span><span class="at"> Twitter username</span></span>
+<span id="cb1-6"><a href="technical.html#cb1-6"></a><span class="fu">github</span><span class="kw">:</span><span class="at"> GitHub username</span></span>
+<span id="cb1-7"><a href="technical.html#cb1-7"></a><span class="fu">gitlab</span><span class="kw">:</span><span class="at"> GitLab username</span></span>
+<span id="cb1-8"><a href="technical.html#cb1-8"></a><span class="fu">keybase</span><span class="kw">:</span><span class="at"> Keybase ID</span></span>
+<span id="cb1-9"><a href="technical.html#cb1-9"></a><span class="fu">orcid</span><span class="kw">:</span><span class="at"> ORCID ID</span></span>
+<span id="cb1-10"><a href="technical.html#cb1-10"></a><span class="pp">---</span></span></code></pre></div>
+</details><p><br></p>
+<p>At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username.
+Add your usernames or ID’s without the “@” or the “https:…”. The link field can be your personal website URL, for example.</p>
+</div>
+<div id="examples" class="section level3">
+<h3>
+<span class="header-section-number">2.2.3</span> Examples<a class="anchor" aria-label="anchor" href="#examples"><i class="fas fa-link"></i></a>
+</h3>
+<p>This author file, <a href="https://github.com/ropensci/roweb3/blob/master/content/author/kelly-obriant/_index.md"><code>/author/kelly-obriant/_index.md</code></a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="technical.html#cb2-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="technical.html#cb2-2"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Kelly O'Briant</span></span>
+<span id="cb2-3"><a href="technical.html#cb2-3"></a><span class="fu">link</span><span class="kw">:</span><span class="at"> https://kellobri.github.io/</span></span>
+<span id="cb2-4"><a href="technical.html#cb2-4"></a><span class="fu">twitter</span><span class="kw">:</span><span class="at"> kellrstats</span></span>
+<span id="cb2-5"><a href="technical.html#cb2-5"></a><span class="fu">github</span><span class="kw">:</span><span class="at"> kellobri</span></span>
+<span id="cb2-6"><a href="technical.html#cb2-6"></a><span class="pp">---</span></span></code></pre></div>
+<p>… generates <a href="https://ropensci.org/author/kelly-obriant/">Kelly O’Briant’s author page</a></p>
+<div class="inline-figure"><img src="images/authorpage-1.png" title="Screenshot of Kelly O'Briant's author page" alt="Screenshot of Kelly O'Briant's author page" width="488"></div>
+<p>This author file, <a href="https://github.com/ropensci/roweb3/blob/master/content/author/ma%C3%ABlle-salmon/_index.md"><code>/author/maëlle-salmon/_index.md</code></a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="technical.html#cb3-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="technical.html#cb3-2"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Maëlle Salmon</span></span>
+<span id="cb3-3"><a href="technical.html#cb3-3"></a><span class="fu">twitter</span><span class="kw">:</span><span class="at"> ma_salmon</span></span>
+<span id="cb3-4"><a href="technical.html#cb3-4"></a><span class="fu">bio</span><span class="kw">:</span><span class="at"> rOpenSci Research Software Engineer, Associate editor of rOpenSci Software Peer Review</span></span>
+<span id="cb3-5"><a href="technical.html#cb3-5"></a><span class="fu">github</span><span class="kw">:</span><span class="at"> maelle</span></span>
+<span id="cb3-6"><a href="technical.html#cb3-6"></a><span class="fu">gitlab</span><span class="kw">:</span><span class="at"> maelle</span></span>
+<span id="cb3-7"><a href="technical.html#cb3-7"></a><span class="fu">keybase</span><span class="kw">:</span><span class="at"> maelle_salmon</span></span>
+<span id="cb3-8"><a href="technical.html#cb3-8"></a><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-2815-0399</span></span>
+<span id="cb3-9"><a href="technical.html#cb3-9"></a><span class="pp">---</span></span></code></pre></div>
+<p>… generates <a href="https://ropensci.org/author/ma%C3%ABlle-salmon/">Maëlle Salmon’s author page</a>.</p>
+<p>For an example of how to name the folder with an accent and initials, see this <a href="https://github.com/ropensci/roweb3/blob/master/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md">author file</a> that generates <a href="https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/">Richèl J.C. Bilderbeek’s author page</a>.
+The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.</p>
+<p>Look at <a href="https://github.com/ropensci/roweb3/tree/master/content/author">other people’s folder names</a> for examples.</p>
+</div>
+</div>
+<div id="templates" class="section level2">
+<h2>
+<span class="header-section-number">2.3</span> Post template<a class="anchor" aria-label="anchor" href="#templates"><i class="fas fa-link"></i></a>
+</h2>
+<p>Start your post from a template. If you use RStudio, refer to <a href="technical.html#blogdownaddin">the instructions to create your draft with blogdown’s New Post Addin</a>.
+If not, refer to <a href="technical.html#manually">the instructions to create your draft manually</a>.</p>
+<div id="blogdownaddin" class="section level3">
+<h3>
+<span class="header-section-number">2.3.1</span> New Post Addin<a class="anchor" aria-label="anchor" href="#blogdownaddin"><i class="fas fa-link"></i></a>
+</h3>
+<p>The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you’ll have entered.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;If you don’t use RStudio you can still use the addin, but the new post will be opened in the editor returned by &lt;a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html"&gt;&lt;code&gt;getOption("editor")&lt;/code&gt;&lt;/a&gt;, that you might need to configure.&lt;/p&gt;'><sup>1</sup></a></p>
+<ul>
+<li>Install <code>whoami</code> (<code>install.packages("whoami")</code>), and <code>blogdown</code> above version 1.1.10 (at the moment of writing, only available from GitHub, so <code>remotes::install_github("rstudio/blogdown")</code>).</li>
+<li>Install Hugo (to preview the post): <code>blogdown::install_hugo()</code>.</li>
+<li>Re-start R.</li>
+<li>In RStudio, open the forked <code>roweb3</code> project.</li>
+<li>Create a new post by running Addins &gt; New Post or <code>blogdown:::new_post_addin()</code>.</li>
+<li>Leave “Categories” blank.</li>
+</ul>
+<div class="inline-figure"><img src="images/blogdownaddin.png" title="blogdown's New Post Addin." alt="blogdown's New Post Addin." width="70%" style="display: block; margin: auto;"></div>
+<ul>
+<li>Enter a title, no need to worry about title case at this stage.</li>
+<li>Enter your name if <code>whoami</code> wasn’t able to guess it.</li>
+<li>Choose the correct date.</li>
+<li>Enter a new slug if the default one is too long.</li>
+<li>Choose “blog” as a Subdirectory from the drop-down menu.</li>
+<li>Choose an Archetype, Rmd or md, from the drop-down menu.</li>
+<li>Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.</li>
+<li>Ignore Categories.</li>
+<li>Select “tech notes” tag if this is a tech note</li>
+<li>Select any other relevant tags and/or create new ones</li>
+<li>Click on “Done”, your post draft will have been created and opened.</li>
+</ul>
+</div>
+<div id="manually" class="section level3">
+<h3>
+<span class="header-section-number">2.3.2</span> Manually<a class="anchor" aria-label="anchor" href="#manually"><i class="fas fa-link"></i></a>
+</h3>
+<p>Create a folder <code>YYYY-MM-DD-slug/</code> (e.g. <code>2020-01-20-rorcid/</code>) under <code>/content/blog/</code>
+Your post source and its images should live in <code>/content/blog/YYYY-MM-DD-slug/</code>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;In Hugo speak, we’d say your post is a &lt;a href="https://gohugo.io/content-management/page-bundles/#leaf-bundles"&gt;leaf bundle&lt;/a&gt;.&lt;/p&gt;'><sup>2</sup></a></p>
+<ul>
+<li><p><a href="templatermd.html#templatermd">R Markdown template</a> is to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.Rmd</code>. It will need to be knit (RStudio knit button, or <code>rmarkdown::render(&lt;path_to_file&gt;)</code>). Add both <code>index.Rmd</code> and <code>index.md</code>to your PR.</p></li>
+<li><p><a href="templatemd.html#templatemd">Markdown template</a> is to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.md</code>.</p></li>
+</ul>
+</div>
+</div>
+<div id="usetemplates" class="section level2">
+<h2>
+<span class="header-section-number">2.4</span> Adding content<a class="anchor" aria-label="anchor" href="#usetemplates"><i class="fas fa-link"></i></a>
+</h2>
+<div id="whatgoesinyaml" class="section level3">
+<h3>
+<span class="header-section-number">2.4.1</span> YAML<a class="anchor" aria-label="anchor" href="#whatgoesinyaml"><i class="fas fa-link"></i></a>
+</h3>
+<p>The YAML sets the metadata for a post. This is the YAML from our <a href="templatermd.html#templatermd">post template</a>, with comments to explain some components:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="technical.html#cb4-1"></a><span class="pp">---</span></span>
+<span id="cb4-2"><a href="technical.html#cb4-2"></a><span class="fu">slug</span><span class="kw">:</span><span class="at"> </span><span class="st">"post-template"</span></span>
+<span id="cb4-3"><a href="technical.html#cb4-3"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Post Title in Title Case</span></span>
+<span id="cb4-4"><a href="technical.html#cb4-4"></a><span class="co"># Delete the package_version line below if your post is not about a package</span></span>
+<span id="cb4-5"><a href="technical.html#cb4-5"></a><span class="fu">package_version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb4-6"><a href="technical.html#cb4-6"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="technical.html#cb4-7"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Author Name1</span></span>
+<span id="cb4-8"><a href="technical.html#cb4-8"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Author Name2</span></span>
+<span id="cb4-9"><a href="technical.html#cb4-9"></a><span class="co"># Set the date below to the publication date of your post</span></span>
+<span id="cb4-10"><a href="technical.html#cb4-10"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2020-03-10</span></span>
+<span id="cb4-11"><a href="technical.html#cb4-11"></a><span class="co"># Minimal tags for a post about a community-contributed package </span></span>
+<span id="cb4-12"><a href="technical.html#cb4-12"></a><span class="co"># that has passed software peer review are listed below</span></span>
+<span id="cb4-13"><a href="technical.html#cb4-13"></a><span class="co"># Consult the Technical Guidelines for information on choosing tags</span></span>
+<span id="cb4-14"><a href="technical.html#cb4-14"></a><span class="fu">tags</span><span class="kw">:</span></span>
+<span id="cb4-15"><a href="technical.html#cb4-15"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Software Peer Review</span></span>
+<span id="cb4-16"><a href="technical.html#cb4-16"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages</span></span>
+<span id="cb4-17"><a href="technical.html#cb4-17"></a><span class="at">  </span><span class="kw">-</span><span class="at"> R</span></span>
+<span id="cb4-18"><a href="technical.html#cb4-18"></a><span class="at">  </span><span class="kw">-</span><span class="at"> community</span></span>
+<span id="cb4-19"><a href="technical.html#cb4-19"></a><span class="co"># The summary below will be used by e.g. Twitter cards</span></span>
+<span id="cb4-20"><a href="technical.html#cb4-20"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"A very short summary of your post (~ 100 characters)"</span></span>
+<span id="cb4-21"><a href="technical.html#cb4-21"></a><span class="co"># If you have no preferred image for Twitter cards,</span></span>
+<span id="cb4-22"><a href="technical.html#cb4-22"></a><span class="co"># delete the twitterImg and twitterAlt lines below </span></span>
+<span id="cb4-23"><a href="technical.html#cb4-23"></a><span class="co"># - Replace "blog" with "technotes" as needed</span></span>
+<span id="cb4-24"><a href="technical.html#cb4-24"></a><span class="co"># - Note "/" between year/month/day</span></span>
+<span id="cb4-25"><a href="technical.html#cb4-25"></a><span class="fu">twitterImg</span><span class="kw">:</span><span class="at"> blog/2019/06/04/post-template/name-of-image.png</span></span>
+<span id="cb4-26"><a href="technical.html#cb4-26"></a><span class="fu">twitterAlt</span><span class="kw">:</span><span class="at"> </span><span class="st">"Alternative description of the image"</span></span>
+<span id="cb4-27"><a href="technical.html#cb4-27"></a><span class="co"># the text below is for populating the "share on Twitter" button</span></span>
+<span id="cb4-28"><a href="technical.html#cb4-28"></a><span class="co"># if deleted, the title of the post will be used</span></span>
+<span id="cb4-29"><a href="technical.html#cb4-29"></a><span class="fu">tweet</span><span class="kw">:</span><span class="at"> </span><span class="st">"A post about blabla by @username!"</span></span>
+<span id="cb4-30"><a href="technical.html#cb4-30"></a><span class="pp">---</span></span></code></pre></div>
+<div id="subject-tags" class="section level4">
+<h4>
+<span class="header-section-number">2.4.1.1</span> Subject tags<a class="anchor" aria-label="anchor" href="#subject-tags"><i class="fas fa-link"></i></a>
+</h4>
+<p>Add tags to the YAML of your post to make it more findable. Browse <a href="https://ropensci.org/tags/">our page that lists all tags in use</a> and re-use an existing tag rather than creating a new one e.g. ‘packages’ exists, so use that, rather than ‘package’.</p>
+<p>For a post about your peer-reviewed package, use ‘Software Peer Review’, ‘community’, ‘packages’, the package name, and any others you see fit.</p>
+</div>
+<div id="twitter-cards-metadata-optional" class="section level4">
+<h4>
+<span class="header-section-number">2.4.1.2</span> Twitter cards metadata (optional)<a class="anchor" aria-label="anchor" href="#twitter-cards-metadata-optional"><i class="fas fa-link"></i></a>
+</h4>
+<p>If you’re curious about the <code>description</code>, <code>twitterImg</code>, <code>twitterAlt</code> YAML fields in the post metadata and how they can help draw readers to your post, refer to <a href="twittercards.html#twittercards">our explanation of Twitter cards</a>.</p>
+<p>Delete <code>description</code>, <code>twitterImg</code> and <code>twitterAlt</code> YAML fields if you don’t use them.</p>
+</div>
+<div id="default-twitter-text-optional" class="section level4">
+<h4>
+<span class="header-section-number">2.4.1.3</span> Default Twitter text (optional)<a class="anchor" aria-label="anchor" href="#default-twitter-text-optional"><i class="fas fa-link"></i></a>
+</h4>
+<p>Provide default text for tweets when a reader clicks the “Share on Twitter” button by
+replacing the value of <code>tweet: "A post about blabla by @username!"</code>.
+Consider including your (and your coauthors) Twitter handle(s) (<code>@username</code>) in the tweet
+text to ensure you get notified when someone shares your post.</p>
+</div>
+</div>
+<div id="images---general" class="section level3">
+<h3>
+<span class="header-section-number">2.4.2</span> Images - General<a class="anchor" aria-label="anchor" href="#images---general"><i class="fas fa-link"></i></a>
+</h3>
+<p>Images can either be <a href="technical.html#addimage">external</a> or created in <a href="technical.html#addfigure">rmarkdown</a>.
+Regardless of how images are included, they should all contain <strong>alt</strong> text
+and consider the following features.</p>
+<p><strong>Alt text</strong><br>
+Every image should be accompanied by alternative text to make it more accessible to people with disabilities and provide a better user experience for everyone.
+The alternative text should convey the meaning or content that is displayed in the image.
+Refer <a href="https://www.w3.org/WAI/tutorials/images/informative/">to this tutorial for details on what should go in alternative text</a>,
+and see the following sections for how to include alt text.</p>
+<p><strong>Image features</strong></p>
+<ul>
+<li>Consider transparent backgrounds as the blog background is not white
+(hex logos etc. will look better this way)</li>
+<li>Keep images &lt; 1 mb
+<ul>
+<li>Large images can be compressed/optimized with tools like</li>
+<li>
+<a href="http://optipng.sourceforge.net/">OptiPNG</a> (Local software,
+<a href="https://bookdown.org/yihui/rmarkdown-cookbook/optipng.html">also integrates with rmarkdown</a>)</li>
+<li>
+<a href="https://github.com/ardata-fr/minimage">minimage</a> (Local software)</li>
+<li>
+<a href="https://tinypng.com/">TinyPNG</a> (Online tool)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="addimage" class="section level3">
+<h3>
+<span class="header-section-number">2.4.3</span> Images - External<a class="anchor" aria-label="anchor" href="#addimage"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>This section refers to images that are <strong>not</strong> generated from R Markdown.
+If you want to <strong>generate</strong> images from R Markdown use <a href="https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md">our R Markdown template</a> and see <a href="technical.html#addfigure">next subsection</a>.</p>
+</blockquote>
+<p><strong>File location</strong><br>
+All images go in the same folder as your post source (<code>/content/blog/YYYY-MM-DD-slug/</code>)
+(do not link to external services like imgur).
+To reference them in your post, use <code>name-of-image.png</code>.</p>
+<p><strong>Insert an image</strong></p>
+<ul>
+<li>
+<strong>Insert</strong> an image with either <code>figure</code> or <code>imgtxt</code> short codes
+<ul>
+<li>Note the use of <code>alt =</code> to specify <a href="#images">alt text</a>
+</li>
+<li><code>{{&lt; figure src = "image-name.png" alt = "informative description" &gt;}}</code></li>
+<li><code>{{&lt; imgtxt src = "image-name.png" alt = "informative description"&gt;}} Text to right {{&lt; /imgtxt &gt;}}</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Image placement</strong></p>
+<ul>
+<li>
+<p>Basic positioning with <code>{{&lt; figure &gt;}}</code> and <code>class</code></p>
+<p><code>{{&lt; figure src = "image-name.png" alt = "informative description" class = "center" &gt;}}</code></p>
+<ul>
+<li>
+<code>pull-left</code> - Left-align the picture and wrap text around it</li>
+<li>
+<code>center</code> - Center the picture (no text wrapping)</li>
+<li>
+<code>pull-right</code> - Right-align the picture and wrap text around it</li>
+</ul>
+</li>
+</ul>
+<div class="inline-figure"><img src="images/figure.png" width="30%" style="display: block; margin: auto;"></div>
+<ul>
+<li>
+<p>Specific text next to image with <code>{{&lt; imgtxt &gt;}}</code></p>
+<p><code>{{&lt; imgtxt src = "image-name.png"&gt;}} Text to right {{&lt;/ imgtxt &gt;}} Text below</code></p>
+<ul>
+<li>Only text between <code>{{&lt; imgtxt &gt;}}</code> and <code>{{&lt;/ imgtxt &gt;}}</code> is to the right of the figure</li>
+</ul>
+</li>
+</ul>
+<div class="inline-figure"><img src="images/imgtxt.png" width="30%" style="display: block; margin: auto;"></div>
+<ul>
+<li>For images side-by-side, create a composite and insert as a single image
+<ul>
+<li>Consider <a href="https://www.gimp.org">gimp</a> for free and open source image manipulation software</li>
+<li>Consider the R package <a href="https://patchwork.data-imaginist.com/">patchwork</a> for combining R figures</li>
+</ul>
+</li>
+</ul>
+<p><strong>Other details</strong></p>
+<ul>
+<li><p>Control image <strong>size</strong> with <code>width</code><br><code>{{&lt; figure src = "image-name.png" width = "400" alt = "informative description"&gt;}}</code></p></li>
+<li><p>Make the image a <strong>hyperlink</strong> with <code>link</code><br><code>{{&lt; figure src = "image-name.png" alt = "informative description" link = "http://hyperlink"&gt;}}</code></p></li>
+</ul>
+<p><strong>Important!</strong> In <strong>R Markdown</strong> (i.e. in *.Rmd files but NOT *.md files), these Hugo shortcodes need to be escaped:</p>
+<p><code>&lt;!--html_preserve--&gt;</code><br><code>{{&lt; figure src = "name-of-image.png" width = "400" alt = "informative description"&gt;}}</code><br><code>&lt;!--/html_preserve--&gt;</code></p>
+</div>
+<div id="addfigure" class="section level3">
+<h3>
+<span class="header-section-number">2.4.4</span> Images - Rmd-created<a class="anchor" aria-label="anchor" href="#addfigure"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>File location</strong><br>
+When using <a href="https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md">our R Markdown template</a> the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes.
+Therefore you don’t need to worry about paths.</p>
+<p><strong>Image details</strong><br>
+In the chunk producing a figure, use the <code>hugoopts</code> chunk option to control the <strong>alt text</strong> and other elements.
+<code>hugoopts</code> is a named list that can have all elements described in the <a href="https://gohugo.io/content-management/shortcodes/#figure">documentation of the Hugo figure shortcode</a> except for <code>title</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="technical.html#cb5-1"></a><span class="bn">```{r chunkname, hugoopts=list(alt="alternative text please make it informative", caption="this is what this image shows, write it here or in the paragraph after the image as you prefer", width=300)} </span></span>
+<span id="cb5-2"><a href="technical.html#cb5-2"></a><span class="bn">plot(1:10)</span></span>
+<span id="cb5-3"><a href="technical.html#cb5-3"></a><span class="bn">```</span></span></code></pre></div>
+<p>This chunk above produces a figure with <em>“alternative text please make it informative”</em> as alternative text, <em>“title of the image”</em> as title, <em>“this is what this image shows, write it here or in the paragraph after the image as you prefer”</em> as caption, and a width of 300 pixels.</p>
+</div>
+<div id="addcitation" class="section level3">
+<h3>
+<span class="header-section-number">2.4.5</span> Citations<a class="anchor" aria-label="anchor" href="#addcitation"><i class="fas fa-link"></i></a>
+</h3>
+<p>To add citations, refer to them in the body of your post:</p>
+<pre><code>Citation of the primary literature[^1].
+Citation of an R package[^2].
+Citation of a website[^3].</code></pre>
+<p>And list your sources at the bottom of your post:</p>
+<pre><code>[^1]: Sciaini, M., Fritsch, M., Scherer, C., &amp; Simpkins, C. E. (2018). NLMR and landscapetools: An integrated environment for simulating and modifying neutral landscape models in R. Methods in Ecology and Evolution, 9(11), 2240-2248. &lt;https://doi.org/10.1111/2041-210X.13076&gt;
+[^2]: Elin Waring, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu and Shannon Ellis (2019). skimr: Compact and Flexible Summaries of Data. R package version 2.0.2. https://CRAN.R-project.org/package=skimr
+[^3]: Hugo static site generator. https://gohugo.io/</code></pre>
+<div id="finding-citations" class="section level4">
+<h4>
+<span class="header-section-number">2.4.5.1</span> Finding citations<a class="anchor" aria-label="anchor" href="#finding-citations"><i class="fas fa-link"></i></a>
+</h4>
+<p>To get the citation for an R package, run <code>citation("packagename")</code>.</p>
+<p>To get the citation for an article, you can use the RStudio Addin for <a href="https://docs.ropensci.org/rcrossref/">rcrossref</a>, or get the citation from a paper’s DOI by running e.g.</p>
+<pre><code>rcrossref::cr_cn("10.1111/2041-210X.13076", format="text", style="apa")
+
+[1] "Sciaini, M., Fritsch, M., Scherer, C., &amp; Simpkins, C. E. (2018). NLMRandlandscapetools: An integrated environment for simulating and modifying neutral landscape models inR. Methods in Ecology and Evolution, 9(11), 2240–2248. doi:10.1111/2041-210x.13076"</code></pre>
+<p>To get the citation for an article in <a href="https://scholar.google.com/">Google Scholar</a>, find the article, click the quote symbol (in search results under the article) to open the “Cite” window, and copy the APA style text.</p>
+<div class="inline-figure"><img src="images/citation-gscholar.png" title="Get a citation from Google Scholar." alt="Get a citation from Google Scholar." width="482"></div>
+</div>
+</div>
+<div id="addtweet" class="section level3">
+<h3>
+<span class="header-section-number">2.4.6</span> Embedded tweets<a class="anchor" aria-label="anchor" href="#addtweet"><i class="fas fa-link"></i></a>
+</h3>
+<p>Use a <a href="https://gohugo.io/content-management/shortcodes/#tweet">Hugo shortcode</a> to embed a tweet using its ID e.g. <code>{{&lt; tweet 1138216112808529920 &gt;}}</code>. In R Markdown, shortcodes need to be html escaped, refer to <a href="https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md">the template</a> for an example.</p>
+</div>
+<div id="examples-1" class="section level3">
+<h3>
+<span class="header-section-number">2.4.7</span> Examples<a class="anchor" aria-label="anchor" href="#examples-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Comparing the raw Markdown to the live posts in these examples might be helpful.</p>
+<ul>
+<li><p>A blog post about a package that has passed software peer review.
+Compare <a href="https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2019-10-21-rmangal.md">raw markdown</a> with the <a href="https://ropensci.org/blog/2019/10/21/rmangal/">live post</a>.</p></li>
+<li><p>A tech note.
+Compare <a href="https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2018-10-06-av-release.md">raw markdown</a> with the <a href="https://ropensci.org/technotes/2018/10/06/av-release/">live tech note</a>.</p></li>
+</ul>
+</div>
+</div>
+<div id="styleguide" class="section level2">
+<h2>
+<span class="header-section-number">2.5</span> Style Guide<a class="anchor" aria-label="anchor" href="#styleguide"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>For formatting of package names, functions, and code, follow the <a href="https://style.tidyverse.org/documentation.html#r-code">tidyverse style guidance</a>. Format package names as regular text (no quotes).</li>
+<li>Do not use markdown in titles (but you can use them in headings).</li>
+<li>Use ## and ### to format headings in your post, i.e. section titles as ## (h2) and subsections as ### (h3), #### (h4).</li>
+<li>Use title case for the title of your post; use sentence case for headings inside the post.</li>
+<li>‘rOpenSci’ not ‘ROpenSci’</li>
+<li>When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. <code>/blog/</code> instead of <code>https://ropensci.org/blog/</code>.</li>
+<li>When linking to <a href="https://ropensci.org/packages/">rOpenSci packages</a> use their docs.ropensci.org URL, e.g. <a href="https://docs.ropensci.org/drake/" class="uri">https://docs.ropensci.org/drake/</a>.</li>
+<li>Use <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo shortcodes</a> (not html) to add images, tweets, gists etc.</li>
+<li>In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the <a href="https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md">template</a>.</li>
+<li>Instead of using html widgets (<code>DT</code>, <code>leaflet</code>, etc.), include a screenshot and use the <code>link</code> option of the <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo <code>figure</code> shortcode</a> to direct readers to an online version of the widget.</li>
+<li>Use informative <a href="technical.html#addimage">alternative text</a> for all images.</li>
+<li>Add new line at end of each sentence (<a href="https://cirosantilli.com/markdown-style-guide#line-wrapping">makes diffs easier to interpret and easier for editor to suggest specific changes</a>).</li>
+</ul>
+</div>
+<div id="presubchecks" class="section level2">
+<h2>
+<span class="header-section-number">2.6</span> Pre-submission checks<a class="anchor" aria-label="anchor" href="#presubchecks"><i class="fas fa-link"></i></a>
+</h2>
+<div id="knit-post" class="section level3">
+<h3>
+<span class="header-section-number">2.6.1</span> Knit post<a class="anchor" aria-label="anchor" href="#knit-post"><i class="fas fa-link"></i></a>
+</h3>
+<p>If using the R Markdown template, knitting <code>index.Rmd</code> (RStudio knit button, or <code>rmarkdown::render(&lt;path_to_file&gt;)</code>) will generate both <code>index.md</code> and <code>index.html</code> (
+<code>index.html</code> will be ignored, but we need an <code>index.md</code>). Commit both <code>index.Rmd</code> and <code>index.md</code>.</p>
+</div>
+<div id="check-with-roblog" class="section level3">
+<h3>
+<span class="header-section-number">2.6.2</span> Check with <code>roblog</code><a class="anchor" aria-label="anchor" href="#check-with-roblog"><i class="fas fa-link"></i></a>
+</h3>
+<p>You can use functions in the <a href="https://docs.ropensci.org/roblog/articles/checks-guidance.html">roblog package to do some automated checks</a> on your post.</p>
+<ul>
+<li>
+<code>ro_lint_md()</code> to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo shortcodes</a> for tweets, of lower camelCase for rOpenSci name</li>
+<li>
+<code>ro_check_urls()</code> to check for URLs that might be broken</li>
+</ul>
+</div>
+<div id="checklists" class="section level3">
+<h3>
+<span class="header-section-number">2.6.3</span> Author Checklist<a class="anchor" aria-label="anchor" href="#checklists"><i class="fas fa-link"></i></a>
+</h3>
+<p>Pick the appropriate checklist for your post and ensure you checked everything off.
+Hover the mouse over the list and a copy-paste button will appear at the
+top-right corner of the shaded area.</p>
+<div id="posts-on-peer-reviewed-packages" class="section level4">
+<h4>
+<span class="header-section-number">2.6.3.1</span> Posts on peer-reviewed packages<a class="anchor" aria-label="anchor" href="#posts-on-peer-reviewed-packages"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="technical.html#cb9-1"></a>* <span class="st">[ ] I have read the Content Guidelines.</span></span>
+<span id="cb9-2"><a href="technical.html#cb9-2"></a><span class="st">* [ ] I have read the Technical Guidelines.</span></span>
+<span id="cb9-3"><a href="technical.html#cb9-3"></a><span class="st">* [ ] I used or followed the R Markdown or Markdown template.</span></span>
+<span id="cb9-4"><a href="technical.html#cb9-4"></a><span class="st">* [ ] I have followed the Style Guide.</span></span>
+<span id="cb9-5"><a href="technical.html#cb9-5"></a><span class="st">* [ ] I created or updated my author metadata with correct folder name.</span></span>
+<span id="cb9-6"><a href="technical.html#cb9-6"></a><span class="st">* [ ] I have added relevant tags after browsing existing tags (incuding "community" tag).</span></span>
+<span id="cb9-7"><a href="technical.html#cb9-7"></a><span class="st">* [ ] I have added the "tech notes" tag if this is a technote.</span></span>
+<span id="cb9-8"><a href="technical.html#cb9-8"></a><span class="st">* [ ] I ran </span><span class="bn">`roblog::ro_lint_md()`</span><span class="st"> on index.md (optional).</span></span>
+<span id="cb9-9"><a href="technical.html#cb9-9"></a><span class="st">* [ ] I ran </span><span class="bn">`roblog::ro_check_urls()`</span><span class="st"> on index.md (optional).</span></span>
+<span id="cb9-10"><a href="technical.html#cb9-10"></a><span class="st">* [ ] I ran a spell-check on index.md.</span></span>
+<span id="cb9-11"><a href="technical.html#cb9-11"></a><span class="st">* [ ] I have added the tags - Software Peer Review, my-packagename.</span></span>
+<span id="cb9-12"><a href="technical.html#cb9-12"></a><span class="st">* [ ] I have added the package-version YAML tag.</span></span>
+<span id="cb9-13"><a href="technical.html#cb9-13"></a><span class="st">* [ ] I have added acknowledgement of the reviewers' work (with links to reviewers).</span></span>
+<span id="cb9-14"><a href="technical.html#cb9-14"></a><span class="st">* [ ] I have added a link to the software peer review thread.</span></span>
+<span id="cb9-15"><a href="technical.html#cb9-15"></a><span class="st">* [ ] I ran a spell-check on index.md.</span></span></code></pre></div>
+</div>
+<div id="other-posts" class="section level4">
+<h4>
+<span class="header-section-number">2.6.3.2</span> Other posts<a class="anchor" aria-label="anchor" href="#other-posts"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="technical.html#cb10-1"></a>* <span class="st">[ ] I have read the Content Guidelines.</span></span>
+<span id="cb10-2"><a href="technical.html#cb10-2"></a><span class="st">* [ ] I have read the Technical Guidelines.</span></span>
+<span id="cb10-3"><a href="technical.html#cb10-3"></a><span class="st">* [ ] I used or followed the R Markdown or Markdown template.</span></span>
+<span id="cb10-4"><a href="technical.html#cb10-4"></a><span class="st">* [ ] I have followed the Style Guide.</span></span>
+<span id="cb10-5"><a href="technical.html#cb10-5"></a><span class="st">* [ ] I created or updated my author metadata with correct folder name.</span></span>
+<span id="cb10-6"><a href="technical.html#cb10-6"></a><span class="st">* [ ] I have added relevant tags after browsing existing tags (incuding "community" tag).</span></span>
+<span id="cb10-7"><a href="technical.html#cb10-7"></a><span class="st">* [ ] I have added the "tech notes" tag if this is a technote.</span></span>
+<span id="cb10-8"><a href="technical.html#cb10-8"></a><span class="st">* [ ] I ran </span><span class="bn">`roblog::ro_lint_md()`</span><span class="st"> on index.md (optional).</span></span>
+<span id="cb10-9"><a href="technical.html#cb10-9"></a><span class="st">* [ ] I ran </span><span class="bn">`roblog::ro_check_urls()`</span><span class="st"> on index.md (optional).</span></span>
+<span id="cb10-10"><a href="technical.html#cb10-10"></a><span class="st">* [ ] I ran a spell-check on index.md.</span></span></code></pre></div>
+</div>
+</div>
+<div id="localpreview" class="section level3">
+<h3>
+<span class="header-section-number">2.6.4</span> Local preview<a class="anchor" aria-label="anchor" href="#localpreview"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you wish to preview your post locally, as it will appear in our site, you must install Hugo.
+To install, refer to <a href="https://gohugo.io/getting-started/installing/">Hugo docs</a> or run <code>blogdown::install_hugo()</code>.</p>
+<p><strong>Note:</strong> You can also preview your blog post online through the pull request before the final submission</p>
+<p>Then run <code>hugo serve</code> in the repo directory to start a local server on <a href="http://localhost:1313" class="uri">http://localhost:1313</a>.</p>
+<p>The version of Hugo used by the rOpenSci web server is defined in <a href="https://github.com/ropensci/roweb3/blob/master/netlify.toml">netlify.toml</a>.</p>
+<p>When this preview looks good to you, you should submit your post as a pull request.</p>
+</div>
+</div>
+<div id="submitpost" class="section level2">
+<h2>
+<span class="header-section-number">2.7</span> Submit draft post<a class="anchor" aria-label="anchor" href="#submitpost"><i class="fas fa-link"></i></a>
+</h2>
+<div id="create-draft-pull-request" class="section level3">
+<h3>
+<span class="header-section-number">2.7.1</span> Create draft pull request<a class="anchor" aria-label="anchor" href="#create-draft-pull-request"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Open a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests"><strong>draft</strong> pull request (PR)</a> from your fork (<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork">using the web interface</a>, see step 8 for creating a <strong>draft</strong>), or <a href="https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request"><code>usethis::pr_push()</code></a> that will save you some work and that will in the end open the same web interface where you can choose Draft PR in the last step)</p></li>
+<li><p>If you opened a PR instead of a <strong>draft</strong> PR, you can <a href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft">convert it to a draft</a> by clicking on “Still in progress? Convert to draft” on the right panel under “Reviewers”.</p></li>
+</ul>
+</div>
+<div id="add-checklist" class="section level3">
+<h3>
+<span class="header-section-number">2.7.2</span> Add checklist<a class="anchor" aria-label="anchor" href="#add-checklist"><i class="fas fa-link"></i></a>
+</h3>
+<p>In the first comment of your pull request submitting a post, please copy-paste the <a href="technical.html#checklists">checklist</a> corresponding to your post and check off the items.</p>
+</div>
+<div id="preview-online" class="section level3">
+<h3>
+<span class="header-section-number">2.7.3</span> Preview online<a class="anchor" aria-label="anchor" href="#preview-online"><i class="fas fa-link"></i></a>
+</h3>
+<p>From the PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended.
+Otherwise push additional fixes till things look right.</p>
+<div class="inline-figure"><img src="images/hugochecks.png" title="Some checks haven't completed yet." alt="Some checks haven't completed yet." width="776"></div>
+<div class="inline-figure"><img src="images/hugocheckspassed.png" title="All checks have passed." alt="All checks have passed." width="772"></div>
+</div>
+<div id="submit-post" class="section level3">
+<h3>
+<span class="header-section-number">2.7.4</span> Submit post<a class="anchor" aria-label="anchor" href="#submit-post"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Mark the draft PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.</li>
+</ul>
+</div>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></div>
+<div class="next"><a href="respond.html"><span class="header-section-number">3</span> Respond to Feedback</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#technical"><span class="header-section-number">2</span> Technical Guidelines</a></li>
+<li><a class="nav-link" href="#forkcreate"><span class="header-section-number">2.1</span> Fork the roweb3 repository</a></li>
+<li>
+<a class="nav-link" href="#createauthorfile"><span class="header-section-number">2.2</span> Author files</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#why"><span class="header-section-number">2.2.1</span> Why?</a></li>
+<li><a class="nav-link" href="#how"><span class="header-section-number">2.2.2</span> How?</a></li>
+<li><a class="nav-link" href="#examples"><span class="header-section-number">2.2.3</span> Examples</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#templates"><span class="header-section-number">2.3</span> Post template</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#blogdownaddin"><span class="header-section-number">2.3.1</span> New Post Addin</a></li>
+<li><a class="nav-link" href="#manually"><span class="header-section-number">2.3.2</span> Manually</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#usetemplates"><span class="header-section-number">2.4</span> Adding content</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#whatgoesinyaml"><span class="header-section-number">2.4.1</span> YAML</a></li>
+<li><a class="nav-link" href="#images---general"><span class="header-section-number">2.4.2</span> Images - General</a></li>
+<li><a class="nav-link" href="#addimage"><span class="header-section-number">2.4.3</span> Images - External</a></li>
+<li><a class="nav-link" href="#addfigure"><span class="header-section-number">2.4.4</span> Images - Rmd-created</a></li>
+<li><a class="nav-link" href="#addcitation"><span class="header-section-number">2.4.5</span> Citations</a></li>
+<li><a class="nav-link" href="#addtweet"><span class="header-section-number">2.4.6</span> Embedded tweets</a></li>
+<li><a class="nav-link" href="#examples-1"><span class="header-section-number">2.4.7</span> Examples</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#styleguide"><span class="header-section-number">2.5</span> Style Guide</a></li>
+<li>
+<a class="nav-link" href="#presubchecks"><span class="header-section-number">2.6</span> Pre-submission checks</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#knit-post"><span class="header-section-number">2.6.1</span> Knit post</a></li>
+<li><a class="nav-link" href="#check-with-roblog"><span class="header-section-number">2.6.2</span> Check with roblog</a></li>
+<li><a class="nav-link" href="#checklists"><span class="header-section-number">2.6.3</span> Author Checklist</a></li>
+<li><a class="nav-link" href="#localpreview"><span class="header-section-number">2.6.4</span> Local preview</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#submitpost"><span class="header-section-number">2.7</span> Submit draft post</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#create-draft-pull-request"><span class="header-section-number">2.7.1</span> Create draft pull request</a></li>
+<li><a class="nav-link" href="#add-checklist"><span class="header-section-number">2.7.2</span> Add checklist</a></li>
+<li><a class="nav-link" href="#preview-online"><span class="header-section-number">2.7.3</span> Preview online</a></li>
+<li><a class="nav-link" href="#submit-post"><span class="header-section-number">2.7.4</span> Submit post</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci-org/blog-guidance/blob/master/authortechnical.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci-org/blog-guidance/edit/master/authortechnical.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Blog Guide for Authors and Editors</strong>" was written by Stefanie Butland, Steffi LaZerte, Maëlle Salmon. It was last built on 2021-04-28.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Preface | rOpenSci Blog Guide for Authors and Editors</title>
+<meta name="author" content="Stefanie Butland, Steffi LaZerte, Maëlle Salmon">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.4.9003/tabs.js"></script><script src="libs/bs3compat-0.2.4.9003/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Blog Guide for Authors and Editors</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="active" href="index.html">Preface</a></li>
+<li class="book-part">Author Guide</li>
+<li><a class="" href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></li>
+<li><a class="" href="technical.html"><span class="header-section-number">2</span> Technical Guidelines</a></li>
+<li><a class="" href="respond.html"><span class="header-section-number">3</span> Respond to Feedback</a></li>
+<li><a class="" href="promote.html"><span class="header-section-number">4</span> Publication and Promotion</a></li>
+<li class="book-part">Editor Guide</li>
+<li><a class="" href="editor.html"><span class="header-section-number">5</span> Review, Publish, Promote</a></li>
+<li><a class="" href="editormeta.html"><span class="header-section-number">6</span> Editorial Governance</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="templatemd.html"><span class="header-section-number">A</span> Template - Post (md)</a></li>
+<li><a class="" href="templatermd.html"><span class="header-section-number">B</span> Template - Post (Rmd)</a></li>
+<li><a class="" href="authortemplate.html"><span class="header-section-number">C</span> Template - Author file</a></li>
+<li><a class="" href="authorchecklistpeer.html"><span class="header-section-number">D</span> Author Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="authorchecklistany.html"><span class="header-section-number">E</span> Author Checklist - Other posts</a></li>
+<li><a class="" href="editorchecklistpeer.html"><span class="header-section-number">F</span> Editor Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="editorchecklistany.html"><span class="header-section-number">G</span> Editor checklist - Other posts</a></li>
+<li><a class="" href="twittercards.html"><span class="header-section-number">H</span> Twitter cards</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci-org/blog-guidance">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="preface" class="section level1 unnumbered">
+<h1>Preface<a class="anchor" aria-label="anchor" href="#preface"><i class="fas fa-link"></i></a>
+</h1>
+<p>The purpose of this documentation is to provide a guide for authors and editors of blog posts and tech notes for the rOpenSci website.
+We created it after reviewing and publishing over 100 posts by community members, in hopes of addressing many frequently asked questions, and frequently given suggestions.</p>
+<p>The volume of information may be overwhelming at first.
+Some of the guidance indicates things we require that you do (such as creating an author file with your metadata), while most of the guidance is information to help you (such as how to add an image to your post).</p>
+<p><strong>What’s in the book and what’s required reading?</strong></p>
+<ul>
+<li><p>Chapter 1 <a href="content.html#content">Content Guidelines</a> coaches you in thinking through what you might say in your post.</p></li>
+<li><p>Chapter 2 <a href="technical.html#technical">Technical Guidelines</a> is <strong>required reading</strong> for submitting a post - from drafting in an (R) Markdown template to submitting for review using GitHub pull request infrastructure.</p></li>
+<li><p>Chapter 3 <a href="respond.html#respond">Responding to Editor’s Review</a> is <strong>required reading</strong>, briefly outlining how to find and respond to an editor’s comments in the GitHub pull request review interface.</p></li>
+<li><p>Chapter 4 <a href="promote.html#promote">Publication and Promotion</a> provides some motivation for doing the extra work to contribute a post by outlining what rOpenSci does to promote it.</p></li>
+<li><p>Chapters 5 and 6 provide <a href="editor.html#editor">guidelines for editors</a> reviewing, publishing and promoting posts and outine editorial <a href="editormeta.html#editormeta">governance</a>.</p></li>
+</ul>
+<p>If you find any errors or things that need clarification, we would be grateful if you opened an issue or pull request in the <a href="https://github.com/ropensci-org/blog-guidance">repository for this book</a>.</p>
+<p><em>We are thankful for the feedback and contributions from <a href="https://github.com/Bisaloo">Hugo Gruson</a> and <a href="https://github.com/mpadge">Mark Padgham</a>.</em></p>
+
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="empty"></div>
+<div class="next"><a href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#preface">Preface</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci-org/blog-guidance/blob/master/index.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci-org/blog-guidance/edit/master/index.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Blog Guide for Authors and Editors</strong>" was written by Stefanie Butland, Steffi LaZerte, Maëlle Salmon. It was last built on 2021-04-28.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

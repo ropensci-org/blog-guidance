@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>A Template - Post (md) | rOpenSci Blog Guide for Authors and Editors</title>
+<meta name="author" content="Stefanie Butland, Steffi LaZerte, Maëlle Salmon">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.4.9003/tabs.js"></script><script src="libs/bs3compat-0.2.4.9003/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Blog Guide for Authors and Editors</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li class="book-part">Author Guide</li>
+<li><a class="" href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></li>
+<li><a class="" href="technical.html"><span class="header-section-number">2</span> Technical Guidelines</a></li>
+<li><a class="" href="respond.html"><span class="header-section-number">3</span> Respond to Feedback</a></li>
+<li><a class="" href="promote.html"><span class="header-section-number">4</span> Publication and Promotion</a></li>
+<li class="book-part">Editor Guide</li>
+<li><a class="" href="editor.html"><span class="header-section-number">5</span> Review, Publish, Promote</a></li>
+<li><a class="" href="editormeta.html"><span class="header-section-number">6</span> Editorial Governance</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="active" href="templatemd.html"><span class="header-section-number">A</span> Template - Post (md)</a></li>
+<li><a class="" href="templatermd.html"><span class="header-section-number">B</span> Template - Post (Rmd)</a></li>
+<li><a class="" href="authortemplate.html"><span class="header-section-number">C</span> Template - Author file</a></li>
+<li><a class="" href="authorchecklistpeer.html"><span class="header-section-number">D</span> Author Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="authorchecklistany.html"><span class="header-section-number">E</span> Author Checklist - Other posts</a></li>
+<li><a class="" href="editorchecklistpeer.html"><span class="header-section-number">F</span> Editor Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="editorchecklistany.html"><span class="header-section-number">G</span> Editor checklist - Other posts</a></li>
+<li><a class="" href="twittercards.html"><span class="header-section-number">H</span> Twitter cards</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci-org/blog-guidance">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="templatemd" class="section level1">
+<h1>
+<span class="header-section-number">A</span> Template - Post (md)<a class="anchor" aria-label="anchor" href="#templatemd"><i class="fas fa-link"></i></a>
+</h1>
+<p>Use of this template is described in <a href="technical.html#templates">Start the post from a template</a> and <a href="technical.html#usetemplates">Walkthrough with code snippets</a>.</p>
+<p>Markdown template to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.md</code></p>
+<p>You can hover over the top-right corner of the template to make a copy-paste button appear.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="templatemd.html#cb15-1"></a>---</span>
+<span id="cb15-2"><a href="templatemd.html#cb15-2"></a>slug: "post-template"</span>
+<span id="cb15-3"><a href="templatemd.html#cb15-3"></a>title: Post Title in Title Case</span>
+<span id="cb15-4"><a href="templatemd.html#cb15-4"></a><span class="fu"># Delete the package_version line below if your post is not about a package</span></span>
+<span id="cb15-5"><a href="templatemd.html#cb15-5"></a>package_version: 0.1.0</span>
+<span id="cb15-6"><a href="templatemd.html#cb15-6"></a>author:</span>
+<span id="cb15-7"><a href="templatemd.html#cb15-7"></a>  - Author Name1</span>
+<span id="cb15-8"><a href="templatemd.html#cb15-8"></a>  - Author Name2</span>
+<span id="cb15-9"><a href="templatemd.html#cb15-9"></a><span class="fu"># Set the date below to the publication date of your post</span></span>
+<span id="cb15-10"><a href="templatemd.html#cb15-10"></a>date: 2020-03-10</span>
+<span id="cb15-11"><a href="templatemd.html#cb15-11"></a><span class="fu"># Minimal tags for a post about a community-contributed package </span></span>
+<span id="cb15-12"><a href="templatemd.html#cb15-12"></a><span class="fu"># that has passed software peer review are listed below</span></span>
+<span id="cb15-13"><a href="templatemd.html#cb15-13"></a><span class="fu"># Consult the Technical Guidelines for information on choosing tags</span></span>
+<span id="cb15-14"><a href="templatemd.html#cb15-14"></a>tags:</span>
+<span id="cb15-15"><a href="templatemd.html#cb15-15"></a>  - Software Peer Review</span>
+<span id="cb15-16"><a href="templatemd.html#cb15-16"></a>  - packages</span>
+<span id="cb15-17"><a href="templatemd.html#cb15-17"></a>  - R</span>
+<span id="cb15-18"><a href="templatemd.html#cb15-18"></a>  - community</span>
+<span id="cb15-19"><a href="templatemd.html#cb15-19"></a><span class="fu"># The summary below will be used by e.g. Twitter cards</span></span>
+<span id="cb15-20"><a href="templatemd.html#cb15-20"></a>description: "A very short summary of your post (~ 100 characters)"</span>
+<span id="cb15-21"><a href="templatemd.html#cb15-21"></a><span class="fu"># If you have no preferred image for Twitter cards,</span></span>
+<span id="cb15-22"><a href="templatemd.html#cb15-22"></a><span class="fu"># delete the twitterImg and twitterAlt lines below </span></span>
+<span id="cb15-23"><a href="templatemd.html#cb15-23"></a><span class="fu"># - Replace "blog" with "technotes" as needed</span></span>
+<span id="cb15-24"><a href="templatemd.html#cb15-24"></a><span class="fu"># - Note "/" between year/month/day</span></span>
+<span id="cb15-25"><a href="templatemd.html#cb15-25"></a>twitterImg: blog/2019/06/04/post-template/name-of-image.png</span>
+<span id="cb15-26"><a href="templatemd.html#cb15-26"></a>twitterAlt: "Alternative description of the image"</span>
+<span id="cb15-27"><a href="templatemd.html#cb15-27"></a><span class="fu"># the text below is for populating the "share on Twitter" button</span></span>
+<span id="cb15-28"><a href="templatemd.html#cb15-28"></a><span class="fu"># if deleted, the title of the post will be used</span></span>
+<span id="cb15-29"><a href="templatemd.html#cb15-29"></a>tweet: "A post about blabla by @username!"</span>
+<span id="cb15-30"><a href="templatemd.html#cb15-30"></a>---</span>
+<span id="cb15-31"><a href="templatemd.html#cb15-31"></a></span>
+<span id="cb15-32"><a href="templatemd.html#cb15-32"></a>This is the Markdown (.md) template for a blog post or tech note. </span>
+<span id="cb15-33"><a href="templatemd.html#cb15-33"></a>To generate your post with R Markdown (.Rmd), use that template instead.</span>
+<span id="cb15-34"><a href="templatemd.html#cb15-34"></a></span>
+<span id="cb15-35"><a href="templatemd.html#cb15-35"></a>Throughout this template, including the YAML, </span>
+<span id="cb15-36"><a href="templatemd.html#cb15-36"></a>you should change "post-template" to the slug of your post, </span>
+<span id="cb15-37"><a href="templatemd.html#cb15-37"></a>and "2019-06-04" to your publication date.</span>
+<span id="cb15-38"><a href="templatemd.html#cb15-38"></a></span>
+<span id="cb15-39"><a href="templatemd.html#cb15-39"></a>Save this file under /content/blog/YYYY-MM-DD-slug/index.md in the local copy of your roweb3 fork.</span>
+<span id="cb15-40"><a href="templatemd.html#cb15-40"></a></span>
+<span id="cb15-41"><a href="templatemd.html#cb15-41"></a><span class="fu">## Section heading in sentence case</span></span>
+<span id="cb15-42"><a href="templatemd.html#cb15-42"></a></span>
+<span id="cb15-43"><a href="templatemd.html#cb15-43"></a>Citation of the primary literature<span class="ot">[^1]</span>. </span>
+<span id="cb15-44"><a href="templatemd.html#cb15-44"></a></span>
+<span id="cb15-45"><a href="templatemd.html#cb15-45"></a>Citation of a website<span class="ot">[^2]</span>. </span>
+<span id="cb15-46"><a href="templatemd.html#cb15-46"></a></span>
+<span id="cb15-47"><a href="templatemd.html#cb15-47"></a>Citation of an R package<span class="ot">[^3]</span>.</span>
+<span id="cb15-48"><a href="templatemd.html#cb15-48"></a></span>
+<span id="cb15-49"><a href="templatemd.html#cb15-49"></a><span class="fu">### Subsection heading</span></span>
+<span id="cb15-50"><a href="templatemd.html#cb15-50"></a></span>
+<span id="cb15-51"><a href="templatemd.html#cb15-51"></a>We recommend the use of <span class="ot">[Hugo shortcodes](https://gohugo.io/content-management/shortcodes/)</span> to include images, tweets, videos, gists, etc.</span>
+<span id="cb15-52"><a href="templatemd.html#cb15-52"></a></span>
+<span id="cb15-53"><a href="templatemd.html#cb15-53"></a>**Add an image** by using a Hugo shortcode. The image is saved under <span class="bn">`/content/blog/YYYY-MM-DD-slug/name-of-image.png`</span>.</span>
+<span id="cb15-54"><a href="templatemd.html#cb15-54"></a></span>
+<span id="cb15-55"><a href="templatemd.html#cb15-55"></a>{{&lt; figure src = "name-of-image.png" width = "400" alt = "this is the alternative text" &gt;}}</span>
+<span id="cb15-56"><a href="templatemd.html#cb15-56"></a></span>
+<span id="cb15-57"><a href="templatemd.html#cb15-57"></a>Consult the Technical Guidelines for tips on changing image size, alignment, and for advice on alternative text.</span>
+<span id="cb15-58"><a href="templatemd.html#cb15-58"></a></span>
+<span id="cb15-59"><a href="templatemd.html#cb15-59"></a>**Embed a tweet** by using a Hugo shortcode. </span>
+<span id="cb15-60"><a href="templatemd.html#cb15-60"></a></span>
+<span id="cb15-61"><a href="templatemd.html#cb15-61"></a>{{&lt; tweet 1138216112808529920 &gt;}}</span>
+<span id="cb15-62"><a href="templatemd.html#cb15-62"></a></span>
+<span id="cb15-63"><a href="templatemd.html#cb15-63"></a></span>
+<span id="cb15-64"><a href="templatemd.html#cb15-64"></a>**Add citation or footnote** text by using the format below </span>
+<span id="cb15-65"><a href="templatemd.html#cb15-65"></a></span>
+<span id="cb15-66"><a href="templatemd.html#cb15-66"></a><span class="ot">[^1]</span>: Sciaini, M., Fritsch, M., Scherer, C., &amp; Simpkins, C. E. (2018). NLMR and landscapetools: An integrated environment for simulating and modifying neutral landscape models in R. Methods in Ecology and Evolution, 9(11), 2240-2248. <span class="ot">&lt;https://doi.org/10.1111/2041-210X.13076&gt;</span></span>
+<span id="cb15-67"><a href="templatemd.html#cb15-67"></a><span class="ot">[^2]</span>: Elin Waring, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu and Shannon Ellis (2019). skimr: Compact and Flexible Summaries of Data. R package version 1.0.7. https://CRAN.R-project.org/package=skimr</span>
+<span id="cb15-68"><a href="templatemd.html#cb15-68"></a><span class="ot">[^3]</span>: Hugo static site generator. https://gohugo.io/</span></code></pre></div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="editormeta.html"><span class="header-section-number">6</span> Editorial Governance</a></div>
+<div class="next"><a href="templatermd.html"><span class="header-section-number">B</span> Template - Post (Rmd)</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#templatemd"><span class="header-section-number">A</span> Template - Post (md)</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci-org/blog-guidance/blob/master/appendix.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci-org/blog-guidance/edit/master/appendix.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Blog Guide for Authors and Editors</strong>" was written by Stefanie Butland, Steffi LaZerte, Maëlle Salmon. It was last built on 2021-04-28.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

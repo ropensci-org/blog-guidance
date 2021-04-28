@@ -1,0 +1,33 @@
+# Editorial Governance {#editormeta}
+
+<div class="summaryblock">
+<p>This chapter explains management of the blog editors GitHub team and the process for staff-authored posts.</p>
+</div>
+
+## GitHub team
+
+rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors) team.
+
+The team is maintained by [`@stefaniebutland`](https://github.com/stefaniebutland) at the moment.
+
+* Blog editors can be tagged in [any ropensci repo](https://github.com/ropensci/), in particular [roweb3](https://github.com/ropensci/roweb3/), by writing `@ropensci/blog-editors` (e.g. `:wave: @ropensci/blog-editors, I have trouble adding citations in my post!`).
+
+* Blog editors have write access to the roweb3 repo.
+
+* Blog editors are ["code owners"](https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS) of `roweb3/content/blog`, `roweb3/content/commcalls` according to [roweb3's CODEOWNERS file ](https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS) so any PR touching a file under these paths will automatically request their review. When one of them posts a review, it will be marked as ["on behalf of `@ropensci/blog-editors`"](https://github.com/ropensci/roweb3/pull/619#issuecomment-589680666).
+
+For adding a new blog editor, the team maintainer or any ropensci admin
+
+* ensures the user has [enabled 2FA](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
+
+* [adds them to the team](https://github.com/orgs/ropensci/teams/blog-editors/members) as Member (the default role).
+
+The blog editors can filter their notifications, e.g. using the [`reason:team-mention` filter](https://github.com/notifications/beta?query=reason%3Ateam-mention).
+
+The blog editors don't necessarily have write access to the blog-guidance repo but are encouraged to make PRs.
+
+## Posts authored by staff
+
+* Staff members can bypass review for tech notes but they can choose to request a review by blog editors.
+* Staff members' blog posts should be scheduled together with Stefanie Butland.
+* Staff members are responsible for creating the [discussion forum entry](#publish) for their own post and must [tweet from the rOpenSci Twitter account](#tweetpromo) (directly or via the Tweetdeck rOpenSci team) before tweeting from their personal account.

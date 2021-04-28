@@ -1,0 +1,225 @@
+#  (PART) Editor Guide {-}
+
+# Review, Publish, Promote {#editor}
+
+<div class="summaryblock">
+<p>This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.</p>
+</div>
+
+## Review a post {#review}
+This section explains how to review a blog post or tech note.
+The editor for a post is typically the Community Manager or their intern.
+
+A post is submitted as a pull request on GitHub. 
+We use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests) to suggest edits, make comments, and ultimately merge the pull request to publish the post.
+There's no better resource than that for screenshots and guidance on reviewing pull requests and for links to share with an author when coaching them on how to respond to your review. 
+
+These are particularly helpful:
+
+- [About pull request reviews](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
+- [Reviewing proposed changes in a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+- [Incorporating feedback in your pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)
+
+### Review
+
+Read the post preview to get a feel for it. On my first read, I (Stefanie) typically make a few pen & paper notes for myself on what to pay attention to on deeper review.
+This is when I often note some positive feedback, based on a first impression.
+There is always something great in a post to highlight in your review. 
+Be specific.
+If the post or something in it excites you, don't hesitate to say that.
+How else will the author know and be inspired?!
+
+To start your review of the pull request, copy and paste either the [editor checklist for a post about a peer-reviewed package](#editorchecklistpeer), or the [editor checklist for any other post](#editorchecklistany), into the box that appears when you click the green _Review changes_ button.
+
+Click on the _Files changed_ tab in the pull request to view the .Rmd or .md file for the post.
+Complete the checklist and comment as needed inline in the .Rmd or .md file.
+You must comment in the .Rmd if one was submitted.
+
+When adding your first comment, choose _Start a review_ (not _Add a single comment_), so the author gets a single notification for the review when it is complete.
+
+Where changes are "obvious" such as fixing grammar or a typo, use GitHub ["commit suggestion" `<cmd-g>`/`<ctrl-g>`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) so the author can commit your change directly. 
+Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) were edited.
+
+While our [Style Guide](#styleguide) recommends that authors add [line breaks at the end of every sentence](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
+
+To download a pull request locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html).
+Even if an author gives edit permission to the repo maintainer, the editor does not usually make edits directly on the post.
+Rare exceptions can be made at the editor's discretion.
+
+To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
+
+After all inline commenting and the checklist is done, add any further notes, starting with a positive comment and your overall impression, to the _Review changes_ box.
+Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
+This helps draw their attention to this nice feature.
+
+We don't (yet?) have templated editor response text, but here are helpful things to include:
+
+- I have made ~n (number of) comments. Look for _hidden conversations_ when there are many comments.
+- Ask for thumbs up or thumbs down on every editor comment so we know you have seen it.
+- It's ok to disagree with some comments.
+- [_Resolve conversation_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations) for items you have addressed.
+- Tag editor when you have finished addressing their comments.
+
+When your review is complete, click [_Comment_, _Approve_, or _Request changes_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review), at your discretion. 
+This will trigger a notificaton to the author.
+
+### Editor checklist - Posts on peer-reviewed packages
+
+````markdown
+* [ ] post follows Content Guidelines
+* [ ] post follows Style Guide
+* [ ] title is in Title Case
+* [ ] publication date is ok
+* [ ] alternative text of images is informative
+* [ ] Twitter metadata looks ok (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator); might have to click twice on "Preview card")
+* [ ] author metadata is provided with correct folder name
+* [ ] html not included in pull request of Rmd post
+* [ ] I ran `roblog::ro_lint_md()` on index.md
+* [ ] I ran `roblog::ro_check_urls()` on index.md
+* [ ] I ran a spell-check on index.md
+* [ ] YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
+* [ ] YAML package-version included
+* [ ] YAML subject tags - software peer review, packagename
+* [ ] acknowledges and links to reviewers
+* [ ] links to peer review thread
+````
+
+### Editor checklist - Other posts
+
+````markdown
+* [ ] post follows Content Guidelines
+* [ ] post follows Style Guide
+* [ ] title is in Title Case
+* [ ] publication date is ok
+* [ ] alternative text of images is informative
+* [ ] Twitter metadata looks ok (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator); might have to click twice on "Preview card")
+* [ ] author metadata is provided with correct folder name
+* [ ] html not included in pull request of Rmd post
+* [ ] I ran `roblog::ro_lint_md()` on index.md
+* [ ] I ran `roblog::ro_check_urls()` on index.md
+* [ ] I ran a spell-check on index.md
+* [ ] YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
+````
+
+### Check Twitter metadata
+
+The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet, separate from [the tweet _we_ send](#tweetpromo). 
+Therefore it is important to check the Twitter metadata by pasting a post's preview link in the [Twitter card validator](https://cards-dev.twitter.com/validator).
+You might have to click twice.
+
+See [Understanding Twitter cards](#twittercards) for details. 
+Perfecting metadata for Twitter cards is optional for authors, so decide how critical any changes are before requesting them in your review.
+
+## Publish a post {#publish}
+Publish a post by merging its pull request.
+For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
+When possible, it's nice to have a post published by morning in the timezone of the main post author. 
+
+A "topic" linked to the blog post will automatically be created in the [discussion forum blogs category](https://discuss.ropensci.org/c/blog/) for both blog posts and tech notes. This facilitates commenting on posts. Comments will appear both below the post and in the discussion forum.
+
+_Note about older posts:_ Very old posts from (before March 2017) have no comments at all; these posts have no `topicid` field in their YAML header. Newer posts (March 2017 onward) have a yaml field `topicid` and a number in it that links to a topic that we manually created in the forum. Posts newer than March 9, 2020 won't have a `topicid` field in their YAML header as a forum topic is automatically created.
+
+## Promote a post on Twitter {#tweetpromo}
+
+### Workflow
+
+Tweet from [rOpenSci](https://twitter.com/rOpenSci).
+
+We tweet at ~8am Pacific, but it would be good to use a system for optimizing the time to send a tweet (e.g. using Buffer). 
+
+Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
+Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
+Stef uses a private Google doc called "scratchpad" for this, and saves images in a local folder. 
+
+### Content
+
+The first tweet of a thread or only tweet _must_ include
+
+* the post title,
+* a link to the post,
+* tag the author's account, or their IRL name,
+
+Any tweet _must_ provide an alternative description of any included image.
+
+A further tweet _can_ include a link to the software peer review thread.
+
+Any tweet _can_ include
+
+* hashtags,
+* additional account names,
+
+with the caveats of the next subsections.
+
+### Tagging accounts
+
+Tag the account(s) of all post authors and package authors and reviewers. 
+
+If not already included in their author metadata, you can search for their account but only tag them if
+
+* it is active,
+* it is not anonymous,
+* it is at least partly used professionally by the owner.
+
+When in doubt, use the person's name, or time permitting, contact the person whose account you'd like to tag.
+
+For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
+
+When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
+We do not use tagging in tweets to ask for attention (i.e. no account names used like hashtags at the bottom of a tweet) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the tweet.
+
+### Using hashtags
+
+#### Selecting relevant hashtags
+
+For a tweet about a post related to a package or any R thing, use the `#rstats` hashtag.
+
+For a tweet about a package post, make the package name a hashtag, since [rocitations Twitter account](https://twitter.com/rocitations) does this to announce package citations.
+
+Check the last tweets using any hashtag except the `#rstats` hashtag to see whether it is used as you expect.
+E.g. using `httr` wouldn't be a good idea. It is a package name but on Twitter it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy) and even has its own emoji automatically attached to it by Twitter. 
+
+#### Adding hashtags
+
+Do not use too many hashtags in any tweet so as not to make the account look like a spam account / greedy for attention.
+
+Post hashtags at the bottom of each tweet, to make the rest of the content of the tweet easier to read.
+
+[Capitalize letters of each word](https://www.boia.org/blog/make-your-hashtags-accessible) for hashtags including several words i.e. use lower or upper camelCase (e.g. `#RLadies` not `#rladies`). 
+
+When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
+
+### Using emojis 
+
+In tweets, emojis are optional. 
+When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
+
+### Using gifs
+
+In tweets, gifs are optional.
+
+* One can include a gif that was created for the post (e.g. an animated plot).
+* But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show).
+* When using a gif we should [add its description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet.
+* When tweeting from twitter.com, as of Feb 2020, if you have the _compose image descriptions_ setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images.
+
+### Example 2-tweet thread:
+
+```
+[blog] “rmangal: making ecological networks easily accessible” 
+
+New post by @KCazelles & @SVissault in our Software Peer Review series 
+
+🔗 https://ropensci.org/blog/2019/10/21/rmangal/
+
+1/2 
+#rstats #rmangal #SoftwarePeerReview
+```
+
+```
+Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal contributors https://docs.ropensci.org/rmangal/authors.html, & all ecologists who have spent countless hours collecting data
+
+🔎Read the rmangal open software peer review thread: https://github.com/ropensci/software-review/issues/332
+
+2/2 
+
+```

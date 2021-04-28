@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 6 Editorial Governance | rOpenSci Blog Guide for Authors and Editors</title>
+<meta name="author" content="Stefanie Butland, Steffi LaZerte, Maëlle Salmon">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.4.9003/tabs.js"></script><script src="libs/bs3compat-0.2.4.9003/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Blog Guide for Authors and Editors</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li class="book-part">Author Guide</li>
+<li><a class="" href="content.html"><span class="header-section-number">1</span> Content Guidelines</a></li>
+<li><a class="" href="technical.html"><span class="header-section-number">2</span> Technical Guidelines</a></li>
+<li><a class="" href="respond.html"><span class="header-section-number">3</span> Respond to Feedback</a></li>
+<li><a class="" href="promote.html"><span class="header-section-number">4</span> Publication and Promotion</a></li>
+<li class="book-part">Editor Guide</li>
+<li><a class="" href="editor.html"><span class="header-section-number">5</span> Review, Publish, Promote</a></li>
+<li><a class="active" href="editormeta.html"><span class="header-section-number">6</span> Editorial Governance</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="templatemd.html"><span class="header-section-number">A</span> Template - Post (md)</a></li>
+<li><a class="" href="templatermd.html"><span class="header-section-number">B</span> Template - Post (Rmd)</a></li>
+<li><a class="" href="authortemplate.html"><span class="header-section-number">C</span> Template - Author file</a></li>
+<li><a class="" href="authorchecklistpeer.html"><span class="header-section-number">D</span> Author Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="authorchecklistany.html"><span class="header-section-number">E</span> Author Checklist - Other posts</a></li>
+<li><a class="" href="editorchecklistpeer.html"><span class="header-section-number">F</span> Editor Checklist - Posts on peer-reviewed packages</a></li>
+<li><a class="" href="editorchecklistany.html"><span class="header-section-number">G</span> Editor checklist - Other posts</a></li>
+<li><a class="" href="twittercards.html"><span class="header-section-number">H</span> Twitter cards</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci-org/blog-guidance">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="editormeta" class="section level1">
+<h1>
+<span class="header-section-number">6</span> Editorial Governance<a class="anchor" aria-label="anchor" href="#editormeta"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+This chapter explains management of the blog editors GitHub team and the process for staff-authored posts.
+</p>
+</div>
+<div id="github-team" class="section level2">
+<h2>
+<span class="header-section-number">6.1</span> GitHub team<a class="anchor" aria-label="anchor" href="#github-team"><i class="fas fa-link"></i></a>
+</h2>
+<p>rOpenSci blog editors are the member of the <a href="https://github.com/orgs/ropensci/teams/blog-editors"><code>@ropensci/blog-editors</code></a> team.</p>
+<p>The team is maintained by <a href="https://github.com/stefaniebutland"><code>@stefaniebutland</code></a> at the moment.</p>
+<ul>
+<li><p>Blog editors can be tagged in <a href="https://github.com/ropensci/">any ropensci repo</a>, in particular <a href="https://github.com/ropensci/roweb3/">roweb3</a>, by writing <code>@ropensci/blog-editors</code> (e.g. <code>:wave: @ropensci/blog-editors, I have trouble adding citations in my post!</code>).</p></li>
+<li><p>Blog editors have write access to the roweb3 repo.</p></li>
+<li><p>Blog editors are <a href="https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS">“code owners”</a> of <code>roweb3/content/blog</code>, <code>roweb3/content/commcalls</code> according to <a href="https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS">roweb3’s CODEOWNERS file</a> so any PR touching a file under these paths will automatically request their review. When one of them posts a review, it will be marked as <a href="https://github.com/ropensci/roweb3/pull/619#issuecomment-589680666">“on behalf of <code>@ropensci/blog-editors</code>”</a>.</p></li>
+</ul>
+<p>For adding a new blog editor, the team maintainer or any ropensci admin</p>
+<ul>
+<li><p>ensures the user has <a href="https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">enabled 2FA</a>,</p></li>
+<li><p><a href="https://github.com/orgs/ropensci/teams/blog-editors/members">adds them to the team</a> as Member (the default role).</p></li>
+</ul>
+<p>The blog editors can filter their notifications, e.g. using the <a href="https://github.com/notifications/beta?query=reason%3Ateam-mention"><code>reason:team-mention</code> filter</a>.</p>
+<p>The blog editors don’t necessarily have write access to the blog-guidance repo but are encouraged to make PRs.</p>
+</div>
+<div id="posts-authored-by-staff" class="section level2">
+<h2>
+<span class="header-section-number">6.2</span> Posts authored by staff<a class="anchor" aria-label="anchor" href="#posts-authored-by-staff"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Staff members can bypass review for tech notes but they can choose to request a review by blog editors.</li>
+<li>Staff members’ blog posts should be scheduled together with Stefanie Butland.</li>
+<li>Staff members are responsible for creating the <a href="editor.html#publish">discussion forum entry</a> for their own post and must <a href="editor.html#tweetpromo">tweet from the rOpenSci Twitter account</a> (directly or via the Tweetdeck rOpenSci team) before tweeting from their personal account.</li>
+</ul>
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="editor.html"><span class="header-section-number">5</span> Review, Publish, Promote</a></div>
+<div class="next"><a href="templatemd.html"><span class="header-section-number">A</span> Template - Post (md)</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#editormeta"><span class="header-section-number">6</span> Editorial Governance</a></li>
+<li><a class="nav-link" href="#github-team"><span class="header-section-number">6.1</span> GitHub team</a></li>
+<li><a class="nav-link" href="#posts-authored-by-staff"><span class="header-section-number">6.2</span> Posts authored by staff</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci-org/blog-guidance/blob/master/editor-meta.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci-org/blog-guidance/edit/master/editor-meta.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Blog Guide for Authors and Editors</strong>" was written by Stefanie Butland, Steffi LaZerte, Maëlle Salmon. It was last built on 2021-04-28.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
