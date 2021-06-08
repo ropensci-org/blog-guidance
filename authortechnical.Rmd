@@ -243,9 +243,9 @@ knitr::include_graphics("images/imgtxt.png")
 
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
-<code>&lt;!\-\-html_preserve\-\-></code>    
+<code>```{=html}</code>    
 <code>{{< figure src = \"name-of-image.png\" width = \"400\" alt = \"informative description\">}}</code>  
-<code>&lt;!\-\-/html_preserve\-\-></code>  
+<code>``</code>  
 
 
 ### Images - Rmd-created {#addfigure}
@@ -326,7 +326,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/
 - When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md).
+- In R Markdown wrap Hugo shortcodes in Pandoc raw attributes as shown in the [template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md).
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
