@@ -483,7 +483,7 @@ knitr::include_graphics("images/hugocheckspassed.png")
 
 ### Submit post
 
-* Mark the draft PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.
+* Mark the draft PR as ready for review at least one week prior to the planned publication date. When you get approval for a post idea you'll be told who to ping as your reviewer.
 
 
 [^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
