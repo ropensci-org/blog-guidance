@@ -366,7 +366,7 @@ Blablablabla
 {{< /quote >}}
 ```
 
-Note that this syntax also work for quotes with attribution!
+Note that this syntax also work for quotes without attribution!
 
 ```markdown
 {{< quote align="center">}}
