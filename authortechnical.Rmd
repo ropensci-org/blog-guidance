@@ -266,9 +266,9 @@ plot(1:10)
 
 This chunk above produces a figure with _"alternative text please make it informative"_ as alternative text, _"title of the image"_ as title, _"this is what this image shows, write it here or in the paragraph after the image as you prefer"_ as caption, and a width of 300 pixels.
 
-### Citations {#addcitation}
+### Citations and footnotes {#addcitation}
 
-To add citations, refer to them in the body of your post:
+To add citations, refer to them in the body of your post as footnotes:
 ```
 Citation of the primary literature[^1].
 Citation of an R package[^2].
