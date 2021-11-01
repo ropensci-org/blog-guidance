@@ -21,16 +21,22 @@ jobs:
       - name: Install pak and query dependencies
         run: |
           install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
-          saveRDS(pak::pkg_deps("local::.", dependencies = TRUE), ".github/r-depends.rds")
+          saveRDS(pak::local_dev_deps_tree(), ".github/r-depends.rds")
         shell: Rscript {0}
 
-      - name: Cache R packages
+      - name: Restore R package cache
         uses: actions/cache@v2
         with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ steps.install-r.outputs.installed-r-version }}-2-${{ hashFiles('.github/r-depends.rds') }}
-          restore-keys: {{ runner.os }}-r-${{ steps.install-r.outputs.installed-r-version }}-2-
-
+          path: |
+            ${{ env.R_LIBS_USER }}
+            !${{ env.R_LIBS_USER }}/pak
+          key: ${{ runner.os }}-${{ steps.get-r-version.outputs.version }}-3-
+          
+      - name: Install macOS system dependencies
+        if: runner.os == 'macOS'
+        run: |
+          brew install libgit2
+          
       - name: Install dependencies
         run: |
           pak::local_install_dev_deps(upgrade = TRUE)
