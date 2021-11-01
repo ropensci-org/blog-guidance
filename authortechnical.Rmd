@@ -306,6 +306,74 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) for an example.
 
+### Block quotes
+
+#### Block quotes with no attribution
+
+E.g. if you want to highlight a sentence from the post itself.
+
+Block quotes are paragraphs starting with `>`.
+
+If you want to have them right-align add `{.blockquote .text-right}` right after the paragraph e.g.
+
+```markdown
+> blabla
+blabla
+blabla
+{.blockquote .text-right}
+```
+
+If you want to have them centered add `{.blockquote .text-center}` right after the paragraph e.g.
+
+```markdown
+> blabla
+blabla
+blabla
+{.blockquote .text-center}
+```
+
+#### Block quotes with attribution
+
+If you want to add a block quote with an author name, use:
+
+```markdown
+{{< quote footer="Author Name">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to add a block quote with an author name and a source, use:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to center the block quote add the align variable:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)" align="center">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to right-align the block quote add the align variable:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)" align="right">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+Note that this syntax also work for quotes with attribution!
+
+```markdown
+{{< quote align="center">}}
+Blablablabla  
+{{< /quote >}}
+```
+
 ### Examples
 
 Comparing the raw Markdown to the live posts in these examples might be helpful.
