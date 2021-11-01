@@ -426,8 +426,7 @@ You can use functions in the [roblog package to do some automated checks](https:
 ### Author Checklist {#checklists}
 
 Pick the appropriate checklist for your post and ensure you checked everything off. 
-Hover the mouse over the list and a copy-paste button will appear at the 
-top-right corner of the shaded area.
+Notice the copy-paste button at the top-right corner of the list.
 
 #### Posts on peer-reviewed packages
 
