@@ -107,7 +107,7 @@ The blogdown New Post RStudio addin creates the post draft in the correct locati
 * Re-start R.
 * In RStudio, open the forked `roweb3` project.
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
-* Leave "Categories" blank.
+* Leave "Categories" blank (and ignore in the file created)
 
 ```{r blogdownaddin, echo = FALSE, fig.alt = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
@@ -138,7 +138,9 @@ Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/`.
 
 ### YAML {#whatgoesinyaml}
 
-The YAML sets the metadata for a post. This is the YAML from our [post template](#templatermd), with comments to explain some components:
+The YAML sets the metadata for a post. This is the YAML from our [post template](#templatermd), with comments to explain some components.
+
+> **Note:** The New Post Addin automatically creates a `categories` component, but you shoul ignore or remove this and use `tags` instead.
 
 ```{r posttemplate, results="asis"}
 show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", 
