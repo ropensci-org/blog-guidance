@@ -454,7 +454,7 @@ To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) 
 
 Then run `hugo serve` or `blogdown::serve_site()` in the repo directory to start a local server on http://localhost:1313 (or another one indicated by blogdown). 
   
-**Note:** If you are more used to using hugodown you can use it too to serve the website.
+**Note:** If you are used to using hugodown you can use it instead to serve the website.
 
 The version of Hugo used by the rOpenSci web server is defined in [netlify.toml](https://github.com/ropensci/roweb3/blob/master/netlify.toml).
 
