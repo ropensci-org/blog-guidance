@@ -102,12 +102,12 @@ If not, refer to [the instructions to create your draft manually](#manually).
 
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
-* Install `whoami` and `blogdown` (`install.packages(c("whoami", "blogdown"))`).
-* Install Hugo (to preview the post): `blogdown::install_hugo()`.
+* Install `whoami` (`install.packages("whoami")`), and `blogdown` above version 1.1.10 (at the moment of writing, only available from GitHub, so `remotes::install_github("rstudio/blogdown")`).
+* Install Hugo (to preview the post): `blogdown::install_hugo("0.89.0")` (version recorded in netlify.toml of the roweb3 repository).
 * Re-start R.
 * In RStudio, open the forked `roweb3` project.
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
-* Leave "Categories" blank.
+* Leave "Categories" blank (and ignore in the file created)
 
 ```{r blogdownaddin, echo = FALSE, fig.alt = "blogdown's New Post Addin.", out.width = "70%", fig.align="center"}
 knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
@@ -138,7 +138,9 @@ Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/`.
 
 ### YAML {#whatgoesinyaml}
 
-The YAML sets the metadata for a post. This is the YAML from our [post template](#templatermd), with comments to explain some components:
+The YAML sets the metadata for a post. This is the YAML from our [post template](#templatermd), with comments to explain some components.
+
+> **Note:** The New Post Addin automatically creates a `categories` component, but you should ignore or remove this and use `tags` instead.
 
 ```{r posttemplate, results="asis"}
 show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", 
@@ -266,9 +268,9 @@ plot(1:10)
 
 This chunk above produces a figure with _"alternative text please make it informative"_ as alternative text, _"title of the image"_ as title, _"this is what this image shows, write it here or in the paragraph after the image as you prefer"_ as caption, and a width of 300 pixels.
 
-### Citations {#addcitation}
+### Citations and footnotes {#addcitation}
 
-To add citations, refer to them in the body of your post:
+To add citations, refer to them in the body of your post as footnotes:
 ```
 Citation of the primary literature[^1].
 Citation of an R package[^2].
@@ -304,7 +306,88 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### Embedded tweets {#addtweet}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its ID e.g. `{{< tweet 1138216112808529920 >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) for an example.
+  
+If you want to quote a tweet and make it look more subdued, you can use a [block quote](#blockquotes) linking the tweet.
+ [Example](https://ropensci.org/blog/2021/02/03/targets/), [source](https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35).
+
+### Block quotes {#blockquotes}
+
+#### Block quotes with no attribution
+
+E.g. if you want to highlight a sentence from the post itself.
+
+Block quotes are paragraphs starting with `>`.
+
+If you want to have them right-align add `{.blockquote .text-right}` right after the paragraph e.g.
+
+```markdown
+> blabla
+blabla
+blabla
+{.blockquote .text-right}
+```
+If you want to have them centered add `{.blockquote .text-center}` right after the paragraph e.g.
+```markdown
+> blabla
+blabla
+blabla
+{.blockquote .text-center}
+```
+#### Block quotes with attribution
+
+If you want to add a block quote with an author name, use:
+
+```markdown
+{{< quote footer="Author Name">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to add a block quote with an author name and a source, use:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to center the block quote add the align variable:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)" align="center">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+If you want to right-align the block quote add the align variable:
+
+```markdown
+{{< quote footer="Author Name" cite="[good book](url)" align="right">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+Note that this syntax also work for quotes without attribution!
+
+```markdown
+{{< quote align="center">}}
+Blablablabla  
+{{< /quote >}}
+```
+
+### Tables
+
+If you want to use e.g. [striped tables](https://getbootstrap.com/docs/4.6/content/tables/), add `{.table .table-responsive .table-striped}` right after the last line of the table.
+
+```markdown
+Header   | Other Header | Another Header
+---------|----------------|-------------------
+Value 11 | Value 12       | Value 13
+Value 21 | Value 22       | Value 23
+Value 31 | Value 32       | Value 33
+{.table .table-responsive .table-striped}
+```
 
 ### Examples
 
@@ -348,8 +431,7 @@ You can use functions in the [roblog package to do some automated checks](https:
 ### Author Checklist {#checklists}
 
 Pick the appropriate checklist for your post and ensure you checked everything off. 
-Hover the mouse over the list and a copy-paste button will appear at the 
-top-right corner of the shaded area.
+Notice the copy-paste button at the top-right corner of the list.
 
 #### Posts on peer-reviewed packages
 
@@ -366,11 +448,13 @@ show_checklist("submission-checklist.csv")
 ### Local preview {#localpreview}
 
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo.
-To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()`. 
+To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()` using the version recorded in [netlify.toml](https://github.com/ropensci/roweb3/blob/master/netlify.toml). 
 
-**Note:** You can also preview your blog post online through the pull request before the final submission
+**Note:** You can also preview your blog post online through the pull request before the final submission.
 
-Then run `hugo serve` in the repo directory to start a local server on http://localhost:1313. 
+Then run `hugo serve` or `blogdown::serve_site()` in the repo directory to start a local server on http://localhost:1313 (or another one indicated by blogdown). 
+  
+**Note:** If you are used to using hugodown you can use it instead to serve the website.
 
 The version of Hugo used by the rOpenSci web server is defined in [netlify.toml](https://github.com/ropensci/roweb3/blob/master/netlify.toml).
 
@@ -406,7 +490,7 @@ knitr::include_graphics("images/hugocheckspassed.png")
 
 ### Submit post
 
-* Mark the draft PR as ready for review at least one week prior to the planned publication date. A review from blog editor(s) will be automatically requested by GitHub.
+* Mark the draft PR as ready for review at least one week prior to the planned publication date. When you get approval for a post idea you'll be told who to ping as your reviewer.
 
 
 [^1]: In Hugo speak, we'd say your post is a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
