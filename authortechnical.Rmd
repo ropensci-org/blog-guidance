@@ -140,7 +140,7 @@ Your post source and its images should live in `/content/blog/YYYY-MM-DD-slug/`.
 
 The YAML sets the metadata for a post. This is the YAML from our [post template](#templatermd), with comments to explain some components.
 
-> **Note:** The New Post Addin automatically creates a `categories` component, but you shoul ignore or remove this and use `tags` instead.
+> **Note:** The New Post Addin automatically creates a `categories` component, but you should ignore or remove this and use `tags` instead.
 
 ```{r posttemplate, results="asis"}
 show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", 
