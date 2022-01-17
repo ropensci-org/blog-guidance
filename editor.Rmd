@@ -22,8 +22,8 @@ These are particularly helpful:
 
 ### Review
 
-Read the post preview to get a feel for it. On my first read, I (Stefanie) typically make a few pen & paper notes for myself on what to pay attention to on deeper review.
-This is when I often note some positive feedback, based on a first impression.
+Read the post preview to get a feel for it. On the first read, you might make a few pen & paper notes on what to pay attention to on deeper review.
+This is a good time to note some positive feedback, based on a first impression.
 There is always something great in a post to highlight in your review. 
 Be specific.
 If the post or something in it excites you, don't hesitate to say that.
@@ -103,7 +103,8 @@ We tweet at ~8am Pacific, but it would be good to use a system for optimizing th
 
 Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
 Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
-Stef uses a private Google doc called "scratchpad" for this, and saves images in a local folder. 
+
+For community posts, draft tweets are posted in the comments of the pull request so the author can comment.
 
 ### Content
 

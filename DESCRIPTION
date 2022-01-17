@@ -11,7 +11,12 @@ Authors@R:
              family = "Butland",
              role = "aut",
              email = "stefaniebutland@gmail.com",
-             comment = c(ORCID = "0000-0002-5427-8951")))
+             comment = c(ORCID = "0000-0002-5427-8951")),
+      person(given = "Steffi", 
+             family = "LaZerte", 
+             role = "aut",
+             email = "steffi@steffi.ca",
+             comment = c(ORCID = "0000-0002-7690-8360")))
 Description: Provides content and technical guidelines for authors submitting a blog post or tech note to rOpenSci, and for editors reviewing, publishing and promoting those posts. 
 License: MIT + file LICENSE
 Encoding: UTF-8

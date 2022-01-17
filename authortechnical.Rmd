@@ -9,7 +9,7 @@ We include advice on commonly used elements like adding [an image](#addimage), [
 
 Briefly, the process is:
 
-1. Get the go-ahead and a tentative publication date from our Community Manager [Stefanie Butland](https://github.com/stefaniebutland).
+1. Get the go-ahead and a tentative publication date from our Community Manager.
 1. Fork the repository (repo) of the rOpenSci website.
 1. Draft your post in R Markdown or Markdown and create or update your author metadata.
 1. Preview and refine your post locally.
