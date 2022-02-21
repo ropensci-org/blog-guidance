@@ -14,7 +14,7 @@ Using an rOpenSci resource, such as the Dev Guide or a task view;Getting your to
 About a peer-reviewed package developed by the authors;rmangal: Making Ecological Networks Easily Accessible;https://ropensci.org/blog/2019/10/21/rmangal/;talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn't make that the dominant part of the post.
 About a peer-reviewed package developed by the authors;Forcing Yourself to Make Your Life Easier;https://ropensci.org/blog/2018/04/12/ijtiff/;is an honest post with some reflection and an important message.
 About a peer-reviewed package developed by the authors;The av Package: Production Quality Video in R;https://ropensci.org/technotes/2018/10/06/av-release/;(tech note) is to the point. av is not a peer-reviewed package but this is a good example of a tech note.
-Major updates to key packages;(Re)introducing skimr v2 - A year in the life of an open source R project;https://ropensci.org/blog/2019/10/29/skimrv2/);
-Major updates to key packages;drake transformed;https://ropensci.org/technotes/2019/03/18/drake-700/;(technote)
-Major updates to key packages;drake's improved high-performance computing power;https://ropensci.org/technotes/2018/05/18/drake-hpc/;(technote)
+Major updates to packages with broad audiences;(Re)introducing skimr v2 - A year in the life of an open source R project;https://ropensci.org/blog/2019/10/29/skimrv2/);
+Major updates to packages with broad audiences;drake transformed;https://ropensci.org/technotes/2019/03/18/drake-700/;(technote)
+Major updates to packages with broad audiences;drake's improved high-performance computing power;https://ropensci.org/technotes/2018/05/18/drake-hpc/;(technote)
 Describe an unsolved problem and a call to action;rOpenSci Educators Collaborative: What Are The Challenges When Teaching Science With R?;https://ropensci.org/blog/2018/07/24/educollab-challenges/;(3 posts from unconf18)
