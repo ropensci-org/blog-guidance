@@ -1,17 +1,20 @@
-category; title; url; description
-About a peer-reviewed package developed by the authors; rmangal: Making Ecological Networks Easily Accessible;https://ropensci.org/blog/2019/10/21/rmangal/;talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn't make that the dominant part of the post.
-About a peer-reviewed package developed by the authors;Forcing Yourself to Make Your Life Easier;https://ropensci.org/blog/2018/04/12/ijtiff/;is an honest post with some reflection and an important message.
-About a peer-reviewed package developed by the authors;The av Package: Production Quality Video in R;https://ropensci.org/technotes/2018/10/06/av-release/;(tech note) is to the point. av is not a peer-reviewed package but this is a good example of a tech note. 
+category;title;url;description
+Useful how-tos and examples;How to cite R and R packages;https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/;"addresses a problem important to rOpenSci's <a href = ""https://ropensci.org/about/"">mission</a>"
+Useful how-tos and examples;How to precompute package vignettes or pkgdown articles;https://ropensci.org/blog/2019/12/08/precompute-vignettes/;addresses a tricky problem common to many developers
+Useful how-tos and examples;How I Test cffr on (about) 2,000 Packages using GitHub Actions and R-universe;https://ropensci.org/blog/2021/11/23/how-i-test-cffr/;shares how the author fixed a tricky problem using an rOpenSci project
 About a group of packages used in a research domain;Using Open-Access Tools (rentrez, taxize) to Find Coronaviruses, Their Genetic Sequences, and Their Hosts;https://ropensci.org/blog/2020/11/10/coronaviruses-and-hosts/;Together, the packages rentrez and taxize can extract standardised data on viruses and their hosts from genetic records.
-Major updates to key packages;(Re)introducing skimr v2 - A year in the life of an open source R project;https://ropensci.org/blog/2019/10/29/skimrv2/);
-Major updates to key packages;drake transformed;https://ropensci.org/technotes/2019/03/18/drake-700/;(technote)
-Major updates to key packages;drake's improved high-performance computing power;https://ropensci.org/technotes/2018/05/18/drake-hpc/;(technote)
-Reviewer perspectives; posts tagged reviewer;https://ropensci.org/tags/reviewer/;
+Describing a creative use case for multiple rOpenSci packages;Where to go observe birds in Radolfzell? An answer with R and open data;https://ropensci.org/blog/2018/08/14/where-to-bird/;
+Reviewer perspectives;posts tagged reviewer;https://ropensci.org/tags/reviewer/;
 Contributing to or taking over maintenance of a package;Relaunching the qualtRics package;https://ropensci.org/blog/2019/04/30/qualtrics-relaunch/;has an engaging tone while being informative and providing technical details.
 Contributing to or taking over maintenance of a package;Monkeying around with Code and Paying it Forward;https://ropensci.org/blog/2018/04/20/monkeydo/;gives insight into how the author is thinking about workflows and contributing to rOpenSci.
 Summarizing a Community Call;Code Review in the Lab;https://ropensci.org/blog/2018/11/29/codereview/;
-Describing a creative use case for multiple rOpenSci packages; Where to go observe birds in Radolfzell? An answer with R and open data;https://ropensci.org/blog/2018/08/14/where-to-bird/;
-Using an rOpenSci resource, such as the Package Development Guide or a task view;When Standards Go Wild - Software Review for a Manuscript;https://ropensci.org/blog/2019/04/18/wild-standards/;
-Using an rOpenSci resource, such as the Package Development Guide or a task view;Using rOpenSci Software Peer Review Guidelines for Teaching;https://ropensci.org/blog/2019/08/27/software-peer-review-guidelines-for-teaching/;
-Using an rOpenSci resource, such as the Package Development Guide or a task view;Getting your toes wet in R: Hydrology, meteorology, and more;https://ropensci.org/blog/2019/04/02/hydrology-task-view/;
+Using an rOpenSci resource, such as the Dev Guide or a task view;When Standards Go Wild - Software Review for a Manuscript;https://ropensci.org/blog/2019/04/18/wild-standards/;
+Using an rOpenSci resource, such as the Dev Guide or a task view;Using rOpenSci Software Peer Review Guidelines for Teaching;https://ropensci.org/blog/2019/08/27/software-peer-review-guidelines-for-teaching/;
+Using an rOpenSci resource, such as the Dev Guide or a task view;Getting your toes wet in R: Hydrology, meteorology, and more;https://ropensci.org/blog/2019/04/02/hydrology-task-view/;
+About a peer-reviewed package developed by the authors;rmangal: Making Ecological Networks Easily Accessible;https://ropensci.org/blog/2019/10/21/rmangal/;talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn't make that the dominant part of the post.
+About a peer-reviewed package developed by the authors;Forcing Yourself to Make Your Life Easier;https://ropensci.org/blog/2018/04/12/ijtiff/;is an honest post with some reflection and an important message.
+About a peer-reviewed package developed by the authors;The av Package: Production Quality Video in R;https://ropensci.org/technotes/2018/10/06/av-release/;(tech note) is to the point. av is not a peer-reviewed package but this is a good example of a tech note.
+Major updates to packages with broad audiences;(Re)introducing skimr v2 - A year in the life of an open source R project;https://ropensci.org/blog/2019/10/29/skimrv2/);
+Major updates to packages with broad audiences;drake transformed;https://ropensci.org/technotes/2019/03/18/drake-700/;(technote)
+Major updates to packages with broad audiences;drake's improved high-performance computing power;https://ropensci.org/technotes/2018/05/18/drake-hpc/;(technote)
 Describe an unsolved problem and a call to action;rOpenSci Educators Collaborative: What Are The Challenges When Teaching Science With R?;https://ropensci.org/blog/2018/07/24/educollab-challenges/;(3 posts from unconf18)
