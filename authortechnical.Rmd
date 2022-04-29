@@ -35,7 +35,7 @@ For staff and leadership team members, editors for software peer review, or memb
 
 
 ### How?
-If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb3/content/author/`](https://github.com/ropensci/roweb3/tree/master/content/author).
+If you don't already have an author page, create a folder called `yourfirstname-yourlastname` in your local copy of [`roweb3/content/author/`](https://github.com/ropensci/roweb3/tree/HEAD/content/author).
 You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.
 
 In that folder, create a file called `_index.md` with information about your online presence.
