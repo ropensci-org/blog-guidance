@@ -9,7 +9,7 @@ Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r posttemplatemd, results="asis"}
-show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", lang = "markdown")
+show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", lang = "markdown")
 ```
 
 # Template - Post (Rmd) {#templatermd}
@@ -18,7 +18,7 @@ Use of this template is described in [Start the post from a template](#templates
 
 R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
 
-[Available on GitHub](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) (_not displayed for copy-paste because of "html_preserve" tags_)
+[Available on GitHub](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) (_not displayed for copy-paste because of "html_preserve" tags_)
 
 # Template - Author file {#authortemplate}
 

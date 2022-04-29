@@ -12,8 +12,6 @@ rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://g
 
 * Blog editors have write access to the roweb3 repo.
 
-* Blog editors are ["code owners"](https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS) of `roweb3/content/blog`, `roweb3/content/commcalls` according to [roweb3's CODEOWNERS file ](https://github.com/ropensci/roweb3/blob/master/.github/CODEOWNERS) so any PR touching a file under these paths will automatically request their review. When one of them posts a review, it will be marked as ["on behalf of `@ropensci/blog-editors`"](https://github.com/ropensci/roweb3/pull/619#issuecomment-589680666).
-
 For adding a new blog editor, the team maintainer or any ropensci admin
 
 * ensures the user has [enabled 2FA](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
