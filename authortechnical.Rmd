@@ -53,7 +53,7 @@ Add your usernames or ID's without the "@" or the "https:...". The link field ca
 
 ### Examples 
 
-This author file, [`/author/kelly-obriant/_index.md`](https://github.com/ropensci/roweb3/blob/master/content/author/kelly-obriant/_index.md) 
+This author file, [`/author/kelly-obriant/_index.md`](https://github.com/ropensci/roweb3/blob/HEAD/content/author/kelly-obriant/_index.md) 
 
 ```yaml
 ---
@@ -71,7 +71,7 @@ knitr::include_graphics("images/authorpage-1.png")
 ```
 
 
-This author file, [`/author/maëlle-salmon/_index.md`](https://github.com/ropensci/roweb3/blob/master/content/author/ma%C3%ABlle-salmon/_index.md)
+This author file, [`/author/maëlle-salmon/_index.md`](https://github.com/ropensci/roweb3/blob/HEAD/content/author/ma%C3%ABlle-salmon/_index.md)
 
 ```yaml
 ---
@@ -87,10 +87,10 @@ orcid: 0000-0002-2815-0399
 
 ... generates [Maëlle Salmon's author page](https://ropensci.org/author/ma%C3%ABlle-salmon/).
 
-For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb3/blob/master/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/).
+For an example of how to name the folder with an accent and initials, see this [author file](https://github.com/ropensci/roweb3/blob/HEAD/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md) that generates [Richèl J.C. Bilderbeek's author page](https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/).
 The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.
 
-Look at [other people's folder names](https://github.com/ropensci/roweb3/tree/master/content/author) for examples. 
+Look at [other people's folder names](https://github.com/ropensci/roweb3/tree/HEAD/content/author) for examples. 
 
 
 ## Post template {#templates}
@@ -143,7 +143,7 @@ The YAML sets the metadata for a post. This is the YAML from our [post template]
 > **Note:** The New Post Addin automatically creates a `categories` component, but you should ignore or remove this and use `tags` instead.
 
 ```{r posttemplate, results="asis"}
-show_template("https://github.com/ropensci/roweb3/raw/master/archetypes/md/index.md", 
+show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", 
               lang = "yaml",
               yaml_only = TRUE)
 ```
@@ -195,7 +195,7 @@ and see the following sections for how to include alt text.
 ### Images - External {#addimage}
 
 > This section refers to images that are **not** generated from R Markdown. 
-> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
+> If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
 
 **File location**  
 All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`) 
@@ -253,7 +253,7 @@ knitr::include_graphics("images/imgtxt.png")
 ### Images - Rmd-created {#addfigure}
 
 **File location**   
-When using [our R Markdown template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. 
+When using [our R Markdown template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. 
 Therefore you don't need to worry about paths.
 
 **Image details**    
@@ -306,7 +306,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### Embedded tweets {#addtweet}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) for an example.
   
 If you want to quote a tweet and make it look more subdued, you can use a [block quote](#blockquotes) linking the tweet.
  [Example](https://ropensci.org/blog/2021/02/03/targets/), [source](https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35).
@@ -394,10 +394,10 @@ Value 31 | Value 32       | Value 33
 Comparing the raw Markdown to the live posts in these examples might be helpful.
 
 - A blog post about a package that has passed software peer review.
-Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
+Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2019-10-21-rmangal.md) with the [live post](https://ropensci.org/blog/2019/10/21/rmangal/).
 
 - A tech note.
-Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/content/blog/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
+Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
 ## Style Guide {#styleguide}
 
@@ -409,7 +409,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/master/
 - When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
 - When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
 - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/master/archetypes/Rmd/index.md).
+- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md).
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
@@ -448,7 +448,7 @@ show_checklist("submission-checklist.csv")
 ### Local preview {#localpreview}
 
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo.
-To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()` using the version recorded in [netlify.toml](https://github.com/ropensci/roweb3/blob/master/netlify.toml). 
+To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()` using the version recorded in [netlify.toml](https://github.com/ropensci/roweb3/blob/HEAD/netlify.toml). 
 
 **Note:** You can also preview your blog post online through the pull request before the final submission.
 
@@ -456,7 +456,7 @@ Then run `hugo serve` or `blogdown::serve_site()` in the repo directory to start
   
 **Note:** If you are used to using hugodown you can use it instead to serve the website.
 
-The version of Hugo used by the rOpenSci web server is defined in [netlify.toml](https://github.com/ropensci/roweb3/blob/master/netlify.toml).
+The version of Hugo used by the rOpenSci web server is defined in [netlify.toml](https://github.com/ropensci/roweb3/blob/HEAD/netlify.toml).
 
 When this preview looks good to you, you should submit your post as a pull request.
 
