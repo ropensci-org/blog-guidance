@@ -121,8 +121,9 @@ knitr::include_graphics("images/blogdownaddin.png", dpi = 25)
   * Choose an Archetype, Rmd or md, from the drop-down menu.
   * Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.
   * Ignore Categories.
-  * Select "tech notes" tag if this is a tech note
-  * Select any other relevant tags and/or create new ones
+  * Select "tech notes" tag if this is a tech note.
+  * Select "Español" and "Spanish" tags if the post is in Spanish.
+  * Select any other relevant tags and/or create new ones.
   * Click on "Done", your post draft will have been created and opened.
 
 ### Manually {#manually}
