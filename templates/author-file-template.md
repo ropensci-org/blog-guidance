@@ -1,9 +1,9 @@
 ---
-name: Author Name
+name: {author_name}
 link: website URL or other online presence
 twitter: Twitter username
-github: GitHub username
+github: {github_username}
 gitlab: GitLab username
 keybase: Keybase ID
-orcid: ORCID ID
+orcid: {orcid_id}
 ---
