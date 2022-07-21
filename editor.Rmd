@@ -84,6 +84,10 @@ You might have to click twice.
 See [Understanding Twitter cards](#twittercards) for details. 
 Perfecting metadata for Twitter cards is optional for authors, so decide how critical any changes are before requesting them in your review.
 
+### Post in more than one language
+
+If a blog post has versions in more than one language, in order to sort how they are listed on our website we must use date and time. Check that the date and time in each of the files has the data to appear in the desired order.
+
 ## Publish a post {#publish}
 Publish a post by merging its pull request.
 For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it's Feb 28th somewhere in the world.
