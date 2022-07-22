@@ -86,7 +86,7 @@ Perfecting metadata for Twitter cards is optional for authors, so decide how cri
 
 ### Post in more than one language
 
-If a blog post has versions in more than one language, in order to sort how they are listed on our website we must use date and time. Check that the date and time in each of the files has the data to appear in the desired order.
+If a blog post has versions in more than one language, in order to sort how they are listed on our website we must use date and time. Check that the date and time in each of the files has the datetime to appear in the desired order.
 
 ## Publish a post {#publish}
 Publish a post by merging its pull request.
