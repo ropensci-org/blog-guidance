@@ -14,7 +14,6 @@ description: "Blog post guidance"
 apple-touch-icon: "favicon/apple-touch-icon.png"
 apple-touch-icon-size: 120
 favicon: "favicon/favicon.ico"
-cover-image: logo.png
 ---
 
 # Preface {-}
