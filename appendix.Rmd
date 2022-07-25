@@ -1,5 +1,3 @@
-# (APPENDIX) Appendix {-}
-
 # Template - Post (md) {#templatemd}
 
 Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
@@ -9,7 +7,7 @@ Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.md`
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r posttemplatemd, results="asis"}
-show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", lang = "markdown")
+blogguidance::show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", lang = "markdown")
 ```
 
 # Template - Post (Rmd) {#templatermd}
@@ -29,7 +27,7 @@ Author file template to be saved as `/content/authors/yourfirstname-yourlastname
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r authorfiletemplate, results="asis"}
-show_template("author-file-template.md", lang = "yaml")
+blogguidance::show_template("author-file-template.md", lang = "yaml")
 ```
 
 # Author Checklist - Posts on peer-reviewed packages {#authorchecklistpeer}
@@ -40,7 +38,7 @@ Copy this checklist into the first comment on your pull request.
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r checklistpkg2, echo = FALSE}
-show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
+blogguidance::show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
 ```
 
 # Author Checklist - Other posts {#authorchecklistany}
@@ -51,7 +49,7 @@ Copy this checklist into the first comment on your pull request.
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r checklistother2, echo = FALSE}
-show_checklist("submission-checklist.csv")
+blogguidance::show_checklist("submission-checklist.csv")
 ```
 
 # Editor Checklist - Posts on peer-reviewed packages {#editorchecklistpeer}
@@ -62,7 +60,7 @@ Copy this checklist to your GitHub review summary.
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r checklisteditor2, echo = FALSE}
-show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
+blogguidance::show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
 ```
 
 # Editor checklist - Other posts {#editorchecklistany}
@@ -73,7 +71,7 @@ Copy this checklist to your GitHub review summary.
 Notice the copy-paste button at the top-right corner of the template.
 
 ```{r checklisteditorprp2, echo = FALSE}
-show_checklist("editor-checklist.csv")
+blogguidance::show_checklist("editor-checklist.csv")
 ```
 
 # Twitter cards {#twittercards}
