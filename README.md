@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![GitHub Actions Workflow for commits to master](https://github.com/ropensci-org/blog-guidance/workflows/Render-Book-from-master/badge.svg)](https://github.com/ropensci-org/blog-guidance/actions?query=workflow%3ARender-Book-from-master)
+[![GitHub Actions Workflow for commits to main](https://github.com/ropensci-org/blog-guidance/workflows/Render-Book-from-main/badge.svg)](https://github.com/ropensci-org/blog-guidance/actions?query=workflow%3ARender-Book-from-main)
 <!-- badges: end -->
 
 This repository contains the bookdown source for "rOpenSci Blog Guidelines for Authors and Editors".
@@ -11,7 +11,7 @@ This repository contains the bookdown source for "rOpenSci Blog Guidelines for A
 
 The book is deployed via GitHub actions.
 
-* [Workflow for commit to master](.github/workflows/master.yml): the book is built (html) and deployed to gh-pages.
+* [Workflow for commit to main](.github/workflows/main.yml): the book is built (html) and deployed to gh-pages.
 
 * [Workflow for commit to any branch in a PR](.github/workflows/pr.yml): the book is built (html) and for PRs from this repo (not forks) the result is deployed to Netlify and the preview URL is posted in the details of a PR check.
 
