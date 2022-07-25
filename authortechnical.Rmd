@@ -42,7 +42,7 @@ In that folder, create a file called `_index.md` with information about your onl
 You can copy this template below (or get it via [roblog](https://docs.ropensci.org/roblog/reference/blog-posts.html) after installing it via `install.packages("roblog", repos = "https://dev.ropensci.org")` ).
 
 ```{r authorfiletemplate1, results="asis"}
-show_template("author-file-template.md", 
+blogguidance::show_template("author-file-template.md", 
               lang = "yaml",
               details = TRUE
 )
@@ -143,7 +143,7 @@ The YAML sets the metadata for a post. This is the YAML from our [post template]
 > **Note:** The New Post Addin automatically creates a `categories` component, but you should ignore or remove this and use `tags` instead.
 
 ```{r posttemplate, results="asis"}
-show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", 
+blogguidance::show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", 
               lang = "yaml",
               yaml_only = TRUE)
 ```
@@ -436,13 +436,13 @@ Notice the copy-paste button at the top-right corner of the list.
 #### Posts on peer-reviewed packages
 
 ```{r checklistpkg, echo = FALSE}
-show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
+blogguidance::show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
 ```
 
 #### Other posts
 
 ```{r checklistother, echo = FALSE}
-show_checklist("submission-checklist.csv")
+blogguidance::show_checklist("submission-checklist.csv")
 ```
 
 ### Local preview {#localpreview}

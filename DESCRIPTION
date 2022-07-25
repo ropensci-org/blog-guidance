@@ -23,10 +23,9 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 Imports: 
-    bookdown,
+    quarto,
     curl,
     glue,
-    magrittr,
     details,
     gluedown,
     purrr,
@@ -35,9 +34,4 @@ Imports:
     bslib,
     downlit,
     knitr (>= 1.31)
-Remotes:
-    rstudio/htmltools,
-    rstudio/bookdown,
-    rstudio/bslib,
-    r-lib/downlit
-    
+RoxygenNote: 7.2.1

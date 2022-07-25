@@ -1,5 +1,3 @@
-#  (PART) Author Guide {-}
-
 # Content Guidelines {#content}
 
 ```{block, type='summaryblock', echo=TRUE}

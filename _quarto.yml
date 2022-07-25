@@ -1,0 +1,41 @@
+project:
+  type: book
+  
+
+book:
+  favicon: images/apple-touch-icon.png
+  title: "rOpenSci Blog Guide for Authors and Editors"
+  author-meta: "Stefanie Butland, Steffi LaZerte, Maëlle Salmon, Yanina Bellini Saibene"
+  reader-mode: true
+  site-url: https://blogguide.ropensci.org/
+  repo-url: https://github.com/ropensci-org/blog-guidance/
+  repo-actions: [edit, issue]
+
+  chapters:
+  - index.Rmd
+
+  - part: Author Guide
+    chapters:
+    - authorcontent.Rmd 
+    - authortechnical.Rmd
+    - authorreview.Rmd
+    - authorpromote.Rmd
+
+  - part: Editor Guide
+    chapters:
+    - editor.Rmd 
+    - editor-meta.Rmd
+    
+  - part: Appendix
+    chapters:
+    - appendix.Rmd 
+    - editor-meta.Rmd
+          
+execute:
+  echo: false
+    
+format:
+  html:
+    theme: [cosmo, custom.scss]
+    code-link: true
+    include-in-header: "matomo.html"

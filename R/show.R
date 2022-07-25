@@ -1,10 +1,13 @@
-knitr::opts_chunk$set(
-  cache = TRUE,
-  echo = FALSE
-)
-
-library("magrittr")
-
+#' Show template
+#'
+#' @param filename Filename
+#' @param lang Language (for instance markdown)
+#' @param details Whether to show as details
+#' @param yaml_only 
+#' @param ... passed to `details::details()`
+#'
+#' @export
+#'
 show_template <- function(filename, 
                           lang = "markdown",
                           details = FALSE,
@@ -15,7 +18,10 @@ show_template <- function(filename,
       readLines(filename)
     } else {
       readLines(
-        file.path("templates", filename)
+        system.file(
+          file.path("templates", filename),
+          package = "blogguidance"
+        )
       )
       
     }
@@ -25,7 +31,7 @@ show_template <- function(filename,
     lines <- bookdown:::fetch_yaml(lines)
   }
   
-  lines %>%
+  lines |>
     glue::glue_collapse(sep = "\n") -> template
 
   if (details) {
@@ -40,14 +46,24 @@ show_template <- function(filename,
 
 }
 
+#' Show checklist
+#'
+#' @param filenames 
+#'
+#' @return text
+#' @export
+#'
 show_checklist <- function(filenames) {
-  filenames <- file.path("checklists", filenames)
+  filenames <- system.file(
+    file.path("checklists", filenames), 
+    package = "blogguidance"
+  )
   purrr::map(filenames, 
-             readLines) %>% 
-    unlist() %>%
-    gluedown::md_task() %>%
+             readLines) |> 
+    unlist() |>
+    gluedown::md_task() |>
     glue::glue_collapse("\n") -> x
   
-  glue::glue("````markdown\n{x}\n````") %>% 
+  glue::glue("````markdown\n{x}\n````") |> 
     knitr::asis_output()
 }
