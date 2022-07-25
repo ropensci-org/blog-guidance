@@ -206,14 +206,20 @@ To reference them in your post, use `name-of-image.png`.
 
 - **Insert** an image with either `figure` or `imgtxt` short codes
   - Note the use of `alt =` to specify [alt text](#images)
-  - `{{< figure src = "image-name.png" alt = "informative description" >}}`
-  - `{{< imgtxt src = "image-name.png" alt = "informative description">}} Text to right {{< /imgtxt >}}`
+  - `{{{< figure src = "image-name.png" alt = "informative description" >}}}`
+  - imgtxt:
+
+```
+{{{< imgtxt src = "image-name.png" alt = "informative description">}}} 
+Text to right 
+{{{< /imgtxt >}}}
+```
   
 **Image placement**
 
-- Basic positioning with `{{< figure >}}` and `class`
+- Basic positioning with `{{{< figure >}}}` and `class`
 
-  `{{< figure src = "image-name.png" alt = "informative description" class = "center" >}}`
+  `{{{< figure src = "image-name.png" alt = "informative description" class = "center" >}}}`
     - `pull-left` - Left-align the picture and wrap text around it
     - `center` - Center the picture (no text wrapping)
     - `pull-right` - Right-align the picture and wrap text around it
@@ -224,8 +230,8 @@ knitr::include_graphics("images/figure.png")
   
 - Specific text next to image with `{{< imgtxt >}}`
 
-  `{{< imgtxt src = "image-name.png">}} Text to right {{</ imgtxt >}} Text below`
-    - Only text between `{{< imgtxt >}}` and `{{</ imgtxt >}}` is to the right of the figure
+  `{{{< imgtxt src = "image-name.png">}}} Text to right {{{</ imgtxt >}}} Text below`
+    - Only text between `{{{< imgtxt >}}}` and `{{{</ imgtxt >}}}` is to the right of the figure
 
 ```{r, out.width = "30%", fig.align = "center"}
 knitr::include_graphics("images/imgtxt.png")
@@ -238,10 +244,10 @@ knitr::include_graphics("images/imgtxt.png")
 **Other details**
 
 - Control image **size** with `width`  
-  `{{< figure src = "image-name.png" width = "400" alt = "informative description">}}`
+  `{{{< figure src = "image-name.png" width = "400" alt = "informative description">}}}`
 
 - Make the image a **hyperlink** with `link`  
-  `{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}`
+  `{{{< figure src = "image-name.png" alt = "informative description" link = "http://hyperlink">}}}`
 
 **Important!**  In **R Markdown** (i.e. in \*.Rmd files but NOT \*.md files), these Hugo shortcodes need to be escaped:  
 
@@ -306,7 +312,7 @@ knitr::include_graphics("images/citation-gscholar.png")
 
 ### Embedded tweets {#addtweet}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) for an example.
+Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) for an example.
   
 If you want to quote a tweet and make it look more subdued, you can use a [block quote](#blockquotes) linking the tweet.
  [Example](https://ropensci.org/blog/2021/02/03/targets/), [source](https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35).
@@ -339,41 +345,41 @@ blabla
 If you want to add a block quote with an author name, use:
 
 ```markdown
-{{< quote footer="Author Name">}}
+{{{< quote footer="Author Name">}}}
 Blablablabla  
-{{< /quote >}}
+{{{< /quote >}}}
 ```
 
 If you want to add a block quote with an author name and a source, use:
 
 ```markdown
-{{< quote footer="Author Name" cite="[good book](url)">}}
+{{{< quote footer="Author Name" cite="[good book](url)">}}}
 Blablablabla  
-{{< /quote >}}
+{{{< /quote >}}}
 ```
 
 If you want to center the block quote add the align variable:
 
 ```markdown
-{{< quote footer="Author Name" cite="[good book](url)" align="center">}}
+{{{< quote footer="Author Name" cite="[good book](url)" align="center">}}}
 Blablablabla  
-{{< /quote >}}
+{{{< /quote >}}}
 ```
 
 If you want to right-align the block quote add the align variable:
 
 ```markdown
-{{< quote footer="Author Name" cite="[good book](url)" align="right">}}
+{{{< quote footer="Author Name" cite="[good book](url)" align="right">}}}
 Blablablabla  
-{{< /quote >}}
+{{{< /quote >}}}
 ```
 
 Note that this syntax also work for quotes without attribution!
 
 ```markdown
-{{< quote align="center">}}
+{{{< quote align="center">}}}
 Blablablabla  
-{{< /quote >}}
+{{{< /quote >}}}
 ```
 
 ### Tables
