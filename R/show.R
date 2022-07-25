@@ -26,7 +26,8 @@ show_template <- function(filename,
       
     }
   ) 
-  
+  lines <- gsub("\\{\\{", "{{{", lines)
+  lines <- gsub("\\}\\}", "}}}", lines)
   if (yaml_only) {
     lines <- bookdown:::fetch_yaml(lines)
   }
