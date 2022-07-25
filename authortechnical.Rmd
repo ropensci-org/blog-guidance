@@ -431,7 +431,7 @@ If using the R Markdown template, knitting `index.Rmd` (RStudio knit button, or 
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
 
-- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) for tweets, of lower camelCase for rOpenSci name
+- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) for tweets.
 - `ro_check_urls()` to check for URLs that might be broken 
 
 ### Author Checklist {#checklists}
