@@ -26,7 +26,7 @@ For help with this aspect of git/GitHub, we recommend [happygitwithr](https://ha
 
 ## Install blogdown
 
-If you plan to use R Markdown to write your post (as opposed to directly writing it in Markdown, not executing any code), please install or update blogdown.
+If you plan to use R Markdown to write your post (using `index.Rmd` as opposed to directly writing it in Markdown with `index.md` and not executing any code), please install or update blogdown.
 
 ```r
 install.packages("blogdown")
