@@ -5,7 +5,7 @@ name: PR-workflow
 jobs:
   bookdown:
     name: Render Book
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Is this a fork
         run: |
