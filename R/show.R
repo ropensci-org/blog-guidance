@@ -29,11 +29,15 @@ show_template <- function(filename,
   lines <- gsub("\\{\\{", "{{{", lines)
   lines <- gsub("\\}\\}", "}}}", lines)
   if (yaml_only) {
-    lines <- bookdown:::fetch_yaml(lines)
+    template <- yaml::as.yaml(
+      rmarkdown::yaml_front_matter(filename)
+    )
+  } else {
+    lines |>
+    glue::glue_collapse(sep = "\n") -> template
   }
   
-  lines |>
-    glue::glue_collapse(sep = "\n") -> template
+  
 
   if (details) {
     toshow <- details::details(template, summary = filename,

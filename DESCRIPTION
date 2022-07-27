@@ -33,5 +33,6 @@ Imports:
     xml2,
     bslib,
     downlit,
-    knitr (>= 1.31)
+    knitr (>= 1.31),
+    yaml
 RoxygenNote: 7.2.1

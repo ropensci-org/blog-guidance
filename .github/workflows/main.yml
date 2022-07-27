@@ -6,7 +6,7 @@ on:
 name: Render-Book-from-main
 
 jobs:
-  bookdown:
+  quarto:
     name: Render-Book
     runs-on: ubuntu-latest
     steps:

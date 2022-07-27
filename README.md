@@ -5,7 +5,7 @@
 [![GitHub Actions Workflow for commits to main](https://github.com/ropensci-org/blog-guidance/workflows/Render-Book-from-main/badge.svg)](https://github.com/ropensci-org/blog-guidance/actions?query=workflow%3ARender-Book-from-main)
 <!-- badges: end -->
 
-This repository contains the bookdown source for "rOpenSci Blog Guidelines for Authors and Editors".
+This repository contains the source for "rOpenSci Blog Guidelines for Authors and Editors".
 
 # Deployment
 
@@ -36,7 +36,6 @@ We welcome contributions that adhere to our [Code of Conduct](https://ropensci.o
 
 # Meta
 
-This book was started using [Sean Kross](https://github.com/seankross)' [minimal bookdown example](https://github.com/seankross/bookdown-start).
 
 The organization of this book was inspired by [JOSS's Author and Reviewer Guides](https://joss.readthedocs.io/en/latest/reviewer_guidelines.html).
 

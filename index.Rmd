@@ -2,7 +2,6 @@
 title: "rOpenSci Blog Guide for Authors and Editors"
 author: "Stefanie Butland, Steffi LaZerte, Maëlle Salmon, Yanina Bellini Saibene"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
