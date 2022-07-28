@@ -1,0 +1,10 @@
+# Author Checklist - Other posts {#authorchecklistany}
+
+Use of this template is described in [Pre-submission checks](#presubchecks).
+
+Copy this checklist into the first comment on your pull request. 
+Notice the copy-paste button at the top-right corner of the template.
+
+```{r checklistother2, echo = FALSE}
+blogguidance::show_checklist("submission-checklist.csv")
+```

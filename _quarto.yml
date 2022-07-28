@@ -28,7 +28,14 @@ book:
     
   - part: Appendix
     chapters:
-    - appendix.Rmd 
+    - templatemd.Rmd
+    - templatermd.Rmd
+    - authortemplate.Rmd
+    - authorchecklistpeer.Rmd
+    - authorchecklistany.Rmd
+    - editorchecklistpeer.Rmd
+    - editorchecklistany.Rmd
+    - twittercards.Rmd
     - editor-meta.Rmd
           
 execute:

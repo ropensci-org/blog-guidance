@@ -1,0 +1,10 @@
+# Editor Checklist - Posts on peer-reviewed packages {#editorchecklistpeer}
+
+Use of this template is described in [Review a Post](#review).
+
+Copy this checklist to your GitHub review summary.
+Notice the copy-paste button at the top-right corner of the template.
+
+```{r checklisteditor2, echo = FALSE}
+blogguidance::show_checklist(c("editor-checklist.csv", "editor-checklist-peer-reviewed-pkg.csv"))
+```

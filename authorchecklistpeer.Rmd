@@ -1,0 +1,10 @@
+# Author Checklist - Posts on peer-reviewed packages {#authorchecklistpeer}
+
+Use of this template is described in [Pre-submission checks](#presubchecks).
+
+Copy this checklist into the first comment on your pull request.
+Notice the copy-paste button at the top-right corner of the template.
+
+```{r checklistpkg2, echo = FALSE}
+blogguidance::show_checklist(c("submission-checklist.csv", "submission-checklist-peer-reviewed-pkg.csv"))
+```
