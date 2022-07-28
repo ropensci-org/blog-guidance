@@ -1,0 +1,10 @@
+# Editor checklist - Other posts {#editorchecklistany}
+
+Use of this template is described in [Review a Post](#review).
+
+Copy this checklist to your GitHub review summary.
+Notice the copy-paste button at the top-right corner of the template.
+
+```{r checklisteditorprp2, echo = FALSE}
+blogguidance::show_checklist("editor-checklist.csv")
+```

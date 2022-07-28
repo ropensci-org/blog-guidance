@@ -1,0 +1,11 @@
+# Template - Author file {#authortemplate}
+
+Use of this template is described in [Create or update your author file](#createauthorfile).
+
+Author file template to be saved as `/content/authors/yourfirstname-yourlastname/_index.md` as described in [Technical Guidelines](#createauthorfile).
+
+Notice the copy-paste button at the top-right corner of the template.
+
+```{r authorfiletemplate, results="asis"}
+blogguidance::show_template("author-file-template.md", lang = "yaml")
+```
