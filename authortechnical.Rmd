@@ -157,6 +157,12 @@ blogguidance::show_template("https://github.com/ropensci/roweb3/raw/HEAD/archety
               yaml_only = TRUE)
 ```
 
+If you need to add an alert box at the beginning of the post, like for instance the link to the blog post in Spanish in this [post](https://ropensci.org/blog/2022/11/23/r-universe-stars-1-en/), use the `preface` field with the Markdown syntax.
+
+```yaml
+preface: "[Lee la versión en español de este artículo](/blog/2022/11/23/r-universe-stars-1-es/)"
+```
+
 #### Subject tags
 
 Add tags to the YAML of your post to make it more findable. Browse [our page that lists all tags in use](https://ropensci.org/tags/) and re-use an existing tag rather than creating a new one e.g. 'packages' exists, so use that, rather than 'package'.
