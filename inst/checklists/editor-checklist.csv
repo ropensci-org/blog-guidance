@@ -10,4 +10,4 @@ I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()` on index.md
 I ran a spell-check on index.md
 YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
-preface YAML field is present if necessary
+YAML field 'preface' is present if necessary
