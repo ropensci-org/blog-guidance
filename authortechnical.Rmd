@@ -37,8 +37,9 @@ install.packages("blogdown")
 Create or update your author file.
 
 ### Why?
+
 The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, or presented in a Community Call.
-A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your Twitter or GitHub profile(s), and a list of all the content you’ve authored on our site.
+A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your social media or GitHub profile(s), and a list of all the content you’ve authored on our site.
 For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
 
 
@@ -59,32 +60,14 @@ blogguidance::show_template("author-file-template.md",
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username.
 Add your usernames or ID's without the "@" or the "https:...". The link field can be your personal website URL, for example.
 
-### Examples 
-
-This author file, [`/author/kelly-obriant/_index.md`](https://github.com/ropensci/roweb3/blob/HEAD/content/author/kelly-obriant/_index.md) 
-
-```yaml
----
-name: Kelly O'Briant
-link: https://kellobri.github.io/
-twitter: kellrstats
-github: kellobri
----
-```
-
-... generates [Kelly O'Briant's author page](https://ropensci.org/author/kelly-obriant/)
-
-```{r authorpage, fig.alt ="Screenshot of Kelly O'Briant's author page"}
-knitr::include_graphics("images/authorpage-1.png")
-```
-
+### Example
 
 This author file, [`/author/maëlle-salmon/_index.md`](https://github.com/ropensci/roweb3/blob/HEAD/content/author/ma%C3%ABlle-salmon/_index.md)
 
 ```yaml
 ---
 name: Maëlle Salmon
-twitter: ma_salmon
+mastodon: https://mastodon.social/@maelle
 bio: rOpenSci Research Software Engineer, Associate editor of rOpenSci Software Peer Review
 github: maelle
 gitlab: maelle
@@ -154,6 +137,12 @@ The YAML sets the metadata for a post. This is the YAML from our [post template]
 blogguidance::show_template("https://github.com/ropensci/roweb3/raw/HEAD/archetypes/md/index.md", 
               lang = "yaml",
               yaml_only = TRUE)
+```
+
+If you need to add an alert box at the beginning of the post, like for instance the link to the blog post in Spanish in this [post](https://ropensci.org/blog/2022/11/23/r-universe-stars-1-en/), use the `preface` field with the Markdown syntax.
+
+```yaml
+preface: "[Lee la versión en español de este artículo](/blog/2022/11/23/r-universe-stars-1-es/)"
 ```
 
 #### Subject tags
