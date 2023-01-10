@@ -60,25 +60,7 @@ blogguidance::show_template("author-file-template.md",
 At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username.
 Add your usernames or ID's without the "@" or the "https:...". The link field can be your personal website URL, for example.
 
-### Examples 
-
-This author file, [`/author/juliane-manitz/_index.md`](https://github.com/ropensci/roweb3/blob/main/content/author/juliane-manitz/_index.md), together with the image saved under `themes/ropensci/static/img/community`,
-
-```yaml
----
-name: Juliane Manitz
-github: jmanitz
-link: http://www.manitz.org/
-img: img/community/juliane-manitz.png
----
-```
-
-... generates [Juliane Manitz's author page](https://ropensci.org/author/juliane-manitz/)
-
-```{r authorpage, fig.alt ="Screenshot of Kelly O'Briant's author page"}
-knitr::include_graphics("images/authorpage-1.png")
-```
-
+### Example
 
 This author file, [`/author/maëlle-salmon/_index.md`](https://github.com/ropensci/roweb3/blob/HEAD/content/author/ma%C3%ABlle-salmon/_index.md)
 
