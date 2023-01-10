@@ -7,5 +7,5 @@ github: {github_username}
 gitlab: GitLab username
 keybase: Keybase ID
 orcid: {orcid_id}
-img: link to picture to be saved in themes/ropensci/static/img/community
+img: link to picture to be saved in themes/ropensci/static/img/community (if not provided, uses GitHub profile picture)
 ---
