@@ -391,7 +391,32 @@ Value 21 | Value 22       | Value 23
 Value 31 | Value 32       | Value 33
 {.table .table-responsive .table-striped}
 ```
+  
+### Math
+  
+If you want to use mathematical formula,
+  
+* install the package [katex](https://docs.ropensci.org/katex/).
+* add `math: true` to your post YAML.
+* for all math you'll need to double the backslashes. All "\" become "\\".
+* for inline math (`$1+1$`), use no dollar sign but instead.
+  
+```r
+`r katex::katex_html("1 + 1", displayMode = FALSE)`
+```
 
+* for displayed math (starting and ending with `$$`)
+
+````r
+```{r}
+string <- "\\begin{aligned}
+x_t & \\sim N(-0.5 y_{t-1} + x_{t-1} + z_{t-1}, 0.3^2)\\\\
+y_t & \\sim N(0.7x_{t-1}, 0.3^2)\\\\
+\\end{aligned}"
+katex::katex_html(string)
+```
+````
+ 
 ### Examples
 
 Comparing the raw Markdown to the live posts in these examples might be helpful.
