@@ -402,6 +402,16 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
 - A tech note.
 Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
+## Multilingual posts
+
+**Please discuss your post's language with blog editors!**
+
+- Our website's default language is English so only posts in English are called `index.md`.
+- For **translating** a post, create a file in the same folder as the original post but called `index.<two-letter-language-code>.md`, for instance  `index.es.md`. Translate tags, title, description too.
+- For a post in say Spanish only, use the same folder structure as for an English post but call the post file `index.es.md`.
+- Add an author file in `content/author/author-name/_index.<two-letter-language-code>.md` even if it only duplicates `content/author/author-name/_index.md`.
+- For a post in a language without any post yet, please ask blog editors to notify the website team so we can add translation for the blog infrastructure (such as "Share this page" and similar phrases).
+
 ## Style Guide {#styleguide}
 
 - For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text (no quotes).
