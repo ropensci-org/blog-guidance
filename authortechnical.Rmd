@@ -416,6 +416,7 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
 - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
 - Use informative [alternative text](#addimage) for all images.
 - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
+- Prefer phrases in English (or the language you are writing in) to Latin phrases such as "e.g." (for instance) or "i.e." (that is to say).
 
 ## Pre-submission checks {#presubchecks}
 
