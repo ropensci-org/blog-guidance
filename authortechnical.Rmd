@@ -410,7 +410,8 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
 - For **translating** a post, create a file in the same folder as the original post but called `index.<two-letter-language-code>.md`, for instance  `index.es.md`. Translate tags, title, description too.
 - For a post in a single non-English language omit the `index.md` file and only use the `index.XX.md` file using the appropriate language code (e.g., `index.es.md` for a Spanish-only post).
 - Add an author file in `content/author/author-name/_index.<two-letter-language-code>.md` even if it only duplicates `content/author/author-name/_index.md`.
-- If you are writing the first blog entry for a language (yay!), please ask blog editors to notify the website team so we can add translation for the blog infrastructure (such as "Share this page" and similar phrases).
+- If you are writing the first blog entry for a particular language (yay!), please ask blog editors to notify the website team so we can add translation for the blog infrastructure (such as "Share this page" and similar phrases).
+- Feel free to checkout the [rOpenSci translation guide](https://translationguide.ropensci.org/) for how we are translating rOpenSci material in general.
 
 ## Style Guide {#styleguide}
 
