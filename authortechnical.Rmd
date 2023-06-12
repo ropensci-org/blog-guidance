@@ -429,11 +429,11 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
   - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
   - Use informative [alternative text](#addimage) for all images.
 - **Language**
+  - **All languages** Avoid Latin phrases such as "e.g." (for instance) or "i.e." (that is to say).
+  Use phrases in the language of your post instead.
   - **English** - Use title case for the title of your post; use sentence case for headings inside the post.
   - **Non-English** - If using English words, use italics for the word in 
   English and translate directly in parentheses the first time it is mentioned
-  - Avoid Latin phrases such as "e.g." (for instance) or "i.e." (that is to say).
-  Use phrases in the language of your post instead.
 
 
 ## Pre-submission checks {#presubchecks}
