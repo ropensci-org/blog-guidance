@@ -253,7 +253,7 @@ knitr::include_graphics("images/imgtxt.png")
 <code>&lt;!\-\-/html_preserve\-\-></code>  
 
 
-#### Image gallery
+**Image gallery**
 
 If you want to display images in a nice gallery, where clicking on an image makes it appear much larger,
 
