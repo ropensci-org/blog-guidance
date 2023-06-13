@@ -260,14 +260,14 @@ If you want to display images in a nice gallery, where clicking on an image make
 1. In the post YAML metadata add `photogallery: yes`.
 1. In the post add each gallery like so:
 
-````md
+```{shortcodes=false}
 
 {{< gallery >}}
 {{< figureforgallery src="search2.png" alt="Screenshot of r-universe simple search results." >}}
 {{< figureforgallery src="search3.png" alt="Screenshot of r-universe advanced search query." >}}
 {{< figureforgallery src="search4.png" alt="Screenshot of r-universe advanced search results." >}}
 {{< /gallery >}}
-````
+```
 
 [Example post](https://ropensci.org/blog/2023/02/27/runiverse-discovering/), [source](https://github.com/ropensci/roweb3/blob/main/content/blog/2023-02-27-runiverse-discovering/index.md).
 
