@@ -402,20 +402,40 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
 - A tech note.
 Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2018-10-06-av-release.md) with the [live tech note](https://ropensci.org/technotes/2018/10/06/av-release/).
 
+## Multilingual posts
+
+**Please discuss your post's language with blog editors!**
+
+- Our website's default language is English so only posts in English are called `index.md`.
+- For **translating** a post, create a file in the same folder as the original post but called `index.<two-letter-language-code>.md`, for instance  `index.es.md`. Translate tags, title, description too.
+- For a post in a single non-English language omit the `index.md` file and only use the `index.XX.md` file using the appropriate language code (e.g., `index.es.md` for a Spanish-only post).
+- Add an author file in `content/author/author-name/_index.<two-letter-language-code>.md` even if it only duplicates `content/author/author-name/_index.md`.
+- If you are writing the first blog entry for a particular language (yay!), please ask blog editors to notify the website team so we can add translation for the blog infrastructure (such as "Share this page" and similar phrases).
+- Feel free to checkout the [rOpenSci translation guide](https://translationguide.ropensci.org/) for how we are translating rOpenSci material in general.
+
 ## Style Guide {#styleguide}
 
-- For formatting of package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). Format package names as regular text (no quotes).
-- Do not use markdown in titles (but you can use them in headings).
-- Use ## and ### to format headings in your post, i.e. section titles as ## (h2) and subsections as ### (h3), #### (h4).
-- Use title case for the title of your post; use sentence case for headings inside the post.
-- 'rOpenSci' not 'ROpenSci'
-- When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
-- When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
-- Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
-- In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md).
-- Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
-- Use informative [alternative text](#addimage) for all images.
-- Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
+- **Formatting**
+  - For package names, functions, and code, follow the [tidyverse style guidance](https://style.tidyverse.org/documentation.html#r-code). 
+  - Format package names as regular text (no quotes).
+  - Do not use markdown in titles (but you can use them in headings).
+  - Use ## and ### to format headings in your post, i.e. section titles as ## (h2) and subsections as ### (h3), #### (h4).
+  - Add new line at end of each sentence ([makes diffs easier to interpret and easier for editor to suggest specific changes](https://cirosantilli.com/markdown-style-guide#line-wrapping)).
+  - 'rOpenSci' not 'ROpenSci'
+- **Links and images**
+  - When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
+  - When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
+  - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
+  - In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md).
+  - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
+  - Use informative [alternative text](#addimage) for all images.
+- **Language**
+  - **All languages** Avoid Latin phrases such as "e.g." (for instance) or "i.e." (that is to say).
+  Use phrases in the language of your post instead.
+  - **English** - Use title case for the title of your post; use sentence case for headings inside the post.
+  - **Non-English** - If using English words, use italics for the word in 
+  English and translate directly in parentheses the first time it is mentioned
+
 
 ## Pre-submission checks {#presubchecks}
 
