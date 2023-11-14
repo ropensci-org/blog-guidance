@@ -73,6 +73,21 @@ blogguidance::show_checklist(c("editor-checklist.csv", "editor-checklist-peer-re
 blogguidance::show_checklist("editor-checklist.csv")
 ```
 
+### Check cross-posting metadata
+
+If the post is cross-posted on other website(s), indicate it like so in the YAML metadata of the post:
+
+```yaml
+crossposts:
+- name: website1 name
+  url: url to post on website1
+- name: website2 name
+  url: url to post on website2
+```
+
+This is to ensure the cross-post alert appears ([example](https://ropensci.org/blog/2023/08/01/r-universe-and-cran/)
+as well as to make the cross-post metadata visible to the JSON feed that Rogue Scholar uses.
+
 ### Check Twitter metadata
 
 The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet, separate from [the tweet _we_ send](#tweetpromo). 
