@@ -85,8 +85,8 @@ crossposts:
   url: url to post on website2
 ```
 
-This is to make the cross-post alert appear ([example](https://ropensci.org/blog/2023/08/01/r-universe-and-cran/)
-as well as to make the cross-post metadata appear in the JSON feed that Rogue Scholar consumes.
+This is to ensure the cross-post alert appears ([example](https://ropensci.org/blog/2023/08/01/r-universe-and-cran/)
+as well as to make the cross-post metadata visible to the JSON feed that Rogue Scholar uses.
 
 ### Check Twitter metadata
 
