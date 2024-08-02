@@ -472,7 +472,7 @@ blogguidance::show_checklist("submission-checklist.csv")
 If you wish to preview your post locally, as it will appear in our site, you must install Hugo.
 To install, refer to [Hugo docs](https://gohugo.io/getting-started/installing/) or run `blogdown::install_hugo()` using the version recorded in [netlify.toml](https://github.com/ropensci/roweb3/blob/HEAD/netlify.toml). 
 
-**Note:** You can also preview your blog post online through the pull request before the final submission at `https://deploy-preview-<123>--ropensci.netlify.app/blog/` where 123 is the number of your PR.
+**Note:** You can also preview your blog post online through the pull request before the final submission at `https://deploy-preview-123--ropensci.netlify.app/blog/` where 123 is the number of your PR.
 
 Then run `hugo serve` or `blogdown::serve_site()` in the repo directory to start a local server on http://localhost:1313 (or another one indicated by blogdown). 
   
