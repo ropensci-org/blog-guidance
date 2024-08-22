@@ -97,7 +97,7 @@ Use short headings to guide the reader.
 
 Did others who are not authors of the post make significant contributions to the package or its inspiration?
 
-Thank reviewers using their first and last names linked to their [rOpenSci author page](https://ropensci.org/authors/) if they have one, or to their relevant online presence (e.g. website, Twitter, GitHub) and link to the software review thread.
+Thank reviewers using their first and last names linked to their [rOpenSci author page](https://ropensci.org/authors/) if they have one, or to their relevant online presence (e.g. website, social media, GitHub) and link to the software review thread.
 There is no obligation to do this, but you could note something specific that you improved in your package or in your coding or documentation practice as a direct result of reviewers’ comments.
 
 ### Consider including a call to action {#action}
@@ -107,14 +107,14 @@ Consider opening issues to illustrate your thinking.
 If you’re willing to consider code or documentation contributions from others, label those issues “[help wanted](https://github.com/search?q=org%3Aropensci+label%3A%22help+wanted%22+state%3Aopen&type=Issues)” (no hyphen, no emojis) and “[good first issue](https://github.com/search?q=org%3Aropensci+label%3A%22good+first+issue%22+state%3Aopen&type=Issues)” or “[beginner](https://github.com/search?q=org%3Aropensci+label%3A%22beginner%22+state%3Aopen&type=Issues)” if those apply. People who want to contribute to rOpenSci can find these by searching GitHub (example: [org:ropensci label:"help wanted" state:open](https://github.com/search?q=org%3Aropensci+label%3A%22help+wanted%22+state%3Aopen&type=Issues)), and we occasionally feature these in our [newsletter](https://news.ropensci.org/).
 
 If you want people to tell you how they have used your package, tell them how you want them to do that. Encourage them to submit their use case to our [public forum](https://discuss.ropensci.org/c/usecases).
-There’s a template to help. We tweet these to help others see applications and we tag both the package author and use case submitter to give credit.
+There’s a template to help. We share these on social media to help others see applications and we tag both the package author and use case submitter to give credit.
 For longer form use cases, they could submit a vignette to include as an article in your package documentation ([example](https://docs.ropensci.org/cyphr/articles/data.html)).
 
 If you want people to give you general feedback, tell them how you’d like to receive that.
 
 ### Conclusion or summary {#conclusion}
 
-Will readers understand your take-home message clearly enough to tweet about your post?
+Will readers understand your take-home message clearly enough to share on their social media about your post?
 You might need to remind them of your main points.
 
 Now **[review the Technical Guidelines](#technical)** for submitting your draft post, and you’re ready to go.
