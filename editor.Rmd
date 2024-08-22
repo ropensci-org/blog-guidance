@@ -121,6 +121,8 @@ It's best to draft social media post in advance (e.g. while reviewing the post) 
 
 For community posts, draft social media text are posted in the comments of the pull request so the author can comment.
 
+If the post is multilingual, we post in social media in all languages the post is available in. We use the same message translate in all languages.
+
 ### Content
 
 The first post of a thread or only post _must_ include
