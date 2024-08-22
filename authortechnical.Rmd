@@ -310,11 +310,11 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
-### Embedded tweets {#addtweet}
+### Embedded social media post {#addsocialpost}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) for an example.
+You can get the code to embed a social media post by clicking on the post's timestamp and then on **"Embed"** for most of the social media platforms.  The social media platform will provide a code snippet that you can copy and paste into your post.
   
-If you want to quote a tweet and make it look more subdued, you can use a [block quote](#blockquotes) linking the tweet.
+If you want to quote a social media post and make it look more subdued, you can use a [block quote](#blockquotes) linking the post.
  [Example](https://ropensci.org/blog/2021/02/03/targets/), [source](https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35).
 
 ### Block quotes {#blockquotes}
