@@ -47,7 +47,7 @@ Rare exceptions can be made at the editor's discretion.
 To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
 
 After all inline commenting and the checklist is done, add any further notes, starting with a positive comment and your overall impression, to the _Review changes_ box.
-Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a Twitter handle.
+Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a social media handle.
 This helps draw their attention to this nice feature.
 
 We don't (yet?) have templated editor response text, but here are helpful things to include:
@@ -88,14 +88,13 @@ crossposts:
 This is to ensure the cross-post alert appears ([example](https://ropensci.org/blog/2023/08/01/r-universe-and-cran/)
 as well as to make the cross-post metadata visible to the JSON feed that Rogue Scholar uses.
 
-### Check Twitter metadata
+### Check social media metadata
 
-The Twitter metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a tweet, separate from [the tweet _we_ send](#tweetpromo). 
-Therefore it is important to check the Twitter metadata by pasting a post's preview link in the [Twitter card validator](https://cards-dev.twitter.com/validator).
-You might have to click twice.
+The social media metadata in a post's YAML helps it "look good" when an account like R Weekly Live or other readers link to the post in a post, separate from [the post _we_ send](#socialpromo). 
 
-See [Understanding Twitter cards](#twittercards) for details. 
-Perfecting metadata for Twitter cards is optional for authors, so decide how critical any changes are before requesting them in your review.
+Therefore it is important to check the social media metadata if it is present.
+
+Perfecting metadata for social media is optional for authors, so decide how critical any changes are before requesting them in your review.
 
 ### Post in more than one language
 
@@ -110,34 +109,35 @@ A "topic" linked to the blog post will automatically be created in the [discussi
 
 _Note about older posts:_ Very old posts from (before March 2017) have no comments at all; these posts have no `topicid` field in their YAML header. Newer posts (March 2017 onward) have a yaml field `topicid` and a number in it that links to a topic that we manually created in the forum. Posts newer than March 9, 2020 won't have a `topicid` field in their YAML header as a forum topic is automatically created.
 
-## Promote a post on Twitter {#tweetpromo}
+## Promote a post on social media {#socialpromo}
 
 ### Workflow
 
-Tweet from [rOpenSci](https://twitter.com/rOpenSci).
+Post from [rOpenSci Mastodon account](https://hachyderm.io/@rOpenSci) and [LinkedIn Page](https://www.linkedin.com/company/ropensci/).
 
-We tweet at ~8am Pacific, but it would be good to use a system for optimizing the time to send a tweet (e.g. using Buffer). 
+We post at different time zones using our own [system to schedule all social media post to Mastodon and LinkedIn](/blog/2023/05/17/scheduling-mastodon/). 
 
-Note that in Tweetdeck you can schedule an individual tweet, but you cannot schedule subsequent tweets in a thread.
-Therefore, it's best to draft tweets in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
+It's best to draft social media post in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
 
-For community posts, draft tweets are posted in the comments of the pull request so the author can comment.
+For community posts, draft social media text are posted in the comments of the pull request so the author can comment.
 
 ### Content
 
-The first tweet of a thread or only tweet _must_ include
+The first post of a thread or only post _must_ include
 
 * the post title,
 * a link to the post,
-* tag the author's account, or their IRL name,
+* tag the author's account, or their IRL name
+* the hashtag `#rstats` and 
+* the tag @rstats group.
 
-Any tweet _must_ provide an alternative description of any included image.
+Any post _must_ provide an alternative description of any included image.
 
-A further tweet _can_ include a link to the software peer review thread.
+A further post _can_ include a link to the software peer review thread.
 
-Any tweet _can_ include
+Any post _can_ include
 
-* hashtags,
+* additional hashtags,
 * additional account names,
 
 with the caveats of the next subsections.
@@ -149,30 +149,32 @@ Tag the account(s) of all post authors and package authors and reviewers.
 If not already included in their author metadata, you can search for their account but only tag them if
 
 * it is active,
-* it is not anonymous,
+* it is not anonymous or private,
 * it is at least partly used professionally by the owner.
 
 When in doubt, use the person's name, or time permitting, contact the person whose account you'd like to tag.
 
-For a package wrapping a service present on Twitter you can tag that account (e.g. for a tweet about `rredlist` that accesses IUCN Red List you might tag IUCN Twitter account).
+For a package wrapping a service present on the social media you can tag that account (e.g. for a Mastodon post about `rredlist` that accesses IUCN Red List you might tag IUCN Mastodon account).
 
 When tagging accounts include them in a sentence e.g. "Thanks to `@account1`"/ "As told by `@account2`". 
-We do not use tagging in tweets to ask for attention (i.e. no account names used like hashtags at the bottom of a tweet) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the tweet.
+We do not use tagging in post to ask for attention (i.e. no account names used like hashtags at the bottom of a post) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the post.
 
 ### Using hashtags
 
+Hashtags are very relevant in Mastodon and LinkedIn.  Because there is not algorithm promoting a post based on likes or boosts, hashtags are the main way to get a post seen by people who are not already following the account.  People follow hashtag on both platforms.
+
 #### Selecting relevant hashtags
 
-For a tweet about a post related to a package or any R thing, use the `#rstats` hashtag.
+For a post about a post related to a package or any R thing, use the `#rStats` hashtag. If the post is in another language than Englis, add the `#rStats + language two letters`, for example for Spanish is `#rStatsES`
 
-For a tweet about a package post, make the package name a hashtag, since [rocitations Twitter account](https://twitter.com/rocitations) does this to announce package citations.
+For a post about a package post, make the package name a hashtag.  You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`.
 
-Check the last tweets using any hashtag except the `#rstats` hashtag to see whether it is used as you expect.
+Check the last post using any hashtag except the `#rStats` hashtag to see whether it is used as you expect.
 E.g. using `httr` wouldn't be a good idea. It is a package name but on Twitter it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy) and even has its own emoji automatically attached to it by Twitter. 
 
 #### Adding hashtags
 
-Do not use too many hashtags in any tweet so as not to make the account look like a spam account / greedy for attention.
+Do not use too many hashtags in any post so as not to make the account look like a spam account / greedy for attention.
 
 Post hashtags at the bottom of each tweet, to make the rest of the content of the tweet easier to read.
 
@@ -182,19 +184,19 @@ When posting a thread, use each hashtag only once so as not to pollute the timel
 
 ### Using emojis 
 
-In tweets, emojis are optional. 
+In post, emojis are optional. 
 When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
 
 ### Using gifs
 
-In tweets, gifs are optional.
+In post, gifs are optional.
 
 * One can include a gif that was created for the post (e.g. an animated plot).
 * But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show).
-* When using a gif we should [add its description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the tweet.
-* When tweeting from twitter.com, as of Feb 2020, if you have the _compose image descriptions_ setting turned on in your accessibility settings, you can add alt descriptions for gifs as you do for images.
+* When using a gif we should [add its description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the post.
 
-### Example 2-tweet thread:
+
+### Example 2-post thread:
 
 ```
 [blog] “rmangal: making ecological networks easily accessible” 
