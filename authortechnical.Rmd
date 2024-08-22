@@ -95,7 +95,7 @@ If not, refer to [the instructions to create your draft manually](#manually).
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
 * Install `whoami` and `blogdown` (`install.packages(c("whoami", "blogdown"))`) (blogdown version should be at least 1.6.0).
-* Install Hugo (to preview the post): `blogdown::install_hugo("0.89.0")` (version recorded in netlify.toml of the roweb3 repository).
+* Install Hugo (to preview the post): `blogdown::install_hugo("0.133.0")` (version recorded in netlify.toml of the roweb3 repository).
 * Re-start R.
 * In RStudio, open the forked `roweb3` project.
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
@@ -152,16 +152,16 @@ Add tags to the YAML of your post to make it more findable. Browse [our page tha
 
 For a post about your peer-reviewed package, use 'Software Peer Review', 'community', 'packages', the package name, and any others you see fit.
 
-#### Twitter cards metadata (optional)
+#### Social media metadata (optional)
 
-If you're curious about the `description`, `twitterImg`, `twitterAlt` YAML fields in the post metadata and how they can help draw readers to your post, refer to [our explanation of Twitter cards](#twittercards).
+If you're curious about the `description`, `socialImg`, `socialAlt` YAML fields in the post metadata and how they can help draw readers to your post, refer to [our explanation of social media cards](#twittercards).
 
-Delete `description`, `twitterImg` and `twitterAlt` YAML fields if you don't use them. 
+Delete `description`, `socialImg` and `socialAlt` YAML fields if you don't use them. 
 
-#### Default Twitter text (optional)
-Provide default text for tweets when a reader clicks the "Share on Twitter" button by
-replacing the value of `tweet: "A post about blabla by @username!"`.
-Consider including your (and your coauthors) Twitter handle(s) (`@username`) in the tweet
+#### Default social media text (optional)
+Provide default text for social media post (Mastodon and LinkedIn) when a reader clicks the "Share on Mastodon" button by
+replacing the value of `social: "A post about blabla by @username!"`.
+Consider including your (and your coauthors) Mastodon handle(s) (`@username`) in the post
 text to ensure you get notified when someone shares your post.
 
 
