@@ -21,4 +21,6 @@ Our newsletter has more than 2,500 email subscribers and additional readers thro
 
 - Our blog is also syndicated to [Rogue Scholar](https://rogue-scholar.org/about), an archive for scholarly blog posts that provide full-text search, long-term archiving, DOIs and metadata. Your blog post will be assigned a DOI and archived in the Internet Archive. If you have an integration with your ORCID, your blog post will be added to your ORCID profile when we publish.
 
+[This is Yani's ORCID profile as an example](https://orcid.org/0000-0002-4522-7466); if you scroll down until the "Works" session, all the rOpenSci blog posts are listed there.
+
 You are welcome to cross-post to your own website as long as you also link to the rOpenSci website version. [Example](https://juliasilge.com/blog/qualtrics-relaunch/).
