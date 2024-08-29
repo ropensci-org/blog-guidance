@@ -140,6 +140,7 @@ blogguidance::show_template("https://github.com/ropensci/roweb3/raw/HEAD/archety
 ```
 
 If you need to add an alert box at the beginning of the post, use the `preface` field with the Markdown syntax.
+See for instance this post with a [preface about a series of post](https://ropensci.org/blog/2018/06/08/rprofile-julia-silge/) ([source](https://github.com/ropensci/roweb3/blob/ab72341023d171b45abda1ba62b4bd8f6553e911/content/blog/2018-06-08-rprofile-julia-silge.md?plain=1#L5))
 
 ```yaml
 preface: "some alert"
