@@ -163,18 +163,18 @@ Hashtags are very relevant in Mastodon and LinkedIn.  Because there is not algor
 
 #### Selecting relevant hashtags
 
-For a post about a post related to a package or any R thing, use the `#rStats` hashtag. If the post is in another language than Englis, add the `#rStats + language two letters`, for example for Spanish is `#rStatsES`
+For a post about a post related to a package or any R thing, use the `#rStats` hashtag. If the post is in another language than English, add the `#rStats + language two letters`, for example for Spanish is `#rStatsES`
 
-For a post about a package post, make the package name a hashtag.  You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`.
+For a post about a package, make the package name a hashtag.  You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`.
 
 Check the last post using any hashtag except the `#rStats` hashtag to see whether it is used as you expect.
-E.g. using `httr` wouldn't be a good idea. It is a package name but on Twitter it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy) and even has its own emoji automatically attached to it by Twitter. 
+E.g. using `httr` wouldn't be a good idea. It is a package name but on social media it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy). 
 
 #### Adding hashtags
 
 Do not use too many hashtags in any post so as not to make the account look like a spam account / greedy for attention.
 
-Post hashtags at the bottom of each tweet, to make the rest of the content of the tweet easier to read.
+Post hashtags at the bottom of each post, to make the rest of the content of the post easier to read.
 
 [Capitalize letters of each word](https://www.boia.org/blog/make-your-hashtags-accessible) for hashtags including several words i.e. use lower or upper camelCase (e.g. `#RLadies` not `#rladies`). 
 
@@ -204,7 +204,7 @@ New post by @KCazelles & @SVissault in our Software Peer Review series
 🔗 https://ropensci.org/blog/2019/10/21/rmangal/
 
 1/2 
-#rstats #rmangal #SoftwarePeerReview
+#rStats #rmangal #SoftwarePeerReview
 ```
 
 ```

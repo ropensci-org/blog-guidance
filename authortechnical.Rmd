@@ -154,14 +154,12 @@ For a post about your peer-reviewed package, use 'Software Peer Review', 'commun
 
 #### Social media metadata (optional)
 
-If you're curious about the `description`, `socialImg`, `socialAlt` YAML fields in the post metadata and how they can help draw readers to your post, refer to [our explanation of social media cards](#twittercards).
-
 Delete `description`, `socialImg` and `socialAlt` YAML fields if you don't use them. 
 
 #### Default social media text (optional)
 Provide default text for social media post (Mastodon and LinkedIn) when a reader clicks the "Share on Mastodon" button by
-replacing the value of `social: "A post about blabla by @username!"`.
-Consider including your (and your coauthors) Mastodon handle(s) (`@username`) in the post
+replacing the value of `social: "A post about blabla by @username@server.extension!"`.
+Consider including your (and your coauthors) Mastodon handle(s) (`@username@server.extension`) in the post
 text to ensure you get notified when someone shares your post.
 
 
@@ -450,7 +448,7 @@ If using the R Markdown template, knitting `index.Rmd` (RStudio knit button, or 
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
 
-- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) for tweets.
+- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 - `ro_check_urls()` to check for URLs that might be broken 
 
 ### Author Checklist {#checklists}
