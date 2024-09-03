@@ -117,7 +117,7 @@ It's best to draft social media post in advance (e.g. while reviewing the post) 
 
 For community posts, draft social media text are posted in the comments of the pull request so the author can comment.
 
-If the post is multilingual, we post in social media in all languages the post is available in. We use the same message translate in all languages.
+If the post is multilingual, we post in social media in all languages the post is available in. We use the same message translated into all languages.
 
 ### Content
 
@@ -126,8 +126,8 @@ The first post of a thread or only post _must_ include
 * the post title,
 * a link to the post,
 * tag the author's account, or their IRL name
-* the hashtag `#rstats` and 
-* the tag @rstats group.
+* the hashtag `#RStats` and 
+* the tag @rstats@a.gup.pe group.
 
 Any post _must_ provide an alternative description of any included image.
 

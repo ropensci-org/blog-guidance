@@ -175,7 +175,7 @@ The alternative text should convey the meaning or content that is displayed in t
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/), 
 and see the following sections for how to include alt text.
 
-If your include a picture because of some text (like a comment in a post or a phrase in a wall), you have to write the text you want to highlight from that image in the alt-tex. 
+If you include a picture with text (like a comment on a post or a phrase on a wall), include the text you want to highlight from that image in the alt-text. 
 
 
 **Image features**  
