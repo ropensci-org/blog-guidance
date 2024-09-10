@@ -26,4 +26,4 @@ The blog editors don't necessarily have write access to the blog-guidance repo b
 
 * Staff members can bypass review for tech notes but they can choose to request a review by blog editors.
 * Staff members' blog posts should be scheduled together with the Community Manager.
-* Staff members are responsible for creating the [discussion forum entry](#publish) for their own post and must [promote from their personal account on Mastodon and/or LinkedIn tagging rOpenSci's accounts.
+* Staff members are responsible promoting their own posts from their personal account on Mastodon and/or LinkedIn tagging rOpenSci's accounts.
