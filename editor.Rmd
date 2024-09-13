@@ -165,7 +165,7 @@ Hashtags are very relevant in Mastodon and LinkedIn.  Because there is not algor
 
 For a post about a post related to a package or any R thing, use the `#rStats` hashtag. If the post is in another language than English, add the `#rStats + language two letters`, for example for Spanish is `#rStatsES`
 
-For a post about a package, make the package name a hashtag.  You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`.
+For a post about a package, make the package name a hashtag.  You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`. Use CamelCase for hashtags, as it improves accessibility by making them more accessible for screen reader users.
 
 Check the last post using any hashtag except the `#rStats` hashtag to see whether it is used as you expect.
 E.g. using `httr` wouldn't be a good idea. It is a package name but on social media it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy). 
