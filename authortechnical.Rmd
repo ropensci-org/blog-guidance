@@ -38,7 +38,7 @@ Create or update your author file.
 
 ### Why?
 
-The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, presented in a Community Call, host a co-working session, deliverd a talk about rOpenSci's activities or contribute to some of our projects like the [Champions Program](https://ropensci.org/champions/).
+The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, presented in a Community Call, host a co-working session, delivered a talk about rOpenSci's activities or contribute to some of our projects like the [Champions Program](https://ropensci.org/champions/).
 A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your social media or GitHub profile(s), and a list of all the content you’ve authored on our site.
 For staff and leadership team members, editors for software peer review, members of our Code of Conduct Committee, and participants of our Champions Program, their rOpenSci title is also listed on their author page.
 
