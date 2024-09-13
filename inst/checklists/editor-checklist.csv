@@ -3,7 +3,6 @@ post follows Style Guide
 title is in Title Case
 publication date is ok
 alternative text of images is informative
-Twitter metadata looks ok (paste post preview link in [Twitter card validator](https://cards-dev.twitter.com/validator); might have to click twice on "Preview card")
 author metadata is provided with correct folder name
 html not included in pull request of Rmd post
 I ran `roblog::ro_lint_md()` on index.md

@@ -3,7 +3,7 @@
 ```{block, type='summaryblock', echo=TRUE}
 This chapter explains the technical details of submitting a blog post or tech note (referred to collectively as "posts") for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
 
-We include advice on commonly used elements like adding [an image](#addimage), [a citation](#addcitation), or [embedding a tweet](#addtweet) in case you need them.
+We include advice on commonly used elements like adding [an image](#addimage), [a citation](#addcitation), or [embedding a social media post](#addsocialpost) in case you need them.
 ```
 
 
@@ -38,9 +38,9 @@ Create or update your author file.
 
 ### Why?
 
-The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, or presented in a Community Call.
+The rOpenSci website has a page listing [all authors](https://ropensci.org/author/) who have contributed to a blog post, tech note, presented in a Community Call, host a co-working session, delivered a talk about rOpenSci's activities or contribute to some of our projects like the [Champions Program](https://ropensci.org/champions/).
 A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your social media or GitHub profile(s), and a list of all the content you’ve authored on our site.
-For staff and leadership team members, editors for software peer review, or members of our Code of Conduct Committee, their rOpenSci title is also listed on their author page.
+For staff and leadership team members, editors for software peer review, members of our Code of Conduct Committee, and participants of our Champions Program, their rOpenSci title is also listed on their author page.
 
 
 ### How?
@@ -57,7 +57,7 @@ blogguidance::show_template("author-file-template.md",
 )
 ```
 
-At minimum, provide your name and a link or your Twitter, GitHub, or GitLab username.
+At minimum, provide your name and a link or your Social Media, GitHub, or GitLab username.
 Add your usernames or ID's without the "@" or the "https:...". The link field can be your personal website URL, for example.
 
 ### Example
@@ -83,6 +83,7 @@ The folder name must include accents, initials with periods, and hyphens for spa
 
 Look at [other people's folder names](https://github.com/ropensci/roweb3/tree/HEAD/content/author) for examples. 
 
+Your author page will show the picture you have on your GitHub profile.
 
 ## Post template {#templates}
 
@@ -94,7 +95,7 @@ If not, refer to [the instructions to create your draft manually](#manually).
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
 * Install `whoami` and `blogdown` (`install.packages(c("whoami", "blogdown"))`) (blogdown version should be at least 1.6.0).
-* Install Hugo (to preview the post): `blogdown::install_hugo("0.89.0")` (version recorded in netlify.toml of the roweb3 repository).
+* Install Hugo (to preview the post): `blogdown::install_hugo("0.133.0")` (version recorded in netlify.toml of the roweb3 repository).
 * Re-start R.
 * In RStudio, open the forked `roweb3` project.
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
@@ -154,16 +155,14 @@ Add tags to the YAML of your post to make it more findable. Browse [our page tha
 
 For a post about your peer-reviewed package, use 'Software Peer Review', 'community', 'packages', the package name, and any others you see fit.
 
-#### Twitter cards metadata (optional)
+#### Social media metadata (optional)
 
-If you're curious about the `description`, `twitterImg`, `twitterAlt` YAML fields in the post metadata and how they can help draw readers to your post, refer to [our explanation of Twitter cards](#twittercards).
+Delete `description`, `socialImg` and `socialAlt` YAML fields if you don't use them. 
 
-Delete `description`, `twitterImg` and `twitterAlt` YAML fields if you don't use them. 
-
-#### Default Twitter text (optional)
-Provide default text for tweets when a reader clicks the "Share on Twitter" button by
-replacing the value of `tweet: "A post about blabla by @username!"`.
-Consider including your (and your coauthors) Twitter handle(s) (`@username`) in the tweet
+#### Default social media text (optional)
+Provide default text for social media post (Mastodon and LinkedIn) when a reader clicks the "Share on Mastodon" button by
+replacing the value of `social: "A post about blabla by @username@server.extension!"`.
+Consider including your (and your coauthors) Mastodon handle(s) (`@username@server.extension`) in the post
 text to ensure you get notified when someone shares your post.
 
 
@@ -174,10 +173,12 @@ Regardless of how images are included, they should all contain **alt** text
 and consider the following features.
 
 **Alt text**  
-Every image should be accompanied by alternative text to make it more accessible to people with disabilities and provide a better user experience for everyone.
+Every image should be accompanied by alternative text to make it more accessible and provide a better user experience.
 The alternative text should convey the meaning or content that is displayed in the image.
 Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/), 
 and see the following sections for how to include alt text.
+
+If you include a picture with text (like a comment on a post or a phrase on a wall), include the text you want to highlight from that image in the alt-text. 
 
 
 **Image features**  
@@ -310,11 +311,12 @@ To get the citation for an article in [Google Scholar](https://scholar.google.co
 knitr::include_graphics("images/citation-gscholar.png")
 ```
 
-### Embedded tweets {#addtweet}
+### Referencing social media posts {#addsocialpost}
 
-Use a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/#tweet) to embed a tweet using its username and its ID e.g. `{{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}}`. In R Markdown, shortcodes need to be html escaped, refer to [the template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) for an example.
-  
-If you want to quote a tweet and make it look more subdued, you can use a [block quote](#blockquotes) linking the tweet.
+We no longer recommend embedding social media posts directly, as posts can always 
+be deleted and the context in the blog post is lost when that happens.
+
+Instead, we recommend using a [block quote](#blockquotes) linking the post.
  [Example](https://ropensci.org/blog/2021/02/03/targets/), [source](https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35).
 
 ### Block quotes {#blockquotes}
@@ -427,8 +429,8 @@ Compare [raw markdown](https://raw.githubusercontent.com/ropensci/roweb3/HEAD/co
   - 'rOpenSci' not 'ROpenSci'
 - **Links and images**
   - When adding rOpenSci links to your post, use relative instead of absolute URLs e.g. `/blog/` instead of `https://ropensci.org/blog/`.
-  - When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/drake/.
-  - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, tweets, gists etc. 
+  - When linking to [rOpenSci packages](https://ropensci.org/packages/) use their docs.ropensci.org URL, e.g. https://docs.ropensci.org/target/.
+  - Use [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) (not html) to add images, gists etc. 
   - In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the [template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md).
   - Instead of using html widgets (`DT`, `leaflet`, etc.), include a screenshot and use the `link` option of the [Hugo `figure` shortcode](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) to direct readers to an online version of the widget.
   - Use informative [alternative text](#addimage) for all images.
@@ -450,7 +452,7 @@ If using the R Markdown template, knitting `index.Rmd` (RStudio knit button, or 
 
 You can use functions in the [roblog package to do some automated checks](https://docs.ropensci.org/roblog/articles/checks-guidance.html) on your post. 
 
-- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes) for tweets.
+- `ro_lint_md()` to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes).
 - `ro_check_urls()` to check for URLs that might be broken 
 
 ### Author Checklist {#checklists}
