@@ -11,3 +11,4 @@ I ran a spell-check on index.md
 YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
 YAML field 'editor' is filled with your name
 YAML field 'preface' is present if necessary
+YAML field 'params.doi' is filled with a new DOI
