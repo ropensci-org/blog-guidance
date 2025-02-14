@@ -59,7 +59,7 @@ We don't (yet?) have templated editor response text, but here are helpful things
 - Tag editor when you have finished addressing their comments.
 
 When your review is complete, click [_Comment_, _Approve_, or _Request changes_](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review), at your discretion. 
-This will trigger a notificaton to the author.
+This will trigger a notification to the author.
 
 ### Editor checklist - Posts on peer-reviewed packages
 
