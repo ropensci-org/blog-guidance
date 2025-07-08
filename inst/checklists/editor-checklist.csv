@@ -3,7 +3,7 @@ post follows Style Guide
 title is in Title Case
 publication date is ok
 alternative text of images is informative
-author metadata is provided with correct folder name
+author metadata is provided with correct folder name for each language
 html not included in pull request of Rmd post
 I ran `roblog::ro_lint_md()` on index.md
 I ran `roblog::ro_check_urls()` on index.md
