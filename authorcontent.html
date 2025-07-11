@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>2&nbsp; Content Guidelines – rOpenSci Blog Guide for Authors and Editors</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./authortechnical.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./images/apple-touch-icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bbacc09e106528b5c778687105f6a2b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript></noscript></head><body class="nav-sidebar floating quarto-light"><p><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
+<!-- End Matomo Code -->
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./authorcontent.html">Author Guide</a></li><li class="breadcrumb-item"><a href="./authorcontent.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">rOpenSci Blog Guide for Authors and Editors</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ropensci-org/blog-guidance/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">rOpenSci Blog Guide for Authors and Editors</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Author Guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorcontent.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authortechnical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorreview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Respond to Feedback</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorpromote.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Publication and Promotion</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Editor Guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Review, Publish, Promote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor-meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Editorial Governance</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templatemd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template - Post (md)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templatermd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Template - Post (Rmd)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authortemplate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Template - Author file</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorchecklistpeer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Author Checklist - Posts on peer-reviewed packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorchecklistany.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Author Checklist - Other posts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editorchecklistpeer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Editor Checklist - Posts on peer-reviewed packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editorchecklistany.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Editor checklist - Other posts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor-meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Editorial Governance</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#postornote" id="toc-postornote" class="nav-link active" data-scroll-target="#postornote"><span class="header-section-number">2.1</span> Blog post or tech note?</a></li>
+  <li><a href="#postthemes" id="toc-postthemes" class="nav-link" data-scroll-target="#postthemes"><span class="header-section-number">2.2</span> Themes</a></li>
+  <li>
+<a href="#postcontent" id="toc-postcontent" class="nav-link" data-scroll-target="#postcontent"><span class="header-section-number">2.3</span> Post content</a>
+  <ul class="collapse">
+<li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><span class="header-section-number">2.3.1</span> What message would you like a reader to take away?</a></li>
+  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience"><span class="header-section-number">2.3.2</span> Who is your audience?</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">2.3.3</span> Start with a short summary</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">2.3.4</span> Give a compelling example</a></li>
+  <li><a href="#acknowledge" id="toc-acknowledge" class="nav-link" data-scroll-target="#acknowledge"><span class="header-section-number">2.3.5</span> Be generous with your appreciation</a></li>
+  <li><a href="#action" id="toc-action" class="nav-link" data-scroll-target="#action"><span class="header-section-number">2.3.6</span> Consider including a call to action</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">2.3.7</span> Conclusion or summary</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/ropensci-org/blog-guidance/edit/main/authorcontent.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ropensci-org/blog-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./authorcontent.html">Author Guide</a></li><li class="breadcrumb-item"><a href="./authorcontent.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="content" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="cell" type="summaryblock">
+<div class="summaryblock">
+<p>
+This chapter coaches you in thinking through what you might say in a post for the rOpenSci website.
+</p>
+</div>
+</div>
+<section id="postornote" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="postornote">
+<span class="header-section-number">2.1</span> Blog post or tech note?</h2>
+<p>The rOpenSci blog features two types of posts: long form blog posts for a broad readership, and shorter tech notes aimed at a more technical audience. The word “post” refers generically to either type. We provide details and <a href="#postthemes">selected examples of blog posts and tech notes</a> below. <a href="https://ropensci.org/technotes/">Tech notes</a> are written for a narrower audience that wants details. They may include information on a software release with major new features, breaking changes, or significant new documentation. They should provide something a reader could not glean from the documentation itself.</p>
+<p>Blog posts are usually published weekly on Tuesdays. Tech notes can be published on any weekday. Both are given the same <a href="authorpromote.html">promotional treatment</a> by rOpenSci.</p>
+</section><section id="postthemes" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="postthemes">
+<span class="header-section-number">2.2</span> Themes</h2>
+<p>Read a few <a href="https://ropensci.org/archive/">posts</a> and consider what you like (or not) about them. Many posts written by community members are about packages that have passed rOpenSci software peer review, however, we have posts on a range of topics and we encourage you to consider these or to propose others.</p>
+<p>Expand a topic below to see examples.</p>
+<ul>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Useful how-tos and examples </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/">How to cite R and R packages</a> addresses a problem important to rOpenSci’s <a href="https://ropensci.org/about/">mission</a>
+</li>
+<li>
+<a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/">How to precompute package vignettes or pkgdown articles</a> addresses a tricky problem common to many developers
+</li>
+<li>
+<a href="https://ropensci.org/blog/2021/11/23/how-i-test-cffr/">How I Test cffr on (about) 2,000 Packages using GitHub Actions and R-universe</a> shares how the author fixed a tricky problem using an rOpenSci project
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> About a group of packages used in a research domain </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2020/11/10/coronaviruses-and-hosts/">Using Open-Access Tools (rentrez, taxize) to Find Coronaviruses, Their Genetic Sequences, and Their Hosts</a> Together, the packages rentrez and taxize can extract standardised data on viruses and their hosts from genetic records.
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Describing a creative use case for multiple rOpenSci packages </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2018/08/14/where-to-bird/">Where to go observe birds in Radolfzell? An answer with R and open data</a>
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Reviewer perspectives </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/tags/reviewer/">posts tagged reviewer</a>
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Contributing to or taking over maintenance of a package </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2019/04/30/qualtrics-relaunch/">Relaunching the qualtRics package</a> has an engaging tone while being informative and providing technical details.
+</li>
+<li>
+<a href="https://ropensci.org/blog/2018/04/20/monkeydo/">Monkeying around with Code and Paying it Forward</a> gives insight into how the author is thinking about workflows and contributing to rOpenSci.
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Summarizing a Community Call </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2018/11/29/codereview/">Code Review in the Lab</a>
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Using an rOpenSci resource, such as the Dev Guide or a task view </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2019/04/18/wild-standards/">When Standards Go Wild - Software Review for a Manuscript</a>
+</li>
+<li>
+<a href="https://ropensci.org/blog/2019/08/27/software-peer-review-guidelines-for-teaching/">Using rOpenSci Software Peer Review Guidelines for Teaching</a>
+</li>
+<li>
+<a href="https://ropensci.org/blog/2019/04/02/hydrology-task-view/">Getting your toes wet in R: Hydrology, meteorology, and more</a>
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> About a peer-reviewed package developed by the authors </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2019/10/21/rmangal/">rmangal: Making Ecological Networks Easily Accessible</a> talks through the scientific problem and context, shows some code examples, and talks about peer review but doesn’t make that the dominant part of the post.
+</li>
+<li>
+<a href="https://ropensci.org/blog/2018/04/12/ijtiff/">Forcing Yourself to Make Your Life Easier</a> is an honest post with some reflection and an important message.
+</li>
+<li>
+<a href="https://ropensci.org/technotes/2018/10/06/av-release/">The av Package: Production Quality Video in R</a> (tech note) is to the point. av is not a peer-reviewed package but this is a good example of a tech note.
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Major updates to packages with broad audiences </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2019/10/29/skimrv2/">(Re)introducing skimr v2 - A year in the life of an open source R project</a>)
+</li>
+<li>
+<a href="https://ropensci.org/technotes/2019/03/18/drake-700/">drake transformed</a> (technote)
+</li>
+<li>
+<a href="https://ropensci.org/technotes/2018/05/18/drake-hpc/">drake’s improved high-performance computing power</a> (technote)
+</li>
+</ul></details>
+</li>
+<li>
+<details closed=""><summary><span title="Click to Expand"><strong> Describe an unsolved problem and a call to action </strong></span>
+</summary><ul>
+<li>
+<a href="https://ropensci.org/blog/2018/07/24/educollab-challenges/">rOpenSci Educators Collaborative: What Are The Challenges When Teaching Science With R?</a> (3 posts from unconf18)
+</li>
+</ul></details>
+</li>
+</ul></section><section id="postcontent" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="postcontent">
+<span class="header-section-number">2.3</span> Post content</h2>
+<p>Since most posts contributed by community members are about packages that have passed software peer review, we use this type of post as an example to outline components you should consider including in your post. Some components would not be included if the post is not about a peer reviewed package.</p>
+<section id="takeaway" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="takeaway">
+<span class="header-section-number">2.3.1</span> What message would you like a reader to take away?</h3>
+<p>What do you feel like you can’t resist sharing with (a very small corner of) the world?</p>
+<p>Why did you create the package? Discuss the tools it builds upon or how it works under the hood. You might share your opinions, 5 tips on doing X, what was challenging and how did you meet the challenge, what got you excited or inspired you, something you learned or implemented from the software peer review process, or a compelling real-world example.</p>
+<p>Share something a reader could not glean from the package documentation itself.</p>
+<p>Use your own voice when you’re writing this. Our website has a professional tone but is less formal than, for example, an academic journal.</p>
+</section><section id="audience" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="audience">
+<span class="header-section-number">2.3.2</span> Who is your audience?</h3>
+<p>You can’t write for everyone; you should have an audience in mind. Consider that readers of the rOpenSci blog have a broad range of interests, skills, and experiences. Some will have deep technical knowledge in software development. Some will be domain scientists interested in how to use the package you have developed. Some might be reading as a way to consider how they can contribute to an open source project. Write in a way that any reader can understand what your post is about, but target the majority of its content to a specific audience.</p>
+</section><section id="summary" class="level3" data-number="2.3.3"><h3 data-number="2.3.3" class="anchored" data-anchor-id="summary">
+<span class="header-section-number">2.3.3</span> Start with a short summary</h3>
+<p>Assume no one knows what your package does or why they should care about it. Provide an outline so your reader knows where you’re taking them, especially if your post is long or complex. A good introduction helps potential readers know whether they want to read the rest. Use short headings to guide the reader.</p>
+</section><section id="example" class="level3" data-number="2.3.4"><h3 data-number="2.3.4" class="anchored" data-anchor-id="example">
+<span class="header-section-number">2.3.4</span> Give a compelling example</h3>
+<ul>
+<li>Explain what you’re going to do in plain language</li>
+<li>Include some code and a figure or other image</li>
+<li>Before code snippets, explain what they do</li>
+<li>After a figure generated by your code, explain what conclusion can be drawn from it. Don’t leave the reader to guess your intent.</li>
+</ul></section><section id="acknowledge" class="level3" data-number="2.3.5"><h3 data-number="2.3.5" class="anchored" data-anchor-id="acknowledge">
+<span class="header-section-number">2.3.5</span> Be generous with your appreciation</h3>
+<p>Did others who are not authors of the post make significant contributions to the package or its inspiration?</p>
+<p>Thank reviewers using their first and last names linked to their <a href="https://ropensci.org/authors/">rOpenSci author page</a> if they have one, or to their relevant online presence (e.g.&nbsp;website, social media, GitHub) and link to the software review thread. There is no obligation to do this, but you could note something specific that you improved in your package or in your coding or documentation practice as a direct result of reviewers’ comments.</p>
+</section><section id="action" class="level3" data-number="2.3.6"><h3 data-number="2.3.6" class="anchored" data-anchor-id="action">
+<span class="header-section-number">2.3.6</span> Consider including a call to action</h3>
+<p>Do you talk about future plans for package development? Consider opening issues to illustrate your thinking. If you’re willing to consider code or documentation contributions from others, label those issues “<a href="https://github.com/search?q=org%3Aropensci+label%3A%22help+wanted%22+state%3Aopen&amp;type=Issues">help wanted</a>” (no hyphen, no emojis) and “<a href="https://github.com/search?q=org%3Aropensci+label%3A%22good+first+issue%22+state%3Aopen&amp;type=Issues">good first issue</a>” or “<a href="https://github.com/search?q=org%3Aropensci+label%3A%22beginner%22+state%3Aopen&amp;type=Issues">beginner</a>” if those apply. People who want to contribute to rOpenSci can find these by searching GitHub (example: <a href="https://github.com/search?q=org%3Aropensci+label%3A%22help+wanted%22+state%3Aopen&amp;type=Issues">org:ropensci label:“help wanted” state:open</a>), and we occasionally feature these in our <a href="https://news.ropensci.org/">newsletter</a>.</p>
+<p>If you want people to tell you how they have used your package, tell them how you want them to do that. Encourage them to submit their use case to our <a href="https://discuss.ropensci.org/c/usecases">public forum</a>. There’s a template to help. We share these on social media to help others see applications and we tag both the package author and use case submitter to give credit. For longer form use cases, they could submit a vignette to include as an article in your package documentation (<a href="https://docs.ropensci.org/cyphr/articles/data.html">example</a>).</p>
+<p>If you want people to give you general feedback, tell them how you’d like to receive that.</p>
+</section><section id="conclusion" class="level3" data-number="2.3.7"><h3 data-number="2.3.7" class="anchored" data-anchor-id="conclusion">
+<span class="header-section-number">2.3.7</span> Conclusion or summary</h3>
+<p>Will readers understand your take-home message clearly enough to share on their social media about your post? You might need to remind them of your main points.</p>
+<p>Now <strong><a href="authortechnical.html">review the Technical Guidelines</a></strong> for submitting your draft post, and you’re ready to go.</p>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogguide\.ropensci\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="rOpenSci Blog Guide for Authors and Editors">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">rOpenSci Blog Guide for Authors and Editors</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./authortechnical.html" class="pagination-link" aria-label="Technical Guidelines">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ropensci-org/blog-guidance/edit/main/authorcontent.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ropensci-org/blog-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

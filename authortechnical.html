@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>3&nbsp; Technical Guidelines – rOpenSci Blog Guide for Authors and Editors</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./authorreview.html" rel="next">
+<link href="./authorcontent.html" rel="prev">
+<link href="./images/apple-touch-icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bbacc09e106528b5c778687105f6a2b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript></noscript></head><body class="nav-sidebar floating quarto-light"><p><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
+<!-- End Matomo Code -->
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./authorcontent.html">Author Guide</a></li><li class="breadcrumb-item"><a href="./authortechnical.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">rOpenSci Blog Guide for Authors and Editors</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ropensci-org/blog-guidance/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">rOpenSci Blog Guide for Authors and Editors</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Author Guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorcontent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authortechnical.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorreview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Respond to Feedback</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorpromote.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Publication and Promotion</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Editor Guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Review, Publish, Promote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor-meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Editorial Governance</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templatemd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template - Post (md)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templatermd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Template - Post (Rmd)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authortemplate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Template - Author file</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorchecklistpeer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Author Checklist - Posts on peer-reviewed packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorchecklistany.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Author Checklist - Other posts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editorchecklistpeer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Editor Checklist - Posts on peer-reviewed packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editorchecklistany.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Editor checklist - Other posts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editor-meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Editorial Governance</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#forkcreate" id="toc-forkcreate" class="nav-link active" data-scroll-target="#forkcreate"><span class="header-section-number">3.1</span> Fork the <code>roweb3</code> repository</a></li>
+  <li><a href="#install-blogdown" id="toc-install-blogdown" class="nav-link" data-scroll-target="#install-blogdown"><span class="header-section-number">3.2</span> Install blogdown</a></li>
+  <li>
+<a href="#createauthorfile" id="toc-createauthorfile" class="nav-link" data-scroll-target="#createauthorfile"><span class="header-section-number">3.3</span> Author files</a>
+  <ul class="collapse">
+<li><a href="#why" id="toc-why" class="nav-link" data-scroll-target="#why"><span class="header-section-number">3.3.1</span> Why?</a></li>
+  <li><a href="#how" id="toc-how" class="nav-link" data-scroll-target="#how"><span class="header-section-number">3.3.2</span> How?</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">3.3.3</span> Example</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates"><span class="header-section-number">3.4</span> Post template</a>
+  <ul class="collapse">
+<li><a href="#blogdownaddin" id="toc-blogdownaddin" class="nav-link" data-scroll-target="#blogdownaddin"><span class="header-section-number">3.4.1</span> New Post Addin</a></li>
+  <li><a href="#manually" id="toc-manually" class="nav-link" data-scroll-target="#manually"><span class="header-section-number">3.4.2</span> Manually</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#usetemplates" id="toc-usetemplates" class="nav-link" data-scroll-target="#usetemplates"><span class="header-section-number">3.5</span> Adding content</a>
+  <ul class="collapse">
+<li><a href="#whatgoesinyaml" id="toc-whatgoesinyaml" class="nav-link" data-scroll-target="#whatgoesinyaml"><span class="header-section-number">3.5.1</span> YAML</a></li>
+  <li><a href="#images---general" id="toc-images---general" class="nav-link" data-scroll-target="#images---general"><span class="header-section-number">3.5.2</span> Images - General</a></li>
+  <li><a href="#addimage" id="toc-addimage" class="nav-link" data-scroll-target="#addimage"><span class="header-section-number">3.5.3</span> Images - External</a></li>
+  <li><a href="#addfigure" id="toc-addfigure" class="nav-link" data-scroll-target="#addfigure"><span class="header-section-number">3.5.4</span> Images - Rmd-created</a></li>
+  <li><a href="#addcitation" id="toc-addcitation" class="nav-link" data-scroll-target="#addcitation"><span class="header-section-number">3.5.5</span> Citations and footnotes</a></li>
+  <li><a href="#addsocialpost" id="toc-addsocialpost" class="nav-link" data-scroll-target="#addsocialpost"><span class="header-section-number">3.5.6</span> Referencing social media posts</a></li>
+  <li><a href="#blockquotes" id="toc-blockquotes" class="nav-link" data-scroll-target="#blockquotes"><span class="header-section-number">3.5.7</span> Block quotes</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">3.5.8</span> Tables</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">3.5.9</span> Examples</a></li>
+  </ul>
+</li>
+  <li><a href="#multilingual-posts" id="toc-multilingual-posts" class="nav-link" data-scroll-target="#multilingual-posts"><span class="header-section-number">3.6</span> Multilingual posts</a></li>
+  <li><a href="#styleguide" id="toc-styleguide" class="nav-link" data-scroll-target="#styleguide"><span class="header-section-number">3.7</span> Style Guide</a></li>
+  <li>
+<a href="#presubchecks" id="toc-presubchecks" class="nav-link" data-scroll-target="#presubchecks"><span class="header-section-number">3.8</span> Pre-submission checks</a>
+  <ul class="collapse">
+<li><a href="#knit-post" id="toc-knit-post" class="nav-link" data-scroll-target="#knit-post"><span class="header-section-number">3.8.1</span> Knit post</a></li>
+  <li><a href="#check-with-roblog" id="toc-check-with-roblog" class="nav-link" data-scroll-target="#check-with-roblog"><span class="header-section-number">3.8.2</span> Check with <code>roblog</code></a></li>
+  <li><a href="#checklists" id="toc-checklists" class="nav-link" data-scroll-target="#checklists"><span class="header-section-number">3.8.3</span> Author Checklist</a></li>
+  <li><a href="#localpreview" id="toc-localpreview" class="nav-link" data-scroll-target="#localpreview"><span class="header-section-number">3.8.4</span> Local preview</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#submitpost" id="toc-submitpost" class="nav-link" data-scroll-target="#submitpost"><span class="header-section-number">3.9</span> Submit draft post</a>
+  <ul class="collapse">
+<li><a href="#create-draft-pull-request" id="toc-create-draft-pull-request" class="nav-link" data-scroll-target="#create-draft-pull-request"><span class="header-section-number">3.9.1</span> Create draft pull request</a></li>
+  <li><a href="#add-checklist" id="toc-add-checklist" class="nav-link" data-scroll-target="#add-checklist"><span class="header-section-number">3.9.2</span> Add checklist</a></li>
+  <li><a href="#preview-online" id="toc-preview-online" class="nav-link" data-scroll-target="#preview-online"><span class="header-section-number">3.9.3</span> Preview online</a></li>
+  <li><a href="#submit-post" id="toc-submit-post" class="nav-link" data-scroll-target="#submit-post"><span class="header-section-number">3.9.4</span> Submit post</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/ropensci-org/blog-guidance/edit/main/authortechnical.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ropensci-org/blog-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./authorcontent.html">Author Guide</a></li><li class="breadcrumb-item"><a href="./authortechnical.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="technical" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Technical Guidelines</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="cell" type="summaryblock">
+<div class="summaryblock">
+<p>
+This chapter explains the technical details of submitting a blog post or tech note (referred to collectively as “posts”) for publication on the rOpenSci website - from drafting in an (R) Markdown template, to submitting for review using GitHub Pull Request infrastructure.
+</p>
+<p>
+We include advice on commonly used elements like adding <a href="#addimage">an image</a>, <a href="#addcitation">a citation</a>, or <a href="#addsocialpost">embedding a social media post</a> in case you need them.
+</p>
+</div>
+</div>
+<p>Briefly, the process is:</p>
+<ol type="1">
+<li>Get the go-ahead and a tentative publication date from our Community Manager.</li>
+<li>Fork the repository (repo) of the rOpenSci website.</li>
+<li>Draft your post in R Markdown or Quarto or Markdown and create or update your author metadata.</li>
+<li>Preview and refine your post locally.</li>
+<li>Submit via pull request and preview your post.</li>
+<li>A blog editor reviews your post.</li>
+<li>Revise your post in response to review.</li>
+</ol>
+<p>This chapter links to templates for posts and checklists that you can also find in the Appendix.</p>
+<section id="forkcreate" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="forkcreate">
+<span class="header-section-number">3.1</span> Fork the <code>roweb3</code> repository</h2>
+<p>Fork the rOpenSci website <a href="https://github.com/ropensci/roweb3">repository</a> and create a new branch to work on your post. For help with this aspect of git/GitHub, we recommend <a href="https://happygitwithr.com/fork-and-clone.html">happygitwithr</a> and the <a href="https://usethis.r-lib.org/articles/articles/pr-functions.html">pull request helpers of the usethis package</a>.</p>
+</section><section id="install-blogdown" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="install-blogdown">
+<span class="header-section-number">3.2</span> Install blogdown</h2>
+<p>If you plan to use R Markdown to write your post (using <code>index.Rmd</code> as opposed to directly writing it in Markdown with <code>index.md</code> and not executing any code), please install or update blogdown.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"blogdown"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="createauthorfile" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="createauthorfile">
+<span class="header-section-number">3.3</span> Author files</h2>
+<p>Create or update your author file.</p>
+<section id="why" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="why">
+<span class="header-section-number">3.3.1</span> Why?</h3>
+<p>The rOpenSci website has a page listing <a href="https://ropensci.org/author/">all authors</a> who have contributed to a blog post, tech note, presented in a Community Call, host a co-working session, delivered a talk about rOpenSci’s activities or contribute to some of our projects like the <a href="https://ropensci.org/champions/">Champions Program</a>. A click on your by-line in a post takes the reader to your author page that has links to your online home, possibly your social media or GitHub profile(s), and a list of all the content you’ve authored on our site. For staff and leadership team members, editors for software peer review, members of our Code of Conduct Committee, and participants of our Champions Program, their rOpenSci title is also listed on their author page.</p>
+</section><section id="how" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="how">
+<span class="header-section-number">3.3.2</span> How?</h3>
+<p>If you don’t already have an author page, create a folder called <code>yourfirstname-yourlastname</code> in your local copy of <a href="https://github.com/ropensci/roweb3/tree/HEAD/content/author"><code>roweb3/content/author/</code></a>. You can have accents, middle initials, or hyphens appear in your name if you name your folder appropriately. That can be tricky so we have examples below.</p>
+<p>In that folder, create a file called <code>_index.md</code> with information about your online presence. You can copy this template below (or get it via <a href="https://docs.ropensci.org/roblog/reference/blog-posts.html">roblog</a> after installing it via <code>install.packages("roblog", repos = "https://dev.ropensci.org")</code> ).</p>
+<details closed=""><summary><span title="Click to Expand"> author-file-template.md </span>
+</summary><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Author name</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">link</span><span class="kw">:</span><span class="at"> website URL or other online presence</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mastodon</span><span class="kw">:</span><span class="at"> Mastodon full URL to profile</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">twitter</span><span class="kw">:</span><span class="at"> Twitter username</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">github</span><span class="kw">:</span><span class="at"> GitHub username</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">gitlab</span><span class="kw">:</span><span class="at"> GitLab username</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">keybase</span><span class="kw">:</span><span class="at"> Keybase ID</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">orcid</span><span class="kw">:</span><span class="at"> ORCID ID</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">img</span><span class="kw">:</span><span class="at"> link to picture to be saved in themes/ropensci/static/img/community (if not provided, uses GitHub profile picture)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><p><br></p>
+<p>At minimum, provide your name and a link or your Social Media, GitHub, or GitLab username. Add your usernames or ID’s without the “@” or the “https:…”. The link field can be your personal website URL, for example.</p>
+</section><section id="example" class="level3" data-number="3.3.3"><h3 data-number="3.3.3" class="anchored" data-anchor-id="example">
+<span class="header-section-number">3.3.3</span> Example</h3>
+<p>This author file, <a href="https://github.com/ropensci/roweb3/blob/HEAD/content/author/ma%C3%ABlle-salmon/_index.md"><code>/author/maëlle-salmon/_index.md</code></a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Maëlle Salmon</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mastodon</span><span class="kw">:</span><span class="at"> https://mastodon.social/@maelle</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">bio</span><span class="kw">:</span><span class="at"> rOpenSci Research Software Engineer, Associate editor of rOpenSci Software Peer Review</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">github</span><span class="kw">:</span><span class="at"> maelle</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">gitlab</span><span class="kw">:</span><span class="at"> maelle</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">keybase</span><span class="kw">:</span><span class="at"> maelle_salmon</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-2815-0399</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>… generates <a href="https://ropensci.org/author/ma%C3%ABlle-salmon/">Maëlle Salmon’s author page</a>.</p>
+<p>For an example of how to name the folder with an accent and initials, see this <a href="https://github.com/ropensci/roweb3/blob/HEAD/content/author/rich%C3%A8l-j.c.-bilderbeek/_index.md">author file</a> that generates <a href="https://ropensci.org/author/rich%C3%A8l-j.c.-bilderbeek/">Richèl J.C. Bilderbeek’s author page</a>. The folder name must include accents, initials with periods, and hyphens for spaces, in order to link to their blog content.</p>
+<p>Look at <a href="https://github.com/ropensci/roweb3/tree/HEAD/content/author">other people’s folder names</a> for examples.</p>
+<p>Your author page will show the picture you have on your GitHub profile.</p>
+</section></section><section id="templates" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="templates">
+<span class="header-section-number">3.4</span> Post template</h2>
+<p>Start your post from a template. If you use RStudio, refer to <a href="#blogdownaddin">the instructions to create your draft with blogdown’s New Post Addin</a>. If not, refer to <a href="#manually">the instructions to create your draft manually</a>.</p>
+<section id="blogdownaddin" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="blogdownaddin">
+<span class="header-section-number">3.4.1</span> New Post Addin</h3>
+<p>The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you’ll have entered.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<ul>
+<li>Install <code>whoami</code> and <code>blogdown</code> (<code>install.packages(c("whoami", "blogdown"))</code>) (blogdown version should be at least 1.6.0).</li>
+<li>Install Hugo (to preview the post): <code>blogdown::install_hugo("0.133.0")</code> (version recorded in netlify.toml of the roweb3 repository).</li>
+<li>Re-start R.</li>
+<li>In RStudio, open the forked <code>roweb3</code> project.</li>
+<li>Create a new post by running Addins &gt; New Post or <code>blogdown:::new_post_addin()</code>.</li>
+<li>Leave “Categories” blank (and ignore in the file created)</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/blogdownaddin.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="blogdown's New Post Addin."></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Enter a title, no need to worry about title case at this stage.</li>
+<li>Enter your name if <code>whoami</code> wasn’t able to guess it.</li>
+<li>Choose the correct date.</li>
+<li>Enter a new slug if the default one is too long.</li>
+<li>Choose “blog” as a Subdirectory from the drop-down menu.</li>
+<li>Choose an Archetype, Rmd or qmd or md, from the drop-down menu.</li>
+<li>Also choose the correct Format: .Rmd if Rmd, Markdown (.md) if md. Never choose .RMarkdown.</li>
+<li>Ignore Categories.</li>
+<li>Select “tech notes” tag if this is a tech note</li>
+<li>Select any other relevant tags and/or create new ones</li>
+<li>Click on “Done”, your post draft will have been created and opened.</li>
+</ul></section><section id="manually" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="manually">
+<span class="header-section-number">3.4.2</span> Manually</h3>
+<p>Create a folder <code>YYYY-MM-DD-slug/</code> (e.g.&nbsp;<code>2020-01-20-rorcid/</code>) under <code>/content/blog/</code> Your post source and its images should live in <code>/content/blog/YYYY-MM-DD-slug/</code>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<ul>
+<li><p><a href="templatermd.html">R Markdown template</a> is to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.Rmd</code>. It will need to be knit (RStudio knit button, or <code>blogdown::build_site(build_rmd = &lt;path_to_file&gt;)</code>). Add both <code>index.Rmd</code> and <code>index.md</code>to your PR.</p></li>
+<li><p><a href="templatermd.html">Quarto template</a> is to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.qmd</code>. It will need to be rendered. Add both <code>index.qmd</code> and <code>index.md</code>to your PR.</p></li>
+<li><p><a href="templatemd.html">Markdown template</a> is to be saved as <code>/content/blog/YYYY-MM-DD-slug/index.md</code>.</p></li>
+</ul></section></section><section id="usetemplates" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="usetemplates">
+<span class="header-section-number">3.5</span> Adding content</h2>
+<section id="whatgoesinyaml" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="whatgoesinyaml">
+<span class="header-section-number">3.5.1</span> YAML</h3>
+<p>The YAML sets the metadata for a post. This is the YAML from our <a href="templatermd.html">post template</a>, with comments to explain some components.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> The New Post Addin automatically creates a <code>categories</code> component, but you should ignore or remove this and use <code>tags</code> instead.</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slug</span><span class="kw">:</span><span class="at"> post-template</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Post Title in Title Case</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">package_version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Author Name1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Author Name2</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">'2020-03-10'</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tags</span><span class="kw">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Software Peer Review</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> packages</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> R</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> community</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> A very short summary of your post (~ 100 characters)</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">socialImg</span><span class="kw">:</span><span class="at"> blog/2019/06/04/post-template/name-of-image.png</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">socialAlt</span><span class="kw">:</span><span class="at"> Alternative description of the image</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">social</span><span class="kw">:</span><span class="at"> A post about blabla by @username@server.extension!</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> </span><span class="ch">~</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you need to add an alert box at the beginning of the post, use the <code>preface</code> field with the Markdown syntax. See for instance this post with a <a href="https://ropensci.org/blog/2018/06/08/rprofile-julia-silge/">preface about a series of post</a> (<a href="https://github.com/ropensci/roweb3/blob/ab72341023d171b45abda1ba62b4bd8f6553e911/content/blog/2018-06-08-rprofile-julia-silge.md?plain=1#L5">source</a>)</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">preface</span><span class="kw">:</span><span class="at"> </span><span class="st">"some alert"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="subject-tags" class="level4" data-number="3.5.1.1"><h4 data-number="3.5.1.1" class="anchored" data-anchor-id="subject-tags">
+<span class="header-section-number">3.5.1.1</span> Subject tags</h4>
+<p>Add tags to the YAML of your post to make it more findable. Browse <a href="https://ropensci.org/tags/">our page that lists all tags in use</a> and re-use an existing tag rather than creating a new one e.g.&nbsp;‘packages’ exists, so use that, rather than ‘package’.</p>
+<p>For a post about your peer-reviewed package, use ‘Software Peer Review’, ‘community’, ‘packages’, the package name, and any others you see fit.</p>
+</section><section id="social-media-metadata-optional" class="level4" data-number="3.5.1.2"><h4 data-number="3.5.1.2" class="anchored" data-anchor-id="social-media-metadata-optional">
+<span class="header-section-number">3.5.1.2</span> Social media metadata (optional)</h4>
+<p>Delete <code>description</code>, <code>socialImg</code> and <code>socialAlt</code> YAML fields if you don’t use them.</p>
+</section><section id="default-social-media-text-optional" class="level4" data-number="3.5.1.3"><h4 data-number="3.5.1.3" class="anchored" data-anchor-id="default-social-media-text-optional">
+<span class="header-section-number">3.5.1.3</span> Default social media text (optional)</h4>
+<p>Provide default text for social media post (Mastodon and LinkedIn) when a reader clicks the “Share on Mastodon” button by replacing the value of <code>social: "A post about blabla by @username@server.extension!"</code>. Consider including your (and your coauthors) Mastodon handle(s) (<code>@username@server.extension</code>) in the post text to ensure you get notified when someone shares your post.</p>
+</section></section><section id="images---general" class="level3" data-number="3.5.2"><h3 data-number="3.5.2" class="anchored" data-anchor-id="images---general">
+<span class="header-section-number">3.5.2</span> Images - General</h3>
+<p>Images can either be <a href="#addimage">external</a> or created in <a href="#addfigure">rmarkdown</a>. Regardless of how images are included, they should all contain <strong>alt</strong> text and consider the following features.</p>
+<p><strong>Alt text</strong><br>
+Every image should be accompanied by alternative text to make it more accessible and provide a better user experience. The alternative text should convey the meaning or content that is displayed in the image. Refer <a href="https://www.w3.org/WAI/tutorials/images/informative/">to this tutorial for details on what should go in alternative text</a>, and see the following sections for how to include alt text.</p>
+<p>If you include a picture with text (like a comment on a post or a phrase on a wall), include the text you want to highlight from that image in the alt-text.</p>
+<p><strong>Image features</strong></p>
+<ul>
+<li>Consider transparent backgrounds as the blog background is not white (hex logos etc. will look better this way)</li>
+<li>Keep images &lt; 1 mb
+<ul>
+<li>Large images can be compressed/optimized with tools like</li>
+<li>
+<a href="http://optipng.sourceforge.net/">OptiPNG</a> (Local software, <a href="https://bookdown.org/yihui/rmarkdown-cookbook/optipng.html">also integrates with rmarkdown</a>)</li>
+<li>
+<a href="https://github.com/ardata-fr/minimage">minimage</a> (Local software)</li>
+<li>
+<a href="https://tinypng.com/">TinyPNG</a> (Online tool)</li>
+</ul>
+</li>
+</ul></section><section id="addimage" class="level3" data-number="3.5.3"><h3 data-number="3.5.3" class="anchored" data-anchor-id="addimage">
+<span class="header-section-number">3.5.3</span> Images - External</h3>
+<blockquote class="blockquote">
+<p>This section refers to images that are <strong>not</strong> generated from R Markdown. If you want to <strong>generate</strong> images from R Markdown use <a href="https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md">our R Markdown template</a> and see <a href="#addfigure">next subsection</a>.</p>
+</blockquote>
+<p><strong>File location</strong><br>
+All images go in the same folder as your post source (<code>/content/blog/YYYY-MM-DD-slug/</code>) (do not link to external services like imgur). To reference them in your post, use <code>name-of-image.png</code>.</p>
+<p><strong>Insert an image</strong></p>
+<ul>
+<li>
+<strong>Insert</strong> an image with either <code>figure</code> or <code>imgtxt</code> short codes
+<ul>
+<li>Note the use of <code>alt =</code> to specify <a href="#images">alt text</a>
+</li>
+<li><code>{{&lt; figure src = "image-name.png" alt = "informative description" &gt;}}</code></li>
+<li>imgtxt:</li>
+</ul>
+</li>
+</ul>
+<pre><code>{{&lt; imgtxt src = "image-name.png" alt = "informative description"&gt;}} 
+Text to right 
+{{&lt; /imgtxt &gt;}}</code></pre>
+<p><strong>Image placement</strong></p>
+<ul>
+<li>
+<p>Basic positioning with <code>{{&lt; figure &gt;}}</code> and <code>class</code></p>
+<p><code>{{&lt; figure src = "image-name.png" alt = "informative description" class = "center" &gt;}}</code></p>
+<ul>
+<li>
+<code>pull-left</code> - Left-align the picture and wrap text around it</li>
+<li>
+<code>center</code> - Center the picture (no text wrapping)</li>
+<li>
+<code>pull-right</code> - Right-align the picture and wrap text around it</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/figure.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p>Specific text next to image with <code>{{&lt; imgtxt &gt;}}</code></p>
+<p><code>{{&lt; imgtxt src = "image-name.png"&gt;}} Text to right {{&lt;/ imgtxt &gt;}} Text below</code></p>
+<ul>
+<li>Only text between <code>{{&lt; imgtxt &gt;}}</code> and <code>{{&lt;/ imgtxt &gt;}}</code> is to the right of the figure</li>
+</ul>
+</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/imgtxt.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>For images side-by-side, create a composite and insert as a single image
+<ul>
+<li>Consider <a href="https://www.gimp.org">gimp</a> for free and open source image manipulation software</li>
+<li>Consider the R package <a href="https://patchwork.data-imaginist.com/">patchwork</a> for combining R figures</li>
+</ul>
+</li>
+</ul>
+<p><strong>Other details</strong></p>
+<ul>
+<li><p>Control image <strong>size</strong> with <code>width</code><br><code>{{&lt; figure src = "image-name.png" width = "400" alt = "informative description"&gt;}}</code></p></li>
+<li><p>Make the image a <strong>hyperlink</strong> with <code>link</code><br><code>{{&lt; figure src = "image-name.png" alt = "informative description" link = "http://hyperlink"&gt;}}</code></p></li>
+</ul>
+<p><strong>Important!</strong> In <strong>R Markdown</strong> (i.e.&nbsp;in *.Rmd files but NOT *.md files), these Hugo shortcodes need to be escaped:</p>
+<p><code>&lt;!--html_preserve--&gt;</code><br><code>{{&lt; figure src=\"name-of-image.png\" width=\"400\" alt=\"informative description\"&gt;}}</code><br><code>&lt;!--/html_preserve--&gt;</code></p>
+</section><section id="addfigure" class="level3" data-number="3.5.4"><h3 data-number="3.5.4" class="anchored" data-anchor-id="addfigure">
+<span class="header-section-number">3.5.4</span> Images - Rmd-created</h3>
+<p><strong>File location</strong><br>
+When using <a href="https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md">our R Markdown template</a> the knitr hook in the setup chunk actually creates the necessary Hugo shortcodes. Therefore you don’t need to worry about paths.</p>
+<p><strong>Image details</strong><br>
+In the chunk producing a figure, use the <code>hugoopts</code> chunk option to control the <strong>alt text</strong> and other elements. <code>hugoopts</code> is a named list that can have all elements described in the <a href="https://gohugo.io/content-management/shortcodes/#figure">documentation of the Hugo figure shortcode</a> except for <code>title</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r chunkname, hugoopts=list(alt="alternative text please make it informative", caption="this is what this image shows, write it here or in the paragraph after the image as you prefer", width=300)} </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This chunk above produces a figure with <em>“alternative text please make it informative”</em> as alternative text, <em>“title of the image”</em> as title, <em>“this is what this image shows, write it here or in the paragraph after the image as you prefer”</em> as caption, and a width of 300 pixels.</p>
+</section><section id="addcitation" class="level3" data-number="3.5.5"><h3 data-number="3.5.5" class="anchored" data-anchor-id="addcitation">
+<span class="header-section-number">3.5.5</span> Citations and footnotes</h3>
+<p>To add citations, refer to them in the body of your post as footnotes:</p>
+<pre><code>Citation of the primary literature[^1].
+Citation of an R package[^2].
+Citation of a website[^3].</code></pre>
+<p>And list your sources at the bottom of your post:</p>
+<pre><code>[^1]: Sciaini, M., Fritsch, M., Scherer, C., &amp; Simpkins, C. E. (2018). NLMR and landscapetools: An integrated environment for simulating and modifying neutral landscape models in R. Methods in Ecology and Evolution, 9(11), 2240-2248. &lt;https://doi.org/10.1111/2041-210X.13076&gt;
+[^2]: Elin Waring, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu and Shannon Ellis (2019). skimr: Compact and Flexible Summaries of Data. R package version 2.0.2. https://CRAN.R-project.org/package=skimr
+[^3]: Hugo static site generator. https://gohugo.io/</code></pre>
+<section id="finding-citations" class="level4" data-number="3.5.5.1"><h4 data-number="3.5.5.1" class="anchored" data-anchor-id="finding-citations">
+<span class="header-section-number">3.5.5.1</span> Finding citations</h4>
+<p>To get the citation for an R package, run <code>citation("packagename")</code>.</p>
+<p>To get the citation for an article, you can use the RStudio Addin for <a href="https://docs.ropensci.org/rcrossref/">rcrossref</a>, or get the citation from a paper’s DOI by running e.g.</p>
+<pre><code>rcrossref::cr_cn("10.1111/2041-210X.13076", format="text", style="apa")
+
+[1] "Sciaini, M., Fritsch, M., Scherer, C., &amp; Simpkins, C. E. (2018). NLMRandlandscapetools: An integrated environment for simulating and modifying neutral landscape models inR. Methods in Ecology and Evolution, 9(11), 2240–2248. doi:10.1111/2041-210x.13076"</code></pre>
+<p>To get the citation for an article in <a href="https://scholar.google.com/">Google Scholar</a>, find the article, click the quote symbol (in search results under the article) to open the “Cite” window, and copy the APA style text.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/citation-gscholar.png" class="img-fluid figure-img" alt="Get a citation from Google Scholar." width="482"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="addsocialpost" class="level3" data-number="3.5.6"><h3 data-number="3.5.6" class="anchored" data-anchor-id="addsocialpost">
+<span class="header-section-number">3.5.6</span> Referencing social media posts</h3>
+<p>We no longer recommend embedding social media posts directly, as posts can always be deleted and the context in the blog post is lost when that happens.</p>
+<p>Instead, we recommend using a <a href="#blockquotes">block quote</a> linking the post. <a href="https://ropensci.org/blog/2021/02/03/targets/">Example</a>, <a href="https://github.com/ropensci/roweb3/blob/0528c5a9e0ea781dd78a9f70c1e49d034f39fd69/content/blog/2021-02-03-targets/index.md?plain=1#L35">source</a>.</p>
+</section><section id="blockquotes" class="level3" data-number="3.5.7"><h3 data-number="3.5.7" class="anchored" data-anchor-id="blockquotes">
+<span class="header-section-number">3.5.7</span> Block quotes</h3>
+<section id="block-quotes-with-no-attribution" class="level4" data-number="3.5.7.1"><h4 data-number="3.5.7.1" class="anchored" data-anchor-id="block-quotes-with-no-attribution">
+<span class="header-section-number">3.5.7.1</span> Block quotes with no attribution</h4>
+<p>E.g. if you want to highlight a sentence from the post itself.</p>
+<p>Block quotes are paragraphs starting with <code>&gt;</code>.</p>
+<p>If you want to have them right-align add <code>{.blockquote .text-right}</code> right after the paragraph e.g.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; blabla</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">blabla</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">blabla</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">{.blockquote .text-right}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to have them centered add <code>{.blockquote .text-center}</code> right after the paragraph e.g.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; blabla</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">blabla</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">blabla</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">{.blockquote .text-center}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="block-quotes-with-attribution" class="level4" data-number="3.5.7.2"><h4 data-number="3.5.7.2" class="anchored" data-anchor-id="block-quotes-with-attribution">
+<span class="header-section-number">3.5.7.2</span> Block quotes with attribution</h4>
+<p>If you want to add a block quote with an author name, use:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>{{&lt; quote footer="Author Name"&gt;}}</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Blablablabla  </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>{{&lt; /quote &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to add a block quote with an author name and a source, use:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>{{&lt; quote footer="Author Name" cite="<span class="co">[</span><span class="ot">good book</span><span class="co">](url)</span>"&gt;}}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Blablablabla  </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>{{&lt; /quote &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to center the block quote add the align variable:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>{{&lt; quote footer="Author Name" cite="<span class="co">[</span><span class="ot">good book</span><span class="co">](url)</span>" align="center"&gt;}}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Blablablabla  </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>{{&lt; /quote &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to right-align the block quote add the align variable:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>{{&lt; quote footer="Author Name" cite="<span class="co">[</span><span class="ot">good book</span><span class="co">](url)</span>" align="right"&gt;}}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>Blablablabla  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>{{&lt; /quote &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that this syntax also work for quotes without attribution!</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>{{&lt; quote align="center"&gt;}}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>Blablablabla  </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>{{&lt; /quote &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section><section id="tables" class="level3" data-number="3.5.8"><h3 data-number="3.5.8" class="anchored" data-anchor-id="tables">
+<span class="header-section-number">3.5.8</span> Tables</h3>
+<p>If you want to use e.g.&nbsp;<a href="https://getbootstrap.com/docs/4.6/content/tables/">striped tables</a>, add <code>{.table .table-responsive .table-striped}</code> right after the last line of the table.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Header   | Other Header | Another Header</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>---------|----------------|-------------------</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Value 11 | Value 12       | Value 13</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>Value 21 | Value 22       | Value 23</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>Value 31 | Value 32       | Value 33</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>{.table .table-responsive .table-striped}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="examples" class="level3" data-number="3.5.9"><h3 data-number="3.5.9" class="anchored" data-anchor-id="examples">
+<span class="header-section-number">3.5.9</span> Examples</h3>
+<p>Comparing the raw Markdown to the live posts in these examples might be helpful.</p>
+<ul>
+<li><p>A blog post about a package that has passed software peer review. Compare <a href="https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2019-10-21-rmangal.md">raw markdown</a> with the <a href="https://ropensci.org/blog/2019/10/21/rmangal/">live post</a>.</p></li>
+<li><p>A tech note. Compare <a href="https://raw.githubusercontent.com/ropensci/roweb3/HEAD/content/blog/2018-10-06-av-release.md">raw markdown</a> with the <a href="https://ropensci.org/technotes/2018/10/06/av-release/">live tech note</a>.</p></li>
+</ul></section></section><section id="multilingual-posts" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="multilingual-posts">
+<span class="header-section-number">3.6</span> Multilingual posts</h2>
+<p><strong>Please discuss your post’s language with blog editors!</strong></p>
+<ul>
+<li>Our website’s default language is English so only posts in English are called <code>index.md</code>.</li>
+<li>For <strong>translating</strong> a post, create a file in the same folder as the original post but called <code>index.&lt;two-letter-language-code&gt;.md</code>, for instance <code>index.es.md</code>. Translate tags, title, description too.</li>
+<li>For a post in a single non-English language omit the <code>index.md</code> file and only use the <code>index.XX.md</code> file using the appropriate language code (e.g., <code>index.es.md</code> for a Spanish-only post).</li>
+<li>Add an author file in <code>content/author/author-name/_index.&lt;two-letter-language-code&gt;.md</code> even if it only duplicates <code>content/author/author-name/_index.md</code>.</li>
+<li>If you are writing the first blog entry for a particular language (yay!), please ask blog editors to notify the website team so we can add translation for the blog infrastructure (such as “Share this page” and similar phrases).</li>
+<li>Feel free to checkout the <a href="https://translationguide.ropensci.org/">rOpenSci translation guide</a> for how we are translating rOpenSci material in general.</li>
+</ul></section><section id="styleguide" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="styleguide">
+<span class="header-section-number">3.7</span> Style Guide</h2>
+<ul>
+<li>
+<strong>Formatting</strong>
+<ul>
+<li>For package names, functions, and code, follow the <a href="https://style.tidyverse.org/documentation.html#r-code">tidyverse style guidance</a>.</li>
+<li>Format package names as regular text (no quotes).</li>
+<li>Do not use markdown in titles (but you can use them in headings).</li>
+<li>Use ## and ### to format headings in your post, i.e.&nbsp;section titles as ## (h2) and subsections as ### (h3), #### (h4).</li>
+<li>Add new line at end of each sentence (<a href="https://cirosantilli.com/markdown-style-guide#line-wrapping">makes diffs easier to interpret and easier for editor to suggest specific changes</a>).</li>
+<li>‘rOpenSci’ not ‘ROpenSci’</li>
+</ul>
+</li>
+<li>
+<strong>Links and images</strong>
+<ul>
+<li>When adding rOpenSci links to your post, use relative instead of absolute URLs e.g.&nbsp;<code>/blog/</code> instead of <code>https://ropensci.org/blog/</code>.</li>
+<li>When linking to <a href="https://ropensci.org/packages/">rOpenSci packages</a> use their docs.ropensci.org URL, e.g.&nbsp;https://docs.ropensci.org/target/.</li>
+<li>Use <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo shortcodes</a> (not html) to add images, gists etc.</li>
+<li>In R Markdown wrap Hugo shortcodes between html preserve tags as shown in the <a href="https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md">template</a>.</li>
+<li>Instead of using html widgets (<code>DT</code>, <code>leaflet</code>, etc.), include a screenshot and use the <code>link</code> option of the <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo <code>figure</code> shortcode</a> to direct readers to an online version of the widget.</li>
+<li>Use informative <a href="#addimage">alternative text</a> for all images.</li>
+</ul>
+</li>
+<li>
+<strong>Language</strong>
+<ul>
+<li>
+<strong>All languages</strong> Avoid Latin phrases such as “e.g.” (for instance) or “i.e.” (that is to say). Use phrases in the language of your post instead.</li>
+<li>
+<strong>English</strong> - Use title case for the title of your post; use sentence case for headings inside the post.</li>
+<li>
+<strong>Non-English</strong> - If using English words, use italics for the word in English and translate directly in parentheses the first time it is mentioned</li>
+</ul>
+</li>
+</ul></section><section id="presubchecks" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="presubchecks">
+<span class="header-section-number">3.8</span> Pre-submission checks</h2>
+<section id="knit-post" class="level3" data-number="3.8.1"><h3 data-number="3.8.1" class="anchored" data-anchor-id="knit-post">
+<span class="header-section-number">3.8.1</span> Knit post</h3>
+<p>If using the R Markdown template, knitting <code>index.Rmd</code> (RStudio knit button, or <code>blogdown::build_site(build_rmd = &lt;path_to_file&gt;)</code>) will generate <code>index.md</code>. Commit both <code>index.Rmd</code> and <code>index.md</code>.</p>
+</section><section id="check-with-roblog" class="level3" data-number="3.8.2"><h3 data-number="3.8.2" class="anchored" data-anchor-id="check-with-roblog">
+<span class="header-section-number">3.8.2</span> Check with <code>roblog</code>
+</h3>
+<p>You can use functions in the <a href="https://docs.ropensci.org/roblog/articles/checks-guidance.html">roblog package to do some automated checks</a> on your post.</p>
+<ul>
+<li>
+<code>ro_lint_md()</code> to check and enforce use of complete alternative descriptions for image, of relative links to rOpenSci website, of <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Hugo shortcodes</a>.</li>
+<li>
+<code>ro_check_urls()</code> to check for URLs that might be broken</li>
+</ul></section><section id="checklists" class="level3" data-number="3.8.3"><h3 data-number="3.8.3" class="anchored" data-anchor-id="checklists">
+<span class="header-section-number">3.8.3</span> Author Checklist</h3>
+<p>Pick the appropriate checklist for your post and ensure you checked everything off. Notice the copy-paste button at the top-right corner of the list.</p>
+<section id="posts-on-peer-reviewed-packages" class="level4" data-number="3.8.3.1"><h4 data-number="3.8.3.1" class="anchored" data-anchor-id="posts-on-peer-reviewed-packages">
+<span class="header-section-number">3.8.3.1</span> Posts on peer-reviewed packages</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have read the Content Guidelines.</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have read the Technical Guidelines.</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I used or followed the R Markdown or Markdown template.</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have followed the Style Guide.</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I created or updated my author metadata with correct folder name.</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added relevant tags after browsing existing tags (including "community" tag).</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added the "tech notes" tag if this is a technote.</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran <span class="in">`roblog::ro_lint_md()`</span> on index.md (optional).</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran <span class="in">`roblog::ro_check_urls()`</span> on index.md (optional).</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran a spell-check on index.md.</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added the tags - Software Peer Review, my-packagename.</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added the package-version YAML tag.</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added acknowledgement of the reviewers' work (with links to reviewers).</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added a link to the software peer review thread.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section><section id="other-posts" class="level4" data-number="3.8.3.2"><h4 data-number="3.8.3.2" class="anchored" data-anchor-id="other-posts">
+<span class="header-section-number">3.8.3.2</span> Other posts</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have read the Content Guidelines.</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have read the Technical Guidelines.</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I used or followed the R Markdown or Markdown template.</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have followed the Style Guide.</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I created or updated my author metadata with correct folder name.</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added relevant tags after browsing existing tags (including "community" tag).</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I have added the "tech notes" tag if this is a technote.</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran <span class="in">`roblog::ro_lint_md()`</span> on index.md (optional).</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran <span class="in">`roblog::ro_check_urls()`</span> on index.md (optional).</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="va">[ ]</span> I ran a spell-check on index.md.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section></section><section id="localpreview" class="level3" data-number="3.8.4"><h3 data-number="3.8.4" class="anchored" data-anchor-id="localpreview">
+<span class="header-section-number">3.8.4</span> Local preview</h3>
+<p>If you wish to preview your post locally, as it will appear in our site, you must install Hugo. To install, refer to <a href="https://gohugo.io/getting-started/installing/">Hugo docs</a> or run <code>blogdown::install_hugo()</code> using the version recorded in <a href="https://github.com/ropensci/roweb3/blob/HEAD/netlify.toml">netlify.toml</a>.</p>
+<p><strong>Note:</strong> You can also preview your blog post online through the pull request before the final submission.</p>
+<p>Then run <code>hugo serve</code> or <code>blogdown::serve_site()</code> in the repo directory to start a local server on http://localhost:1313 (or another one indicated by blogdown).</p>
+<p><strong>Note:</strong> If you are used to using hugodown you can use it instead to serve the website.</p>
+<p>The version of Hugo used by the rOpenSci web server is defined in <a href="https://github.com/ropensci/roweb3/blob/HEAD/netlify.toml">netlify.toml</a>.</p>
+<p>When this preview looks good to you, you should submit your post as a pull request.</p>
+</section></section><section id="submitpost" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="submitpost">
+<span class="header-section-number">3.9</span> Submit draft post</h2>
+<section id="create-draft-pull-request" class="level3" data-number="3.9.1"><h3 data-number="3.9.1" class="anchored" data-anchor-id="create-draft-pull-request">
+<span class="header-section-number">3.9.1</span> Create draft pull request</h3>
+<ul>
+<li><p>Open a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests"><strong>draft</strong> pull request (PR)</a> from your fork (<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork">using the web interface</a>, see step 8 for creating a <strong>draft</strong>), or <a href="https://usethis.r-lib.org/articles/articles/pr-functions.html#submit-pull-request"><code>usethis::pr_push()</code></a> that will save you some work and that will in the end open the same web interface where you can choose Draft PR in the last step)</p></li>
+<li><p>If you opened a PR instead of a <strong>draft</strong> PR, you can <a href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft">convert it to a draft</a> by clicking on “Still in progress? Convert to draft” on the right panel under “Reviewers”.</p></li>
+</ul></section><section id="add-checklist" class="level3" data-number="3.9.2"><h3 data-number="3.9.2" class="anchored" data-anchor-id="add-checklist">
+<span class="header-section-number">3.9.2</span> Add checklist</h3>
+<p>In the first comment of your pull request submitting a post, please copy-paste the <a href="#checklists">checklist</a> corresponding to your post and check off the items.</p>
+</section><section id="preview-online" class="level3" data-number="3.9.3"><h3 data-number="3.9.3" class="anchored" data-anchor-id="preview-online">
+<span class="header-section-number">3.9.3</span> Preview online</h3>
+<p>From the PR, Netlify will start building the new version of the site within seconds and you can preview your changes to make sure everything looks as intended. Otherwise push additional fixes till things look right.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/hugochecks.png" class="img-fluid figure-img" alt="Some checks haven't completed yet." width="776"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/hugocheckspassed.png" class="img-fluid figure-img" alt="All checks have passed." width="772"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="submit-post" class="level3" data-number="3.9.4"><h3 data-number="3.9.4" class="anchored" data-anchor-id="submit-post">
+<span class="header-section-number">3.9.4</span> Submit post</h3>
+<ul>
+<li>Mark the draft PR as ready for review at least one week prior to the planned publication date. When you get approval for a post idea you’ll be told who to ping as your reviewer.</li>
+</ul>
+
+
+</section></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+<ol>
+<li id="fn1"><p>If you don’t use RStudio you can still use the addin, but the new post will be opened in the editor returned by <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html"><code>getOption("editor")</code></a>, that you might need to configure.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In Hugo speak, we’d say your post is a <a href="https://gohugo.io/content-management/page-bundles/#leaf-bundles">leaf bundle</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogguide\.ropensci\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./authorcontent.html" class="pagination-link" aria-label="Content Guidelines">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content Guidelines</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./authorreview.html" class="pagination-link" aria-label="Respond to Feedback">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Respond to Feedback</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ropensci-org/blog-guidance/edit/main/authortechnical.Rmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ropensci-org/blog-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
