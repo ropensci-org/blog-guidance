@@ -2,6 +2,7 @@ post follows Content Guidelines
 post follows Style Guide
 title is in Title Case
 publication date is ok
+slug is ok
 alternative text of images is informative
 author metadata is provided with correct folder name for each language
 html not included in pull request of Rmd post
