@@ -175,7 +175,7 @@ and consider the following features.
 **Alt text**  
 Every image should be accompanied by alternative text to make it more accessible and provide a better user experience.
 The alternative text should convey the meaning or content that is displayed in the image.
-Refer [to this tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/), 
+Refer to this [decision tree regarding when to add alternative text](https://www.w3.org/WAI/tutorials/images/decision-tree/); to this [tutorial for details on what should go in alternative text](https://www.w3.org/WAI/tutorials/images/informative/); and to this [post about the importance of context in alternative text](https://archive.ph/MnUEL), 
 and see the following sections for how to include alt text.
 
 If you include a picture with text (like a comment on a post or a phrase on a wall), include the text you want to highlight from that image in the alt-text. 
