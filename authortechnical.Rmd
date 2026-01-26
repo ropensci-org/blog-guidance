@@ -256,6 +256,10 @@ knitr::include_graphics("images/imgtxt.png")
 <code>{{< figure src = \"name-of-image.png\" width = \"400\" alt = \"informative description\">}}</code>  
 <code>&lt;!\-\-/html_preserve\-\-></code>  
 
+- If a post does not exist in English, you must create "language-specific resources": 
+  for a post in Spanish, an image called `image.png` must be renamed `image.es.png`
+  and be referred to like that in the figure shortcode:
+  `{{{< figure src = "image.es.png" alt = "informative description">}}}`
 
 ### Images - Rmd-created {#addfigure}
 
