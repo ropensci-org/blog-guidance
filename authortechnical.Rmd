@@ -502,6 +502,8 @@ When this preview looks good to you, you should submit your post as a pull reque
 
 * If you opened a PR instead of a **draft** PR, you can [convert it to a draft](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft) by clicking on "Still in progress? Convert to draft" on the right panel under "Reviewers".
 
+**If you use generative AI tools to help create your PR**, make sure the result still follows this guide — our templates, style guide, and the [Content Guidelines](/authorcontent). We reserve the right to close PRs that modify more files or folders than necessary, or that don't follow our templates and guidelines.
+
 ### Add checklist
 
 In the first comment of your pull request submitting a post, please copy-paste the [checklist](#checklists) corresponding to your post and check off the items.
