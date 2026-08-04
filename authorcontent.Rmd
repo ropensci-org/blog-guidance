@@ -69,6 +69,7 @@ Share something a reader could not glean from the package documentation itself.
 
 Use your own voice when you’re writing this. 
 Our website has a professional tone but is less formal than, for example, an academic journal.
+We don't accept content that's fully AI-generated, the ideas and words should be yours. You’re welcome to use tools (including AI tools) to support your writing process, but the final piece should reflect your own perspective and voice.
 
 ### Who is your audience? {#audience}
 
