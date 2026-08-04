@@ -8,4 +8,4 @@ I have added the "tech notes" tag if this is a technote.
 I ran `roblog::ro_lint_md()` on index.md (optional).
 I ran `roblog::ro_check_urls()` on index.md (optional).
 I ran a spell-check on index.md.
-This post reflects my own words and thinking. No AI tools were used to fully write this post.
+This post reflects my own words and thoughts. While I may have used AI assistance, this post was not fully AI-generated.
