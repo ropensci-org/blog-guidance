@@ -203,6 +203,9 @@ All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-
 (do not link to external services like imgur).
 To reference them in your post, use `name-of-image.png`. 
 
+**Attribution**
+If an image isn't your own original work (e.g., a photo, illustration, or a diagram from an external source), make sure you have the right to use it and give proper attribution. Check the image's license (such as Creative Commons) for what attribution is required, and credit the creator and source, typically right below the image or in the caption if the license requires it. When in doubt, prefer images you created yourself or that are explicitly labeled for reuse.
+
 **Insert an image**
 
 - **Insert** an image with either `figure` or `imgtxt` short codes
