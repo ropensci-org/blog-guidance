@@ -198,7 +198,7 @@ If you include a picture with text (like a comment on a post or a phrase on a wa
 > This section refers to images that are **not** generated from R Markdown. 
 > If you want to **generate** images from R Markdown use [our R Markdown template](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) and see [next subsection](#addfigure).
 Choose images that are relevant, clear, and useful to the reader. 
-Images should support the content and should meet our accessibility requirements.
+Images should support the content and should include [Alt text](#images---general) to meet our accessibility requirements.
 We generally prefer not to use AI-generated or AI-modified images.
 **File location**  
 All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`) 
