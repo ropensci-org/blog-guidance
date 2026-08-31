@@ -200,6 +200,8 @@ If you include a picture with text (like a comment on a post or a phrase on a wa
 Choose images that are relevant, clear, and useful to the reader. 
 Images should support the content and should include [Alt text](#images---general) to meet our accessibility requirements.
 We generally prefer not to use AI-generated or AI-modified images.
+
+
 **File location**  
 All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`) 
 (do not link to external services like imgur).
