@@ -53,7 +53,8 @@ cat(paste0(
 ```
 ## Post language(s) {#postlanguage}
 
-Posts don't have to be in English. You're welcome to write in your preferred language and if you'd like your post to reach readers in more than one language, we can host multilingual post.
+Posts don't have to be in English. 
+You're welcome to write in your preferred language and if you'd like your post to reach readers in more than one language, we can host multilingual post.
 
 If you want a translation, you have two paths: do it yourself as the author, or ask an editor to arrange one. Either way, discuss your plans with your blog editor early on so everyone's on the same page. posts with multiple language versions take a little longer to review, since each version needs its own review pass. Plan accordingly if you're working toward a particular publication date.
 
