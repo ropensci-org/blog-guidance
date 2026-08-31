@@ -54,11 +54,19 @@ cat(paste0(
 ## Post language(s) {#postlanguage}
 
 Posts don't have to be in English. 
-You're welcome to write in your preferred language and if you'd like your post to reach readers in more than one language, we can host multilingual post.
+You're welcome to write in your preferred language and if you'd like your post to reach readers in more than one language, we're happy to host multilingual post.
 
-If you want a translation, you have two paths: do it yourself as the author, or ask an editor to arrange one. Either way, discuss your plans with your blog editor early on so everyone's on the same page. Posts with multiple language versions take a little longer to review, since each version needs its own review pass. Plan accordingly if you're working toward a particular publication date.
+If you want a translation, you have two paths: do it yourself as the author, or ask an editor to arrange one.
+Either way, let your blog editor know early in the process. This helps everyone plan and makes the review process smoother.
 
-See the Technical Guidelines for how to set up the files for a multilingual post.
+A few things to keep in mind:
+
+- Mention your translation plans when you first discuss the post with your editor.
+- Please wait until the post has been reviewed and approved in the original language before starting the translation.
+- Posts with multiple language versions may take a little longer to review, since each version needs its own review pass. Plan accordingly if you're working toward a particular publication date.
+
+
+See the [Technical Guidelines](authortechnical.qmd#multilingual-posts) for how to set up the files for a multilingual post.
 
 ## Post content {#postcontent}
 
