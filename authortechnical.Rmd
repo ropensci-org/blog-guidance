@@ -202,6 +202,8 @@ Images should support the content and should include [Alt text](#images---genera
 We generally prefer not to use AI-generated or AI-modified images.
 
 
+
+
 **File location**  
 All images go in the same folder as your post source (`/content/blog/YYYY-MM-DD-slug/`) 
 (do not link to external services like imgur).
