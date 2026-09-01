@@ -24,6 +24,6 @@ The blog editors don't necessarily have write access to the blog-guidance repo b
 
 ## Posts authored by staff
 
-* Staff members can bypass review for tech notes but they can choose to request a review by blog editors.
-* Staff members' blog posts should be scheduled together with the Community Manager.
-* Staff members are responsible for promoting their own posts from their personal account on Mastodon and/or LinkedIn tagging rOpenSci's accounts.
+* Staff members can bypass review for _tech notes_ but they can choose to request a review by blog editors.
+* Staff members' blog posts should be scheduled together with the Community Manager to avoid schedule conflicts.
+* Staff members are responsible for promoting their own posts from their personal account on BlueSky, Mastodon and/or LinkedIn tagging rOpenSci's accounts. If a post has already been made from the rOpenSci account, they can also share that one. If they make the post first, don't forget to tag the rOpenSci account in the post so we can repost it. 
