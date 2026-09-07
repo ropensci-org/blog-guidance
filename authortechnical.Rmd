@@ -256,7 +256,8 @@ knitr::include_graphics("images/imgtxt.png")
 **Image gallery**
 
 If you want to display images in a nice gallery, where clicking on an image makes it appear much larger,
-
+you can use an Image Gallery. 
+Please note that Alt text is not supported in the gallery, so ensure that the surrounding text provides the same relevant information or context conveyed by the images. Do not rely on the images alone to communicate essential information. [Read this blog post about R-universe, which is a good example of how to describe the images in the text and use the gallery](https://ropensci.org/blog/2023/02/27/runiverse-discovering/).
 1. In the post YAML metadata add `photogallery: yes`.
 1. In the post add each gallery like so:
 
