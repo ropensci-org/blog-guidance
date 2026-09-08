@@ -113,6 +113,7 @@ Use short headings to guide the reader.
 ### Comparing your work to other tools
 
 If your post compares your package to other tools that solve a similar problem, aim for a comparison that's accurate, evidence-based, and fair.
+Be nice, remember that those tools are built by people who probably care about them.
 
 * Critique tools, not the people who build them. Real limitations like missing features, performance, dependencies, maintenance status are fair game to discuss, as long as they're accurate and relevant.
 
