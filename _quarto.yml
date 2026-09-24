@@ -5,6 +5,7 @@ project:
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Blog Guide for Authors and Editors"
+  llms-txt: true
   author: "Stefanie Butland, Steffi LaZerte, Maëlle Salmon, Yanina Bellini Saibene"
   reader-mode: true
   site-url: https://blogguide.ropensci.org/
