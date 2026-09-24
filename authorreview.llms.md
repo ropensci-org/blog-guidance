@@ -1,0 +1,16 @@
+# 4  Respond to Feedback
+
+This chapter outlines how an author of a blog post or tech note can find and respond to comments from an editor in the GitHub pull request review interface.
+
+Once you have [submitted](#submitpost) your blog post or tech note, an editor will review your post providing comments on both [content](#content) (is the narrative clear?) and [technical](#technical) (does it follow our Style Guide?) aspects.
+
+Browse [Chapter 5.1 Review a post](#review) to see how editors use the [GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests) to suggest edits, make comments, and approve or request changes to your pull request.
+
+To respond to an editor’s review:
+
+- Respond to every inline comment with a thumbs up or thumbs down emoji so the editor knows you have seen it.
+- It’s ok to explain why you disagree with some comments.
+- [*Resolve conversation*](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations) for items you have addressed.
+- Tag the editor when you have finished addressing their comments.
+
+The editor will confirm when your post is ready for publication.

@@ -1,0 +1,7 @@
+# 9  Template - Post (Rmd)
+
+Use of this template is described in [Start the post from a template](#templates) and [Walkthrough with code snippets](#usetemplates).
+
+R Markdown template to be saved as `/content/blog/YYYY-MM-DD-slug/index.Rmd`
+
+[Available on GitHub](https://github.com/ropensci/roweb3/blob/HEAD/archetypes/Rmd/index.md) (*not displayed for copy-paste because of “html_preserve” tags*)

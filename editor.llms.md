@@ -1,0 +1,236 @@
+# 6  Review, Publish, Promote
+
+This chapter outlines the workflow for an editor to review, publish and promote a blog post or tech note. It may also provide insights for post authors.
+
+## 6.1 Review a post
+
+This section explains how to review a blog post or tech note. The editor for a post is typically the Community Manager or their intern.
+
+A post is submitted as a pull request on GitHub. We use the [well documented GitHub web interface](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests) to suggest edits, make comments, and ultimately merge the pull request to publish the post. There’s no better resource than that for screenshots and guidance on reviewing pull requests and for links to share with an author when coaching them on how to respond to your review.
+
+These are particularly helpful:
+
+- [About pull request reviews](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
+- [Reviewing proposed changes in a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+- [Incorporating feedback in your pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)
+
+### 6.1.1 Review
+
+Read the post preview to get a feel for it. On the first read, you might make a few pen & paper notes on what to pay attention to on deeper review. This is a good time to note some positive feedback, based on a first impression. There is always something great in a post to highlight in your review. Be specific. If the post or something in it excites you, don’t hesitate to say that. How else will the author know and be inspired?!
+
+To start your review of the pull request, copy and paste either the [editor checklist for a post about a peer-reviewed package](#editorchecklistpeer), or the [editor checklist for any other post](#editorchecklistany), into the box that appears when you click the green *Review changes* button.
+
+Click on the *Files changed* tab in the pull request to view the .Rmd or .md file for the post. Complete the checklist and comment as needed inline in the .Rmd or .md file. You must comment in the .Rmd if one was submitted.
+
+When adding your first comment, choose *Start a review* (not *Add a single comment*), so the author gets a single notification for the review when it is complete.
+
+Where changes are “obvious” such as fixing grammar or a typo, use GitHub [“commit suggestion” `<cmd-g>`/`<ctrl-g>`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) so the author can commit your change directly. Comment to explain the change if needed, for instance if the diff displayed by GitHub does not highlight which word(s) were edited.
+
+While our [Style Guide](#styleguide) recommends that authors add [line breaks at the end of every sentence](https://cirosantilli.com/markdown-style-guide#line-wrapping), we do not ask them to add these in their draft after the fact.
+
+To download a pull request locally so that you can experiment with it, run [`usethis::pr_fetch(<pr_number>)`](https://usethis.r-lib.org/reference/pr_init.html). Even if an author gives edit permission to the repo maintainer, the editor does not usually make edits directly on the post. Rare exceptions can be made at the editor’s discretion.
+
+To ask the author to address a comment, provide a link to the appropriate section of this book to guide them.
+
+After all inline commenting and the checklist is done, add any further notes, starting with a positive comment and your overall impression, to the *Review changes* box. Tell the author if you have updated their author metadata (author file) e.g. by fixing the folder name, or adding a social media handle. This helps draw their attention to this nice feature.
+
+We don’t (yet?) have templated editor response text, but here are helpful things to include:
+
+- I have made ~n (number of) comments. Look for *hidden conversations* when there are many comments.
+- Ask for thumbs up or thumbs down on every editor comment so we know you have seen it.
+- It’s ok to disagree with some comments.
+- [*Resolve conversation*](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations) for items you have addressed.
+- Tag editor when you have finished addressing their comments.
+
+When your review is complete, click [*Comment*, *Approve*, or *Request changes*](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review), at your discretion. This will trigger a notification to the author.
+
+### 6.1.2 Editor checklist - Posts on peer-reviewed packages
+
+``` markdown
+* [ ] post follows Content Guidelines
+* [ ] post follows Style Guide
+* [ ] title is in Title Case
+* [ ] publication date is ok
+* [ ] slug is ok
+* [ ] alternative text of images is informative
+* [ ] author metadata is provided with correct folder name for each language
+* [ ] html not included in pull request of Rmd post
+* [ ] I ran `roblog::ro_lint_md()` on index.md
+* [ ] I ran `roblog::ro_check_urls()` on index.md
+* [ ] I ran a spell-check on index.md
+* [ ] YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
+* [ ] YAML field 'editor' is filled with your name
+* [ ] YAML field 'translator' is filled as needed
+* [ ] YAML field 'interviewee' is filled as needed
+* [ ] YAML field 'preface' is present if necessary
+* [ ] YAML field 'params.doi' is filled with a new DOI
+* [ ] YAML package-version included
+* [ ] YAML subject tags - software peer review, packagename
+* [ ] acknowledges and links to reviewers
+* [ ] links to peer review thread
+```
+
+### 6.1.3 Editor checklist - Other posts
+
+``` markdown
+* [ ] post follows Content Guidelines
+* [ ] post follows Style Guide
+* [ ] title is in Title Case
+* [ ] publication date is ok
+* [ ] slug is ok
+* [ ] alternative text of images is informative
+* [ ] author metadata is provided with correct folder name for each language
+* [ ] html not included in pull request of Rmd post
+* [ ] I ran `roblog::ro_lint_md()` on index.md
+* [ ] I ran `roblog::ro_check_urls()` on index.md
+* [ ] I ran a spell-check on index.md
+* [ ] YAML subject tags are ok ("tech notes" for tech notes; "community" for non-staff non-editor)
+* [ ] YAML field 'editor' is filled with your name
+* [ ] YAML field 'translator' is filled as needed
+* [ ] YAML field 'interviewee' is filled as needed
+* [ ] YAML field 'preface' is present if necessary
+* [ ] YAML field 'params.doi' is filled with a new DOI
+```
+
+### 6.1.4 Check cross-posting metadata
+
+If the post is cross-posted on other website(s), indicate it like so in the YAML metadata of the post:
+
+``` yaml
+crossposts:
+- name: website1 name
+  url: url to post on website1
+- name: website2 name
+  url: url to post on website2
+```
+
+This is to ensure the cross-post alert appears ([example](https://ropensci.org/blog/2023/08/01/r-universe-and-cran/) as well as to make the cross-post metadata visible to the JSON feed that Rogue Scholar uses.
+
+### 6.1.5 Check social media metadata
+
+The social media metadata in a post’s YAML helps it “look good” when an account like R Weekly Live or other readers link to the post in a post, separate from [the post *we* send](#socialpromo).
+
+Therefore it is important to check the social media metadata if it is present.
+
+Perfecting metadata for social media is optional for authors, so decide how critical any changes are before requesting them in your review.
+
+### 6.1.6 Check DOI metadata
+
+Before merging the post needs this field:
+
+``` yaml
+params:
+  doi: <doi-string>
+```
+
+where `<doi-string>` is a new unique DOI string generated by running \[`commonmetar::commonmeta_doi()`\]. This does not register the DOI: registration will automatically happen after publication, thanks to Rogue Scholar’s infrastructure.
+
+## 6.2 Publish a post
+
+Publish a post by merging its pull request. For a post dated e.g. 2020-02-28, you can merge it any time after ~5pm Pacific on 2020-02-27 i.e. when it’s Feb 28th somewhere in the world. When possible, it’s nice to have a post published by morning in the timezone of the main post author.
+
+A “topic” linked to the blog post will automatically be created in the [discussion forum blogs category](https://discuss.ropensci.org/c/blog/) for both blog posts and tech notes. This facilitates commenting on posts. Comments will appear both below the post and in the discussion forum.
+
+*Note about older posts:* Very old posts from (before March 2017) have no comments at all; these posts have no `topicid` field in their YAML header. Newer posts (March 2017 onward) have a yaml field `topicid` and a number in it that links to a topic that we manually created in the forum. Posts newer than March 9, 2020 won’t have a `topicid` field in their YAML header as a forum topic is automatically created.
+
+## 6.3 Promote a post on social media
+
+### 6.3.1 Workflow
+
+Post from [rOpenSci Mastodon account](https://hachyderm.io/@rOpenSci) and [LinkedIn Page](https://www.linkedin.com/company/ropensci/).
+
+We post at different time zones using our own [system to schedule all social media post to Mastodon and LinkedIn](./blog/2023/05/17/scheduling-mastodon/).
+
+It’s best to draft social media post in advance (e.g. while reviewing the post) and have a feature image(s) and alternative text for the image ready to use.
+
+For community posts, draft social media text are posted in the comments of the pull request so the author can comment.
+
+If the post is multilingual, we post in social media in all languages the post is available in. We use the same message translated into all languages.
+
+### 6.3.2 Content
+
+The first post of a thread or only post *must* include
+
+- the post title,
+- a link to the post,
+- tag the author’s account, or their IRL name
+- the hashtag `#RStats` and
+- the tag @rstats@a.gup.pe group.
+
+Any post *must* provide an alternative description of any included image.
+
+A further post *can* include a link to the software peer review thread.
+
+Any post *can* include
+
+- additional hashtags,
+- additional account names,
+
+with the caveats of the next subsections.
+
+### 6.3.3 Tagging accounts
+
+Tag the account(s) of all post authors and package authors and reviewers.
+
+If not already included in their author metadata, you can search for their account but only tag them if
+
+- it is active,
+- it is not anonymous or private,
+- it is at least partly used professionally by the owner.
+
+When in doubt, use the person’s name, or time permitting, contact the person whose account you’d like to tag.
+
+For a package wrapping a service present on the social media you can tag that account (e.g. for a Mastodon post about `rredlist` that accesses IUCN Red List you might tag IUCN Mastodon account).
+
+When tagging accounts include them in a sentence e.g. “Thanks to `@account1`”/ “As told by `@account2`”. We do not use tagging in posts to ask for attention (i.e. no account names used like hashtags at the bottom of a post) because it could be viewed as spamming mentioned accounts, and because it creates visual clutter in the post.
+
+### 6.3.4 Using hashtags
+
+Hashtags are very relevant in Mastodon and LinkedIn. Because there is not algorithm promoting a post based on likes or boosts, hashtags are the main way to get a post seen by people who are not already following the account. People follow hashtag on both platforms.
+
+#### 6.3.4.1 Selecting relevant hashtags
+
+For a post about a post related to a package or any R thing, use the `#rStats` hashtag. If the post is in another language than English, add the `#rStats + language two letters`, for example for Spanish is `#rStatsES`
+
+For a post about a package, make the package name a hashtag. You can also add the package category, as we use it for social media campaigns. For example, for a post about the `rredlist` package, you could use `#rredlist` and `#biodiversity`. Use CamelCase for hashtags, as it improves accessibility by making them more accessible for screen reader users.
+
+Check the last post using any hashtag except the `#rStats` hashtag to see whether it is used as you expect. E.g. using `httr` wouldn’t be a good idea. It is a package name but on social media it is the hashtag of [a team with a name controversy](https://en.wikipedia.org/wiki/Washington_Redskins_name_controversy).
+
+#### 6.3.4.2 Adding hashtags
+
+Do not use too many hashtags in any post so as not to make the account look like a spam account / greedy for attention.
+
+Post hashtags at the bottom of each post, to make the rest of the content of the post easier to read.
+
+[Capitalize letters of each word](https://www.boia.org/blog/make-your-hashtags-accessible) for hashtags including several words i.e. use lower or upper camelCase (e.g. `#RLadies` not `#rladies`).
+
+When posting a thread, use each hashtag only once so as not to pollute the timeline of that hashtag.
+
+### 6.3.5 Using emojis
+
+In posts, emojis are optional. When using emojis, [do not use too many of them](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible).
+
+### 6.3.6 Using gifs
+
+In posts, gifs are optional.
+
+- One can include a gif that was created for the post (e.g. an animated plot).
+- But generally not a Giphy gif since it might be interpreted differently by people who know more/less context about the gif in question (e.g. a TV show).
+- When using a gif we should [add its description](https://www.a11ywithlindsey.com/blog/7-ways-tweets-more-accessible) by typing `[Gif alt: descriptive phrase]` at the bottom of the post.
+
+### 6.3.7 Example 2-post thread:
+
+    [blog] “rmangal: making ecological networks easily accessible” 
+
+    New post by @KCazelles & @SVissault in our Software Peer Review series 
+
+    🔗 https://ropensci.org/blog/2019/10/21/rmangal/
+
+    1/2 
+    #rStats #rmangal #SoftwarePeerReview
+
+    Shoutouts 🙏 in the post to reviewers Anna Willoughby & @thomasp85, rmangal contributors https://docs.ropensci.org/rmangal/authors.html, & all ecologists who have spent countless hours collecting data
+
+    🔎Read the rmangal open software peer review thread: https://github.com/ropensci/software-review/issues/332
+
+    2/2 

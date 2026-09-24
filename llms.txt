@@ -1,0 +1,18 @@
+# rOpenSci Blog Guide for Authors and Editors
+
+## Pages
+
+- [rOpenSci Blog Guide for Authors and Editors](https://blogguide.ropensci.org/index.llms.md)
+- [[[2]{.chapter-number}  [Content Guidelines]{.chapter-title}]{#content .quarto-section-identifier}](https://blogguide.ropensci.org/authorcontent.llms.md)
+- [[[3]{.chapter-number}  [Technical Guidelines]{.chapter-title}]{#technical .quarto-section-identifier}](https://blogguide.ropensci.org/authortechnical.llms.md)
+- [[[4]{.chapter-number}  [Respond to Feedback]{.chapter-title}]{#respond .quarto-section-identifier}](https://blogguide.ropensci.org/authorreview.llms.md)
+- [[[5]{.chapter-number}  [Publication and Promotion]{.chapter-title}]{#promote .quarto-section-identifier}](https://blogguide.ropensci.org/authorpromote.llms.md)
+- [[[6]{.chapter-number}  [Review, Publish, Promote]{.chapter-title}]{#editor .quarto-section-identifier}](https://blogguide.ropensci.org/editor.llms.md)
+- [[[7]{.chapter-number}  [Editorial Governance]{.chapter-title}]{#editormeta .quarto-section-identifier}](https://blogguide.ropensci.org/editor-meta.llms.md)
+- [[[8]{.chapter-number}  [Template - Post (md)]{.chapter-title}]{#templatemd .quarto-section-identifier}](https://blogguide.ropensci.org/templatemd.llms.md)
+- [[[9]{.chapter-number}  [Template - Post (Rmd)]{.chapter-title}]{#templatermd .quarto-section-identifier}](https://blogguide.ropensci.org/templatermd.llms.md)
+- [[[10]{.chapter-number}  [Template - Author file]{.chapter-title}]{#authortemplate .quarto-section-identifier}](https://blogguide.ropensci.org/authortemplate.llms.md)
+- [[[11]{.chapter-number}  [Author Checklist - Posts on peer-reviewed packages]{.chapter-title}]{#authorchecklistpeer .quarto-section-identifier}](https://blogguide.ropensci.org/authorchecklistpeer.llms.md)
+- [[[12]{.chapter-number}  [Author Checklist - Other posts]{.chapter-title}]{#authorchecklistany .quarto-section-identifier}](https://blogguide.ropensci.org/authorchecklistany.llms.md)
+- [[[13]{.chapter-number}  [Editor Checklist - Posts on peer-reviewed packages]{.chapter-title}]{#editorchecklistpeer .quarto-section-identifier}](https://blogguide.ropensci.org/editorchecklistpeer.llms.md)
+- [[[14]{.chapter-number}  [Editor checklist - Other posts]{.chapter-title}]{#editorchecklistany .quarto-section-identifier}](https://blogguide.ropensci.org/editorchecklistany.llms.md)
