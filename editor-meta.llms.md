@@ -1,0 +1,27 @@
+# 7  Editorial Governance
+
+This chapter explains management of the blog editors GitHub team and the process for staff-authored posts.
+
+## 7.1 GitHub team
+
+rOpenSci blog editors are the member of the [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors) team.
+
+- Blog editors can be tagged in [any ropensci repo](https://github.com/ropensci/), in particular [roweb3](https://github.com/ropensci/roweb3/), by writing `@ropensci/blog-editors` (e.g. `:wave: @ropensci/blog-editors, I have trouble adding citations in my post!`).
+
+- Blog editors have write access to the roweb3 repo.
+
+For adding a new blog editor, the team maintainer or any ropensci admin
+
+- ensures the user has [enabled 2FA](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
+
+- [adds them to the team](https://github.com/orgs/ropensci/teams/blog-editors/members) as Member (the default role).
+
+The blog editors can filter their notifications, e.g. using the [`reason:team-mention` filter](https://github.com/notifications/beta?query=reason%3Ateam-mention).
+
+The blog editors don’t necessarily have write access to the blog-guidance repo but are encouraged to make PRs.
+
+## 7.2 Posts authored by staff
+
+- Staff members can bypass review for *tech notes* but they can choose to request a review by blog editors.
+- Staff members’ blog posts and tech notes should be scheduled together with the Community Manager to avoid schedule conflicts.
+- rOpenSci’s accounts on BlueSky, Mastodon, and/or LinkedIn will promote blog posts and tech notes.

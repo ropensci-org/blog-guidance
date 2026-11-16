@@ -1,0 +1,21 @@
+# 5  Publication and Promotion
+
+This chapter provides some motivation for doing the extra work to contribute a post by outlining what rOpenSci does to promote it.
+
+We hope that by doing the extra work of publishing a blog post or tech note that you will benefit by getting more eyes on your work. Blog posts and tech notes published in 2019 on rOpenSci website got on average 426 page views in the 31 days following their publication (median of 298.5, minimum of 96, maximum of 1687). Blog posts then live a life of their own: some people will still access them, e.g. finding them via a Search Engine or rOpenSci website tag pages.
+
+When your post is published, here is what we do to promote it.
+
+- Post from [rOpenSci Mastodon account](https://hachyderm.io/@rOpenSci) and [LinkedIn page](https://www.linkedin.com/company/ropensci/) with a link to your post, tagging post author(s) and package reviewers with a link to the software peer review thread where relevant. rOpenSci has more than 2,000 followers on Mastodon and more than 1,000 on LinkedIn.
+
+- List your post, with author names, in our [monthly newsletter](https://ropensci.org/news).
+
+Our newsletter is opened by more than 1,000 readers each month and additional readers through RSS & JSON feeds.
+
+- Our blog and tech notes are syndicated to and shared by [R-bloggers](https://www.r-bloggers.com/) and [R Weekly](https://rweekly.org/). R-Bloggers *cross-posts* posts so it adds page views we can’t measure, whereas R Weekly drives traffic to blog posts on our website. R-Bloggers had nearly 80,000 Twitter followers in February 2020. The R Weekly Highlights podcast also regularly features some of our posts.
+
+- Our blog is also syndicated to [Rogue Scholar](https://rogue-scholar.org/about), an archive for scholarly blog posts that provide full-text search, long-term archiving, DOIs and metadata. Your blog post will be assigned a DOI and archived in the Internet Archive. If you have an integration with your ORCID, your blog post will be added to your ORCID profile when we publish.
+
+[This is Yani’s ORCID profile as an example](https://orcid.org/0000-0002-4522-7466); if you scroll down until the “Works” session, all the rOpenSci blog posts are listed there.
+
+You are welcome to cross-post to your own website as long as you also link to the rOpenSci website version. [Example](https://juliasilge.com/blog/qualtrics-relaunch/).
