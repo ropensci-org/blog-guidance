@@ -95,7 +95,7 @@ If not, refer to [the instructions to create your draft manually](#manually).
 The blogdown New Post RStudio addin creates the post draft in the correct location and fills the post YAML based on metadata you'll have entered.[^2]
 
 * Install `whoami` and `blogdown` (`install.packages(c("whoami", "blogdown"))`) (blogdown version should be at least 1.6.0).
-* Install Hugo (to preview the post): `blogdown::install_hugo("0.170.0")` (version recorded in netlify.toml of the roweb3 repository).
+* Install Hugo (to preview the post): `blogdown::install_hugo("<hugo-version>")` ([version recorded in netlify.toml of the roweb3 repository](https://github.com/ropensci/roweb3/blob/main/netlify.toml)).
 * Re-start R.
 * In RStudio, open the forked `roweb3` project.
 * Create a new post by running Addins > New Post or `blogdown:::new_post_addin()`.
