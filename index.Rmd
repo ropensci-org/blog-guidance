@@ -22,6 +22,10 @@ We created it after reviewing and publishing over 100 posts by community members
 The volume of information may be overwhelming at first. 
 Some of the guidance indicates things we require that you do (such as creating an author file with your metadata), while most of the guidance is information to help you (such as how to add an image to your post).
 
+**So you want to write a blog post?**
+
+If you'd like to write a blog post, first contact the [Blog Post staff](https://ropensci.org/blog) either on Slack or through the [rOpenSci Contact Form](https://ropensci.org/contact). If you'd like to write a blog post about your package going through review, wait until the review process is complete at which time you'll receive information in the review thread on how to proceed.
+
 **What's in the book and what's required reading?**
 
 - Chapter 1 [Content Guidelines](#content) coaches you in thinking through what you might say in your post.
